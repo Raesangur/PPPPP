@@ -1,0 +1,44 @@
+1 - Composition d'un PCB
+    - Stackup
+        - Diélectriques
+    - Cuivres et épaisseurs
+        - Surface finishes
+    - Soldermask
+        - LPI vs Dry Film
+        - Clearance
+    - Silkscreen
+        -
+    - Vias
+        - Tenting
+        - Blind & Buried
+    - Panneaux
+2 - Étapes de fabrication
+    - 2 Layers
+        - Découpe diélectrique
+        - Application copper foil & lamination
+        - Drilling
+        - Plating
+        - Dry-Film & Etching
+        - Soldermask
+        - Silkscreen
+        - Finis de surface
+    - + de layers
+        - Lamination de boards avec des prepregs entre
+3 - Assemblage et tests
+    - Solder Paste
+    - Stencils
+    - Pick & Place
+    - Four
+    - Wave soldering
+    - Tests
+        - Flying Probe
+        - Bed of Nail
+4 - Notes au manufacturier et bonnes pratiques
+    - Notes au manufacturier
+    - Clearance
+    - Comment déterminer son stackup
+5 - Questions
+6 - Video time!
+
+
+
