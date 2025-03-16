@@ -1,6 +1,7 @@
 \documentclass{beamer}
 \usetheme{Madrid}
 
+\usepackage{lmodern}
 \usepackage{comment}
 \usepackage{multicol}
 \usepackage{siunitx}
@@ -91,7 +92,23 @@
     \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
         \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
         \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-    \end{beamercolorbox}}%
+    \end{beamercolorbox}
+}%
+
+\defbeamertemplate*{frametitle}{mytheme}
+{%
+    \vspace{0cm}
+    {\usebeamerfont{title}\usebeamercolor[bg]{title}\insertframetitle}
+    \par
+    \vspace{-0.6cm}
+    \hfill
+    \includegraphics[height=0.635cm]{pictures/logo/c3i.png}
+    \includegraphics[height=0.635cm]{pictures/logo/m1_alpha.pdf}
+    \par
+    \vspace{-0.3cm}
+    \textcolor{UDSgreenSolidarite}{\noindent\rule{\textwidth}{1pt}}
+}%
+
 \usebeamertemplate{mytheme}
 
 
@@ -174,9 +191,9 @@
 
 % ------------ SECTIONS -----------
 
-%\input{Sections/Section1}
-%\input{Sections/Section2}
-%\input{Sections/Section3}
+\input{Sections/Section1}
+\input{Sections/Section2}
+\input{Sections/Section3}
 
 
 
