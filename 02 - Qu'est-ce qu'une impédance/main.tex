@@ -94,6 +94,11 @@
     \end{beamercolorbox}}%
 \usebeamertemplate{mytheme}
 
+
+
+
+% ----------------------- BEGIN DOCUMENT ------------------------
+
 \begin{document}
 
 \usebackgroundtemplate{
@@ -103,21 +108,14 @@
         };
     \end{tikzpicture}
 }
+
 \begin{frame}[plain]
-    %\maketitle
-    
-    {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\hfill\inserttitlegraphicii\par}
-    \begin{multicols}{2}
-        \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true, wd=0.5\textwidth]{title}
-            \usebeamerfont{title}\inserttitle\par%
-            {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
-            {\vspace{24pt}\small\usebeamerfont{author}\insertauthor\par}%
-        \end{beamercolorbox}%
-    \vfill\null
-    \columnbreak
-    \end{multicols}
+    \maketitle
 \end{frame}
 
+
+
+% - TOC -
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
@@ -142,7 +140,7 @@
         \end{column}
         \begin{column}{0.4\textwidth}
             \begin{figure}
-                \includegraphics[width=\textwidth]{pictures/qqoqcp}
+                \includegraphics[width=\textwidth]{pictures/qqoqcp.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -174,11 +172,15 @@
 }
 
 
+% ------------ SECTIONS -----------
+
 %\input{Sections/Section1}
 %\input{Sections/Section2}
-\input{Sections/Section3}
+%\input{Sections/Section3}
 
 
+
+% - END -
 
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
