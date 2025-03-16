@@ -646,26 +646,26 @@
 
 \begin{frame}{Impédance Caractéristique}
     \begin{columns}
-        \begin{column}{0.66\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item Ne dépend pas de la fréquence
                 \item Tout circuit a un $Z_0$
                 \item Ratio tension/courant se déplaçant
             \end{itemize}
         \end{column}
-        \begin{column}{0.33\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{center}
                 \huge{$Z_0 = \sqrt{\dfrac{L}{C}}$}\\
                 \vspace{30pt}
                 \resizebox{\textwidth}{!}{
                 \begin{circuitikz}[american voltages]
-                    \draw [line width = 0.75mm]
+                    \draw [line width = 0.5mm]
                     (0,0) to [short, *-] (7,0)
                     to [R, l_=$R_{LOAD}$] (7,5)
                     (0,0) to [open, v<=$V$] (0,5)
                     to [short, *- ] (3,5)
-                    to [short] (5, 5)
-                    to [american inductor, l_=$L$] (7, 5)
+                    to [short] (4, 5)
+                    to [american inductor, l_=$L$] (6, 5)
                     to [short] (7,5)
                     (0, 5) to [open] (3, 5)
                     to [C, l_=$C$] (3, 0)
