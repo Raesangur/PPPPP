@@ -6,4 +6,4 @@
 \beamer@subsectionintoc {1}{5}{Ligne de transmission}{29}{0}{1}
 \beamer@sectionintoc {2}{Pourquoi une impédance?}{39}{0}{2}
 \beamer@subsectionintoc {2}{1}{Réflexions}{42}{0}{2}
-\beamer@sectionintoc {3}{Comment une impédance?}{53}{0}{3}
+\beamer@sectionintoc {3}{Comment une impédance?}{55}{0}{3}
