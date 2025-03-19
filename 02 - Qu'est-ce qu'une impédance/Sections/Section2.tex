@@ -346,6 +346,125 @@
                     \addplot [
                         domain=0:15,
                         very thick,
+                        color=blue,
+                        style=dashed,
+                    ]
+                    coordinates
+                    {(0, 0) (1, 0) (1.5, 1) (6, 1) (6.5, 0) (7.5, 0) (8, 1) (12.5, 1) (13, 0) (15, 0)};
+                    \addlegendentry{\(Input\ Voltage (Measured)\)}
+                    \end{axis}
+                \end{tikzpicture}
+            }
+            \end{center}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+            \resizebox{\textwidth}{!}{%
+                \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines = left,
+                        xlabel = \(t\),
+                        ylabel = \(V\),
+                        ymax = 3.3,
+                        xmax = 15,
+                    ]
+                    \addplot [
+                        domain=0:15,
+                        very thick,,
+                        color=orange,
+                    ]
+                    coordinates
+                    {(0, 0) (3, 0) (3.5, 1) (8.5, 1) (9, 0) (15, 0)};
+                    \addlegendentry{\(Output\ Voltage (Normal)\)}
+
+                    \addplot [
+                        domain=0:15,
+                        very thick,,
+                        color=green,
+                        style=dashed
+                    ]
+                    coordinates
+                    {(0, 0) (3, 0) (3.5, 2) (10, 2) (10.5, 0) (15, 0)};
+                    \addlegendentry{\(Output\ Voltage (Measured)\)}
+                    \end{axis}
+                \end{tikzpicture}
+            }
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Circuit Ouvert - Oscilloscope}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Oscilloscope à l'entrée
+                \bigskip
+                \item Réflexion en phase avec signal
+                \item Pulse suivi d'un autre
+                \item Délai = temps aller-retour du signal
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{pictures/open-circuit-pulse-reflection.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Circuit Ouvert 2 - Onde à envoyer}
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = left,
+                xlabel = \(t\),
+                ylabel = \(V\),
+                ymax = 3.3,
+                xmax = 10,
+            ]
+            \addplot [
+                domain=0:10,
+                thick,
+                color=red,
+            ]
+            coordinates
+            {(0, 0) (1, 0) (1.5, 1) (12, 1) (12.5, 0) (10, 0)};
+            \addlegendentry{\(Input\ Voltage\)}
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Circuit Ouvert 2 - Vraie forme d'onde}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+            \resizebox{\textwidth}{!}{%
+                \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines = left,
+                        xlabel = \(t\),
+                        ylabel = \(V\),
+                        ymax = 3.3,
+                        xmax = 15,
+                    ]
+                    \addplot [
+                        domain=0:15,
+                        very thick,
+                        color=red,
+                    ]
+                    coordinates
+                    {(0, 0) (1, 0) (1.5, 1) (12, 1) (12.5, 0) (15, 0)};
+                    \addlegendentry{\(Input\ Voltage (Normal)\)}
+
+                    \addplot [
+                        domain=0:15,
+                        very thick,
                         color=orange,
                     ]
                     coordinates
