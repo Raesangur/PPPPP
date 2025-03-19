@@ -32,7 +32,7 @@
 \end{frame}
 
 
-\subsection{Réflexions}
+\subsection{Réflexions sur un circuit ouvert}
 
 \begin{frame}{Ligne de transmission - Circuit Ouvert}
     \begin{center}
@@ -125,7 +125,7 @@
                     to [european resistor, l_=$Z_0$] (6, 4)
                     to [short, -*] (8,4);
                 \end{circuitikz}
-                }
+            }
             \end{center}
         \end{column}
     \end{columns}
@@ -404,6 +404,8 @@
                 \item Réflexion en phase avec signal
                 \item Pulse suivi d'un autre
                 \item Délai = temps aller-retour du signal
+                \bigskip
+                \item Peut endommager la load
             \end{itemize}
         \end{column}
         
@@ -417,7 +419,53 @@
 \end{frame}
 
 
+
+\subsection{Réflexions sur un circuit ouvert 2}
+
+
 \begin{frame}{Circuit Ouvert 2 - Onde à envoyer}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+            \resizebox{\textwidth}{!}{
+                \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines = left,
+                        xlabel = \(t\),
+                        ylabel = \(V\),
+                        ymax = 3.3,
+                        xmax = 15,
+                    ]
+                    \addplot [
+                        domain=0:15,
+                        thick,
+                        color=red,
+                    ]
+                    coordinates
+                    {(0, 0) (1, 0) (1.5, 1) (12, 1) (12.5, 0) (15, 0)};
+                    \addlegendentry{\(Input\ Voltage\)}
+                    \end{axis}
+                \end{tikzpicture}
+            }
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \resizebox{\textwidth}{!}{
+                \begin{circuitikz}[american voltages]
+                    \draw [thick]
+                    (0,0) to [short, *-*] (8,0)
+                    to [open, -*] (8,4)
+                    (0,0) to [open, v<=$V$] (0,4)
+                    to [short, *- ,i_=$i$] (4,4)
+                    to [european resistor, l_=$Z_0$] (6, 4)
+                    to [short, -*] (8,4);
+                \end{circuitikz}
+            }
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Circuit Ouvert 2 - Vraie forme d'onde}
     \begin{center}
         \begin{tikzpicture}
             \begin{axis}[
@@ -425,89 +473,102 @@
                 xlabel = \(t\),
                 ylabel = \(V\),
                 ymax = 3.3,
-                xmax = 10,
+                xmax = 18,
             ]
             \addplot [
-                domain=0:10,
-                thick,
+                domain=0:18,
+                very thick,
                 color=red,
             ]
             coordinates
-            {(0, 0) (1, 0) (1.5, 1) (12, 1) (12.5, 0) (10, 0)};
-            \addlegendentry{\(Input\ Voltage\)}
+            {(0, 0) (1, 0) (1.5, 1) (12, 1) (12.5, 0) (18, 0)};
+            \addlegendentry{\(Input\ Voltage (Normal)\)}
+
+            \addplot [
+                domain=0:18,
+                very thick,
+                color=blue,
+                style=dashed,
+            ]
+            coordinates
+            {(0, 0) (1, 0) (1.5, 1) (4.5, 1) (5, 2) (12, 2) (12.5, 1) (15.5, 1) (16, 0) (18, 0)};
+            \addlegendentry{\(Input\ Voltage (Measured)\)}
             \end{axis}
         \end{tikzpicture}
     \end{center}
 \end{frame}
 
-\begin{frame}{Circuit Ouvert 2 - Vraie forme d'onde}
+\begin{frame}{Circuit Ouvert 2 - Oscilloscope}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{center}
-            \resizebox{\textwidth}{!}{%
-                \begin{tikzpicture}
-                    \begin{axis}[
-                        axis lines = left,
-                        xlabel = \(t\),
-                        ylabel = \(V\),
-                        ymax = 3.3,
-                        xmax = 15,
-                    ]
-                    \addplot [
-                        domain=0:15,
-                        very thick,
-                        color=red,
-                    ]
-                    coordinates
-                    {(0, 0) (1, 0) (1.5, 1) (12, 1) (12.5, 0) (15, 0)};
-                    \addlegendentry{\(Input\ Voltage (Normal)\)}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Oscilloscope à l'entrée
+                \bigskip
+                \item Pulse plus long
+                \item Délai de propagation $ps$ < pulse
+                \bigskip
+                \item Peut endommager la load
+                \item Peut endommager la source
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{pictures/open-circuit-pulse-reflection-2.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-                    \addplot [
-                        domain=0:15,
-                        very thick,
-                        color=orange,
-                    ]
-                    coordinates
-                    {(0, 0) (4.5, 0) (5, 1) (9.5, 1) (10, 0) (15, 0)};
-                    \addlegendentry{\(Input\ Voltage (Measured)\)}
-                    \end{axis}
-                \end{tikzpicture}
-            }
+\subsection{Que se passe-t'il?}
+\begin{frame}
+    \begin{center}<1->
+        $\Gamma = \dfrac{V_r}{V_i} = -\dfrac{I_r}{I_i}$\\
+        $\Gamma = \dfrac{Z_L - Z_0}{Z_L + Z_0}$\\
+    \end{center}
+    \vspace{5mm}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}<2->
+            \begin{center}
+                $Z_L = Z_0$\\
+                $\Gamma = \dfrac{0}{Z_L + Z_0}$\\
+                $\Gamma = 0$\\
+                $V_r = 0$\\
+                Pas de réflexion!
             \end{center}
         \end{column}
-
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.33\textwidth}<3->
             \begin{center}
-            \resizebox{\textwidth}{!}{%
-                \begin{tikzpicture}
-                    \begin{axis}[
-                        axis lines = left,
-                        xlabel = \(t\),
-                        ylabel = \(V\),
-                        ymax = 3.3,
-                        xmax = 15,
-                    ]
-                    \addplot [
-                        domain=0:15,
-                        very thick,,
-                        color=blue,
-                    ]
-                    coordinates
-                    {(0, 0) (3, 0) (3.5, 1) (10, 1) (10.5, 0) (15, 0)};
-                    \addlegendentry{\(Output\ Voltage (Normal)\)}
-
-                    \addplot [
-                        domain=0:15,
-                        very thick,,
-                        color=green,
-                    ]
-                    coordinates
-                    {(0, 0) (3, 0) (3.5, 2) (10, 2) (10.5, 0) (15, 0)};
-                    \addlegendentry{\(Output\ Voltage (Measured)\)}
-                    \end{axis}
-                \end{tikzpicture}
-            }
+                $Z_L = \infty$\\
+                $\Gamma = \dfrac{\infty}{\infty}$\\
+                $\Gamma = 1$\\
+                $V_r = V_i$\\
+                Même tension réfléchie que rentrante
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}<4->
+            \begin{center}
+                $Z_L = 0$\\
+                $\Gamma = -\dfrac{Z_0}{Z_0}$\\
+                $\Gamma = -1$\\
+                $V_r = -V_i$\\
+                Tension réfléchie négative?
             \end{center}
         \end{column}
     \end{columns}
 \end{frame}
+
+
+\begin{frame}{Circuit Fermé - Analogie}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth, height=0.75\textheight, keepaspectratio]{pictures/closed-circuit-pulse-reflection.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Mismatch d'impédance}
+    \animategraphics[autoplay, loop,width=\linewidth]{12}{pictures/partial-reflection/partial-reflection-}{0}{51}
+\end{frame}
+
+\subsection{Donc, pourquoi une impédance?}
