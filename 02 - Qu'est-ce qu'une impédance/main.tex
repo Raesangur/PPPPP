@@ -1,0 +1,223 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\usepackage{lmodern}
+\usepackage{comment}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{fontawesome}
+
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{pgfplots}
+
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{adjustbox}
+
+\usepackage{animate}
+%\usepackage{cite}
+
+\usepackage[style=alphabetic,backend=biber, style=numeric, sorting=none]{biblatex}
+\addbibresource{references.bib}
+\renewcommand*{\mkbibacro}[1]{#1}
+
+%\usetikzlibrary{external}
+%\usepgfplotslibrary{external}
+%\tikzexternalize
+\pgfplotsset{compat=1.18}
+
+
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+
+\definecolor{UDSgreenDurable}{RGB}{149, 193, 78}
+\definecolor{UDSgreenVivacite}{RGB}{121, 181, 81}
+\definecolor{UDSgreenCreativite}{RGB}{90, 173, 85}
+\definecolor{UDSgreenFierte}{RGB}{0, 167, 89}
+\definecolor{UDSgreenSolidarite}{RGB}{61, 143, 88}
+\definecolor{UDSgreenBien-etre}{RGB}{68, 124, 90}
+\definecolor{UDSgreenReussite}{RGB}{72, 106, 92} 
+\definecolor{UDSgrey}{RGB}{228, 232, 225} 
+
+\setbeamercolor{palette primary}{bg=UDSgreenSolidarite,fg=white}
+\setbeamercolor{palette secondary}{bg=UDSgreenFierte,fg=white}
+\setbeamercolor{palette tertiary}{bg=UDSgreenCreativite,fg=white}
+\setbeamercolor{palette quaternary}{bg=UDSgreenReussite,fg=white}
+\setbeamercolor{structure}{fg=UDSgreenReussite} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=UDSgreenBien-etre} % TOC sections
+\setbeamercolor{background canvas}{bg=UDSgrey}
+
+
+\setbeamertemplate{caption}[numbered]
+
+
+\makeatletter
+\newcommand\titlegraphicii[1]{\def\inserttitlegraphicii{#1}}
+\titlegraphicii{}
+\setbeamertemplate{title page}
+{
+    {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\hfill\inserttitlegraphicii\par}
+    \begin{multicols}{2}
+        \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true, wd=0.5\textwidth]{title}
+            \usebeamerfont{title}\inserttitle\par%
+            {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+            {\vspace{24pt}\small\usebeamerfont{author}\insertauthor\par}%
+        \end{beamercolorbox}%
+    \vfill\null
+    \columnbreak
+    \end{multicols}
+}
+\makeatother
+\author{Pascal-Emmanuel Lachance}
+\title{PPPPP02}
+\subtitle{Qu'est-ce qu'une impédance?}
+\institute{Compétitions de Conception de Circuits Imprimés}
+\date{\today}
+\titlegraphic{\includegraphics[scale = 0.3]{pictures/logo/udes_logo.pdf}}
+%\titlegraphicii{\includegraphics[scale = 0.2]{pictures/logo/3IT_logo.png}}
+%\logo{\includegraphics[scale = 0.15]{pictures/logo/udes_logo.pdf}}
+
+\defbeamertemplate*{footline}{mytheme}
+{
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+        \usebeamerfont{author in head/foot} Pascal-Emmanuel Lachance
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+        \usebeamerfont{title in head/foot}\inserttitle
+    \end{beamercolorbox}}%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+        \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+        \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+    \end{beamercolorbox}
+}%
+
+\defbeamertemplate*{frametitle}{mytheme}
+{%
+    \vspace{0cm}
+    {\usebeamerfont{title}\usebeamercolor[bg]{title}\insertframetitle}
+    \par
+    \vspace{-0.55cm}
+    \hfill
+    \includegraphics[height=0.635cm]{pictures/logo/c3i.png}
+    \includegraphics[height=0.635cm]{pictures/logo/m1_alpha.pdf}
+    \par
+    \vspace{-0.3cm}
+    \textcolor{UDSgreenSolidarite}{\noindent\rule{\textwidth}{1pt}}
+}%
+
+\usebeamertemplate{mytheme}
+
+
+
+
+% ----------------------- BEGIN DOCUMENT ------------------------
+
+\begin{document}
+
+\usebackgroundtemplate{
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            {\includegraphics[height=\paperheight,keepaspectratio]{pictures/background/background-PCB.png}}
+        };
+    \end{tikzpicture}
+}
+
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+
+
+% - TOC -
+\usebackgroundtemplate{
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{pictures/background/background2.jpg}
+        };
+    \end{tikzpicture}
+}
+\begin{frame}{Table des matières}
+    \begin{columns}[T]
+        \begin{column}{0.66\textwidth}
+            \Large{
+            \begin{enumerate}
+                \setlength\itemsep{8pt}
+                \item Qu'est-ce qu'une impédance?
+                \item Pourquoi une impédance?
+                \item Où une impédance?
+                \item Quand une impédance?
+                \item Comment une impédance?
+                \item Qui une impédance?
+            \end{enumerate}
+            }
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth]{pictures/qqoqcp.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\AtBeginSection[]{
+    \begin{frame}[plain]
+         \vfill
+         \centering
+         \begin{beamercolorbox}[sep=6pt,center,shadow=true,rounded=true]{title}
+             \usebeamerfont{title}\insertsectionhead\par%
+         \end{beamercolorbox}
+         \tableofcontents[currentsection,hideothersubsections]
+         \vfill
+  \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+    \begin{frame}[plain]
+         \vfill
+         \centering
+         \begin{beamercolorbox}[sep=6pt,center,shadow=true,rounded=true]{title}
+             \usebeamerfont{title}\insertsectionhead\par%
+         \end{beamercolorbox}
+         \tableofcontents[currentsection,currentsubsection]
+         \vfill
+    \end{frame}
+}
+
+
+% ------------ SECTIONS -----------
+
+\input{Sections/Section1}
+\input{Sections/Section2}
+\input{Sections/Section3}
+
+
+
+% - END -
+
+\usebackgroundtemplate{
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            {\includegraphics[height=\paperheight,keepaspectratio]{pictures/background/background-PCB.png}}
+        };
+    \end{tikzpicture}
+}
+\begin{frame}
+    \begin{multicols}{2}
+        \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true, wd=0.5\textwidth]{title}
+            {\usebeamerfont{title}Merci!\par}%
+        \end{beamercolorbox}%
+    \vfill\null
+    \columnbreak
+    \end{multicols}
+\end{frame}
+
+
+\end{document}
