@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  19 MAR 2025 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  19 MAR 2025 16:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1550,12 +1550,12 @@ Package biblatex Info: ... file 'main.bbl' found.
 Package biblatex Info: Reference section=0 on input line 122.
 Package biblatex Info: Reference segment=0 on input line 122.
 (build/main.nav)
-<pictures/logo/udes_logo.pdf, id=37, 416.68016pt x 65.70796pt>
+<pictures/logo/udes_logo.pdf, id=61, 416.68016pt x 65.70796pt>
 File: pictures/logo/udes_logo.pdf Graphic file (type pdf)
 <use pictures/logo/udes_logo.pdf>
 Package pdftex.def Info: pictures/logo/udes_logo.pdf  used on input line 134.
 (pdftex.def)             Requested size: 125.005pt x 19.71252pt.
-<pictures/background/background-PCB.png, id=50, 893.3375pt x 554.07pt>
+<pictures/background/background-PCB.png, id=74, 893.3375pt x 554.07pt>
 File: pictures/background/background-PCB.png Graphic file (type png)
 <use pictures/background/background-PCB.png>
 Package pdftex.def Info: pictures/background/background-PCB.png  used on input 
@@ -1565,22 +1565,22 @@ line 134.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pictures/background/back
 ground-PCB.png (PNG copy)> <./pictures/logo/udes_logo.pdf>]
-<pictures/qqoqcp.png, id=87, 240.9pt x 240.9pt>
+<pictures/qqoqcp.png, id=111, 240.9pt x 240.9pt>
 File: pictures/qqoqcp.png Graphic file (type png)
 <use pictures/qqoqcp.png>
 Package pdftex.def Info: pictures/qqoqcp.png  used on input line 167.
 (pdftex.def)             Requested size: 136.91603pt x 136.91742pt.
-<pictures/logo/c3i.png, id=89, 822.272pt x 708.246pt>
+<pictures/logo/c3i.png, id=113, 822.272pt x 708.246pt>
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
 Package pdftex.def Info: pictures/logo/c3i.png  used on input line 167.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-<pictures/logo/m1_alpha.pdf, id=90, 56.90552pt x 56.90552pt>
+<pictures/logo/m1_alpha.pdf, id=114, 56.90552pt x 56.90552pt>
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
 Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 167.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-<pictures/background/background2.jpg, id=91, 738.76pt x 554.07pt>
+<pictures/background/background2.jpg, id=115, 738.76pt x 554.07pt>
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
@@ -1589,7 +1589,7 @@ e 167.
 [2
 
  <./pictures/background/background2.jpg> <./pictures/logo/c3i.png> <./pictures/
-logo/m1_alpha.pdf> <./pictures/qqoqcp.png>] (./Sections/Section2.tex (build/mai
+logo/m1_alpha.pdf> <./pictures/qqoqcp.png>] (./Sections/Section1.tex (build/mai
 n.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
@@ -1599,8 +1599,693 @@ e 3.
 [3
 
 ]
-<pictures/Phase_Difference_Between_Impedance_and_Current.png, id=185, 2150.0325
+<pictures/background/complex-maths.png, id=214, 147.4308pt x 147.4308pt>
+File: pictures/background/complex-maths.png Graphic file (type png)
+<use pictures/background/complex-maths.png>
+Package pdftex.def Info: pictures/background/complex-maths.png  used on input l
+ine 18.
+(pdftex.def)             Requested size: 342.2953pt x 342.35013pt.
+LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <12> not available
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 18.
+
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 18.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 18.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+
+Overfull \vbox (114.8898pt too high) detected at line 18
+ []
+
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 18.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[4
+
+ <./pictures/background/complex-maths.png>]
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+7.
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+47.
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+47.
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 47.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 47.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 47.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 47.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 47.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 47.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 47.
+<pictures/relationship-between-resistance-reactance-and-impedance.png, id=256, 
+498.86375pt x 367.3725pt>
+File: pictures/relationship-between-resistance-reactance-and-impedance.png Grap
+hic file (type png)
+<use pictures/relationship-between-resistance-reactance-and-impedance.png>
+Package pdftex.def Info: pictures/relationship-between-resistance-reactance-and
+-impedance.png  used on input line 47.
+(pdftex.def)             Requested size: 171.14764pt x 126.03172pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 47.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 47.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 47.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[5
+
+ <./pictures/relationship-between-resistance-reactance-and-impedance.png>] (bui
+ld/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 49.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[6
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 65.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 65.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 65.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[7
+
+]
+<pictures/Phase_Difference_Between_Impedance_and_Current.png, id=369, 2150.0325
 pt x 1120.185pt>
+File: pictures/Phase_Difference_Between_Impedance_and_Current.png Graphic file 
+(type png)
+<use pictures/Phase_Difference_Between_Impedance_and_Current.png>
+Package pdftex.def Info: pictures/Phase_Difference_Between_Impedance_and_Curren
+t.png  used on input line 72.
+(pdftex.def)             Requested size: 342.2953pt x 178.32735pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 72.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 72.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 72.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[8
+
+ <./pictures/Phase_Difference_Between_Impedance_and_Current.png>]
+<pictures/component-resistance.png, id=396, 602.25pt x 602.25pt>
+File: pictures/component-resistance.png Graphic file (type png)
+<use pictures/component-resistance.png>
+Package pdftex.def Info: pictures/component-resistance.png  used on input line 
+96.
+(pdftex.def)             Requested size: 112.95807pt x 112.95834pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 96.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 96.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 96.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[9
+
+ <./pictures/component-resistance.png>] (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 104.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[10
+
+]
+<pictures/component-capacitor.png, id=473, 70.8246pt x 41.1939pt>
+File: pictures/component-capacitor.png Graphic file (type png)
+<use pictures/component-capacitor.png>
+Package pdftex.def Info: pictures/component-capacitor.png  used on input line 1
+27.
+(pdftex.def)             Requested size: 112.95807pt x 65.70348pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 127.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 127.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 127.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[11
+
+ <./pictures/component-capacitor.png>]
+<pictures/parallel-plate-capacitor.png, id=501, 385.44pt x 366.36874pt>
+File: pictures/parallel-plate-capacitor.png Graphic file (type png)
+<use pictures/parallel-plate-capacitor.png>
+Package pdftex.def Info: pictures/parallel-plate-capacitor.png  used on input l
+ine 153.
+(pdftex.def)             Requested size: 112.95807pt x 107.36786pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 153.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 153.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 153.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[12
+
+ <./pictures/parallel-plate-capacitor.png>]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 179.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 179.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 179.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[13
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 195.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 195.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 195.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[14
+
+]
+<pictures/capacitive-reactance.png, id=587, 791.95876pt x 383.4325pt>
+File: pictures/capacitive-reactance.png Graphic file (type png)
+<use pictures/capacitive-reactance.png>
+Package pdftex.def Info: pictures/capacitive-reactance.png  used on input line 
+208.
+(pdftex.def)             Requested size: 342.2953pt x 165.72696pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 208.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 208.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 208.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[15
+
+ <./pictures/capacitive-reactance.png>]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 220.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 220.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 220.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[16
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 234.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 234.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 234.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[17
+
+] (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 242.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[18
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 265.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 265.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 265.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[19
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 295.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 295.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 295.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[20
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 318.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 318.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 318.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[21
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 334.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 334.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 334.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[22
+
+]
+<pictures/inductive-reactance.png, id=821, 829.0975pt x 406.51875pt>
+File: pictures/inductive-reactance.png Graphic file (type png)
+<use pictures/inductive-reactance.png>
+Package pdftex.def Info: pictures/inductive-reactance.png  used on input line 3
+47.
+(pdftex.def)             Requested size: 342.2953pt x 167.82751pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 347.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 347.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 347.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[23
+
+ <./pictures/inductive-reactance.png>]
+<pictures/In_inductive_reactance_the_current_is_inversely_proportional_to_the_f
+requency.png, id=848, 821.0675pt x 398.48875pt>
+File: pictures/In_inductive_reactance_the_current_is_inversely_proportional_to_
+the_frequency.png Graphic file (type png)
+<use pictures/In_inductive_reactance_the_current_is_inversely_proportional_to_t
+he_frequency.png>
+Package pdftex.def Info: pictures/In_inductive_reactance_the_current_is_inverse
+ly_proportional_to_the_frequency.png  used on input line 360.
+(pdftex.def)             Requested size: 342.2953pt x 166.12372pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 360.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 360.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 360.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[24
+
+ <./pictures/In_inductive_reactance_the_current_is_inversely_proportional_to_th
+e_frequency.png>] (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 364.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[25
+
+]
+<pictures/rc-low-pass-filter.png, id=926, 485.04288pt x 314.09654pt>
+File: pictures/rc-low-pass-filter.png Graphic file (type png)
+<use pictures/rc-low-pass-filter.png>
+Package pdftex.def Info: pictures/rc-low-pass-filter.png  used on input line 38
+2.
+(pdftex.def)             Requested size: 225.91615pt x 146.2978pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 382.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 382.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 382.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[26
+
+ <./pictures/rc-low-pass-filter.png>]
+<pictures/voltage-divider.png, id=954, 279.29344pt x 174.6525pt>
+File: pictures/voltage-divider.png Graphic file (type png)
+<use pictures/voltage-divider.png>
+Package pdftex.def Info: pictures/voltage-divider.png  used on input line 401.
+(pdftex.def)             Requested size: 225.91615pt x 141.27853pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 401.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 401.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 401.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[27
+
+ <./pictures/voltage-divider.png>]
+File: pictures/relationship-between-resistance-reactance-and-impedance.png Grap
+hic file (type png)
+<use pictures/relationship-between-resistance-reactance-and-impedance.png>
+Package pdftex.def Info: pictures/relationship-between-resistance-reactance-and
+-impedance.png  used on input line 428.
+(pdftex.def)             Requested size: 188.26346pt x 138.63881pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 428.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 428.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 428.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[28
+
+] (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 430.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[29
+
+]
+\absvshift=\dimen378
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 446.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 446.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 446.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[30
+
+]
+\absvshift=\dimen379
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 464.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 464.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 464.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[31
+
+]
+\absvshift=\dimen380
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 484.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 484.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 484.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[32
+
+]
+\absvshift=\dimen381
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 506.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 506.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 506.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[33
+
+]
+\absvshift=\dimen382
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 531.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 531.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 531.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[34
+
+]
+\absvshift=\dimen383
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 580.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 580.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 580.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[35
+
+]
+\absvshift=\dimen384
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 607.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 607.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 607.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[36
+
+]
+\absvshift=\dimen385
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 644.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 644.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 644.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[37
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 678.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 678.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <20.74> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 678.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 678.
+
+\absvshift=\dimen386
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 678.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 678.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 678.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[38
+
+]) (./Sections/Section2.tex (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 3.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[39
+
+]
 File: pictures/Phase_Difference_Between_Impedance_and_Current.png Graphic file 
 (type png)
 <use pictures/Phase_Difference_Between_Impedance_and_Current.png>
@@ -1620,52 +2305,15 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 10.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[4
+[40
 
- <./pictures/Phase_Difference_Between_Impedance_and_Current.png>]
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 32.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-2.
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-32.
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-32.
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 32.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 32.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 32.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 32.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 32.
-<pictures/power-factor.png, id=212, 351.3125pt x 211.79124pt>
+]
+<pictures/power-factor.png, id=1365, 351.3125pt x 211.79124pt>
 File: pictures/power-factor.png Graphic file (type png)
 <use pictures/power-factor.png>
 Package pdftex.def Info: pictures/power-factor.png  used on input line 32.
 (pdftex.def)             Requested size: 171.14764pt x 103.18076pt.
-<pictures/power-factor-beer.png, id=213, 1096.095pt x 809.0225pt>
+<pictures/power-factor-beer.png, id=1366, 1096.095pt x 809.0225pt>
 File: pictures/power-factor-beer.png Graphic file (type png)
 <use pictures/power-factor-beer.png>
 Package pdftex.def Info: pictures/power-factor-beer.png  used on input line 32.
@@ -1684,7 +2332,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 32.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[5
+[41
 
  <./pictures/power-factor.png> <./pictures/power-factor-beer.png>] (build/main.
 toc)
@@ -1693,22 +2341,10 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 35.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[6
+[42
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 60.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 60.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 60.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 60.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 60.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 60.
-\absvshift=\dimen378
+\absvshift=\dimen387
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
 Package pdftex.def Info: pictures/logo/c3i.png  used on input line 60.
@@ -1722,7 +2358,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 60.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[7
+[43
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1738,16 +2374,16 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 83.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[8
+[44
 
 ]
-\absvshift=\dimen379
+\absvshift=\dimen388
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 132.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[9
+[45
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1763,7 +2399,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 155.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[10
+[46
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1779,7 +2415,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 178.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[11
+[47
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1795,7 +2431,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 202.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[12
+[48
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1811,7 +2447,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 226.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[13
+[49
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1827,7 +2463,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 250.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[14
+[50
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1843,7 +2479,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 274.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[15
+[51
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1859,7 +2495,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 298.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[16
+[52
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1875,7 +2511,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 322.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[17
+[53
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1891,10 +2527,10 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 396.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[18
+[54
 
 ]
-<pictures/open-circuit-pulse-reflection.png, id=606, 268.00125pt x 200.75pt>
+<pictures/open-circuit-pulse-reflection.png, id=1760, 268.00125pt x 200.75pt>
 File: pictures/open-circuit-pulse-reflection.png Graphic file (type png)
 <use pictures/open-circuit-pulse-reflection.png>
 Package pdftex.def Info: pictures/open-circuit-pulse-reflection.png  used on in
@@ -1913,7 +2549,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 419.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[19
+[55
 
  <./pictures/open-circuit-pulse-reflection.png>] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -1921,10 +2557,10 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 423.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[20
+[56
 
 ]
-\absvshift=\dimen380
+\absvshift=\dimen389
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
 Package pdftex.def Info: pictures/logo/c3i.png  used on input line 466.
@@ -1938,7 +2574,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 466.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[21
+[57
 
 ]
 File: pictures/logo/c3i.png Graphic file (type png)
@@ -1954,10 +2590,11 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 499.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[22
+[58
 
 ]
-<pictures/open-circuit-pulse-reflection-2.png, id=728, 268.00125pt x 200.75pt>
+<pictures/open-circuit-pulse-reflection-2.png, id=1888, 268.00125pt x 200.75pt>
+
 File: pictures/open-circuit-pulse-reflection-2.png Graphic file (type png)
 <use pictures/open-circuit-pulse-reflection-2.png>
 Package pdftex.def Info: pictures/open-circuit-pulse-reflection-2.png  used on 
@@ -1976,7 +2613,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 522.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[23
+[59
 
  <./pictures/open-circuit-pulse-reflection-2.png>] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -1984,554 +2621,586 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 524.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[24
+[60
 
 ]
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 560.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[25
-
-]
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 560.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[26
-
-]
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 560.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[27
-
-]
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 560.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[28
-
-]
-<pictures/closed-circuit-pulse-reflection.png, id=904, 773.13844pt x 647.41875p
-t>
-File: pictures/closed-circuit-pulse-reflection.png Graphic file (type png)
-<use pictures/closed-circuit-pulse-reflection.png>
-Package pdftex.def Info: pictures/closed-circuit-pulse-reflection.png  used on 
-input line 568.
-(pdftex.def)             Requested size: 233.29999pt x 195.36317pt.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 568.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 573.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 568.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 573.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 568.
+e 573.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[29
+[61
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 573.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 573.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 573.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[62
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 573.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 573.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 573.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[63
+
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 573.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 573.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 573.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[64
+
+]
+<pictures/closed-circuit-pulse-reflection.png, id=2070, 773.13844pt x 647.41875
+pt>
+File: pictures/closed-circuit-pulse-reflection.png Graphic file (type png)
+<use pictures/closed-circuit-pulse-reflection.png>
+Package pdftex.def Info: pictures/closed-circuit-pulse-reflection.png  used on 
+input line 581.
+(pdftex.def)             Requested size: 233.29999pt x 195.36317pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 581.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 581.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 581.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[65
 
  <./pictures/closed-circuit-pulse-reflection.png>]
-<pictures/partial-reflection/partial-reflection-0.png, id=932, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-0.png, id=2097, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-0.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-0.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-0.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-0.png> <a0,fr0>
-<pictures/partial-reflection/partial-reflection-1.png, id=936, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-1.png, id=2101, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-1.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-1.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-1.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-1.png> <a0,fr1>
-<pictures/partial-reflection/partial-reflection-2.png, id=940, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-2.png, id=2105, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-2.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-2.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-2.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-2.png> <a0,fr2>
-<pictures/partial-reflection/partial-reflection-3.png, id=944, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-3.png, id=2109, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-3.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-3.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-3.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-3.png> <a0,fr3>
-<pictures/partial-reflection/partial-reflection-4.png, id=948, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-4.png, id=2113, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-4.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-4.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-4.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-4.png> <a0,fr4>
-<pictures/partial-reflection/partial-reflection-5.png, id=952, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-5.png, id=2117, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-5.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-5.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-5.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-5.png> <a0,fr5>
-<pictures/partial-reflection/partial-reflection-6.png, id=956, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-6.png, id=2121, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-6.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-6.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-6.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-6.png> <a0,fr6>
-<pictures/partial-reflection/partial-reflection-7.png, id=960, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-7.png, id=2125, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-7.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-7.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-7.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-7.png> <a0,fr7>
-<pictures/partial-reflection/partial-reflection-8.png, id=964, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-8.png, id=2129, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-8.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-8.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-8.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-8.png> <a0,fr8>
-<pictures/partial-reflection/partial-reflection-9.png, id=968, 368.37625pt x 16
-1.60374pt>
+<pictures/partial-reflection/partial-reflection-9.png, id=2133, 368.37625pt x 1
+61.60374pt>
 File: pictures/partial-reflection/partial-reflection-9.png Graphic file (type p
 ng)
 <use pictures/partial-reflection/partial-reflection-9.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-9.png  
-used on input line 572.
+used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-9.png> <a0,fr9>
-<pictures/partial-reflection/partial-reflection-10.png, id=972, 368.37625pt x 1
-61.60374pt>
+<pictures/partial-reflection/partial-reflection-10.png, id=2137, 368.37625pt x 
+161.60374pt>
 File: pictures/partial-reflection/partial-reflection-10.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-10.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-10.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-10.png> <a0,fr10>
-<pictures/partial-reflection/partial-reflection-11.png, id=976, 368.37625pt x 1
-61.60374pt>
+<pictures/partial-reflection/partial-reflection-11.png, id=2141, 368.37625pt x 
+161.60374pt>
 File: pictures/partial-reflection/partial-reflection-11.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-11.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-11.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-11.png> <a0,fr11>
-<pictures/partial-reflection/partial-reflection-12.png, id=980, 368.37625pt x 1
-61.60374pt>
+<pictures/partial-reflection/partial-reflection-12.png, id=2145, 368.37625pt x 
+161.60374pt>
 File: pictures/partial-reflection/partial-reflection-12.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-12.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-12.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-12.png> <a0,fr12>
-<pictures/partial-reflection/partial-reflection-13.png, id=984, 368.37625pt x 1
-61.60374pt>
+<pictures/partial-reflection/partial-reflection-13.png, id=2149, 368.37625pt x 
+161.60374pt>
 File: pictures/partial-reflection/partial-reflection-13.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-13.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-13.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-13.png> <a0,fr13>
-<pictures/partial-reflection/partial-reflection-14.png, id=988, 368.37625pt x 1
-61.60374pt>
+<pictures/partial-reflection/partial-reflection-14.png, id=2153, 368.37625pt x 
+161.60374pt>
 File: pictures/partial-reflection/partial-reflection-14.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-14.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-14.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-14.png> <a0,fr14>
-<pictures/partial-reflection/partial-reflection-15.png, id=992, 368.37625pt x 1
-61.60374pt>
+<pictures/partial-reflection/partial-reflection-15.png, id=2157, 368.37625pt x 
+161.60374pt>
 File: pictures/partial-reflection/partial-reflection-15.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-15.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-15.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-15.png> <a0,fr15>
-<pictures/partial-reflection/partial-reflection-16.png, id=996, 368.37625pt x 1
-61.60374pt>
+<pictures/partial-reflection/partial-reflection-16.png, id=2161, 368.37625pt x 
+161.60374pt>
 File: pictures/partial-reflection/partial-reflection-16.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-16.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-16.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-16.png> <a0,fr16>
-<pictures/partial-reflection/partial-reflection-17.png, id=1000, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-17.png, id=2165, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-17.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-17.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-17.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-17.png> <a0,fr17>
-<pictures/partial-reflection/partial-reflection-18.png, id=1004, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-18.png, id=2169, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-18.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-18.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-18.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-18.png> <a0,fr18>
-<pictures/partial-reflection/partial-reflection-19.png, id=1008, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-19.png, id=2173, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-19.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-19.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-19.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-19.png> <a0,fr19>
-<pictures/partial-reflection/partial-reflection-20.png, id=1012, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-20.png, id=2177, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-20.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-20.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-20.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-20.png> <a0,fr20>
-<pictures/partial-reflection/partial-reflection-21.png, id=1016, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-21.png, id=2181, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-21.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-21.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-21.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-21.png> <a0,fr21>
-<pictures/partial-reflection/partial-reflection-22.png, id=1020, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-22.png, id=2185, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-22.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-22.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-22.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-22.png> <a0,fr22>
-<pictures/partial-reflection/partial-reflection-23.png, id=1024, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-23.png, id=2189, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-23.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-23.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-23.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-23.png> <a0,fr23>
-<pictures/partial-reflection/partial-reflection-24.png, id=1028, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-24.png, id=2193, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-24.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-24.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-24.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-24.png> <a0,fr24>
-<pictures/partial-reflection/partial-reflection-25.png, id=1032, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-25.png, id=2197, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-25.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-25.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-25.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-25.png> <a0,fr25>
-<pictures/partial-reflection/partial-reflection-26.png, id=1036, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-26.png, id=2201, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-26.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-26.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-26.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-26.png> <a0,fr26>
-<pictures/partial-reflection/partial-reflection-27.png, id=1040, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-27.png, id=2205, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-27.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-27.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-27.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-27.png> <a0,fr27>
-<pictures/partial-reflection/partial-reflection-28.png, id=1044, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-28.png, id=2209, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-28.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-28.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-28.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-28.png> <a0,fr28>
-<pictures/partial-reflection/partial-reflection-29.png, id=1048, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-29.png, id=2213, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-29.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-29.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-29.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-29.png> <a0,fr29>
-<pictures/partial-reflection/partial-reflection-30.png, id=1052, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-30.png, id=2217, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-30.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-30.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-30.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-30.png> <a0,fr30>
-<pictures/partial-reflection/partial-reflection-31.png, id=1056, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-31.png, id=2221, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-31.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-31.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-31.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-31.png> <a0,fr31>
-<pictures/partial-reflection/partial-reflection-32.png, id=1060, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-32.png, id=2225, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-32.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-32.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-32.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-32.png> <a0,fr32>
-<pictures/partial-reflection/partial-reflection-33.png, id=1064, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-33.png, id=2229, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-33.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-33.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-33.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-33.png> <a0,fr33>
-<pictures/partial-reflection/partial-reflection-34.png, id=1068, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-34.png, id=2233, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-34.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-34.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-34.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-34.png> <a0,fr34>
-<pictures/partial-reflection/partial-reflection-35.png, id=1072, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-35.png, id=2237, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-35.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-35.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-35.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-35.png> <a0,fr35>
-<pictures/partial-reflection/partial-reflection-36.png, id=1076, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-36.png, id=2241, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-36.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-36.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-36.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-36.png> <a0,fr36>
-<pictures/partial-reflection/partial-reflection-37.png, id=1080, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-37.png, id=2245, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-37.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-37.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-37.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-37.png> <a0,fr37>
-<pictures/partial-reflection/partial-reflection-38.png, id=1084, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-38.png, id=2249, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-38.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-38.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-38.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-38.png> <a0,fr38>
-<pictures/partial-reflection/partial-reflection-39.png, id=1088, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-39.png, id=2253, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-39.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-39.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-39.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-39.png> <a0,fr39>
-<pictures/partial-reflection/partial-reflection-40.png, id=1092, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-40.png, id=2257, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-40.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-40.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-40.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-40.png> <a0,fr40>
-<pictures/partial-reflection/partial-reflection-41.png, id=1096, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-41.png, id=2261, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-41.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-41.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-41.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-41.png> <a0,fr41>
-<pictures/partial-reflection/partial-reflection-42.png, id=1100, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-42.png, id=2265, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-42.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-42.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-42.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-42.png> <a0,fr42>
-<pictures/partial-reflection/partial-reflection-43.png, id=1104, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-43.png, id=2269, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-43.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-43.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-43.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-43.png> <a0,fr43>
-<pictures/partial-reflection/partial-reflection-44.png, id=1108, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-44.png, id=2273, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-44.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-44.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-44.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-44.png> <a0,fr44>
-<pictures/partial-reflection/partial-reflection-45.png, id=1112, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-45.png, id=2277, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-45.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-45.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-45.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-45.png> <a0,fr45>
-<pictures/partial-reflection/partial-reflection-46.png, id=1116, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-46.png, id=2281, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-46.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-46.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-46.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-46.png> <a0,fr46>
-<pictures/partial-reflection/partial-reflection-47.png, id=1120, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-47.png, id=2285, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-47.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-47.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-47.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-47.png> <a0,fr47>
-<pictures/partial-reflection/partial-reflection-48.png, id=1124, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-48.png, id=2289, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-48.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-48.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-48.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-48.png> <a0,fr48>
-<pictures/partial-reflection/partial-reflection-49.png, id=1128, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-49.png, id=2293, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-49.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-49.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-49.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-49.png> <a0,fr49>
-<pictures/partial-reflection/partial-reflection-50.png, id=1132, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-50.png, id=2297, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-50.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-50.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-50.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-50.png> <a0,fr50>
-<pictures/partial-reflection/partial-reflection-51.png, id=1136, 368.37625pt x 
+<pictures/partial-reflection/partial-reflection-51.png, id=2302, 368.37625pt x 
 161.60374pt>
 File: pictures/partial-reflection/partial-reflection-51.png Graphic file (type 
 png)
 <use pictures/partial-reflection/partial-reflection-51.png>
 Package pdftex.def Info: pictures/partial-reflection/partial-reflection-51.png 
- used on input line 572.
+ used on input line 585.
 (pdftex.def)             Requested size: 368.37534pt x 161.60335pt.
  <./pictures/partial-reflection/partial-reflection-51.png> <a0,fr51>
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 572.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 585.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 572.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 585.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 572.
+e 585.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[30
+[66
 
 ] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 574.
+e 587.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[31
+[67
 
 ]) (./Sections/Section3.tex (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -2539,7 +3208,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[32
+[68
 
 ])
 File: pictures/background/background-PCB.png Graphic file (type png)
@@ -2547,7 +3216,7 @@ File: pictures/background/background-PCB.png Graphic file (type png)
 Package pdftex.def Info: pictures/background/background-PCB.png  used on input 
 line 220.
 (pdftex.def)             Requested size: 440.3973pt x 273.14662pt.
-[33
+[69
 
 ]
 \tf@nav=\write8
@@ -2561,29 +3230,36 @@ line 220.
 
 (build/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AE758EC073BD70B4279AE4CFAD5968DE;1176.
+(rerunfilecheck)             Checksum: C9EA6438E69ADDE95DB2E32C0241E7C6;2057.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 66180 strings out of 478287
- 1671684 string characters out of 5849289
- 2587972 words of memory out of 5000000
- 83329 multiletter control sequences out of 15000+600000
- 512114 words of font info for 68 fonts, out of 8000000 for 9000
+ 69279 strings out of 478287
+ 1767748 string characters out of 5849289
+ 2617235 words of memory out of 5000000
+ 86317 multiletter control sequences out of 15000+600000
+ 537260 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,23n,122p,737b,2608s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on build/main.pdf (33 pages, 2401697 bytes).
+ips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/publi
+c/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmsso17.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on build/main.pdf (69 pages, 3164364 bytes).
 PDF statistics:
- 1392 PDF objects out of 1440 (max. 8388607)
- 1100 compressed objects within 11 object streams
- 73 named destinations out of 1000 (max. 500000)
- 1017 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2643 PDF objects out of 2984 (max. 8388607)
+ 2218 compressed objects within 23 object streams
+ 151 named destinations out of 1000 (max. 500000)
+ 1387 words of extra memory for PDF output out of 10000 (max. 10000000)
 
