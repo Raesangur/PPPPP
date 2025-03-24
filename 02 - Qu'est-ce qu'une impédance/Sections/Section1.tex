@@ -227,8 +227,7 @@
         \vspace{15pt}
         \begin{figure}
             \centering
-            % TODO
-            %\includegraphics[width=\textwidth]{pictures/in_capacitive_reactance_the_current_is_inversely_proportional_to_the_frequency.png}
+            \includegraphics[width=\textwidth]{pictures/in_capacitive_reactance_the_current_is_inversely_proportional_to_the_frequency.png}
         \end{figure}
     \end{center}
 \end{frame}
@@ -257,8 +256,7 @@
         \begin{column}{0.33\textwidth}
             \begin{figure}
                 \centering
-                % TODO
-                %\includegraphics[width=\textwidth]{pictures/component-inductor.png}
+                \includegraphics[width=\textwidth]{pictures/component-inductor.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -287,8 +285,7 @@
         \begin{column}{0.33\textwidth}
             \begin{figure}
                 \centering
-                % TODO
-                %\includegraphics[width=\textwidth]{pictures/simple-inductor.png}
+                \includegraphics[width=\textwidth]{pictures/simple-inductor.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -336,7 +333,7 @@
 \begin{frame}{Inductance - Réactance Inductive}
     \begin{center}
         \Large{
-            $\mathcal{X}_L = 2 \pi f L$
+            $X_L = 2 \pi f L$
         }
         \vspace{15pt}
         \begin{figure}
@@ -455,7 +452,7 @@
         to [R, l_=$R_{LOAD}$] (10,5)
         (0,0) to [open, v<=$V$] (0,5)
         to [short, *- ,i=$i$] (2,5)
-        to [R, l_=$R$] (4, 5)
+        to [R, l_=$R$, color=red] (4, 5)
         to [short] (10,5)
         ;
     \end{circuitikz}
@@ -476,7 +473,7 @@
         to [R, l_=$R$] (4, 5)
         to [short] (10,5)
         (0, 5) to [open] (4, 5)
-        to [C, l_=$C$] (4, 0)
+        to [C, l_=$C$, color=red] (4, 0)
         ;
     \end{circuitikz}
     }
@@ -495,7 +492,7 @@
         to [short, *- ,i=$i$] (2,5)
         to [R, l_=$R$] (4, 5)
         to [short] (5, 5)
-        to [american inductor, l_=$L$] (7, 5)
+        to [american inductor, l_=$L$, color=red] (7, 5)
         to [short] (10,5)
         (0, 5) to [open] (4.5, 5)
         to [C, l_=$C$] (4.5, 0)
@@ -523,7 +520,7 @@
         (0, 5) to [open] (4.5, 5)
         to [C, l_=$C$] (4.5, 0)
         (0, 5) to [open] (6, 5)
-        to [R, l_=$G$] (6, 0)
+        to [R, l_=$G$, color=red] (6, 0)
         ;
     \end{circuitikz}
     }
@@ -651,6 +648,9 @@
                 \item Ne dépend pas de la fréquence
                 \item Tout circuit a un $Z_0$
                 \item Ratio tension/courant se déplaçant
+                \bigskip
+                \item $Z_0$ ne dépend que de la \textit{géométrie} du circuit
+                \item Ratio du E-field vs H-field
             \end{itemize}
         \end{column}
         \begin{column}{0.5\textwidth}
@@ -661,7 +661,7 @@
                 \begin{circuitikz}[american voltages]
                     \draw [line width = 0.5mm]
                     (0,0) to [short, *-] (7,0)
-                    to [R, l_=$R_{LOAD}$] (7,5)
+                    to [R, l_=$R_{L}$] (7,5)
                     (0,0) to [open, v<=$V$] (0,5)
                     to [short, *- ] (3,5)
                     to [short] (4, 5)

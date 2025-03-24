@@ -1,6 +1,7 @@
 \documentclass{beamer}
 \usetheme{Madrid}
 
+\usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{comment}
 \usepackage{multicol}
@@ -186,7 +187,7 @@
          \begin{beamercolorbox}[sep=6pt,center,shadow=true,rounded=true]{title}
              \usebeamerfont{title}\insertsectionhead\par%
          \end{beamercolorbox}
-         \tableofcontents[currentsection,currentsubsection]
+         \tableofcontents[currentsection,currentsubsection,subsectionstyle=show/shaded/hide]
          \vfill
     \end{frame}
 }
