@@ -181,7 +181,7 @@
 \begin{frame}{Capacitance - Équations - Ajout d'une fréquence}
     \begin{center}
         \Large{
-            Posons $V = \sin(2 \pi t) = e^{j 2 \pi f t} = e^{j \omega t}$\\
+            Posons $V = \sin(2 \pi f t) = e^{j 2 \pi f t} = e^{j \omega t}$\\
             \vspace{15pt}
             $I = C \cdot \frac{de^{j \omega t}}{dt}$\\
             \vspace{5pt}
@@ -207,30 +207,30 @@
     \end{center}
 \end{frame}
 
-\begin{frame}{Capacitance - Équations - Isoler le courant}
-    \begin{center}
-        \Large{
-            $X_C = \dfrac{1}{2 \pi f C} = \dfrac{V}{I}$\\
-            \vspace{15pt}
-            $I = \dfrac{V}{X_C}$\\
-            \vspace{5pt}
-            $I = V \cdot \omega C = V \cdot 2 \pi f C$\\
-        }
-    \end{center}
-\end{frame}
-
-\begin{frame}{Capacitance - Courant selon fréquence}
-    \begin{center}
-        \Large{
-            $I = V \cdot 2 \pi f C$
-        }
-        \vspace{15pt}
-        \begin{figure}
-            \centering
-            \includegraphics[width=\textwidth]{pictures/in_capacitive_reactance_the_current_is_inversely_proportional_to_the_frequency.png}
-        \end{figure}
-    \end{center}
-\end{frame}
+%\begin{frame}{Capacitance - Équations - Isoler le courant}
+%    \begin{center}
+%        \Large{
+%            $X_C = \dfrac{1}{2 \pi f C} = \dfrac{V}{I}$\\
+%            \vspace{15pt}
+%            $I = \dfrac{V}{X_C}$\\
+%            \vspace{5pt}
+%            $I = V \cdot \omega C = V \cdot 2 \pi f C$\\
+%        }
+%    \end{center}
+%\end{frame}
+%
+%\begin{frame}{Capacitance - Courant selon fréquence}
+%    \begin{center}
+%        \Large{
+%            $I = V \cdot 2 \pi f C$
+%        }
+%        \vspace{15pt}
+%        \begin{figure}
+%            \centering
+%            \includegraphics[width=\textwidth]{pictures/in_capacitive_reactance_the_current_is_inversely_proportional_to_the_frequency.png}
+%        \end{figure}
+%    \end{center}
+%\end{frame}
 
 
 
@@ -271,6 +271,7 @@
                 \item Flux magnétique fait circuler du courant dans les conducteurs autour
                 \begin{itemize}
                     \item \textit{Self-induction}
+                    \item Inclut la boucle elle-même
                 \end{itemize}
                 \item Énergie emmagasinée dans les champs magnétiques
             \end{itemize}
@@ -317,7 +318,7 @@
 \begin{frame}{Inductance - Équations - Ajout d'une fréquence}
     \begin{center}
         \Large{
-            Posons $I = \sin(2 \pi t) = e^{j 2 \pi f t} = e^{j \omega t}$\\
+            Posons $I = \sin(2 \pi f t) = e^{j 2 \pi f t} = e^{j \omega t}$\\
             \vspace{15pt}
             $V = L \cdot \frac{de^{j \omega t}}{dt}$\\
             \vspace{5pt}
@@ -343,68 +344,69 @@
     \end{center}
 \end{frame}
 
-\begin{frame}{Inductance - Courant selon fréquence}
-    \begin{center}
-        \Large{
-            $V = I \cdot 2 \pi f L$
-        }
-        \vspace{15pt}
-        \begin{figure}
-            \centering
-            \includegraphics[width=\textwidth]{pictures/In_inductive_reactance_the_current_is_inversely_proportional_to_the_frequency.png}
-        \end{figure}
-    \end{center}
-\end{frame}
+%\begin{frame}{Inductance - Courant selon fréquence}
+%    \begin{center}
+%        \Large{
+%            $V = I \cdot 2 \pi f L$
+%        }
+%        \vspace{15pt}
+%        \begin{figure}
+%            \centering
+%            \includegraphics[width=\textwidth]{pictures/In_inductive_reactance_the_current_is_inversely_proportional_to_the_frequency.png}
+%        \end{figure}
+%    \end{center}
+%\end{frame}
 
 
 % -------------- FILTRE ------------ %
-\subsection{Filtres}
-\begin{frame}{Filtre Passe-Bas RC}
-    \begin{columns}
-        \begin{column}{0.33\textwidth}
-            \begin{center}
-                $-3dB$ = $\frac{1}{2}$ puissance\\
-                \vspace{10pt}
-                \Large{$R = \dfrac{1}{2 \pi f C}$}
-            \end{center}
-        \end{column}
-        
-        \begin{column}{0.66\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width=\textwidth]{pictures/rc-low-pass-filter.png}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Filtre Passe-Bas RC}
-    \begin{columns}
-        \begin{column}{0.33\textwidth}
-            \begin{center}
-                \Large{$R = \dfrac{1}{2 \pi f C}$}\\
-                \vspace{10pt}
-                \Large{$X_C = \dfrac{1}{2 \pi f C}$}
-            \end{center}
-        \end{column}
-        
-        \begin{column}{0.66\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width=\textwidth]{pictures/voltage-divider.png}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
-
+%\subsection{Filtres}
+%\begin{frame}{Filtre Passe-Bas RC}
+%    \begin{columns}
+%        \begin{column}{0.33\textwidth}
+%            \begin{center}
+%                $-3dB$ = $\frac{1}{2}$ puissance\\
+%                \vspace{10pt}
+%                \Large{$R = \dfrac{1}{2 \pi f C}$}
+%            \end{center}
+%        \end{column}
+%        
+%        \begin{column}{0.66\textwidth}
+%            \begin{figure}
+%                \centering
+%                \includegraphics[width=\textwidth]{pictures/rc-low-pass-filter.png}
+%            \end{figure}
+%        \end{column}
+%    \end{columns}
+%\end{frame}
+%
+%\begin{frame}{Filtre Passe-Bas RC}
+%    \begin{columns}
+%        \begin{column}{0.33\textwidth}
+%            \begin{center}
+%                \Large{$R = \dfrac{1}{2 \pi f C}$}\\
+%                \vspace{10pt}
+%                \Large{$X_C = \dfrac{1}{2 \pi f C}$}
+%            \end{center}
+%        \end{column}
+%        
+%        \begin{column}{0.66\textwidth}
+%            \begin{figure}
+%                \centering
+%                \includegraphics[width=\textwidth]{pictures/voltage-divider.png}
+%            \end{figure}
+%        \end{column}
+%    \end{columns}
+%\end{frame}
+    
 
 \begin{frame}{Impédance}
     \begin{columns}
-        \begin{column}{0.4\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{itemize}
+                \item Complexe
                 \item Amplitude défini la "résistance" réelle du circuit
+                \item Résistance d'un circuit à une certaine fréquence
                 \item Phase défini le décalage du courant par rapport à la tension
-                \item Power Factor
             \end{itemize}
             \par
             \vspace{10pt}
@@ -415,7 +417,7 @@
             \end{center}
         \end{column}
         
-        \begin{column}{0.55\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{figure}
                 \centering
                 \includegraphics[width=\textwidth]{pictures/relationship-between-resistance-reactance-and-impedance.png}
@@ -579,9 +581,19 @@
 
 
 \begin{frame}{Ligne de transmission - Impédance caractéstique}
-    \begin{center}
-    $Z_0 = \sqrt{\dfrac{R + j \omega L}{G + j \omega C}}$
+    \begin{columns}
+        \begin{column}{0.85\textwidth}
+            \begin{center}
+            $Z_0 = \sqrt{\dfrac{R + j \omega L}{G + j \omega C}}$
+            \end{center}
+        \end{column}
+        \begin{column}{0.15\textwidth}
+            \small{$G [S] = \dfrac{1}{R}$}
+        \end{column}
+        
+    \end{columns}
     \vfill
+    \begin{center}
     \resizebox{0.9\textwidth}{!}{
     \begin{circuitikz}[american voltages]
         \draw [thick]
