@@ -3,6 +3,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{pifont}
 \usepackage{comment}
 \usepackage{multicol}
 \usepackage{siunitx}
@@ -113,6 +114,9 @@
     \textcolor{UDSgreenSolidarite}{\noindent\rule{\textwidth}{1pt}}
 }%
 
+\setbeamertemplate{itemize item}{\large$\bullet$}
+\setbeamertemplate{itemize subitem}{\small$\bullet$}
+\setbeamertemplate{itemize subsubitem}{\tiny$\bullet$}
 \usebeamertemplate{mytheme}
 
 
@@ -195,9 +199,8 @@
 
 % ------------ SECTIONS -----------
 
-%\input{Sections/Section1}
-%\input{Sections/Section2}
-
+\input{Sections/Section1}
+\input{Sections/Section2}
 \input{Sections/Section3}
 
 
