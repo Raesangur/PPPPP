@@ -5,14 +5,16 @@
 \beamer@subsectionintoc {1}{4}{Filtres}{25}{0}{1}
 \beamer@subsectionintoc {1}{5}{Ligne de transmission}{29}{0}{1}
 \beamer@sectionintoc {2}{Pourquoi une impédance?}{39}{0}{2}
-\beamer@subsectionintoc {2}{1}{Réflexions sur un circuit ouvert}{42}{0}{2}
-\beamer@subsectionintoc {2}{2}{Réflexions sur un circuit ouvert 2}{56}{0}{2}
-\beamer@subsectionintoc {2}{3}{Que se passe-t'il?}{60}{0}{2}
-\beamer@subsectionintoc {2}{4}{Réflexions sur un circuit fermé}{67}{0}{2}
-\beamer@subsectionintoc {2}{5}{Donc, pourquoi une impédance?}{74}{0}{2}
-\beamer@subsectionintoc {2}{6}{3e impédance cachée!}{76}{0}{2}
-\beamer@sectionintoc {3}{Comment une impédance?}{80}{0}{3}
-\beamer@subsectionintoc {3}{1}{Matching à la source}{81}{0}{3}
-\beamer@subsectionintoc {3}{2}{Matching à la load}{82}{0}{3}
-\beamer@subsectionintoc {3}{3}{Matching du conducteur}{83}{0}{3}
-\beamer@subsectionintoc {3}{4}{Impédance Différentielle}{84}{0}{3}
+\beamer@subsectionintoc {2}{1}{Power Factor}{40}{0}{2}
+\beamer@subsectionintoc {2}{2}{Réflexions sur un circuit ouvert}{43}{0}{2}
+\beamer@subsectionintoc {2}{3}{Réflexions sur un circuit ouvert 2}{57}{0}{2}
+\beamer@subsectionintoc {2}{4}{Que se passe-t'il?}{61}{0}{2}
+\beamer@subsectionintoc {2}{5}{Réflexions sur un circuit fermé}{68}{0}{2}
+\beamer@subsectionintoc {2}{6}{Donc, pourquoi une impédance?}{75}{0}{2}
+\beamer@subsectionintoc {2}{7}{3e impédance cachée!}{77}{0}{2}
+\beamer@sectionintoc {3}{Comment une impédance?}{81}{0}{3}
+\beamer@subsectionintoc {3}{1}{Matching à la source}{82}{0}{3}
+\beamer@subsectionintoc {3}{2}{Matching à la load}{85}{0}{3}
+\beamer@subsectionintoc {3}{3}{Matching du conducteur}{88}{0}{3}
+\beamer@subsectionintoc {3}{4}{Impédance Différentielle}{96}{0}{3}
+\beamer@subsectionintoc {3}{5}{Résumé}{100}{0}{3}
