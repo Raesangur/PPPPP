@@ -9,6 +9,7 @@
 \usepackage{siunitx}
 \usepackage{fontawesome}
 
+\usepackage[yyyymmdd]{datetime}
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usepackage{pgfplots}
@@ -28,6 +29,8 @@
 %\usepgfplotslibrary{external}
 %\tikzexternalize
 \pgfplotsset{compat=1.18}
+
+\renewcommand{\dateseparator}{--}
 
 
 \DeclarePairedDelimiter\bra{\langle}{\rvert}
@@ -95,7 +98,7 @@
         \usebeamerfont{title in head/foot}\inserttitle
     \end{beamercolorbox}}%
     \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-        \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+        \usebeamerfont{date in head/foot}\today{}\hspace*{2em}
         \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
     \end{beamercolorbox}
 }%
