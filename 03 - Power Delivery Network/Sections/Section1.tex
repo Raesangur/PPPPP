@@ -1,3 +1,82 @@
 %!TEX root = ../main.tex 
 
 \section{Comment protéger une alimentation?}
+
+\subsection{Protection antistatique}
+
+\begin{frame}{Décharge Électrostatique (ESD)}
+    \begin{columns}
+        \begin{column}{0.66\textwidth}
+            \begin{itemize}
+                \item Norme IEC-61000-4-2
+                \begin{itemize}
+                    \item Types de décharges
+                    \item Méthodologies de tests \& certification
+                    \item 4 catégories de produits
+                    \item Jusqu'à $\SI{\pm 8}{\kilo\volt}$ / $\SI{\pm 15}{\kilo\volt}$
+                \end{itemize}
+                \item Deux types de chocs statiques
+                \begin{itemize}
+                    \item \textbf{Contact Discharge} - Toucher directement chaque pin avec un ESD gun
+                    \item \textbf{Air Discharge} - ESD gun proche du DUT jusqu'à décharge
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.33\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{pictures/ESD-discharge-finger.png}
+            \end{figure}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.5\textwidth]{pictures/ESD-logo.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Décharge Électrostatique - Waveform}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Pic de courant initial
+                \begin{itemize}
+                    \item Rise time $\lesssim \SI{1}{\nano\second}$
+                \end{itemize}
+                \item $2^e$ pic
+                \item Chute graduelle
+            \end{itemize}
+        \end{column}
+    \end{columns}
+
+    \vspace{-66pt}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{pictures/ESD-discharge-waveform.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Circuit protégé antistatiquement}
+    \begin{center}
+    \resizebox{\textwidth}{!}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,0) to [short, *-] (10,0)
+        to [european resistor, l_=${LOAD}$] (10,5)
+        (0,0) to [open, v<=$V$] (0,5)
+        to [short, *- ,i=$i$] (2,5)
+        to [short] (10,5)
+        ;
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+\subsection{Protection de tension inverse}
+\subsection{Protection de court-circuit}
+\subsection{Protection de inrush current}
+\subsection{GFCI \& Grounding}

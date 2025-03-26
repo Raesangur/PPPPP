@@ -1,0 +1,16 @@
+*/build/*
+
+
+*.aux
+*.bcf
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.pdf
+*.run.xml
+*.snm
+*.synctex.gz
+*.tex
+*.toc
