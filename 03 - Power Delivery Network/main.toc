@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Comment protéger une alimentation?}{2}{0}{1}
+\beamer@sectionintoc {2}{Comment filtrer une alimentation?}{3}{0}{2}
+\beamer@sectionintoc {3}{Quels sont les types de régulateurs?}{4}{0}{3}
+\beamer@sectionintoc {4}{Comment conçevoir un arbre d'alimentation?}{5}{0}{4}
