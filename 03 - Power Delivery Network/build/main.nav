@@ -15,61 +15,71 @@
 \headcommand {\beamer@framepages {5}{5}}
 \headcommand {\slideentry {1}{1}{4}{6/6}{Protection antistatique}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\beamer@subsectionpages {3}{6}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{7}{Protection de tension inverse}}
-\headcommand {\slideentry {1}{2}{1}{7/7}{Protection de tension inverse}{0}}
+\headcommand {\slideentry {1}{1}{5}{7/7}{Protection antistatique}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@subsectionpages {7}{7}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{8}{Protection de court-circuit}}
-\headcommand {\slideentry {1}{3}{1}{8/8}{Protection de court-circuit}{0}}
+\headcommand {\slideentry {1}{1}{6}{8/8}{Protection antistatique}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@subsectionpages {8}{8}}
-\headcommand {\beamer@subsectionentry {0}{1}{4}{9}{Protection de inrush current}}
-\headcommand {\slideentry {1}{4}{1}{9/9}{Protection de inrush current}{0}}
+\headcommand {\slideentry {1}{1}{7}{9/9}{Protection antistatique}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\beamer@subsectionentry {0}{1}{5}{10}{GFCI \& Grounding}}
-\headcommand {\slideentry {1}{5}{1}{10/10}{GFCI \& Grounding}{0}}
+\headcommand {\slideentry {1}{1}{8}{10/10}{Protection antistatique}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\beamer@sectionpages {2}{10}}
-\headcommand {\beamer@subsectionpages {10}{10}}
-\headcommand {\sectionentry {2}{Comment filtrer une alimentation?}{11}{Comment filtrer une alimentation?}{0}}
-\headcommand {\slideentry {2}{0}{1}{11/11}{}{0}}
+\headcommand {\slideentry {1}{1}{9}{11/11}{Protection antistatique}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Filtrer l'entrée}}
-\headcommand {\slideentry {2}{1}{1}{12/12}{Filtrer l'entrée}{0}}
+\headcommand {\beamer@subsectionpages {3}{11}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{12}{Protection de tension inverse}}
+\headcommand {\slideentry {1}{2}{1}{12/12}{Protection de tension inverse}{0}}
 \headcommand {\beamer@framepages {12}{12}}
 \headcommand {\beamer@subsectionpages {12}{12}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{13}{Filtrer la sortie d'un régulateur}}
-\headcommand {\slideentry {2}{2}{1}{13/13}{Filtrer la sortie d'un régulateur}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{13}{Protection de court-circuit}}
+\headcommand {\slideentry {1}{3}{1}{13/13}{Protection de court-circuit}{0}}
 \headcommand {\beamer@framepages {13}{13}}
 \headcommand {\beamer@subsectionpages {13}{13}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{14}{Filtrer au IC}}
-\headcommand {\slideentry {2}{3}{1}{14/14}{Filtrer au IC}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{14}{Protection de inrush current}}
+\headcommand {\slideentry {1}{4}{1}{14/14}{Protection de inrush current}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@sectionpages {11}{14}}
 \headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\sectionentry {3}{Quels sont les types de régulateurs?}{15}{Quels sont les types de régulateurs?}{0}}
-\headcommand {\slideentry {3}{0}{1}{15/15}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{5}{15}{GFCI \& Grounding}}
+\headcommand {\slideentry {1}{5}{1}{15/15}{GFCI \& Grounding}{0}}
 \headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@sectionpages {2}{15}}
 \headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{16}{Régulateurs Linéaires}}
-\headcommand {\slideentry {3}{1}{1}{16/16}{Régulateurs Linéaires}{0}}
+\headcommand {\sectionentry {2}{Comment filtrer une alimentation?}{16}{Comment filtrer une alimentation?}{0}}
+\headcommand {\slideentry {2}{0}{1}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
 \headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{17}{Régulateurs "switching"}}
-\headcommand {\slideentry {3}{2}{1}{17/17}{Régulateurs "switching"}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{17}{Filtrer l'entrée}}
+\headcommand {\slideentry {2}{1}{1}{17/17}{Filtrer l'entrée}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@sectionpages {15}{17}}
 \headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\sectionentry {4}{Comment conçevoir un arbre d'alimentation?}{18}{Comment conçevoir un arbre d'alimentation?}{0}}
-\headcommand {\slideentry {4}{0}{1}{18/18}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{18}{Filtrer la sortie d'un régulateur}}
+\headcommand {\slideentry {2}{2}{1}{18/18}{Filtrer la sortie d'un régulateur}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {4}{0}{2}{19/19}{}{0}}
+\headcommand {\beamer@subsectionpages {18}{18}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{19}{Filtrer au IC}}
+\headcommand {\slideentry {2}{3}{1}{19/19}{Filtrer au IC}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@partpages {1}{19}}
-\headcommand {\beamer@subsectionpages {18}{19}}
-\headcommand {\beamer@sectionpages {18}{19}}
-\headcommand {\beamer@documentpages {19}}
-\headcommand {\gdef \inserttotalframenumber {19}}
+\headcommand {\beamer@sectionpages {16}{19}}
+\headcommand {\beamer@subsectionpages {19}{19}}
+\headcommand {\sectionentry {3}{Quels sont les types de régulateurs?}{20}{Quels sont les types de régulateurs?}{0}}
+\headcommand {\slideentry {3}{0}{1}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{21}{Régulateurs Linéaires}}
+\headcommand {\slideentry {3}{1}{1}{21/21}{Régulateurs Linéaires}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{22}{Régulateurs "switching"}}
+\headcommand {\slideentry {3}{2}{1}{22/22}{Régulateurs "switching"}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@sectionpages {20}{22}}
+\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\sectionentry {4}{Comment conçevoir un arbre d'alimentation?}{23}{Comment conçevoir un arbre d'alimentation?}{0}}
+\headcommand {\slideentry {4}{0}{1}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {4}{0}{2}{24/24}{}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@partpages {1}{24}}
+\headcommand {\beamer@subsectionpages {23}{24}}
+\headcommand {\beamer@sectionpages {23}{24}}
+\headcommand {\beamer@documentpages {24}}
+\headcommand {\gdef \inserttotalframenumber {24}}
