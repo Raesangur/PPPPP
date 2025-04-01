@@ -171,7 +171,6 @@
 
 \begin{frame}{Circuit protégé antistatiquement - TVS}
     \begin{center}
-    Circuitikz version here is \pgfcircversion{} released on \pgfcircversiondate{}.
     \vspace{-24pt}
     \resizebox{\textwidth}{!}{
     \begin{circuitikz}[american voltages]
@@ -181,6 +180,8 @@
         (0,-3) to [open, v<=$V$] (0,1)
         to [short] (10,1)
         ;
+
+        % TODO : MODIFIER LA DIODE POUR UNE TVS
 
         \draw [thick]
         (3, -3) to [empty ZZener diode, color=red] (3, 1);
@@ -193,7 +194,63 @@
         -- (0.6,2.15) -- (0.7,2.05) % Final damping
         -- (1,2.1); % Settling
 
-        \node[right] at (1,2.1) {$i_{\text{ESD}}(t) \rightarrow \SI{8}{\kilo\volt}$};
+        \node[right] at (1,2.1) {$i_{\text{ESD}}(t) \rightarrow \pm\SI{8}{\kilo\volt}$};
+
+        \draw[->, thick, red] 
+        (1, 0.75) to[out=0, in=90] (2.75, -0.5);
+
+        \draw[->, thick, blue] 
+        (1, -2.75) to[out=0, in=-90] (2.75, -1.5);
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+\begin{frame}{Diode TVS (Transient Voltage Suppression)}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \textbf{Faite pour protection antistatique!}
+                \item \textbf{Bidirectionnel!!}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Deux diodes Zener qui se font face
+                \item \textit{iv curve} symmétrique
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{pictures/diode-tvs-iv-curve.png}
+            \end{figure}
+\end{frame}
+
+\begin{frame}{Circuit protégé antistatiquement - Condensateur}
+    \begin{center}
+    \vspace{-24pt}
+    \resizebox{\textwidth}{!}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,-3) to [short, *-] (10,-3)
+        to [european resistor, l_=${LOAD}$] (10,1)
+        (0,-3) to [open, v<=$V$] (0,1)
+        to [short] (10,1)
+        ;
+
+        \draw [thick]
+        (3, -3) to [C, color=red] (3, 1);
+
+        % Current spike as a waveform
+        \draw[thick, ->] (-0.1, 2) -- (0,3) % Rising edge
+        -- (0,3) -- (0.1,1.8) % First sharp drop
+        -- (0.2,2.5) -- (0.3,1.9) % Second spike
+        -- (0.4,2.3) -- (0.5,2.0) % Smaller oscillation
+        -- (0.6,2.15) -- (0.7,2.05) % Final damping
+        -- (1,2.1); % Settling
+
+        \node[right] at (1,2.1) {$i_{\text{ESD}}(t) \rightarrow \pm\SI{8}{\kilo\volt}$};
     \end{circuitikz}
     }
     \end{center}
@@ -201,6 +258,100 @@
 
 
 \subsection{Protection de tension inverse}
+\begin{frame}{Circuit de protection inverse - Diode}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{itemize}
+                \item Ne conduit que dans un sens
+                \bigskip
+                \item Drop de tension $V_f$
+                \item $P = I \cdot V_f$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.66\textwidth}
+            \begin{center}
+            \vspace{-24pt}
+            \resizebox{\textwidth}{!}{
+            \begin{circuitikz}[american voltages]
+                \draw [thick]
+                (0, 0) to [short, *-] (10, 0)
+                to [european resistor, l_=${LOAD}$] (10, 5)
+                (0, 0) to [open, v<=$V$] (0, 5)
+                to [short] (4, 5)
+                to [empty diode, color=red] (6, 5)
+                to [short] (10, 5)
+                ;
+            \end{circuitikz}
+            }
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Circuit de protection inverse - Diode Schottky}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{itemize}
+                \item Ne conduit que dans un sens
+                \bigskip
+                \item Drop de tension $V_f$ plus petite
+                \item $P = I \cdot V_f$
+                \bigskip
+                \item Plus cher pour même rating de courant
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.66\textwidth}
+            \begin{center}
+            \vspace{-24pt}
+            \resizebox{\textwidth}{!}{
+            \begin{circuitikz}[american voltages]
+                \draw [thick]
+                (0, 0) to [short, *-] (10, 0)
+                to [european resistor, l_=${LOAD}$] (10, 5)
+                (0, 0) to [open, v<=$V$] (0, 5)
+                to [short] (4, 5)
+                to [empty Schottky diode, color=red] (6, 5)
+                to [short] (10, 5)
+                ;
+            \end{circuitikz}
+            }
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Circuit de protection inverse - PMOS}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{itemize}
+                \item Ne conduit que dans un sens
+                \bigskip
+                \item Drop de tension vraiment plus petite ($R_{ds_{on}} \cdot I$)
+                \bigskip
+                \item Tension maximale supportée
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.66\textwidth}
+            \begin{center}
+            \vspace{-24pt}
+            \resizebox{\textwidth}{!}{
+            \begin{circuitikz}[american voltages]
+                \draw [thick]
+                (0, 0) to [short, *-] (10, 0)
+                to [european resistor, l_=${LOAD}$] (10, 5)
+                (0, 0) to [open, v<=$V$] (0, 5);
+                
+                \draw   (4,5) node[pigfete, color=red, rotate=90, xscale=2, yscale=-2] (fet) {}
+                (fet.G) to [short, -*] (fet.G |- 0,0)
+                (fet.D) to [short, -*] (0, 5)
+                (fet.S) to (10, 5);
+            \end{circuitikz}
+            }
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
 \subsection{Protection de court-circuit}
 \subsection{Protection de inrush current}
 \subsection{GFCI \& Grounding}
