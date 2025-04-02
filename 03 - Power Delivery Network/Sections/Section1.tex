@@ -341,10 +341,72 @@
                 to [european resistor, l_=${LOAD}$] (10, 5)
                 (0, 0) to [open, v<=$V$] (0, 5);
                 
-                \draw   (4,5) node[pigfete, color=red, rotate=90, xscale=2, yscale=-2] (fet) {}
+                \draw   (4,5) node[pigfete, bodydiode, color=red, rotate=90, xscale=2, yscale=-2] (fet) {}
+                (fet.G) node [anchor=south, xshift=8pt] {G}
+                (fet.D) node [anchor=east, yshift=8pt] {D}
+                (fet.S) node [anchor=west, yshift=8pt] {S}
                 (fet.G) to [short, -*] (fet.G |- 0,0)
                 (fet.D) to [short, -*] (0, 5)
                 (fet.S) to (10, 5);
+            \end{circuitikz}
+            }
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Transistor MOSFET P-Channel (PMOS)}
+    \begin{columns}
+        \begin{column}{0.75\textwidth}
+            \begin{center}
+                $V_{gs}$ négatif!\\
+                \vspace{6pt}
+                $V_{gs} < -V_t$
+            \end{center}
+            \vspace{24pt}
+
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item $V_G = VDD$
+                        \item $V_{gs} = \SI{0}{\volt}$
+                        \item $\SI{0}{\volt} > -V_t$
+                        \item Ne conduit pas
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item $V_G = \SI{0}{\volt}$
+                        \item $V_{gs} = -VDD$
+                        \item $-VDD > -V_t$
+                        \item Conduit!
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+        \end{column}
+
+        \begin{column}{0.25\textwidth}
+            \begin{center}
+            \vspace{-24pt}
+            \resizebox{!}{0.75\textheight}{
+            \begin{circuitikz}[american voltages]
+                
+                \draw   (2,0) node[pigfete, bodydiode, xscale=1.5, yscale=1.5] (fet) {}
+                (fet.G) node [anchor=east, yshift=8pt] {G}
+                (fet.D) node [anchor=south, xshift=8pt, yshift=-4pt] {D}
+                (fet.S) node [anchor=north, xshift=8pt, yshift=4pt] {S}
+                (fet.G) to [short, -*] (fet.G |- 0, 0.4)
+                (fet.D) to [short] (2, 2)
+                ++(0,0) node[vcc]{VDD}
+                (fet.S) to [short] (2, -1.5)
+                to [R] (2, -3.5)
+                to (2, -3.75) node[ground]{}
+                ;
+
+                \draw[->, thick, red] 
+                (1, 0.75) to[out=90, in=180] (1.75, 1.5);
+
+                \node[right] at (0.66, 1.66) {$V_{gs}$};
             \end{circuitikz}
             }
             \end{center}
