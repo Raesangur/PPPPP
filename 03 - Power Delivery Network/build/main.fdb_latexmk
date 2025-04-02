@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber build/main"] 1742143178 "build/main.bcf" "build/main.bbl" "build/main" 1743468745
-  "build/main.bcf" 1743468745 105730 36d4436373fea05bfad3236409305767 "pdflatex"
+["biber build/main"] 1742143178 "build/main.bcf" "build/main.bbl" "build/main" 1743612796
+  "build/main.bcf" 1743612796 105730 36d4436373fea05bfad3236409305767 "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
-["pdflatex"] 1743468741 "main.tex" "build/main.pdf" "main" 1743468745
+["pdflatex"] 1743612792 "main.tex" "build/main.pdf" "main" 1743612796
   "/etc/texmf/web2c/texmf.cnf" 1710593888 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -317,6 +317,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty" 1602274933 20688 beaddf14d96104d4bf016523be5395c5 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc" 1254938640 2375 baa924870cfb487815765f9094cf3728 ""
+  "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc" 1254938640 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc" 1254938640 2327 9d6df24f9c4f7368395224341a95523a ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmss10.tfm" 1254938640 11176 53ebf7a171df1f9447b387b178768bb5 ""
@@ -341,6 +342,7 @@
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmss10.tfm" 1254938640 10976 59d4d2acacc56ba9abc92645023932ec ""
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmss12.tfm" 1254938640 11024 7a83ae8920360cd8bd5d0289069119dc ""
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmss8.tfm" 1254938640 10976 d5243dcaf5ba5ee7825c8438c6b7a7ea ""
+  "/usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb" 1254938640 30388 702fae6a5f0e6e9c48a1d872b442ffcf ""
   "/usr/share/texmf/fonts/type1/public/lm/lmss10.pfb" 1254938640 97408 f595704ec2a07246c2d6f7b602587452 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmss12.pfb" 1254938640 96107 daf52840b555e3b38f9679b629b5e2df ""
   "/usr/share/texmf/fonts/type1/public/lm/lmss8.pfb" 1254938640 94400 e33ecfb646a9f148e2e53da01a9168fe ""
@@ -357,16 +359,16 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1710593893 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1710593926 2799367 9c6569d5c6930be5a9194991ba8f88e5 ""
-  "Sections/Section1.tex" 1743468739 11535 2769ade99b8ee6f699d7d9f48f5091d8 ""
+  "Sections/Section1.tex" 1743612790 13803 00606711948a9abaa22287c8809720ca ""
   "Sections/Section2.tex" 1743002313 177 c0bfe26bc1eabd1a8a77b5d2bb051a10 ""
   "Sections/Section3.tex" 1743002338 150 f8ea2ebbeeb74933f6831d4adee62b6b ""
   "Sections/Section4.tex" 1743002348 82 f252c39740145840626117508b17c105 ""
-  "build/main.aux" 1743468745 10522 2c6435a6194e74c109f577ee95ddcb0c "pdflatex"
+  "build/main.aux" 1743612796 10718 68af3fdfd05e3b524e48adab574cfccf "pdflatex"
   "build/main.bbl" 1743000964 466 ee04f40f768daeed26442158e95aba61 "biber build/main"
-  "build/main.nav" 1743468745 5511 b5184e556b792d69fd668b00c49b7c1a "pdflatex"
-  "build/main.out" 1743468745 2758 5eb8b46ea2eff4a9cf615b9bd6ff6e90 "pdflatex"
-  "build/main.run.xml" 1743468745 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
-  "build/main.toc" 1743468745 959 ba8afccd0cb8d61adb09e058fc7557ab "pdflatex"
+  "build/main.nav" 1743612796 5632 a115249dc0c63fa7df184b7362427eba "pdflatex"
+  "build/main.out" 1743612796 2758 21e95414a85122c613bf15ae57ec8249 "pdflatex"
+  "build/main.run.xml" 1743612796 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "build/main.toc" 1743612796 959 0c51681492acdb7f4adcf6b089a8eec5 "pdflatex"
   "main.tex" 1743000964 6267 481376f67367d19af23ebe600a289177 ""
   "pictures/ESD-discharge-finger.png" 1743003664 207462 a1927151ab6b7389ca7c69bc2413ec37 ""
   "pictures/ESD-discharge-waveform.png" 1743006261 17741 6fa06a7598f9d41685511bfa968171e0 ""
