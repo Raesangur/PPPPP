@@ -343,8 +343,8 @@
                 
                 \draw   (4,5) node[pigfete, bodydiode, color=red, rotate=90, xscale=2, yscale=-2] (fet) {}
                 (fet.G) node [anchor=south, xshift=8pt] {G}
-                (fet.D) node [anchor=east, yshift=8pt] {D}
-                (fet.S) node [anchor=west, yshift=8pt] {S}
+                (fet.D) node [anchor=west, yshift=8pt] {D}
+                (fet.S) node [anchor=east, yshift=8pt] {S}
                 (fet.G) to [short, -*] (fet.G |- 0,0)
                 (fet.D) to [short, -*] (0, 5)
                 (fet.S) to (10, 5);
@@ -361,25 +361,29 @@
             \begin{center}
                 $V_{gs}$ négatif!\\
                 \vspace{6pt}
-                $V_{gs} < -V_t$
+                $V_{gs} < -V_t$\\
+                \vspace{8pt}
+                Faire attention au $V_{gs_{max}}$
             \end{center}
             \vspace{24pt}
 
             \begin{columns}
                 \begin{column}{0.5\textwidth}
+                    %\textbf{Branchement normal}
+                    \begin{itemize}
+                        \item $V_G = \SI{0}{\volt}$
+                        \item $V_{gs} = -VDD$
+                        \item $-VDD < -V_t$
+                        \item Conduit!
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    %\textbf{Branchement inverse}
                     \begin{itemize}
                         \item $V_G = VDD$
                         \item $V_{gs} = \SI{0}{\volt}$
                         \item $\SI{0}{\volt} > -V_t$
                         \item Ne conduit pas
-                    \end{itemize}
-                \end{column}
-                \begin{column}{0.5\textwidth}
-                    \begin{itemize}
-                        \item $V_G = \SI{0}{\volt}$
-                        \item $V_{gs} = -VDD$
-                        \item $-VDD > -V_t$
-                        \item Conduit!
                     \end{itemize}
                 \end{column}
             \end{columns}
@@ -414,6 +418,45 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}{Circuit de protection inverse - PMOS complèt}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{itemize}
+                \item Ne conduit que dans un sens
+                \bigskip
+                \item Drop de tension vraiment plus petite ($R_{ds_{on}} \cdot I$)
+                \bigskip
+                \item Supporte toutes les tensions!
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.66\textwidth}
+            \begin{center}
+            \vspace{-24pt}
+            \resizebox{\textwidth}{!}{
+            \begin{circuitikz}[american voltages]
+                \draw [thick]
+                (0, 0) to [short, *-] (10, 0)
+                to [european resistor, l_=${LOAD}$] (10, 5)
+                (0, 0) to [open, v<=$V$] (0, 5);
+                
+                \draw   (4,5) node[pigfete, bodydiode, color=red, rotate=90, xscale=2, yscale=-2] (fet) {}
+                (fet.G) node [anchor=south, xshift=8pt] {G}
+                (fet.D) node [anchor=west, yshift=8pt] {D}
+                (fet.S) node [anchor=east, yshift=8pt] {S}
+                (fet.G) to [R] (fet.G |- 0,0)
+                (fet.D) to [short, -*] (0, 5)
+                (fet.S) to (10, 5)
+                (fet.G) to [short] (fet.G -| 6,3)
+                to [full ZZener diode] (6, 5);
+            \end{circuitikz}
+            }
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
 \subsection{Protection de court-circuit}
+
 \subsection{Protection de inrush current}
 \subsection{GFCI \& Grounding}
