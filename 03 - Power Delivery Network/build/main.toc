@@ -5,12 +5,12 @@
 \beamer@subsectionintoc {1}{4}{Protection de inrush current}{23}{0}{1}
 \beamer@subsectionintoc {1}{5}{Undervoltage Lockout}{31}{0}{1}
 \beamer@subsectionintoc {1}{6}{Protection complète}{34}{0}{1}
-\beamer@subsectionintoc {1}{7}{GFCI \& Grounding}{37}{0}{1}
-\beamer@sectionintoc {2}{Comment filtrer une alimentation?}{38}{0}{2}
-\beamer@subsectionintoc {2}{1}{Filtrer l'entrée}{39}{0}{2}
-\beamer@subsectionintoc {2}{2}{Filtrer la sortie d'un régulateur}{40}{0}{2}
-\beamer@subsectionintoc {2}{3}{Filtrer au IC}{41}{0}{2}
-\beamer@sectionintoc {3}{Quels sont les types de régulateurs?}{42}{0}{3}
-\beamer@subsectionintoc {3}{1}{Régulateurs Linéaires}{43}{0}{3}
-\beamer@subsectionintoc {3}{2}{Régulateurs "switching"}{44}{0}{3}
-\beamer@sectionintoc {4}{Comment conçevoir un arbre d'alimentation?}{45}{0}{4}
+\beamer@subsectionintoc {1}{7}{120V}{39}{0}{1}
+\beamer@sectionintoc {2}{Comment filtrer une alimentation?}{44}{0}{2}
+\beamer@subsectionintoc {2}{1}{Filtrer l'entrée}{45}{0}{2}
+\beamer@subsectionintoc {2}{2}{Filtrer la sortie d'un régulateur}{46}{0}{2}
+\beamer@subsectionintoc {2}{3}{Filtrer au IC}{47}{0}{2}
+\beamer@sectionintoc {3}{Quels sont les types de régulateurs?}{48}{0}{3}
+\beamer@subsectionintoc {3}{1}{Régulateurs Linéaires}{49}{0}{3}
+\beamer@subsectionintoc {3}{2}{Régulateurs "switching"}{50}{0}{3}
+\beamer@sectionintoc {4}{Comment conçevoir un arbre d'alimentation?}{51}{0}{4}
