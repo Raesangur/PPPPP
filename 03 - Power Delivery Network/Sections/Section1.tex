@@ -628,11 +628,13 @@
         \item Protection de batterie
         \item Efficacité
         \item Garantie de fonctionnement
+        \bigskip
+        \item Du OVLO ça existe aussi
     \end{itemize}
     \vfill
     \begin{figure}
         \centering
-        \includegraphics[width=0.66\textwidth]{pictures/battery-discharge-curve.png}
+        \includegraphics[width=0.5\textwidth]{pictures/battery-discharge-curve.png}
     \end{figure}
 \end{frame}
 
@@ -699,7 +701,7 @@
 
 \begin{frame}{Protection complète - Circuit électrique}
     \begin{center}
-        \resizebox{\textwidth}{!}{
+        \resizebox{0.8\textwidth}{!}{
         \begin{tikzpicture}[
             block/.style = {rectangle, draw, minimum height=1cm,        minimum width=2.5cm, align=center},
             node distance=0.8cm and 0.6cm,
@@ -718,26 +720,32 @@
         \node[coordinate, right=of cm] (outlabel) {};
         
         % Input arrow with label
-        \draw[->] ($(inlabel)+(-0.5,0.0)$) -- (scp.west) node[     midway, above] {Input};
+        \draw[->] ($(inlabel)+(-0.75,0.0)$) -- (scp.west) node[     midway, above] {Input};
         
         % Top row
         \draw[->] (scp) -- (tvs);
         \draw[->] (tvs) -- (rvp);
         
         % Segmented down to second row
-        \draw[->] (rvp.east) -- ++(0.6,0) |- (uvlo.north);
+        \draw[->] 
+        (rvp.east)      
+        -- ++(0.5, 0)     
+        -- ++(0, -0.75)    
+        -| (uvlo.north);
+
         
         % Bottom row
         \draw[->] (uvlo) -- (ss);
         \draw[->] (ss) -- (cm);
         
         % Output arrow with label
-        \draw[->] (cm.east) -- ++(1.2,0) node[midway, above] {Load};
+        \draw[->] (cm.east) -- ++(1.25,0) node[midway, above] {Load};
         
         \end{tikzpicture}
         }
     \end{center}
     \pause
+    %\vfill
     \begin{center}
         \resizebox{\textwidth}{!}{
         \begin{circuitikz}[american voltages]
@@ -800,4 +808,114 @@
         }
     \end{center}  
 \end{frame}
-\subsection{GFCI \& Grounding}
+
+\begin{frame}{Solution Miracle}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \textbf<1>{Catégorie de device:}
+            \begin{itemize}
+                \item<1-> \textit{eFuse}
+                \item<1-> \textit{Load Switch}
+                \item<1-> \textit{Ideal Diode}
+            \end{itemize}
+        \end{column}
+        \pause
+        \begin{column}{0.66\textwidth}
+            \begin{center}
+                \textbf{Une seule chip qui:}
+            \end{center}
+            \begin{columns}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item \small{RVP}
+                        \item \small{TVS}
+                        \item \small{Short-Circuit}
+                        \item \small{Current Limit}
+                        \item \small{Current Monitoring}
+                    \end{itemize}
+                \end{column}
+                \begin{column}{0.5\textwidth}
+                    \begin{itemize}
+                        \item \small{Soft-Start}
+                        \item \small{UVLO / OVP}
+                        \item \small{Très faibles pertes}
+                        \item \small{Température}
+                    \end{itemize}
+                \end{column}
+            \end{columns}
+            
+        \end{column}
+    \end{columns}
+    \vfill
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.75\textwidth]{pictures/load-switch.png}
+    \end{figure}
+\end{frame}
+
+
+\subsection{120V}
+
+\begin{frame}{120V}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item<1-> Vivant (\textit{Live})
+                \item<1-> Neutre (\textit{Neutral})
+                \item<1-> Masse (\textit{Ground})
+                \bigskip
+                \item<2-> Pas le même GND que dans ton circuit
+                \item<2-> GND du circuit provient du Neutre!
+                \item<2-> \textbf{NE PAS CONNECTER ENSEMBLE}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.75\textwidth]{pictures/120v-wire.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Connection 120V}
+    \begin{center}
+        \resizebox{\textwidth}{!}{
+        \begin{circuitikz}[american]
+            \ctikzset{voltage/american plus={\tiny $+$}};
+            \ctikzset{voltage/american minus={\tiny $-$}};
+
+            \draw (0,0) node [transformer](T){};
+
+            \draw (T.A1) --++(-1,0);
+            \draw (T.A2) --++(-1,0);
+            \draw (T.B1) --++(3,0);        
+            \draw (T.B2) --++(3,0);
+            \draw (T.A2) to[open,v<=$\SI{25}{\kilo\volt}$](T.A1);
+
+            \draw[thick]
+            ($(T.B1)!0.5!(T.B2)-(0.7,0)$) --
+            node[pos=0.25, above, inner sep=0pt](n){} ++
+            (3,0);
+            \draw  (n -| 2, 0) ++ (0, -0.03) -- ++ (0, -0.3) node[ground]{};
+
+            \draw (n) to [open, v>={\footnotesize $\SI{120}{\volt}$}](T.B1);
+            \draw (n) to [open, v>={\footnotesize $\SI{120}{\volt}$}](T.B2);
+        \end{circuitikz}
+        }
+    \end{center}
+\end{frame}
+
+\begin{frame}{Grounding}
+    \begin{itemize}
+        \item Grounder les chassis des appareils
+        \item Permet d'éviter d'avoir un chassis connecté au Live
+        \item Retourne se connecter au panneau électrique
+        \item Wiré séparément au Neutre
+    \end{itemize}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.66\textwidth]{pictures/3-wire-ac-plug.png}
+    \end{figure}
+\end{frame}
