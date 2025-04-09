@@ -547,7 +547,8 @@
                     \item<2-> Laisse passer de plus en plus de courant
                 \end{itemize}
                 \bigskip
-                \item<3-> \textit{Slow-Start}
+                \item<3-> \textit{Soft-Start}
+                \item<3-> \textit{Pre-Charge}
             \end{itemize}
         \end{column}
 
@@ -564,4 +565,239 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}{Soft Start}
+    \begin{columns}
+        \begin{column}{0.575\textwidth}    
+            \begin{itemize}
+                \item Fonctionalité de certains régulateurs de tension
+                \item Pente de la tension de sortie
+                \item Ajustée avec un condensateur $C_{SS}$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.9\textwidth]{pictures/ic-soft-start-curve.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    \vfill
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.66\textwidth]{pictures/ic-soft-start.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Pre-charge}
+    \begin{itemize}
+        \item Pour les systèmes haut-voltage
+        \item Contacteur avec une limite de courant
+        \item Permet de charger les condensateurs
+        \item Activation du contacteur principal après
+    \end{itemize}
+
+    \vfill
+
+    \begin{center}
+        \resizebox{!}{0.5\textheight}{
+        \begin{circuitikz}[american voltages]
+            \draw [thick]
+            (0, 0) to [short, *-] (10, 0)
+            to [european resistor, l_=${LOAD}$] (10, 5)
+            (8, 5) to [C, color=red] (8,0)
+            (0, 0) to [open, v<=$V$, l=400V] (0, 5)
+            to [short] (3, 5)
+            to [normal open switch] (5, 5)
+            to [short] (10, 5)
+            (2, 5) to [short] (2, 3)
+            to [closing switch, color=red] (4, 3)
+            to [R] (6, 3)
+            to [short] (6, 5)
+            ;
+        \end{circuitikz}
+        }
+    \end{center}    
+\end{frame}
+
+\subsection{Undervoltage Lockout}
+
+\begin{frame}{Undervoltage Lockout (UVLO)}
+    \begin{itemize}
+        \item Couper l'alimentation si entrée trop faible
+        \bigskip
+        \item Protection de batterie
+        \item Efficacité
+        \item Garantie de fonctionnement
+    \end{itemize}
+    \vfill
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.66\textwidth]{pictures/battery-discharge-curve.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Undervoltage Lockout (UVLO) - Enable}
+    \begin{columns}
+        \begin{column}{0.66\textwidth}
+            \begin{itemize}
+                \item Batterie $V_{max} = \SI{4.2}{\volt}$
+                \item Batterie $V_{min} = \SI{3.7}{\volt}$
+                \item Tension EN $V_{ref} = \SI{1.2}{\volt}$
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.33\textwidth}
+        \begin{center}
+            Poser $R_2 = \SI{47}{\kilo\ohm}$\\
+            \vspace{8pt}
+            $V_{ref} = V_{min} \cdot \dfrac{R_2}{R_1 + R_2}$\\
+            \vspace{6pt}
+            $R_1 = $\SI{100}{\kilo\ohm}
+        \end{center}
+        \end{column}
+    \end{columns}
+
+    \vfill
+
+    \begin{center}
+        \resizebox{!}{0.4\textheight}{
+        \begin{circuitikz}[american voltages]
+        \ctikzset{multipoles/thickness=4}
+        \ctikzset{multipoles/external pins thickness=2}
+            % Regulator
+            \draw (6, 5) node[dipchip,
+                num pins=4,
+                hide numbers,
+                external pins width=0.3,
+                external pad fraction=4 ](C){REG};
+            \node [right, font=\tiny] at (C.bpin 1) {IN};
+            \node [right, font=\tiny] at (C.bpin 2) {EN};
+            \node [left,  font=\tiny] at (C.bpin 4) {OUT};
+
+            % UVLO
+            \draw (C.pin 2) to [short] (C.pin 2 -| 5, 5)
+            to [R, l2=$R_1$ and $\SI{100}{\kilo\ohm}$, l2 halign=c] (C.pin 2 -| 2, 5) 
+            to [short] (C.pin 1 -| 2, 5)
+            (C.pin 2 -| 5, 5) to [R, l2=$R_2$ and $\SI{47}{\kilo\ohm}$, l2 halign=c] (5, 0);
+
+            % Source & Load
+            \draw
+            (0, 0) to [short, *-] (10, 0)
+            to [european resistor, l_=${LOAD}$] (C.pin 4 -| 10, 5)
+            to [short] (C.pin 4)
+            (C.pin 4 -| 9, 5) to [C] (9, 0)
+            (0, 0) to [open, v<=$4.2V$] (C.pin 1 -| 0, 5)
+            to [short] (C.pin 1);
+        \end{circuitikz}
+        }
+    \end{center}  
+\end{frame}
+
+
+\subsection{Protection complète}
+
+
+\begin{frame}{Protection complète - Circuit électrique}
+    \begin{center}
+        \resizebox{\textwidth}{!}{
+        \begin{tikzpicture}[
+            block/.style = {rectangle, draw, minimum height=1cm,        minimum width=2.5cm, align=center},
+            node distance=0.8cm and 0.6cm,
+            >={Stealth[round]}
+        ]
+        
+        % Nodes
+        \node[coordinate] (inlabel) {};
+        \node[block, right=of inlabel] (scp) {Short-circuit\\       Protection};
+        \node[block, right=of scp] (tvs) {Transient Voltage\\       Suppression};
+        \node[block, right=of tvs] (rvp) {Reverse Voltage\\     Protection};
+        
+        \node[block, below=of scp] (uvlo) {Undervoltage\\Lockout};
+        \node[block, right=of uvlo] (ss) {Soft Start};
+        \node[block, right=of ss] (cm) {Current\\Measurement};
+        \node[coordinate, right=of cm] (outlabel) {};
+        
+        % Input arrow with label
+        \draw[->] ($(inlabel)+(-0.5,0.0)$) -- (scp.west) node[     midway, above] {Input};
+        
+        % Top row
+        \draw[->] (scp) -- (tvs);
+        \draw[->] (tvs) -- (rvp);
+        
+        % Segmented down to second row
+        \draw[->] (rvp.east) -- ++(0.6,0) |- (uvlo.north);
+        
+        % Bottom row
+        \draw[->] (uvlo) -- (ss);
+        \draw[->] (ss) -- (cm);
+        
+        % Output arrow with label
+        \draw[->] (cm.east) -- ++(1.2,0) node[midway, above] {Load};
+        
+        \end{tikzpicture}
+        }
+    \end{center}
+    \pause
+    \begin{center}
+        \resizebox{\textwidth}{!}{
+        \begin{circuitikz}[american voltages]
+        \ctikzset{multipoles/thickness=4}
+        \ctikzset{multipoles/external pins thickness=2}
+            % Regulator
+            \draw (18, 5) node[dipchip,
+                num pins=6,
+                hide numbers,
+                external pins width=0.3,
+                external pad fraction=4 ](C){REG};
+            \node [right, font=\tiny] at (C.bpin 1) {IN};
+            \node [right, font=\tiny] at (C.bpin 2) {EN};
+            \node [right, font=\tiny] at (C.bpin 3) {SS};
+            \node [left,  font=\tiny] at (C.bpin 6) {OUT};
+
+            % Soft Start
+            \draw
+            (C.pin 3) to [short] (C.pin 3 -| 16, 5)
+            to [C, l=$C_{SS}$] (16, 0);
+
+            % UVLO
+            \draw (C.pin 2) to [short] (C.pin 2 -| 15, 5)
+            to [R] (C.pin 2 -| 13, 5) 
+            to [short] (C.pin 1 -| 13, 5)
+            (C.pin 2 -| 15, 5) to [R] (15, 0);
+
+            % Source & Load
+            \draw
+            (0, 0) to [short, *-] (24, 0)
+            to [european resistor, l_=${LOAD}$] (C.pin 6 -| 24, 5)
+            to [R, l=$R_{CS}$] (C.pin 6)
+            (C.pin 6 -| 23, 5) to [C] (23, 0)
+            (0, 0) to [open, v<=$V$] (C.pin 1 -| 0, 5);
+
+            % TVS
+            \draw
+            (C.pin 1 -| 4, 5) to [C, l_=$TVS$] (4, 0)
+            (6, 0) to [full ZZener diode, l_=$TVS$] (C.pin 1 -| 6, 5);
+
+            % RVP
+            \draw   (C.pin 1 -| 9, 5) node[pigfete, bodydiode, rotate=90, xscale=2, yscale=-2] (fet) {}
+            (fet.G) node [anchor=south, xshift=8pt] {G}
+            (fet.D) node [anchor=west, yshift=8pt] {D}
+            (fet.S) node [anchor=east, yshift=8pt] {S}
+            (fet.G) to [R] (fet.G |- 0,0)
+            %(fet.D) to [short, -*] (C.pin 1 -| 0, 5)
+            (fet.S) to (C.pin 1)
+            (fet.G) to [short] (fet.G -| 11, 3)
+            to [full ZZener diode] (C.pin 1 -| 11, 5);
+
+            % Fuse Protection
+            % TODO: Replace afuse with wfuse
+            \draw
+            (C.pin 1 -| 0, 5) to [afuse, l=$FUSE$] (C.pin 1 -| 4, 5)
+            %to [R, l=$R_{CS}$] (C.pin 1 -| 4, 5)
+            to [short] (fet.D);
+            
+        \end{circuitikz}
+        }
+    \end{center}  
+\end{frame}
 \subsection{GFCI \& Grounding}
