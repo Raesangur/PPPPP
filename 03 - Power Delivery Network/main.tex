@@ -91,7 +91,7 @@
 \makeatother
 \author{Pascal-Emmanuel Lachance}
 \title{PPPPP02}
-\subtitle{Comment conçevoir un Power Delivery Network?}
+\subtitle{Comment conçevoir un\\ Power Delivery Network?}
 \institute{Compétitions de Conception de Circuits Imprimés}
 \date{\today}
 \titlegraphic{\includegraphics[scale = 0.3]{pictures/logo/udes_logo.pdf}}
@@ -109,7 +109,8 @@
         \usebeamerfont{title in head/foot}\inserttitle
     \end{beamercolorbox}}%
     \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-        \usebeamerfont{date in head/foot}\today{}\hspace*{2em}
+        \hfill\usebeamerfont{date in head/foot}\today{}
+        \hfill%\hspace*{2em}
         \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
     \end{beamercolorbox}
 }%
@@ -192,7 +193,7 @@
 
 % ------------ SECTIONS -----------
 
-%\input{Sections/Section1}
+\input{Sections/Section1}
 \input{Sections/Section2}
 \input{Sections/Section3}
 \input{Sections/Section4}
