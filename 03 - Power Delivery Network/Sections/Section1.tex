@@ -919,3 +919,52 @@
         \includegraphics[width=0.66\textwidth]{pictures/3-wire-ac-plug.png}
     \end{figure}
 \end{frame}
+
+\begin{frame}{Grounding - Bonnes pratiques}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Garder le fil de GND plus long que les autres
+                \item Mettre le LIVE plus court que les autres
+                \item Toujours mettre du strain relief sur un câble
+            \end{itemize}
+            \vspace{-12pt}
+            \begin{figure}
+                \centering
+                \includegraphics<1->[width=\textwidth]{pictures/uk-plug-wiring.png}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{itemize}
+                \item<2-> Grounder toutes les parties d'un boîtier
+                \item<2-> Busbar de GND
+            \end{itemize}
+            \begin{figure}
+                \centering
+                \includegraphics<2->[width=\textwidth]{pictures/server-door-grounding.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Ground Fault Circuit Interrupter}
+    \begin{columns}
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \item Mesure le courant qui passe par Live \& Neutral
+                \item Coupe dès que $V_{in} \neq V_{out}$ 
+            \end{itemize}
+            \vspace{24pt}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.9\textwidth]{pictures/gfci-example.png}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.66\textwidth]{pictures/gfci-outlet.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
