@@ -7,7 +7,13 @@
 \usepackage{comment}
 \usepackage{multicol}
 \usepackage{siunitx}
-\usepackage{fontawesome}
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}} % ✓
+\newcommand{\xmark}{\ding{55}} % ✗
 
 \usepackage[yyyymmdd]{datetime}
 \usepackage{tikz}
@@ -32,6 +38,10 @@
 \pgfplotsset{compat=1.18}
 
 \renewcommand{\dateseparator}{--}
+
+\makeatletter
+\let\slideno\beamer@slideinframe
+\makeatother
 
 
 \DeclarePairedDelimiter\bra{\langle}{\rvert}
@@ -182,7 +192,7 @@
 
 % ------------ SECTIONS -----------
 
-\input{Sections/Section1}
+%\input{Sections/Section1}
 \input{Sections/Section2}
 \input{Sections/Section3}
 \input{Sections/Section4}
