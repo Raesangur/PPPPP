@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  9 APR 2025 17:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  13 APR 2025 23:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2521,7 +2521,7 @@ e 907.
 [42
 
 ]
-<pictures/3-wire-ac-plug.png, id=1453, 799.98875pt x 531.9875pt>
+<pictures/3-wire-ac-plug.png, id=1454, 799.98875pt x 531.9875pt>
 File: pictures/3-wire-ac-plug.png Graphic file (type png)
 <use pictures/3-wire-ac-plug.png>
 Package pdftex.def Info: pictures/3-wire-ac-plug.png  used on input line 921.
@@ -2541,43 +2541,93 @@ e 921.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [43
 
- <./pictures/3-wire-ac-plug.png>]) (./Sections/Section2.tex (build/main.toc)
+ <./pictures/3-wire-ac-plug.png>]
+<pictures/uk-plug-wiring.png, id=1483, 878.28125pt x 591.20876pt>
+File: pictures/uk-plug-wiring.png Graphic file (type png)
+<use pictures/uk-plug-wiring.png>
+Package pdftex.def Info: pictures/uk-plug-wiring.png  used on input line 948.
+(pdftex.def)             Requested size: 205.37926pt x 138.24846pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 948.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 948.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 948.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[44
+
+ <./pictures/uk-plug-wiring.png>]
+File: pictures/uk-plug-wiring.png Graphic file (type png)
+<use pictures/uk-plug-wiring.png>
+Package pdftex.def Info: pictures/uk-plug-wiring.png  used on input line 948.
+(pdftex.def)             Requested size: 205.37926pt x 138.24846pt.
+<pictures/server-door-grounding.png, id=1511, 702.625pt x 526.96875pt>
+File: pictures/server-door-grounding.png Graphic file (type png)
+<use pictures/server-door-grounding.png>
+Package pdftex.def Info: pictures/server-door-grounding.png  used on input line
+ 948.
+(pdftex.def)             Requested size: 136.91603pt x 102.6821pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 948.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 948.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 948.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[45
+
+ <./pictures/server-door-grounding.png>]
+<pictures/gfci-example.png, id=1539, 564.1075pt x 311.1625pt>
+File: pictures/gfci-example.png Graphic file (type png)
+<use pictures/gfci-example.png>
+Package pdftex.def Info: pictures/gfci-example.png  used on input line 970.
+(pdftex.def)             Requested size: 215.64363pt x 118.95042pt.
+<pictures/gfci-outlet.png, id=1540, 346.29375pt x 574.145pt>
+File: pictures/gfci-outlet.png Graphic file (type png)
+<use pictures/gfci-outlet.png>
+Package pdftex.def Info: pictures/gfci-outlet.png  used on input line 970.
+(pdftex.def)             Requested size: 67.77551pt x 112.36519pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 970.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 970.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 970.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[46
+
+ <./pictures/gfci-example.png> <./pictures/gfci-outlet.png>]) (./Sections/Secti
+on2.tex (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[44
+[47
 
 ] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 5.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[45
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 6.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[46
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 7.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[47
-
-]) (./Sections/Section3.tex (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [48
 
@@ -2585,9 +2635,25 @@ e 3.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 5.
+e 6.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [49
+
+]) (./Sections/Section3.tex (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 3.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[50
+
+] (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 5.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[51
 
 ] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -2595,7 +2661,15 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 6.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[50
+[52
+
+] (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 7.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[53
 
 ]) (./Sections/Section4.tex (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -2603,7 +2677,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[51
+[54
 
 ])
 File: pictures/background/background-PCB.png Graphic file (type png)
@@ -2611,7 +2685,7 @@ File: pictures/background/background-PCB.png Graphic file (type png)
 Package pdftex.def Info: pictures/background/background-PCB.png  used on input 
 line 209.
 (pdftex.def)             Requested size: 440.3973pt x 273.14662pt.
-[52
+[55
 
 ]
 \tf@nav=\write8
@@ -2625,16 +2699,16 @@ line 209.
 
 (build/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E026E0C59E00F22CF3AA9185E8A678CD;3011.
+(rerunfilecheck)             Checksum: 3FD201FBA1792E3516A377F5CD2EB728;3011.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 70991 strings out of 478287
- 1787246 string characters out of 5849289
- 2727083 words of memory out of 5000000
- 88002 multiletter control sequences out of 15000+600000
+ 71084 strings out of 478287
+ 1789823 string characters out of 5849289
+ 2727188 words of memory out of 5000000
+ 88085 multiletter control sequences out of 15000+600000
  558751 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,20n,122p,1003b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2649,10 +2723,10 @@ ype1/public/lm/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb><
 1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on build/main.pdf (52 pages, 3218715 bytes).
+Output written on build/main.pdf (55 pages, 4055100 bytes).
 PDF statistics:
- 1950 PDF objects out of 2073 (max. 8388607)
- 1701 compressed objects within 18 object streams
- 121 named destinations out of 1000 (max. 500000)
- 884 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2038 PDF objects out of 2073 (max. 8388607)
+ 1778 compressed objects within 18 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 904 words of extra memory for PDF output out of 10000 (max. 10000000)
 
