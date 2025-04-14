@@ -439,7 +439,7 @@
                 to [european resistor, l_=${LOAD}$] (10, 5)
                 (0, 0) to [open, v<=$V$] (0, 5);
                 
-                \draw   (4,5) node[pigfete, bodydiode, color=red, rotate=90, xscale=2, yscale=-2] (fet) {}
+                \draw   (4,5) node[pigfete, bodydiode, rotate=90, xscale=2, yscale=-2] (fet) {}
                 (fet.G) node [anchor=south, xshift=8pt] {G}
                 (fet.D) node [anchor=west, yshift=8pt] {D}
                 (fet.S) node [anchor=east, yshift=8pt] {S}
@@ -447,7 +447,7 @@
                 (fet.D) to [short, -*] (0, 5)
                 (fet.S) to (10, 5)
                 (fet.G) to [short] (fet.G -| 6,3)
-                to [full ZZener diode] (6, 5);
+                to [empty ZZener diode, color=red] (6, 5);
             \end{circuitikz}
             }
             \end{center}
@@ -499,7 +499,7 @@
             \vspace{12pt}
             \begin{figure}
                 \centering
-                \includegraphics[width=0.33\textwidth]{pictures/polyfuse.png}
+                \includegraphics[width=0.25\textwidth]{pictures/polyfuse.png}
             \end{figure}
         \end{column}
 
@@ -605,7 +605,7 @@
             (0, 0) to [short, *-] (10, 0)
             to [european resistor, l_=${LOAD}$] (10, 5)
             (8, 5) to [C, color=red] (8,0)
-            (0, 0) to [open, v<=$V$, l=400V] (0, 5)
+            (0, 0) to [open, v<=$400V$] (0, 5)
             to [short] (3, 5)
             to [normal open switch] (5, 5)
             to [short] (10, 5)
@@ -622,20 +622,21 @@
 \subsection{Undervoltage Lockout}
 
 \begin{frame}{Undervoltage Lockout (UVLO)}
-    \begin{itemize}
-        \item Couper l'alimentation si entrée trop faible
-        \bigskip
-        \item Protection de batterie
-        \item Efficacité
-        \item Garantie de fonctionnement
-        \bigskip
-        \item Du OVLO ça existe aussi
-    \end{itemize}
-    \vfill
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.5\textwidth]{pictures/battery-discharge-curve.png}
-    \end{figure}
+\large
+\centering
+\begin{tabular}{c l}
+    \textcolor{UDSgreenFierte}{\faPowerOff}       & Couper l'alimentation si entrée trop faible \\
+    \textcolor{UDSgreenFierte}{\faBatteryQuarter} & Protection de batterie \\
+    \textcolor{UDSgreenFierte}{\faPercent}        & Efficacité \\
+    \textcolor{UDSgreenFierte}{\faCheckCircle}    & Garantie de fonctionnement \\
+    \textcolor{UDSgreenFierte}{\faBolt}           & Du OVP (\textit{Overvoltage Protection}) ça existe aussi \\
+\end{tabular}
+
+\vfill
+\begin{figure}
+    \centering
+    \includegraphics[width=0.66\textwidth]{pictures/battery-discharge-curve.png}
+\end{figure}
 \end{frame}
 
 \begin{frame}{Undervoltage Lockout (UVLO) - Enable}
