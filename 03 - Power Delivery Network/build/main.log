@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  13 APR 2025 23:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  14 APR 2025 01:16
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -767,17 +767,21 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \extratabsurround=\skip66
 \backup@length=\skip67
 \ar@cellbox=\box129
-)) (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
-Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks46
+\minrowclearance=\skip68
+) (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+Package: fontawesome5 2021/06/04 v5.15.3 Font Awesome 5
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic
-.tex)
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.
-tex)) (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-help
+er.sty
+Package: fontawesome5-generic-helper 2021/06/04 v5.15.3 non-uTeX helper for fon
+tawesome5
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)
+)) (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
 Package: fmtcount 2020/01/30 v3.07
@@ -787,8 +791,8 @@ Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texl
 ive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks46
-\XKV@tempa@toks=\toks47
+\XKV@toks=\toks47
+\XKV@tempa@toks=\toks48
 )
 \XKV@depth=\count349
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -828,8 +832,8 @@ put line 308.
 \dayofyear=\count373
 \dayofweek=\count374
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks48
-\dt@b=\toks49
+\dt@a=\toks49
+\dt@b=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/sha
 re/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
@@ -859,8 +863,8 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen302
 \pgffor@skip=\dimen303
-\pgffor@stack=\toks50
-\pgffor@toks=\toks51
+\pgffor@stack=\toks51
+\pgffor@toks=\toks52
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
@@ -977,9 +981,9 @@ dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/sha
 re/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks52
-\t@pgfplots@tokb=\toks53
-\t@pgfplots@tokc=\toks54
+\t@pgfplots@toka=\toks53
+\t@pgfplots@tokb=\toks54
+\t@pgfplots@tokc=\toks55
 \pgfplots@tmpa=\dimen336
 \c@pgfplots@coordindex=\count388
 \c@pgfplots@scanlineindex=\count389
@@ -1004,7 +1008,7 @@ x.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
 \c@pgfplotstable@counta=\count391
-\t@pgfplotstable@a=\toks55
+\t@pgfplotstable@a=\toks56
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
 .code.tex)
@@ -1087,18 +1091,18 @@ Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count396
 \calc@Adimen=\dimen350
 \calc@Bdimen=\dimen351
-\calc@Askip=\skip68
-\calc@Bskip=\skip69
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count397
-\calc@Cskip=\skip70
+\calc@Cskip=\skip71
 ) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 \g_MT_multlinerow_int=\count398
 \l_MT_multwidth_dim=\dimen352
-\origjot=\skip71
+\origjot=\skip72
 \l_MT_shortvdotswithinadjustabove_dim=\dimen353
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen354
 \l_MT_above_intertext_sep=\dimen355
@@ -1234,14 +1238,14 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \c@blx@sectionciteorder@0=\count457
 \blx@entrysetcounter=\count458
 \blx@biblioinstance=\count459
-\labelnumberwidth=\skip72
-\labelalphawidth=\skip73
-\biblabelsep=\skip74
-\bibitemsep=\skip75
-\bibnamesep=\skip76
-\bibinitsep=\skip77
-\bibparsep=\skip78
-\bibhang=\skip79
+\labelnumberwidth=\skip73
+\labelalphawidth=\skip74
+\biblabelsep=\skip75
+\bibitemsep=\skip76
+\bibnamesep=\skip77
+\bibinitsep=\skip78
+\bibparsep=\skip79
+\bibhang=\skip80
 \blx@bcfin=\read4
 \blx@bcfout=\write6
 \blx@langwohyphens=\language87
@@ -1325,20 +1329,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count528
 \c@pageref=\count529
 \c@savedpageref=\count530
-\shorthandwidth=\skip80
-\shortjournalwidth=\skip81
-\shortserieswidth=\skip82
-\shorttitlewidth=\skip83
-\shortauthorwidth=\skip84
-\shorteditorwidth=\skip85
-\locallabelnumberwidth=\skip86
-\locallabelalphawidth=\skip87
-\localshorthandwidth=\skip88
-\localshortjournalwidth=\skip89
-\localshortserieswidth=\skip90
-\localshorttitlewidth=\skip91
-\localshortauthorwidth=\skip92
-\localshorteditorwidth=\skip93
+\shorthandwidth=\skip81
+\shortjournalwidth=\skip82
+\shortserieswidth=\skip83
+\shorttitlewidth=\skip84
+\shortauthorwidth=\skip85
+\shorteditorwidth=\skip86
+\locallabelnumberwidth=\skip87
+\locallabelalphawidth=\skip88
+\localshorthandwidth=\skip89
+\localshortjournalwidth=\skip90
+\localshortserieswidth=\skip91
+\localshorttitlewidth=\skip92
+\localshortauthorwidth=\skip93
+\localshorteditorwidth=\skip94
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -1400,10 +1404,7 @@ Package biblatex Info: ... and expl3
 (biblatex)             2022-01-21 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/shar
-e/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2022-01-12 L3 Experimental document command parser
-)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
@@ -1487,36 +1488,36 @@ File: pgflibraryshapes.multipart.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 zlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 42.
+Package hyperref Info: Option `colorlinks' set `true' on input line 52.
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 131.
+h' as default language. on input line 141.
 \@quotelevel=\count542
 \@quotereset=\count543
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-31.
+41.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (build/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1558,12 +1559,12 @@ LaTeX Font Info:    ... okay on input line 131.
 \scratchbox=\box162
 \nofMPsegments=\count545
 \nofMParguments=\count546
-\everyMPshowfont=\toks56
+\everyMPshowfont=\toks57
 \MPscratchCnt=\count547
 \MPscratchDim=\dimen378
 \MPnumerator=\count548
 \makeMPintoPDFobject=\count549
-\everyMPtoPDFconversion=\toks57
+\everyMPtoPDFconversion=\toks58
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1572,7 +1573,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 131.
+Package hyperref Info: Link coloring ON on input line 141.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1582,59 +1583,59 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count550
 )
-LaTeX Info: Redefining \ref on input line 131.
-LaTeX Info: Redefining \pageref on input line 131.
-LaTeX Info: Redefining \nameref on input line 131.
+LaTeX Info: Redefining \ref on input line 141.
+LaTeX Info: Redefining \pageref on input line 141.
+LaTeX Info: Redefining \nameref on input line 141.
 (build/main.out) (build/main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 131.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 141.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 131.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 141.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 131.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 141.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 131.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 141.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 131.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 131.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 141.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 131.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 131.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 131.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 141.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 131.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 131.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 131.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 141.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 131.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 131.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 131.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 141.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 131.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 131.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 141.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 131.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 141.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 131.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 131.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 131.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 131.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 131.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 141.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 131.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 141.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -1666,7 +1667,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 131.
+or `english'. on input line 141.
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
@@ -1686,26 +1687,29 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 (build/main.bbl)
-Package biblatex Info: Reference section=0 on input line 131.
-Package biblatex Info: Reference segment=0 on input line 131.
+Package biblatex Info: Reference section=0 on input line 141.
+Package biblatex Info: Reference segment=0 on input line 141.
 (build/main.nav)
-<pictures/logo/udes_logo.pdf, id=77, 416.68016pt x 65.70796pt>
+<pictures/logo/udes_logo.pdf, id=45, 416.68016pt x 65.70796pt>
 File: pictures/logo/udes_logo.pdf Graphic file (type pdf)
 <use pictures/logo/udes_logo.pdf>
-Package pdftex.def Info: pictures/logo/udes_logo.pdf  used on input line 143.
+Package pdftex.def Info: pictures/logo/udes_logo.pdf  used on input line 153.
 (pdftex.def)             Requested size: 125.005pt x 19.71252pt.
-<pictures/background/background-PCB.png, id=90, 893.3375pt x 554.07pt>
+<pictures/background/background-PCB.png, id=58, 893.3375pt x 554.07pt>
 File: pictures/background/background-PCB.png Graphic file (type png)
 <use pictures/background/background-PCB.png>
 Package pdftex.def Info: pictures/background/background-PCB.png  used on input 
-line 143.
+line 153.
 (pdftex.def)             Requested size: 440.3973pt x 273.14662pt.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pictures/background/back
 ground-PCB.png (PNG copy)> <./pictures/logo/udes_logo.pdf>] (./Sections/Section
-1.tex (build/main.toc)
-<pictures/background/background2.jpg, id=154, 738.76pt x 554.07pt>
+2.tex (build/main.toc
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 3.
+)
+<pictures/background/background2.jpg, id=116, 738.76pt x 554.07pt>
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
@@ -1713,15 +1717,7 @@ e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [2
 
- <./pictures/background/background2.jpg>] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 5.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[3
-
-]
+ <./pictures/background/background2.jpg>]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
 37.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
@@ -1743,7 +1739,7 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 37.
+(Font)              <10.95> on input line 37.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 37.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1758,45 +1754,52 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-<pictures/ESD-discharge-finger.png, id=243, 803.0pt x 451.6875pt>
-File: pictures/ESD-discharge-finger.png Graphic file (type png)
-<use pictures/ESD-discharge-finger.png>
-Package pdftex.def Info: pictures/ESD-discharge-finger.png  used on input line 
-37.
-(pdftex.def)             Requested size: 112.95807pt x 63.53906pt.
-<pictures/ESD-logo.png, id=244, 44.57599pt x 44.57599pt>
-File: pictures/ESD-logo.png Graphic file (type png)
-<use pictures/ESD-logo.png>
-Package pdftex.def Info: pictures/ESD-logo.png  used on input line 37.
-(pdftex.def)             Requested size: 56.47903pt x 56.48094pt.
-<pictures/logo/c3i.png, id=246, 822.272pt x 708.246pt>
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
+nput line 37.
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
+nput line 37.
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
+nput line 37.
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree3.fd)
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 37.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 37.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on i
+nput line 37.
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd)
+<pictures/logo/c3i.png, id=149, 822.272pt x 708.246pt>
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
 Package pdftex.def Info: pictures/logo/c3i.png  used on input line 37.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-<pictures/logo/m1_alpha.pdf, id=247, 56.90552pt x 56.90552pt>
+<pictures/logo/m1_alpha.pdf, id=151, 56.90552pt x 56.90552pt>
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
 Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 37.
@@ -1806,93 +1809,212 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 37.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[3
+
+ <./pictures/logo/c3i.png> <./pictures/logo/m1_alpha.pdf>] (build/main.toc)
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 39.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [4
 
- <./pictures/logo/c3i.png> <./pictures/logo/m1_alpha.pdf> <./pictures/ESD-disch
-arge-finger.png> <./pictures/ESD-logo.png>]
-<pictures/ESD-discharge-waveform.png, id=287, 670.75594pt x 427.5975pt>
-File: pictures/ESD-discharge-waveform.png Graphic file (type png)
-<use pictures/ESD-discharge-waveform.png>
-Package pdftex.def Info: pictures/ESD-discharge-waveform.png  used on input lin
-e 61.
-(pdftex.def)             Requested size: 342.2953pt x 218.20885pt.
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 95.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 95.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 95.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 95.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
+<pictures/linear-regulator-7805.png, id=243, 269.50688pt x 317.68687pt>
+File: pictures/linear-regulator-7805.png Graphic file (type png)
+<use pictures/linear-regulator-7805.png>
+Package pdftex.def Info: pictures/linear-regulator-7805.png  used on input line
+ 95.
+(pdftex.def)             Requested size: 56.47903pt x 66.57562pt.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 61.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 95.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 61.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 95.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 61.
+e 95.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [5
 
- <./pictures/ESD-discharge-waveform.png>]
-\absvshift=\dimen379
+ <./pictures/linear-regulator-7805.png>]
+File: pictures/linear-regulator-7805.png Graphic file (type png)
+<use pictures/linear-regulator-7805.png>
+Package pdftex.def Info: pictures/linear-regulator-7805.png  used on input line
+ 95.
+(pdftex.def)             Requested size: 56.47903pt x 66.57562pt.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 90.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 95.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 90.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 95.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 90.
+e 95.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [6
 
 ]
-<pictures/diode-iv-curve.png, id=346, 1003.75pt x 602.25pt>
-File: pictures/diode-iv-curve.png Graphic file (type png)
-<use pictures/diode-iv-curve.png>
-Package pdftex.def Info: pictures/diode-iv-curve.png  used on input line 97.
-(pdftex.def)             Requested size: 342.2953pt x 205.37799pt.
+File: pictures/linear-regulator-7805.png Graphic file (type png)
+<use pictures/linear-regulator-7805.png>
+Package pdftex.def Info: pictures/linear-regulator-7805.png  used on input line
+ 95.
+(pdftex.def)             Requested size: 56.47903pt x 66.57562pt.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 97.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 95.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 97.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 95.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 97.
+e 95.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [7
 
- <./pictures/diode-iv-curve.png>]
-<pictures/diode-zener-iv-curve.png, id=375, 1075.01625pt x 1049.9225pt>
-File: pictures/diode-zener-iv-curve.png Graphic file (type png)
-<use pictures/diode-zener-iv-curve.png>
-Package pdftex.def Info: pictures/diode-zener-iv-curve.png  used on input line 
-120.
-(pdftex.def)             Requested size: 205.37926pt x 200.57674pt.
+]
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 120.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 95.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 120.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 95.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 120.
+e 95.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [8
 
- <./pictures/diode-zener-iv-curve.png>]
-\absvshift=\dimen380
+]
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 95.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 95.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 95.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[9
+
+]
+<pictures/linear-regulator.png, id=378, 456.70625pt x 303.1325pt>
+File: pictures/linear-regulator.png Graphic file (type png)
+<use pictures/linear-regulator.png>
+Package pdftex.def Info: pictures/linear-regulator.png  used on input line 102.
+
+(pdftex.def)             Requested size: 308.06367pt x 204.48071pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 102.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 102.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 102.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[10
+
+ <./pictures/linear-regulator.png>]
+<pictures/psrr-graph.png, id=407, 554.82281pt x 380.17032pt>
+File: pictures/psrr-graph.png Graphic file (type png)
+<use pictures/psrr-graph.png>
+Package pdftex.def Info: pictures/psrr-graph.png  used on input line 139.
+(pdftex.def)             Requested size: 225.91615pt x 154.79767pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 139.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 139.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 139.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[11
+
+ <./pictures/psrr-graph.png>]
+File: pictures/psrr-graph.png Graphic file (type png)
+<use pictures/psrr-graph.png>
+Package pdftex.def Info: pictures/psrr-graph.png  used on input line 139.
+(pdftex.def)             Requested size: 225.91615pt x 154.79767pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 139.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 139.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 139.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[12
+
+]
+File: pictures/psrr-graph.png Graphic file (type png)
+<use pictures/psrr-graph.png>
+Package pdftex.def Info: pictures/psrr-graph.png  used on input line 139.
+(pdftex.def)             Requested size: 225.91615pt x 154.79767pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 139.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 139.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 139.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[13
+
+]
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
 Package pdftex.def Info: pictures/logo/c3i.png  used on input line 153.
@@ -1906,738 +2028,15 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 153.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[9
-
-]
-<pictures/clamping-esd-pulse.png, id=430, 386.19281pt x 164.11313pt>
-File: pictures/clamping-esd-pulse.png Graphic file (type png)
-<use pictures/clamping-esd-pulse.png>
-Package pdftex.def Info: pictures/clamping-esd-pulse.png  used on input line 16
-9.
-(pdftex.def)             Requested size: 342.2953pt x 145.45921pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 169.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 169.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 169.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[10
-
- <./pictures/clamping-esd-pulse.png>]
-\absvshift=\dimen381
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 207.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 207.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 207.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[11
-
-]
-<pictures/diode-tvs-iv-curve.png, id=484, 533.74406pt x 189.70876pt>
-File: pictures/diode-tvs-iv-curve.png Graphic file (type png)
-<use pictures/diode-tvs-iv-curve.png>
-Package pdftex.def Info: pictures/diode-tvs-iv-curve.png  used on input line 22
-8.
-(pdftex.def)             Requested size: 342.2953pt x 121.66502pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 228.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 228.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 228.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[12
-
- <./pictures/diode-tvs-iv-curve.png>]
-\absvshift=\dimen382
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 257.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 257.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 257.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[13
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 260.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [14
 
-]
-\absvshift=\dimen383
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 289.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 289.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 289.
+e 155.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [15
-
-]
-\absvshift=\dimen384
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 321.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 321.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 321.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[16
-
-]
-\absvshift=\dimen385
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 356.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 356.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 356.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[17
-
-]
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 419.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 419.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 419.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[18
-
-]
-\absvshift=\dimen386
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 456.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 456.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 456.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[19
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 459.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[20
-
-]
-<pictures/fuse.png, id=766, 626.34pt x 626.34pt>
-File: pictures/fuse.png Graphic file (type png)
-<use pictures/fuse.png>
-Package pdftex.def Info: pictures/fuse.png  used on input line 485.
-(pdftex.def)             Requested size: 56.47903pt x 56.47328pt.
-<pictures/fuse-curve.png, id=767, 661.47125pt x 756.8275pt>
-File: pictures/fuse-curve.png Graphic file (type png)
-<use pictures/fuse-curve.png>
-Package pdftex.def Info: pictures/fuse-curve.png  used on input line 485.
-(pdftex.def)             Requested size: 182.13225pt x 208.38803pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 485.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 485.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 485.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[21
-
- <./pictures/fuse.png> <./pictures/fuse-curve.png>]
-<pictures/polyfuse.png, id=795, 385.44pt x 413.545pt>
-File: pictures/polyfuse.png Graphic file (type png)
-<use pictures/polyfuse.png>
-Package pdftex.def Info: pictures/polyfuse.png  used on input line 513.
-(pdftex.def)             Requested size: 56.47903pt x 60.59665pt.
-<pictures/polyfuse-curve.png, id=796, 672.5125pt x 1135.24126pt>
-File: pictures/polyfuse-curve.png Graphic file (type png)
-<use pictures/polyfuse-curve.png>
-Package pdftex.def Info: pictures/polyfuse-curve.png  used on input line 513.
-(pdftex.def)             Requested size: 127.2964pt x 214.88393pt.
-
-Overfull \hbox (12.33154pt too wide) detected at line 513
-[][][] $[]$[][][][][][][][] $[]$[][][][][][] 
- []
-
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 513.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 513.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 513.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[22
-
- <./pictures/polyfuse.png> <./pictures/polyfuse-curve.png>] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 515.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[23
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-530.
-(/usr/share/texmf/tex/latex/lm/ts1lmss.fd
-File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-<pictures/inrush-current.png, id=873, 319.1925pt x 195.73125pt>
-File: pictures/inrush-current.png Graphic file (type png)
-<use pictures/inrush-current.png>
-Package pdftex.def Info: pictures/inrush-current.png  used on input line 530.
-(pdftex.def)             Requested size: 233.64174pt x 143.26486pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 530.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 530.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 530.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[24
-
- <./pictures/inrush-current.png>]
-File: pictures/inrush-current.png Graphic file (type png)
-<use pictures/inrush-current.png>
-Package pdftex.def Info: pictures/inrush-current.png  used on input line 530.
-(pdftex.def)             Requested size: 233.64174pt x 143.26486pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 530.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 530.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 530.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[25
-
-]
-<pictures/inrush-current-limiter.png, id=929, 630.355pt x 620.3175pt>
-File: pictures/inrush-current-limiter.png Graphic file (type png)
-<use pictures/inrush-current-limiter.png>
-Package pdftex.def Info: pictures/inrush-current-limiter.png  used on input lin
-e 566.
-(pdftex.def)             Requested size: 59.90271pt x 58.94023pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 566.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 566.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 566.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[26
-
- <./pictures/inrush-current-limiter.png>]
-File: pictures/inrush-current-limiter.png Graphic file (type png)
-<use pictures/inrush-current-limiter.png>
-Package pdftex.def Info: pictures/inrush-current-limiter.png  used on input lin
-e 566.
-(pdftex.def)             Requested size: 59.90271pt x 58.94023pt.
-<pictures/inrush-current-limiter-pmos.png, id=959, 208.1376pt x 122.859pt>
-File: pictures/inrush-current-limiter-pmos.png Graphic file (type png)
-<use pictures/inrush-current-limiter-pmos.png>
-Package pdftex.def Info: pictures/inrush-current-limiter-pmos.png  used on inpu
-t line 566.
-(pdftex.def)             Requested size: 119.80544pt x 70.71834pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 566.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 566.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 566.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[27
-
- <./pictures/inrush-current-limiter-pmos.png>]
-File: pictures/inrush-current-limiter.png Graphic file (type png)
-<use pictures/inrush-current-limiter.png>
-Package pdftex.def Info: pictures/inrush-current-limiter.png  used on input lin
-e 566.
-(pdftex.def)             Requested size: 59.90271pt x 58.94023pt.
-File: pictures/inrush-current-limiter-pmos.png Graphic file (type png)
-<use pictures/inrush-current-limiter-pmos.png>
-Package pdftex.def Info: pictures/inrush-current-limiter-pmos.png  used on inpu
-t line 566.
-(pdftex.def)             Requested size: 119.80544pt x 70.71834pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 566.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 566.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 566.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[28
-
-]
-<pictures/ic-soft-start-curve.png, id=1012, 972.63374pt x 593.21625pt>
-File: pictures/ic-soft-start-curve.png Graphic file (type png)
-<use pictures/ic-soft-start-curve.png>
-Package pdftex.def Info: pictures/ic-soft-start-curve.png  used on input line 5
-89.
-(pdftex.def)             Requested size: 123.22359pt x 75.14754pt.
-<pictures/ic-soft-start.png, id=1013, 1256.44406pt x 451.6875pt>
-File: pictures/ic-soft-start.png Graphic file (type png)
-<use pictures/ic-soft-start.png>
-Package pdftex.def Info: pictures/ic-soft-start.png  used on input line 589.
-(pdftex.def)             Requested size: 225.91615pt x 81.21063pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 589.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 589.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 589.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[29
-
- <./pictures/ic-soft-start-curve.png> <./pictures/ic-soft-start.png>]
-\absvshift=\dimen387
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 620.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 620.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 620.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[30
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 622.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[31
-
-]
-<pictures/battery-discharge-curve.png, id=1116, 199.4652pt x 94.4328pt>
-File: pictures/battery-discharge-curve.png Graphic file (type png)
-<use pictures/battery-discharge-curve.png>
-Package pdftex.def Info: pictures/battery-discharge-curve.png  used on input li
-ne 639.
-(pdftex.def)             Requested size: 171.14764pt x 81.03049pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 639.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 639.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 639.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[32
-
- <./pictures/battery-discharge-curve.png>]
-\absvshift=\dimen388
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 696.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 696.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 696.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[33
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 699.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[34
-
-]
-\absvshift=\dimen389
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 810.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 810.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 810.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[35
-
-]
-\absvshift=\dimen390
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 810.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 810.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 810.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[36
-
-]
-<pictures/load-switch.png, id=1269, 1386.68062pt x 516.42938pt>
-File: pictures/load-switch.png Graphic file (type png)
-<use pictures/load-switch.png>
-Package pdftex.def Info: pictures/load-switch.png  used on input line 854.
-(pdftex.def)             Requested size: 256.72147pt x 95.60886pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 854.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 854.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 854.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[37
-
- <./pictures/load-switch.png>]
-File: pictures/load-switch.png Graphic file (type png)
-<use pictures/load-switch.png>
-Package pdftex.def Info: pictures/load-switch.png  used on input line 854.
-(pdftex.def)             Requested size: 256.72147pt x 95.60886pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 854.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 854.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 854.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[38
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 857.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[39
-
-]
-<pictures/120v-wire.png, id=1370, 524.96124pt x 521.95pt>
-File: pictures/120v-wire.png Graphic file (type png)
-<use pictures/120v-wire.png>
-Package pdftex.def Info: pictures/120v-wire.png  used on input line 879.
-(pdftex.def)             Requested size: 128.36073pt x 127.62003pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 879.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 879.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 879.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[40
-
- <./pictures/120v-wire.png>]
-File: pictures/120v-wire.png Graphic file (type png)
-<use pictures/120v-wire.png>
-Package pdftex.def Info: pictures/120v-wire.png  used on input line 879.
-(pdftex.def)             Requested size: 128.36073pt x 127.62003pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 879.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 879.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 879.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[41
-
-]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-\absvshift=\dimen391
-\absvshift=\dimen392
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 907.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 907.
-\absvshift=\dimen393
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 907.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 907.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 907.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[42
-
-]
-<pictures/3-wire-ac-plug.png, id=1454, 799.98875pt x 531.9875pt>
-File: pictures/3-wire-ac-plug.png Graphic file (type png)
-<use pictures/3-wire-ac-plug.png>
-Package pdftex.def Info: pictures/3-wire-ac-plug.png  used on input line 921.
-(pdftex.def)             Requested size: 225.91615pt x 150.22992pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 921.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 921.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 921.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[43
-
- <./pictures/3-wire-ac-plug.png>]
-<pictures/uk-plug-wiring.png, id=1483, 878.28125pt x 591.20876pt>
-File: pictures/uk-plug-wiring.png Graphic file (type png)
-<use pictures/uk-plug-wiring.png>
-Package pdftex.def Info: pictures/uk-plug-wiring.png  used on input line 948.
-(pdftex.def)             Requested size: 205.37926pt x 138.24846pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 948.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 948.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 948.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[44
-
- <./pictures/uk-plug-wiring.png>]
-File: pictures/uk-plug-wiring.png Graphic file (type png)
-<use pictures/uk-plug-wiring.png>
-Package pdftex.def Info: pictures/uk-plug-wiring.png  used on input line 948.
-(pdftex.def)             Requested size: 205.37926pt x 138.24846pt.
-<pictures/server-door-grounding.png, id=1511, 702.625pt x 526.96875pt>
-File: pictures/server-door-grounding.png Graphic file (type png)
-<use pictures/server-door-grounding.png>
-Package pdftex.def Info: pictures/server-door-grounding.png  used on input line
- 948.
-(pdftex.def)             Requested size: 136.91603pt x 102.6821pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 948.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 948.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 948.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[45
-
- <./pictures/server-door-grounding.png>]
-<pictures/gfci-example.png, id=1539, 564.1075pt x 311.1625pt>
-File: pictures/gfci-example.png Graphic file (type png)
-<use pictures/gfci-example.png>
-Package pdftex.def Info: pictures/gfci-example.png  used on input line 970.
-(pdftex.def)             Requested size: 215.64363pt x 118.95042pt.
-<pictures/gfci-outlet.png, id=1540, 346.29375pt x 574.145pt>
-File: pictures/gfci-outlet.png Graphic file (type png)
-<use pictures/gfci-outlet.png>
-Package pdftex.def Info: pictures/gfci-outlet.png  used on input line 970.
-(pdftex.def)             Requested size: 67.77551pt x 112.36519pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 970.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 970.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 970.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[46
-
- <./pictures/gfci-example.png> <./pictures/gfci-outlet.png>]) (./Sections/Secti
-on2.tex (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 3.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[47
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 5.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[48
-
-] (build/main.toc)
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 6.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[49
 
 ]) (./Sections/Section3.tex (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -2645,7 +2044,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[50
+[16
 
 ] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -2653,7 +2052,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 5.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[51
+[17
 
 ] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -2661,7 +2060,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 6.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[52
+[18
 
 ] (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -2669,7 +2068,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 7.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[53
+[19
 
 ]) (./Sections/Section4.tex (build/main.toc)
 File: pictures/background/background2.jpg Graphic file (type jpg)
@@ -2677,15 +2076,15 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[54
+[20
 
 ])
 File: pictures/background/background-PCB.png Graphic file (type png)
 <use pictures/background/background-PCB.png>
 Package pdftex.def Info: pictures/background/background-PCB.png  used on input 
-line 209.
+line 219.
 (pdftex.def)             Requested size: 440.3973pt x 273.14662pt.
-[55
+[21
 
 ]
 \tf@nav=\write8
@@ -2699,34 +2098,40 @@ line 209.
 
 (build/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3FD201FBA1792E3516A377F5CD2EB728;3011.
+(rerunfilecheck)             Checksum: EC66D5C5BFB6C390AF9131C0E39F97B2;1577.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71084 strings out of 478287
- 1789823 string characters out of 5849289
- 2727188 words of memory out of 5000000
- 88085 multiletter control sequences out of 15000+600000
- 558751 words of font info for 97 fonts, out of 8000000 for 9000
+ 68887 strings out of 478287
+ 1727309 string characters out of 5849289
+ 2718832 words of memory out of 5000000
+ 85992 multiletter control sequences out of 15000+600000
+ 571956 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,20n,122p,1003b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
-thit.enc}</usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on build/main.pdf (55 pages, 4055100 bytes).
+ 128i,14n,122p,1003b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome
+5/fa5free0.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/t
+exmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-e
+c.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/
+share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}</usr/share/
+texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbo10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/zapfding/uzdr.pfb>
+Output written on build/main.pdf (21 pages, 1524497 bytes).
 PDF statistics:
- 2038 PDF objects out of 2073 (max. 8388607)
- 1778 compressed objects within 18 object streams
- 127 named destinations out of 1000 (max. 500000)
- 904 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 889 PDF objects out of 1000 (max. 8388607)
+ 749 compressed objects within 8 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 495 words of extra memory for PDF output out of 10000 (max. 10000000)
 
