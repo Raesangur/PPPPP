@@ -2,6 +2,7 @@
 
 \section{Quels sont les types de régulateurs?}
 
+
 \begin{frame}{Régulateurs Linéaires vs Switching}
 \renewcommand{\arraystretch}{1.4}
 \begin{table}
@@ -17,21 +18,21 @@
         \faPuzzlePiece\ & \textbf{Complexité} 
             & {\color{UDSgreenFierte}Faible \cmark} 
             & {\color{red}Moyen à Élevé \xmark} \\
-        \faPercent\ & \textbf{Efficacité} 
-            & {\color{red}Faible \xmark} 
-            & {\color{UDSgreenFierte}Très Efficace \cmark} \\
         \faWaveSquare\ & \textbf{Bruit}      
             & {\color{UDSgreenFierte}Faible \cmark} 
             & {\color{red}Moyen à Élevé \xmark} \\
+        \faPercent\ & \textbf{Efficacité} 
+            & {\color{red}Faible \xmark} 
+            & {\color{UDSgreenFierte}Très Efficace \cmark} \\
         \faRandom\ & \textbf{\boldmath$V_{out}$} 
             & {\color{red}$V_{out} < V_{in}$ \xmark} 
             & {\color{UDSgreenFierte}$V_{out} \subseteq \mathbb{R}$ \cmark} \\
-        \faBolt\ & \textbf{Courant}            
-            & {\color{red}Faible à Moyen \xmark}
-            & {\color{UDSgreenFierte}Moyen à Élevé \cmark} \\
         \faThermometerHalf\ & \textbf{Température}        
             & {\color{red}Élevée \xmark}            
             & {\color{UDSgreenFierte}Faible à Moyenne \cmark} \\
+        \faBolt\ & \textbf{Courant}            
+            & {\color{red}Faible à Moyen \xmark}
+            & {\color{UDSgreenFierte}Moyen à Élevé \cmark} \\
     \end{tabular}
 \end{table}
 \end{frame}
@@ -52,12 +53,12 @@
                 \begin{itemize}
                     \item<2-> PSRR
                 \end{itemize}
-                \item<3-> $V_{in} > V_{out} > \SI{0.5}{\volt}$
+                \item<3-> $V_{in} - \SI{0.3}{\volt} > V_{out}$
                 \item<4-> Très peu efficace
                 \begin{itemize}
                     \setlength{\itemsep}{4pt}
                     \item<4-> $I_{in} = I_{out}$
-                    \item<4-> $eff = \dfrac{P_{out}}{P_{in}} = \dfrac{V_{out}}{V_{in}}$
+                    \item<4-> $\eta = \dfrac{P_{out}}{P_{in}} = \dfrac{V_{out}}{V_{in}}$
                 \end{itemize}
                 \item<5-> Power dissipée en chaleur!
                 \item<5-> Limite le courant
@@ -94,11 +95,54 @@
     \end{columns}
 \end{frame}
 
+%\begin{frame}{Régulateur Linéaire - Fonctionnement}
+%    \begin{figure}
+%        \centering
+%        \includegraphics[width=0.9\textwidth]{pictures/linear-regulator.png}
+%    \end{figure}
+%\end{frame}
+
 \begin{frame}{Régulateur Linéaire - Fonctionnement}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.9\textwidth]{pictures/linear-regulator.png}
-    \end{figure}
+    \begin{center}
+        \resizebox{\textwidth}{!}{
+        \begin{circuitikz}[american voltages]
+            \draw [thick]
+            (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
+            (20.5, 8) to [C] (20.5, 0) node [ground]{}
+            (0, 8) to [C] (0, 0) node [ground]{};
+            \draw
+            (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
+                
+            % Feedback Voltage Divider
+            \draw [thick]
+            (17, 8) to [R] (17, 4) to [R] (17, 0) node[ground] {};
+
+            % Zener Voltage Reference
+            \draw [thick]
+            (5.5, 0) node[ground]{} to [empty ZZener diode] (5.5, 5) to [R] (5.5, 8);
+
+            % Comparison OpAmp
+            \draw [thick]
+            (10, 4) node[op amp, xscale=1.5, yscale=-1.5] (amp) {}
+            (amp.+) to [short, -*] (amp.+ -| 5.5, 0)
+            (amp.-) to [short] (amp.- -| 7, 0)
+            to [short] (7, 1) to [short] (16, 1)
+            to [short] (16, 4) to [short, -*] (17, 4);
+
+            % PMOS
+            \draw [thick]
+            (14, 8) node[pigfete, bodydiode, rotate=90, xscale=2, yscale=-2] (fet) {}
+            (fet.G) node [anchor=south, xshift=8pt] {G}
+            (fet.D) node [anchor=west, yshift=8pt] {D}
+            (fet.S) node [anchor=east, yshift=8pt] {S}
+            (fet.G) to [short] (fet.G |- 0, 4) to [short] (amp.out) 
+            (fet.D) to [short] (0, 8)
+            (fet.S) to (22, 8);
+
+            \draw[dashed, ultra thick, rounded corners] (4, 9.5) rectangle (18.5, -1.5);
+        \end{circuitikz}
+        }
+    \end{center}  
 \end{frame}
 
 \begin{frame}{Power Supply Ripple Reduction}
