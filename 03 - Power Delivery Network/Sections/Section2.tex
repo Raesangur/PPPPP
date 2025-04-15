@@ -3,7 +3,7 @@
 \section{Quels sont les types de régulateurs?}
 
 
-\begin{frame}{Régulateurs Linéaires vs Switching}
+\begin{frame}{DC-DC - Régulateurs Linéaires vs Switching}
 \renewcommand{\arraystretch}{1.4}
 \begin{table}
     \centering
@@ -27,6 +27,9 @@
         \faRandom\ & \textbf{\boldmath$V_{out}$} 
             & {\color{red}$V_{out} < V_{in}$ \xmark} 
             & {\color{UDSgreenFierte}$V_{out} \subseteq \mathbb{R}$ \cmark} \\
+        \faUnlink\ & \textbf{Isolation} 
+            & {\color{red} Non \xmark} 
+            & {\color{UDSgreenFierte} Possible \cmark} \\
         \faThermometerHalf\ & \textbf{Température}        
             & {\color{red}Élevée \xmark}            
             & {\color{UDSgreenFierte}Faible à Moyenne \cmark} \\
@@ -54,6 +57,7 @@
                     \item<2-> PSRR
                 \end{itemize}
                 \item<3-> $V_{in} - \SI{0.3}{\volt} > V_{out}$
+                \item<3-> Isolation impossible
                 \item<4-> Très peu efficace
                 \begin{itemize}
                     \setlength{\itemsep}{4pt}
@@ -78,6 +82,7 @@
                 \faWaveSquare\ & {\color{UDSgreenFierte}Faible \cmark}\\
                 \ifnum\slideno>2 
                 \faRandom\ & {\color{red}$V_{out} < V_{in}$ \xmark}\\
+                \faUnlink\ & {\color{red}Non \xmark}\\
                 \ifnum\slideno>3 
                 \faPercent\ & {\color{red}Faible \xmark}\\
                 \ifnum\slideno>4 
@@ -95,12 +100,6 @@
     \end{columns}
 \end{frame}
 
-%\begin{frame}{Régulateur Linéaire - Fonctionnement}
-%    \begin{figure}
-%        \centering
-%        \includegraphics[width=0.9\textwidth]{pictures/linear-regulator.png}
-%    \end{figure}
-%\end{frame}
 
 \begin{frame}{Régulateur Linéaire - Fonctionnement}
     \begin{center}
@@ -196,7 +195,6 @@
                 $PSRR = \dfrac{\Delta V_{in}}{\Delta V_{out}}$
             \end{center}
         \end{column}
-        \pause
         \begin{column}{0.5\textwidth}
             \begin{center}
                 $PSRR (dB) = -20 \log \left(\dfrac{\Delta V_{in}}{\Delta V_{out}}\right)$
@@ -244,4 +242,221 @@
 \end{tabular}
 \end{frame}
 
+
+
 \subsection{Régulateurs \textit{Switching}}
+
+\begin{frame}{Régulateur Switching - Résumé}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \vspace{-18pt}
+            \begin{itemize}
+                \item<1-> Régulateur plus complexe
+                \begin{itemize}
+                    \item<1-> IC
+                    \item<1-> Condensateurs \& bobines
+                    \item<1-> Transistors et diodes
+                \end{itemize}
+                \item<1-> Topologies
+                \item<2-> Rajoute du bruit au circuit
+                \begin{itemize}
+                    \item<2-> Fréquence de \textit{switching}
+                \end{itemize}
+                \item<3-> Output très grande selon topologie
+                \begin{itemize}
+                    \item<3-> $V_{out} > V_{in}$
+                    \item<3-> $V_{out} < \SI{0}{\volt}$
+                    \only<3>{\item \textit{Sortie isolée possible}}
+                \end{itemize}
+                \item<4-> Extrèmement efficace
+                \begin{itemize}
+                    \item<4-> 80\% - 90\%
+                    \only<4>{\item \textit{Courant \& Tension scale selon demande}}
+                \end{itemize}
+                \only<5-> {
+                \item Bonne gestion thermique
+                \begin{itemize}
+                    \item Selon topologie
+                \end{itemize}
+                \item Gros courants
+                }
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.4\textwidth}
+            \renewcommand{\arraystretch}{1.4}
+            \begin{table}
+            \centering
+            \begin{tabular}{>{\color{UDSgreenSolidarite}}c | c}
+                \rowcolor{UDSgreenSolidarite}
+                \color{white}\textbf{\faList} & \color{white}\textbf{Régulateur Linéaire}\\
+                \faDollarSign\ & {\color{red}Moyen à Élevé \xmark}\\
+                \faPuzzlePiece\ & {\color{red}Moyen à Élevé \xmark}\\
+                \ifnum\slideno>1
+                \faWaveSquare\ & {\color{red}Moyen à Élevé \xmark}\\
+                \ifnum\slideno>2 
+                \faRandom\ & {\color{UDSgreenFierte}$V_{out} \subseteq \mathbb{R}$ \cmark}\\
+                \faUnlink & {\color{UDSgreenFierte}Possible  \cmark}\\
+                \ifnum\slideno>3 
+                \faPercent\ & {\color{UDSgreenFierte}Très Efficace \cmark}\\
+                \ifnum\slideno>4 
+                \faThermometerHalf\ & {\color{UDSgreenFierte}Faible à Moyenne \cmark}\\
+                \faBolt\ & {\color{UDSgreenFierte}Moyen à Élevé \cmark}\\
+                \fi\fi\fi\fi
+            \end{tabular}
+            \end{table}
+            \vfill
+            \begin{figure}
+                \centering
+                \includegraphics<-3>[width=0.5\textwidth]{pictures/switching-regulator-ic.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Topologies de Régulateurs Switching}
+    \centering
+    \Large
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{>{\color{UDSgreenFierte}}c l | c | c}
+        \rowcolor{UDSgreenSolidarite}
+        & \textcolor{white}{\textbf{Topologie}} & 
+        \textcolor{white}{\boldmath$V_{out}$} & 
+        \textcolor{white}{\textbf{Isolation}} \\
+
+        \faArrowDown   & \textbf{Buck}        & $V_{out} < V_{in}$                            & \xmark \\
+        \faArrowUp     & \textbf{Boost}       & $V_{out} > V_{in}$                            & \xmark \\
+        \faArrowsAltV  & \textbf{Buck-Boost}  & $V_{out} \subseteq \mathbb{R}$ & \xmark \\
+        \faRetweet     & \textbf{SEPIC}       & $V_{out} \ge \SI{0}{\volt}$ & \xmark \\
+        \faBorderStyle & \textbf{Flyback}     & $V_{out} \subseteq \mathbb{R}$ & \cmark
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Régulateur Switching - Principe principal}
+    \begin{itemize}
+        \item Une bobine s'oppose aux changements de courant
+    \end{itemize}
+
+    \vfill
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{pictures/law-of-inductance.png}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Régulateur Switching - Buck - Fonctionnement}
+    \centering
+    \resizebox{\textwidth}{!}{
+    \ctikzset{inductors/scale=2}
+    \begin{circuitikz}[american voltages,
+        block/.style = {rectangle, draw, minimum height=1cm,        minimum width=2.5cm, align=center},
+        node distance=0.8cm and 0.6cm,
+        >={Stealth[round]}
+    ]
+        \draw [thick]
+        (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
+        (19.5, 8) to [C] (19.5, 0) node [ground]{}
+        (0, 8) to [C] (0, 0) node [ground]{};
+        \draw
+        (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
+
+
+        % PMOS
+        \only<1> {
+            \draw [thick]
+            (6, 8) node[pigfete, bodydiode, rotate=90, xscale=2, yscale=-2] (fet) {};
+        }
+        \only<2> {
+            \draw [thick]
+            (6, 8) node[pigfete, bodydiode, rotate=90, xscale=2, yscale=-2, color=UDSgreenFierte] (fet) {};
+        }
+        \only<3> {
+            \draw [thick]
+            (6, 8) node[pigfete, bodydiode, rotate=90, xscale=2, yscale=-2, color=red] (fet) {};
+        }
+
+        \draw [thick]
+        (fet.G) node [anchor=south, xshift=8pt] {G}
+        (fet.D) node [anchor=west, yshift=8pt] {D}
+        (fet.S) node [anchor=east, yshift=8pt] {S}
+        (fet.D) to [short] (0, 8);
+
+        \only<1> {
+            \draw[thick]
+            (fet.S) to [short] (12, 8) to [american inductor] (20, 8) to [short] (22, 8);
+        }
+        \only<2-> {
+            \draw[thick]
+            (fet.S) to [short] (12, 8) to [american inductor, f>^={\Large$i$}] (20, 8) to [short] (22, 8);
+        }
+
+        % Control Block
+        \draw [thick]
+        (fet.G |- 0, 4) node [block, anchor=south, yshift=-8pt] (control) {\LARGE Control}
+        (control.north) to [short] (fet.G);
+
+        % Schottky Diode
+        \draw [thick]
+        (12, 0) node[ground]{} to [empty Schottky diode] (12, 8);
+
+
+        % Arrows
+        \only<2> {
+            \draw[->, ultra thick, red] 
+            (4, 9.5) to[out=0, in=180] (8, 9.5);
+            \draw[->, ultra thick, red] 
+            (12.5, 9.5) to[out=0, in=180] (17, 9.5);
+            \draw[->, ultra thick, red] 
+            (19.5, 9.5) to[out=0, in=90] (21, 5);
+
+            \draw[->, ultra thick, red] 
+            (21, 3) to[out=-90, in=0] (19.5, -1);
+            \draw[->, ultra thick, red] 
+            (16, -1) to[out=180, in=0] (13, -1);
+            \draw[->, ultra thick, red] 
+            (9, -1) to[out=180, in=0] (5, -1);
+            \draw[->, ultra thick, red] 
+            (2.5, 1.5) to[out=120, in=240] (2.5, 6.5);
+        }
+        \only<3> {
+            \draw[->, ultra thick, red] 
+            (12.5, 5.5) to[out=90, in=180] (14.5, 7.5)
+            to [out=0, in=180] (16.5, 7.5)
+            to [out=0, in=90] (18.75, 5);
+            \draw[->, ultra thick, red] 
+            (18.75, 2) to[out=-90, in=0] (16.5, 0.5)
+            to [out=180, in=0] (14.5, 0.5)
+            to [out=180, in=-90] (12.5, 2.5);
+
+            \draw[->, ultra thick, red] 
+            (19.75, 6.5) to[out=90, in=180] (20.75, 7.5)
+            to[out=0, in=90] (21.75, 6.5);
+            \draw[->, ultra thick, red] 
+            (21.75, 1.5) to[out=-90, in=0] (20.75, 0.5)
+            to[out=180, in=-90] (19.75, 1.5);
+        }
+    \end{circuitikz}
+    }
+\end{frame}
+
+\begin{frame}{Régulateur Switching - Buck - Waveform}
+   \begin{itemize}
+        \item \color{UDSgreenFierte}\faToggleOn \color{black}\ ~Le courant augmente tranquilement
+        \item \color{red}\faToggleOff \color{black}\ ~Le courant descend
+    \end{itemize}
+
+    \vfill
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{pictures/buck-switching-current.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Régulateur Switching - Buck - Waveform}
+    \vfill
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{pictures/buck-switching-output.png}
+    \end{figure}
+\end{frame}
