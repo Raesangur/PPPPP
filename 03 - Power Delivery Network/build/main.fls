@@ -2517,6 +2517,9 @@ INPUT ./pictures/background/background2.jpg
 INPUT ./pictures/background/background2.jpg
 INPUT pictures/background/background2.jpg
 INPUT ./pictures/background/background2.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fontawesome5/fa5free3solid.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fontawesome5/fa5free2solid.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fontawesome5/fa5free0solid.tfm
 INPUT ./pictures/buck-switching-current.png
 INPUT ./pictures/buck-switching-current.png
 INPUT pictures/buck-switching-current.png
