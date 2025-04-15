@@ -441,10 +441,15 @@
 \end{frame}
 
 \begin{frame}{Régulateur Switching - Buck - Waveform}
-   \begin{itemize}
-        \item \color{UDSgreenFierte}\faToggleOn \color{black}\ ~Le courant augmente tranquilement
-        \item \color{red}\faToggleOff \color{black}\ ~Le courant descend
-    \end{itemize}
+   \large
+    \renewcommand{\arraystretch}{1.25}
+    \begin{tabular}{>{\color{UDSgreenFierte}}c l}
+        \faToggleOn   & \color{black} Le courant augmente tranquillement \\
+        \color{red}\faToggleOff & \color{black} Le courant descend \\
+        \faRetweet    & \color{black} Il y a toujours du courant qui s'en va vers la load \\
+        \hspace{12pt}\color{red}\faBan & \hspace{12pt}\color{black} Il n'y a pas toujours du courant qui sort de la source \\
+        \hspace{12pt}\faChartLine & \hspace{12pt}\color{black} $I_{out} > I_{in}$ \\
+    \end{tabular}
 
     \vfill
     \begin{figure}

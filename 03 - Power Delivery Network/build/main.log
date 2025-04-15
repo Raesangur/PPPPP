@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  14 APR 2025 20:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  14 APR 2025 20:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2309,20 +2309,20 @@ e 441.
 File: pictures/buck-switching-current.png Graphic file (type png)
 <use pictures/buck-switching-current.png>
 Package pdftex.def Info: pictures/buck-switching-current.png  used on input lin
-e 454.
+e 459.
 (pdftex.def)             Requested size: 342.2953pt x 43.08519pt.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 454.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 459.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 454.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 459.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 454.
+e 459.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [28
 
@@ -2331,20 +2331,20 @@ e 454.
 File: pictures/buck-switching-output.png Graphic file (type png)
 <use pictures/buck-switching-output.png>
 Package pdftex.def Info: pictures/buck-switching-output.png  used on input line
- 462.
+ 467.
 (pdftex.def)             Requested size: 342.2953pt x 205.64557pt.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 462.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 467.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 462.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 467.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 462.
+e 467.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [29
 
@@ -2415,11 +2415,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71878 strings out of 478287
- 1816843 string characters out of 5849289
+ 71881 strings out of 478287
+ 1816930 string characters out of 5849289
  2749331 words of memory out of 5000000
- 88947 multiletter control sequences out of 15000+600000
- 624107 words of font info for 142 fonts, out of 8000000 for 9000
+ 88950 multiletter control sequences out of 15000+600000
+ 625011 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,122p,1003b,1261s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2442,7 +2442,7 @@ mf/fonts/type1/public/lm/lmsso17.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on build/main.pdf (35 pages, 2549136 bytes).
+Output written on build/main.pdf (35 pages, 2550061 bytes).
 PDF statistics:
  1299 PDF objects out of 1440 (max. 8388607)
  1124 compressed objects within 12 object streams
