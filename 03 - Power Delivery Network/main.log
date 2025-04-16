@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.25)  7 APR 2025 23:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.25)  15 APR 2025 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -847,17 +847,34 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \backup@length=\skip69
 \ar@cellbox=\box132
 ))
-(/usr/share/texmf-dist/tex/latex/fontawesome/fontawesome.sty
-Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
+\everycr=\toks47
+\minrowclearance=\skip70
+\rownum=\count369
+)
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
 
-(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count370
+\l__pdf_internal_box=\box133
+))
+Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
+
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 )
-(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
 )
-(/usr/share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic.tex)
-(/usr/share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.tex))
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
+Package: fontawesome5-generic-helper 2022/05/02 v5.15.4 non-uTeX helper for fon
+tawesome5
+
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)))
 (/usr/share/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
@@ -873,10 +890,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks47
-\XKV@tempa@toks=\toks48
+\XKV@toks=\toks48
+\XKV@tempa@toks=\toks49
 )
-\XKV@depth=\count369
+\XKV@depth=\count371
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texmf-dist/tex/latex/fmtcount/fcprefix.sty
@@ -884,41 +901,41 @@ Package: fcprefix 2012/09/28
 
 (/usr/share/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count370
+\fc@digit@counter=\count372
 ))
-\c@padzeroesN=\count371
-\fc@tmpcatcode=\count372
-\@DT@modctr=\count373
-\@ordinalctr=\count374
-\@orgargctr=\count375
-\@strctr=\count376
-\@tmpstrctr=\count377
-\@DT@loopN=\count378
-\@DT@X=\count379
+\c@padzeroesN=\count373
+\fc@tmpcatcode=\count374
+\@DT@modctr=\count375
+\@ordinalctr=\count376
+\@orgargctr=\count377
+\@strctr=\count378
+\@tmpstrctr=\count379
+\@DT@loopN=\count380
+\@DT@X=\count381
 )
 (/usr/share/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count380
-\@month=\count381
-\@year=\count382
-\c@HOUR=\count383
-\c@HOURXII=\count384
-\c@MINUTE=\count385
-\c@TOHOUR=\count386
-\c@TOMINUTE=\count387
-\c@SECOND=\count388
-\currenthour=\count389
-\currentminute=\count390
-\currentsecond=\count391
+\@day=\count382
+\@month=\count383
+\@year=\count384
+\c@HOUR=\count385
+\c@HOURXII=\count386
+\c@MINUTE=\count387
+\c@TOHOUR=\count388
+\c@TOMINUTE=\count389
+\c@SECOND=\count390
+\currenthour=\count391
+\currentminute=\count392
+\currentsecond=\count393
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count392
-\dayofyear=\count393
-\dayofweek=\count394
+\@dtctr=\count394
+\dayofyear=\count395
+\dayofweek=\count396
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks49
-\dt@b=\toks50
+\dt@a=\toks50
+\dt@b=\toks51
 )
 (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -926,7 +943,7 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box133
+\pgfnodeparttextbox=\box134
 )
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -944,8 +961,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen313
 \pgffor@skip=\dimen314
-\pgffor@stack=\toks51
-\pgffor@toks=\toks52
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
@@ -953,7 +970,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
 x
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count395
+\pgf@plot@mark@count=\count397
 \pgfplotmarksize=\dimen315
 )
 \tikz@lastx=\dimen316
@@ -964,21 +981,21 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@lastmovetoy=\dimen321
 \tikzleveldistance=\dimen322
 \tikzsiblingdistance=\dimen323
-\tikz@figbox=\box134
-\tikz@figbox@bg=\box135
-\tikz@tempbox=\box136
-\tikz@tempbox@bg=\box137
-\tikztreelevel=\count396
-\tikznumberofchildren=\count397
-\tikznumberofcurrentchild=\count398
-\tikz@fig@count=\count399
+\tikz@figbox=\box135
+\tikz@figbox@bg=\box136
+\tikz@tempbox=\box137
+\tikz@tempbox@bg=\box138
+\tikztreelevel=\count398
+\tikznumberofchildren=\count399
+\tikznumberofcurrentchild=\count400
+\tikz@fig@count=\count401
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count400
-\pgfmatrixcurrentcolumn=\count401
-\pgf@matrix@numberofcolumns=\count402
+\pgfmatrixcurrentrow=\count402
+\pgfmatrixcurrentcolumn=\count403
+\pgf@matrix@numberofcolumns=\count404
 )
-\tikz@expandcount=\count403
+\tikz@expandcount=\count405
 
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
@@ -1024,9 +1041,9 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 fpu.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
-\pgf@circ@count@a=\count404
-\pgf@circ@count@b=\count405
-\pgf@circ@count@c=\count406
+\pgf@circ@count@a=\count406
+\pgf@circ@count@b=\count407
+\pgf@circ@count@c=\count408
 \pgf@circ@res@up=\dimen335
 \pgf@circ@res@down=\dimen336
 \pgf@circ@res@zero=\dimen337
@@ -1040,14 +1057,14 @@ fpu.code.tex
 \pgfstartlinewidth=\dimen345
 )
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
-\ctikz@scratchbox=\box138
+\ctikz@scratchbox=\box139
 )
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
-\pgf@circ@res@count=\count407
+\pgf@circ@res@count=\count409
 )
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex)
@@ -1063,21 +1080,21 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks53
-\t@pgfplots@tokb=\toks54
-\t@pgfplots@tokc=\toks55
+\t@pgfplots@toka=\toks54
+\t@pgfplots@tokb=\toks55
+\t@pgfplots@tokc=\toks56
 \pgfplots@tmpa=\dimen347
-\c@pgfplots@coordindex=\count408
-\c@pgfplots@scanlineindex=\count409
+\c@pgfplots@coordindex=\count410
+\c@pgfplots@scanlineindex=\count411
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
 oader.code.tex
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks56
-\t@pgf@tokb=\toks57
-\t@pgf@tokc=\toks58
+\t@pgf@toka=\toks57
+\t@pgf@tokb=\toks58
+\t@pgf@tokc=\toks59
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
 gfutil-common-lists.tex))
@@ -1088,14 +1105,14 @@ gfutil-common-lists.tex))
 ext.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
 x
-\c@pgfplotsarray@tmp=\count410
+\c@pgfplotsarray@tmp=\count412
 )
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
 ex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
 ex
-\c@pgfplotstable@counta=\count411
-\t@pgfplotstable@a=\toks59
+\c@pgfplotstable@counta=\count413
+\t@pgfplotstable@a=\toks60
 )
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
 x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
@@ -1103,7 +1120,7 @@ x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
 .code.tex
-\c@pgfplotslibrarysurf@no=\count412
+\c@pgfplotslibrarysurf@no=\count414
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
 pgfsys-pdftex.def)))
@@ -1127,11 +1144,11 @@ decorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen350
 \pgfdecoratedinputsegmentremainingdistance=\dimen351
 \pgf@decorate@distancetomove=\dimen352
-\pgf@decorate@repeatstate=\count413
+\pgf@decorate@repeatstate=\count415
 \pgfdecorationsegmentamplitude=\dimen353
 \pgfdecorationsegmentlength=\dimen354
 )
-\tikz@lib@dec@box=\box139
+\tikz@lib@dec@box=\box140
 )
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 decorations.pathmorphing.code.tex
@@ -1143,7 +1160,7 @@ decorations.pathreplacing.code.tex
 ons.pathreplacing.code.tex))
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua
 .code.tex)
-\pgfplots@numplots=\count414
+\pgfplots@numplots=\count416
 \pgfplots@xmin@reg=\dimen355
 \pgfplots@xmax@reg=\dimen356
 \pgfplots@ymin@reg=\dimen357
@@ -1162,30 +1179,30 @@ Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
 
 (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count415
-\calc@Bcount=\count416
+\calc@Acount=\count417
+\calc@Bcount=\count418
 \calc@Adimen=\dimen361
 \calc@Bdimen=\dimen362
-\calc@Askip=\skip70
-\calc@Bskip=\skip71
+\calc@Askip=\skip71
+\calc@Bskip=\skip72
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count417
-\calc@Cskip=\skip72
+\calc@Ccount=\count419
+\calc@Cskip=\skip73
 )
 (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count418
+\g_MT_multlinerow_int=\count420
 \l_MT_multwidth_dim=\dimen363
-\origjot=\skip73
+\origjot=\skip74
 \l_MT_shortvdotswithinadjustabove_dim=\dimen364
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen365
 \l_MT_above_intertext_sep=\dimen366
 \l_MT_below_intertext_sep=\dimen367
 \l_MT_above_shortintertext_sep=\dimen368
 \l_MT_below_shortintertext_sep=\dimen369
-\xmathstrut@box=\box140
+\xmathstrut@box=\box141
 \xmathstrut@dim=\dimen370
 )
 (/usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
@@ -1200,7 +1217,7 @@ Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
 
 (/usr/share/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box141
+\collectedbox=\box142
 )
 \tc@llx=\dimen371
 \tc@lly=\dimen372
@@ -1222,12 +1239,12 @@ File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 
 (/usr/share/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count419
+\c@checkoddpage=\count421
 )
 (/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box142
-\sift@deathcycles=\count420
+\@vwid@box=\box143
+\sift@deathcycles=\count422
 \@vwid@loff=\dimen383
 \@vwid@roff=\dimen384
 ))
@@ -1241,14 +1258,8 @@ Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 (/usr/share/texmf-dist/tex/latex/media9/pdfbase.sty
 Package: pdfbase 2024/09/16 v0.59 driver independent access to low-level PDF fe
 atures
-
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count421
-\l__pdf_internal_box=\box143
-)
-\g_pbs_page_int=\count422
-\g_pbs_oc_int=\count423
+\g_pbs_page_int=\count423
+\g_pbs_oc_int=\count424
 )
 (/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
@@ -1266,7 +1277,7 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count424
+\c@abspage=\count425
 Package zref Info: New property: abspage on input line 67.
 )
 (/usr/share/texmf-dist/tex/latex/ocgx2/ocgbase.sty
@@ -1276,87 +1287,87 @@ Package: ocgbase 2024/09/15 v0.24 support package for ocgx2.sty
 \@anim@measbox=\box145
 \@anim@tmpdima=\dimen385
 \@anim@tmpdimb=\dimen386
-\@anim@num=\count425
-\@anim@curframe=\count426
-\@anim@curframe@zb=\count427
-\@anim@resizeflags=\count428
-\@anim@skipfram=\count429
-\@anim@mulframecnt=\count430
+\@anim@num=\count426
+\@anim@curframe=\count427
+\@anim@curframe@zb=\count428
+\@anim@resizeflags=\count429
+\@anim@skipfram=\count430
+\@anim@mulframecnt=\count431
 \@anim@@tmlnfile=\read3
-\@anim@tmpcnt=\count431
-\c@@anim@ltxcnt=\count432
-\@anim@curlayer=\count433
-\@anim@lineno=\count434
-\@anim@curfield=\count435
-\@anim@@resizeflags=\count436
+\@anim@tmpcnt=\count432
+\c@@anim@ltxcnt=\count433
+\@anim@curlayer=\count434
+\@anim@lineno=\count435
+\@anim@curfield=\count436
+\@anim@@resizeflags=\count437
 )
 (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
 
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count437
+\lrq@indent=\count438
 
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count438
-\c@listtotal=\count439
-\c@listcount=\count440
-\c@liststart=\count441
-\c@liststop=\count442
-\c@citecount=\count443
-\c@citetotal=\count444
-\c@multicitecount=\count445
-\c@multicitetotal=\count446
-\c@instcount=\count447
-\c@maxnames=\count448
-\c@minnames=\count449
-\c@maxitems=\count450
-\c@minitems=\count451
-\c@citecounter=\count452
-\c@maxcitecounter=\count453
-\c@savedcitecounter=\count454
-\c@uniquelist=\count455
-\c@uniquename=\count456
-\c@refsection=\count457
-\c@refsegment=\count458
-\c@maxextratitle=\count459
-\c@maxextratitleyear=\count460
-\c@maxextraname=\count461
-\c@maxextradate=\count462
-\c@maxextraalpha=\count463
-\c@abbrvpenalty=\count464
-\c@highnamepenalty=\count465
-\c@lownamepenalty=\count466
-\c@maxparens=\count467
-\c@parenlevel=\count468
-\blx@tempcnta=\count469
-\blx@tempcntb=\count470
-\blx@tempcntc=\count471
-\c@blx@maxsection=\count472
-\blx@maxsegment@0=\count473
-\blx@notetype=\count474
-\blx@parenlevel@text=\count475
-\blx@parenlevel@foot=\count476
-\blx@sectionciteorder@0=\count477
-\blx@sectionciteorderinternal@0=\count478
-\blx@entrysetcounter=\count479
-\blx@biblioinstance=\count480
-\labelnumberwidth=\skip74
-\labelalphawidth=\skip75
-\biblabelsep=\skip76
-\bibitemsep=\skip77
-\bibnamesep=\skip78
-\bibinitsep=\skip79
-\bibparsep=\skip80
-\bibhang=\skip81
+\c@tabx@nest=\count439
+\c@listtotal=\count440
+\c@listcount=\count441
+\c@liststart=\count442
+\c@liststop=\count443
+\c@citecount=\count444
+\c@citetotal=\count445
+\c@multicitecount=\count446
+\c@multicitetotal=\count447
+\c@instcount=\count448
+\c@maxnames=\count449
+\c@minnames=\count450
+\c@maxitems=\count451
+\c@minitems=\count452
+\c@citecounter=\count453
+\c@maxcitecounter=\count454
+\c@savedcitecounter=\count455
+\c@uniquelist=\count456
+\c@uniquename=\count457
+\c@refsection=\count458
+\c@refsegment=\count459
+\c@maxextratitle=\count460
+\c@maxextratitleyear=\count461
+\c@maxextraname=\count462
+\c@maxextradate=\count463
+\c@maxextraalpha=\count464
+\c@abbrvpenalty=\count465
+\c@highnamepenalty=\count466
+\c@lownamepenalty=\count467
+\c@maxparens=\count468
+\c@parenlevel=\count469
+\blx@tempcnta=\count470
+\blx@tempcntb=\count471
+\blx@tempcntc=\count472
+\c@blx@maxsection=\count473
+\blx@maxsegment@0=\count474
+\blx@notetype=\count475
+\blx@parenlevel@text=\count476
+\blx@parenlevel@foot=\count477
+\blx@sectionciteorder@0=\count478
+\blx@sectionciteorderinternal@0=\count479
+\blx@entrysetcounter=\count480
+\blx@biblioinstance=\count481
+\labelnumberwidth=\skip75
+\labelalphawidth=\skip76
+\biblabelsep=\skip77
+\bibitemsep=\skip78
+\bibnamesep=\skip79
+\bibinitsep=\skip80
+\bibparsep=\skip81
+\bibhang=\skip82
 \blx@bcfin=\read4
 \blx@bcfout=\write6
 \blx@langwohyphens=\language90
-\c@mincomprange=\count481
-\c@maxcomprange=\count482
-\c@mincompwidth=\count483
+\c@mincomprange=\count482
+\c@maxcomprange=\count483
+\c@mincompwidth=\count484
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1367,88 +1378,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count484
-\c@savedafterword=\count485
-\c@annotator=\count486
-\c@savedannotator=\count487
-\c@author=\count488
-\c@savedauthor=\count489
-\c@bookauthor=\count490
-\c@savedbookauthor=\count491
-\c@commentator=\count492
-\c@savedcommentator=\count493
-\c@editor=\count494
-\c@savededitor=\count495
-\c@editora=\count496
-\c@savededitora=\count497
-\c@editorb=\count498
-\c@savededitorb=\count499
-\c@editorc=\count500
-\c@savededitorc=\count501
-\c@foreword=\count502
-\c@savedforeword=\count503
-\c@holder=\count504
-\c@savedholder=\count505
-\c@introduction=\count506
-\c@savedintroduction=\count507
-\c@namea=\count508
-\c@savednamea=\count509
-\c@nameb=\count510
-\c@savednameb=\count511
-\c@namec=\count512
-\c@savednamec=\count513
-\c@translator=\count514
-\c@savedtranslator=\count515
-\c@shortauthor=\count516
-\c@savedshortauthor=\count517
-\c@shorteditor=\count518
-\c@savedshorteditor=\count519
-\c@labelname=\count520
-\c@savedlabelname=\count521
-\c@institution=\count522
-\c@savedinstitution=\count523
-\c@lista=\count524
-\c@savedlista=\count525
-\c@listb=\count526
-\c@savedlistb=\count527
-\c@listc=\count528
-\c@savedlistc=\count529
-\c@listd=\count530
-\c@savedlistd=\count531
-\c@liste=\count532
-\c@savedliste=\count533
-\c@listf=\count534
-\c@savedlistf=\count535
-\c@location=\count536
-\c@savedlocation=\count537
-\c@organization=\count538
-\c@savedorganization=\count539
-\c@origlocation=\count540
-\c@savedoriglocation=\count541
-\c@origpublisher=\count542
-\c@savedorigpublisher=\count543
-\c@publisher=\count544
-\c@savedpublisher=\count545
-\c@language=\count546
-\c@savedlanguage=\count547
-\c@origlanguage=\count548
-\c@savedoriglanguage=\count549
-\c@pageref=\count550
-\c@savedpageref=\count551
-\shorthandwidth=\skip82
-\shortjournalwidth=\skip83
-\shortserieswidth=\skip84
-\shorttitlewidth=\skip85
-\shortauthorwidth=\skip86
-\shorteditorwidth=\skip87
-\locallabelnumberwidth=\skip88
-\locallabelalphawidth=\skip89
-\localshorthandwidth=\skip90
-\localshortjournalwidth=\skip91
-\localshortserieswidth=\skip92
-\localshorttitlewidth=\skip93
-\localshortauthorwidth=\skip94
-\localshorteditorwidth=\skip95
+\c@afterword=\count485
+\c@savedafterword=\count486
+\c@annotator=\count487
+\c@savedannotator=\count488
+\c@author=\count489
+\c@savedauthor=\count490
+\c@bookauthor=\count491
+\c@savedbookauthor=\count492
+\c@commentator=\count493
+\c@savedcommentator=\count494
+\c@editor=\count495
+\c@savededitor=\count496
+\c@editora=\count497
+\c@savededitora=\count498
+\c@editorb=\count499
+\c@savededitorb=\count500
+\c@editorc=\count501
+\c@savededitorc=\count502
+\c@foreword=\count503
+\c@savedforeword=\count504
+\c@holder=\count505
+\c@savedholder=\count506
+\c@introduction=\count507
+\c@savedintroduction=\count508
+\c@namea=\count509
+\c@savednamea=\count510
+\c@nameb=\count511
+\c@savednameb=\count512
+\c@namec=\count513
+\c@savednamec=\count514
+\c@translator=\count515
+\c@savedtranslator=\count516
+\c@shortauthor=\count517
+\c@savedshortauthor=\count518
+\c@shorteditor=\count519
+\c@savedshorteditor=\count520
+\c@labelname=\count521
+\c@savedlabelname=\count522
+\c@institution=\count523
+\c@savedinstitution=\count524
+\c@lista=\count525
+\c@savedlista=\count526
+\c@listb=\count527
+\c@savedlistb=\count528
+\c@listc=\count529
+\c@savedlistc=\count530
+\c@listd=\count531
+\c@savedlistd=\count532
+\c@liste=\count533
+\c@savedliste=\count534
+\c@listf=\count535
+\c@savedlistf=\count536
+\c@location=\count537
+\c@savedlocation=\count538
+\c@organization=\count539
+\c@savedorganization=\count540
+\c@origlocation=\count541
+\c@savedoriglocation=\count542
+\c@origpublisher=\count543
+\c@savedorigpublisher=\count544
+\c@publisher=\count545
+\c@savedpublisher=\count546
+\c@language=\count547
+\c@savedlanguage=\count548
+\c@origlanguage=\count549
+\c@savedoriglanguage=\count550
+\c@pageref=\count551
+\c@savedpageref=\count552
+\shorthandwidth=\skip83
+\shortjournalwidth=\skip84
+\shortserieswidth=\skip85
+\shorttitlewidth=\skip86
+\shortauthorwidth=\skip87
+\shorteditorwidth=\skip88
+\locallabelnumberwidth=\skip89
+\locallabelalphawidth=\skip90
+\localshorthandwidth=\skip91
+\localshortjournalwidth=\skip92
+\localshortserieswidth=\skip93
+\localshorttitlewidth=\skip94
+\localshortauthorwidth=\skip95
+\localshorteditorwidth=\skip96
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1460,19 +1471,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count552
-\c@textcitetotal=\count553
-\c@textcitemaxnames=\count554
-\c@biburlbigbreakpenalty=\count555
-\c@biburlbreakpenalty=\count556
-\c@biburlnumpenalty=\count557
-\c@biburlucpenalty=\count558
-\c@biburllcpenalty=\count559
+\c@textcitecount=\count553
+\c@textcitetotal=\count554
+\c@textcitemaxnames=\count555
+\c@biburlbigbreakpenalty=\count556
+\c@biburlbreakpenalty=\count557
+\c@biburlnumpenalty=\count558
+\c@biburlucpenalty=\count559
+\c@biburllcpenalty=\count560
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count560
+\c@smartand=\count561
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1484,8 +1495,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count561
-\c@bbx:relatedtotal=\count562
+\c@bbx:relatedcount=\count562
+\c@bbx:relatedtotal=\count563
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1512,52 +1523,125 @@ File: biblatex.cfg
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
-
-(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2025-01-18 L3 programming layer (loader) 
-)
 Package biblatex Info: ... and expl3
 (biblatex)             2025-01-18 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
-(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2024-08-16 L3 Experimental document command parser
-)
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 41.
-Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 130.
-\@quotelevel=\count563
-\@quotereset=\count564
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-30.
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+arrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/share/texmf-dist/tex/latex/lm/t1lmss.fd
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen387
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shapes.code.tex
+File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geomet
+ric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.c
+ode.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbol
+s.code.tex
+File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows
+.code.tex
+File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shapes.callouts.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callou
+ts.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multip
+art.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box146
+\pgfnodeparttwobox=\box147
+\pgfnodepartthreebox=\box148
+\pgfnodepartfourbox=\box149
+\pgfnodeparttwentybox=\box150
+\pgfnodepartnineteenbox=\box151
+\pgfnodeparteighteenbox=\box152
+\pgfnodepartseventeenbox=\box153
+\pgfnodepartsixteenbox=\box154
+\pgfnodepartfifteenbox=\box155
+\pgfnodepartfourteenbox=\box156
+\pgfnodepartthirteenbox=\box157
+\pgfnodeparttwelvebox=\box158
+\pgfnodepartelevenbox=\box159
+\pgfnodeparttenbox=\box160
+\pgfnodepartninebox=\box161
+\pgfnodeparteightbox=\box162
+\pgfnodepartsevenbox=\box163
+\pgfnodepartsixbox=\box164
+\pgfnodepartfivebox=\box165
+)))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+positioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 52.
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 142.
+\@quotelevel=\count564
+\@quotereset=\count565
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+42.
+ (/usr/share/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./main.aux)
+)
+(./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 142.
+LaTeX Font Info:    ... okay on input line 142.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1595,17 +1679,17 @@ LaTeX Font Info:    ... okay on input line 130.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count565
-\scratchdimen=\dimen387
-\scratchbox=\box146
-\nofMPsegments=\count566
-\nofMParguments=\count567
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count568
-\MPscratchDim=\dimen388
-\MPnumerator=\count569
-\makeMPintoPDFobject=\count570
-\everyMPtoPDFconversion=\toks61
+\scratchcounter=\count566
+\scratchdimen=\dimen388
+\scratchbox=\box166
+\nofMPsegments=\count567
+\nofMParguments=\count568
+\everyMPshowfont=\toks61
+\MPscratchCnt=\count569
+\MPscratchDim=\dimen389
+\MPnumerator=\count570
+\makeMPintoPDFobject=\count571
+\everyMPtoPDFconversion=\toks62
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1615,58 +1699,58 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 130.
+Package hyperref Info: Link coloring ON on input line 142.
  (./main.out)
 (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 130.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 142.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 130.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 142.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 130.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 142.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 130.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 142.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 130.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 142.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 130.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 130.
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 142.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 130.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 130.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 142.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 130.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 130.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 130.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 142.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 130.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 130.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 142.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 130.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 142.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 130.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 130.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 130.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 130.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 130.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 142.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 130.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 142.
 
 (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
 .dict
@@ -1698,7 +1782,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 130.
+or `english'. on input line 142.
  (/usr/share/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
@@ -1719,29 +1803,29 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 130.
-Package biblatex Info: Reference segment=0 on input line 130.
+Package biblatex Info: Reference section=0 on input line 142.
+Package biblatex Info: Reference segment=0 on input line 142.
 (./main.nav)
-<pictures/logo/udes_logo.pdf, id=69, 416.68016pt x 65.70796pt>
+<pictures/logo/udes_logo.pdf, id=41, 416.68016pt x 65.70796pt>
 File: pictures/logo/udes_logo.pdf Graphic file (type pdf)
 <use pictures/logo/udes_logo.pdf>
-Package pdftex.def Info: pictures/logo/udes_logo.pdf  used on input line 142.
+Package pdftex.def Info: pictures/logo/udes_logo.pdf  used on input line 154.
 (pdftex.def)             Requested size: 125.005pt x 19.71252pt.
 
 
-<pictures/background/background-PCB.png, id=82, 893.3375pt x 554.07pt>
+<pictures/background/background-PCB.png, id=54, 893.3375pt x 554.07pt>
 File: pictures/background/background-PCB.png Graphic file (type png)
 <use pictures/background/background-PCB.png>
 Package pdftex.def Info: pictures/background/background-PCB.png  used on input 
-line 142.
+line 154.
 (pdftex.def)             Requested size: 440.3973pt x 273.14662pt.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/lm/lm-ec.enc} <./pictures/background/background-PCB.png (PNG copy)> 
-<./pictures/logo/udes_logo.pdf>] (./Sections/Section1.tex (./main.toc)
+<./pictures/logo/udes_logo.pdf>] (./Sections/Section2.tex (./main.toc)
 
-<pictures/background/background2.jpg, id=146, 738.76pt x 554.07pt>
+<pictures/background/background2.jpg, id=113, 738.76pt x 554.07pt>
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
@@ -1749,664 +1833,195 @@ e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [2
 
- <./pictures/background/background2.jpg>] (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 5.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[3
-
-]
+ <./pictures/background/background2.jpg>]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-37.
- (/usr/share/texmf-dist/tex/latex/lm/ot1lmss.fd
+41.
+
+(/usr/share/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-7.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+1.
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-37.
+41.
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-37.
+41.
 
 (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 37.
+(Font)              <10.95> on input line 41.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 37.
+(Font)              <8> on input line 41.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 37.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+(Font)              <6> on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 37.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 37.
-<pictures/ESD-discharge-finger.png, id=230, 803.0pt x 451.6875pt>
-File: pictures/ESD-discharge-finger.png Graphic file (type png)
-<use pictures/ESD-discharge-finger.png>
-Package pdftex.def Info: pictures/ESD-discharge-finger.png  used on input line 
-37.
-(pdftex.def)             Requested size: 112.95807pt x 63.53906pt.
-<pictures/ESD-logo.png, id=231, 44.57599pt x 44.57599pt>
-File: pictures/ESD-logo.png Graphic file (type png)
-<use pictures/ESD-logo.png>
-Package pdftex.def Info: pictures/ESD-logo.png  used on input line 37.
-(pdftex.def)             Requested size: 56.47903pt x 56.48094pt.
-<pictures/logo/c3i.png, id=233, 822.272pt x 708.246pt>
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 41.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
+nput line 41.
+
+(/usr/share/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
+nput line 41.
+
+(/usr/share/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
+nput line 41.
+
+(/usr/share/texmf-dist/tex/latex/fontawesome5/ufontawesomefree3.fd)
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `OT1/lmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/lmss/bx/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/b/it' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/it' tried instead on input line 41.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 41.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on i
+nput line 41.
+
+(/usr/share/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd)
+<pictures/logo/c3i.png, id=145, 822.272pt x 708.246pt>
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 37.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 41.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-<pictures/logo/m1_alpha.pdf, id=234, 56.90552pt x 56.90552pt>
+<pictures/logo/m1_alpha.pdf, id=147, 56.90552pt x 56.90552pt>
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 37.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 41.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 
 
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 37.
+e 41.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[3
+
+{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}{/usr/share/te
+xmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/share/texmf-dist/fonts
+/enc/dvips/fontawesome5/fa5free3.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/
+lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/sha
+re/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc} <./pictures/logo/c3i.p
+ng> <./pictures/logo/m1_alpha.pdf>] (./main.toc)
+
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 43.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [4
 
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./pictures/logo/c3i.p
-ng> <./pictures/logo/m1_alpha.pdf> <./pictures/ESD-discharge-finger.png> <./pic
-tures/ESD-logo.png>]
-<pictures/ESD-discharge-waveform.png, id=274, 670.75594pt x 427.5975pt>
-File: pictures/ESD-discharge-waveform.png Graphic file (type png)
-<use pictures/ESD-discharge-waveform.png>
-Package pdftex.def Info: pictures/ESD-discharge-waveform.png  used on input lin
-e 61.
-(pdftex.def)             Requested size: 342.2953pt x 218.20885pt.
+] Excluding 'comment' comment.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 61.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 575.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 61.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 575.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 
 
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 61.
+e 575.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [5
 
- <./pictures/ESD-discharge-waveform.png>]
-\absvshift=\dimen389
+]
+\absfshift=\dimen390
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 575.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 575.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 575.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 575.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 575.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 575.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 90.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 575.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 90.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 575.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 
 
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 90.
+e 575.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [6
 
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
-<pictures/diode-iv-curve.png, id=333, 1003.75pt x 602.25pt>
-File: pictures/diode-iv-curve.png Graphic file (type png)
-<use pictures/diode-iv-curve.png>
-Package pdftex.def Info: pictures/diode-iv-curve.png  used on input line 97.
-(pdftex.def)             Requested size: 342.2953pt x 205.37799pt.
+]
+\absfshift=\dimen391
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 97.
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 575.
 (pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
 File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
 <use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 97.
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 575.
 (pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
 
 
 File: pictures/background/background2.jpg Graphic file (type jpg)
 <use pictures/background/background2.jpg>
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 97.
+e 575.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [7
-
- <./pictures/diode-iv-curve.png>]
-<pictures/diode-zener-iv-curve.png, id=362, 1075.01625pt x 1049.9225pt>
-File: pictures/diode-zener-iv-curve.png Graphic file (type png)
-<use pictures/diode-zener-iv-curve.png>
-Package pdftex.def Info: pictures/diode-zener-iv-curve.png  used on input line 
-120.
-(pdftex.def)             Requested size: 205.37926pt x 200.57674pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 120.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 120.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 120.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[8
-
- <./pictures/diode-zener-iv-curve.png>]
-\absvshift=\dimen390
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 153.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 153.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 153.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[9
-
-]
-<pictures/clamping-esd-pulse.png, id=417, 386.19281pt x 164.11313pt>
-File: pictures/clamping-esd-pulse.png Graphic file (type png)
-<use pictures/clamping-esd-pulse.png>
-Package pdftex.def Info: pictures/clamping-esd-pulse.png  used on input line 16
-9.
-(pdftex.def)             Requested size: 342.2953pt x 145.45921pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 169.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 169.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 169.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[10
-
- <./pictures/clamping-esd-pulse.png>]
-\absvshift=\dimen391
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 207.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 207.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 207.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[11
-
-]
-<pictures/diode-tvs-iv-curve.png, id=471, 533.74406pt x 189.70876pt>
-File: pictures/diode-tvs-iv-curve.png Graphic file (type png)
-<use pictures/diode-tvs-iv-curve.png>
-Package pdftex.def Info: pictures/diode-tvs-iv-curve.png  used on input line 22
-8.
-(pdftex.def)             Requested size: 342.2953pt x 121.66502pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 228.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 228.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 228.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[12
-
- <./pictures/diode-tvs-iv-curve.png>]
-\absvshift=\dimen392
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 257.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 257.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 257.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[13
-
-] (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 260.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[14
-
-]
-\absvshift=\dimen393
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 289.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 289.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 289.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[15
-
-]
-\absvshift=\dimen394
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 321.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 321.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 321.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[16
-
-]
-\absvshift=\dimen395
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 356.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 356.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 356.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[17
-
-]
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 419.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 419.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 419.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[18
-
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-\absvshift=\dimen396
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 456.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 456.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 456.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[19
-
-] (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 459.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[20
-
-]
-<pictures/fuse.png, id=749, 626.34pt x 626.34pt>
-File: pictures/fuse.png Graphic file (type png)
-<use pictures/fuse.png>
-Package pdftex.def Info: pictures/fuse.png  used on input line 485.
-(pdftex.def)             Requested size: 56.47903pt x 56.47328pt.
-<pictures/fuse-curve.png, id=750, 661.47125pt x 756.8275pt>
-File: pictures/fuse-curve.png Graphic file (type png)
-<use pictures/fuse-curve.png>
-Package pdftex.def Info: pictures/fuse-curve.png  used on input line 485.
-(pdftex.def)             Requested size: 182.13225pt x 208.38803pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 485.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 485.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 485.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[21
-
- <./pictures/fuse.png> <./pictures/fuse-curve.png>]
-<pictures/polyfuse.png, id=778, 385.44pt x 413.545pt>
-File: pictures/polyfuse.png Graphic file (type png)
-<use pictures/polyfuse.png>
-Package pdftex.def Info: pictures/polyfuse.png  used on input line 513.
-(pdftex.def)             Requested size: 56.47903pt x 60.59665pt.
-<pictures/polyfuse-curve.png, id=779, 672.5125pt x 1135.24126pt>
-File: pictures/polyfuse-curve.png Graphic file (type png)
-<use pictures/polyfuse-curve.png>
-Package pdftex.def Info: pictures/polyfuse-curve.png  used on input line 513.
-(pdftex.def)             Requested size: 127.2964pt x 214.88393pt.
-
-Overfull \hbox (12.33154pt too wide) detected at line 513
-[][][] $[]$[][][][][][][][] $[]$[][][][][][] 
- []
-
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 513.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 513.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 513.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[22
-
- <./pictures/polyfuse.png> <./pictures/polyfuse-curve.png>] (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 515.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[23
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-530.
- (/usr/share/texmf-dist/tex/latex/lm/ts1lmss.fd
-File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-<pictures/inrush-current.png, id=854, 319.1925pt x 195.73125pt>
-File: pictures/inrush-current.png Graphic file (type png)
-<use pictures/inrush-current.png>
-Package pdftex.def Info: pictures/inrush-current.png  used on input line 530.
-(pdftex.def)             Requested size: 233.64174pt x 143.26486pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 530.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 530.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 530.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[24
-
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./pictures/inrush-curren
-t.png>]
-File: pictures/inrush-current.png Graphic file (type png)
-<use pictures/inrush-current.png>
-Package pdftex.def Info: pictures/inrush-current.png  used on input line 530.
-(pdftex.def)             Requested size: 233.64174pt x 143.26486pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 530.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 530.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 530.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[25
-
-]
-<pictures/inrush-current-limiter.png, id=910, 630.355pt x 620.3175pt>
-File: pictures/inrush-current-limiter.png Graphic file (type png)
-<use pictures/inrush-current-limiter.png>
-Package pdftex.def Info: pictures/inrush-current-limiter.png  used on input lin
-e 565.
-(pdftex.def)             Requested size: 59.90271pt x 58.94023pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 565.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 565.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 565.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[26
-
- <./pictures/inrush-current-limiter.png>]
-File: pictures/inrush-current-limiter.png Graphic file (type png)
-<use pictures/inrush-current-limiter.png>
-Package pdftex.def Info: pictures/inrush-current-limiter.png  used on input lin
-e 565.
-(pdftex.def)             Requested size: 59.90271pt x 58.94023pt.
-<pictures/inrush-current-limiter-pmos.png, id=938, 208.1376pt x 122.859pt>
-File: pictures/inrush-current-limiter-pmos.png Graphic file (type png)
-<use pictures/inrush-current-limiter-pmos.png>
-Package pdftex.def Info: pictures/inrush-current-limiter-pmos.png  used on inpu
-t line 565.
-(pdftex.def)             Requested size: 119.80544pt x 70.71834pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 565.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 565.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 565.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[27
-
- <./pictures/inrush-current-limiter-pmos.png>]
-File: pictures/inrush-current-limiter.png Graphic file (type png)
-<use pictures/inrush-current-limiter.png>
-Package pdftex.def Info: pictures/inrush-current-limiter.png  used on input lin
-e 565.
-(pdftex.def)             Requested size: 59.90271pt x 58.94023pt.
-File: pictures/inrush-current-limiter-pmos.png Graphic file (type png)
-<use pictures/inrush-current-limiter-pmos.png>
-Package pdftex.def Info: pictures/inrush-current-limiter-pmos.png  used on inpu
-t line 565.
-(pdftex.def)             Requested size: 119.80544pt x 70.71834pt.
-File: pictures/logo/c3i.png Graphic file (type png)
-<use pictures/logo/c3i.png>
-Package pdftex.def Info: pictures/logo/c3i.png  used on input line 565.
-(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
-File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
-<use pictures/logo/m1_alpha.pdf>
-Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 565.
-(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
-
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 565.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[28
-
-] (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 567.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[29
-
-]) (./Sections/Section2.tex (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 3.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[30
-
-] (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 5.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[31
-
-] (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 6.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[32
-
-] (./main.toc)
-
-File: pictures/background/background2.jpg Graphic file (type jpg)
-<use pictures/background/background2.jpg>
-Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
-e 7.
-(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[33
 
 ]) (./Sections/Section3.tex (./main.toc)
 
@@ -2415,7 +2030,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[34
+[8
 
 ] (./main.toc)
 
@@ -2424,7 +2039,7 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 5.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[35
+[9
 
 ] (./main.toc)
 
@@ -2433,7 +2048,16 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 6.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[36
+[10
+
+] (./main.toc)
+
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 7.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[11
 
 ]) (./Sections/Section4.tex (./main.toc)
 
@@ -2442,16 +2066,16 @@ File: pictures/background/background2.jpg Graphic file (type jpg)
 Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
 e 3.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
-[37
+[12
 
 ])
 
 File: pictures/background/background-PCB.png Graphic file (type png)
 <use pictures/background/background-PCB.png>
 Package pdftex.def Info: pictures/background/background-PCB.png  used on input 
-line 208.
+line 220.
 (pdftex.def)             Requested size: 440.3973pt x 273.14662pt.
-[38
+[13
 
 ]
 \tf@nav=\write8
@@ -2469,30 +2093,34 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 716F47B4C4D4844276C304D391215D91;2758.
+(rerunfilecheck)             Checksum: 0FF80387B87FEFFA74074D64920DB49A;1407.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71473 strings out of 473190
- 1789196 string characters out of 5722593
- 2874237 words of memory out of 5000000
- 93667 multiletter control sequences out of 15000+600000
- 638947 words of font info for 98 fonts, out of 8000000 for 9000
+ 74572 strings out of 473190
+ 1881636 string characters out of 5722593
+ 2997046 words of memory out of 5000000
+ 96771 multiletter control sequences out of 15000+600000
+ 650963 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,14n,123p,1003b,1469s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dis
-t/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf-dist/fonts/type1/public/lm
-/lmss12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/share/
-texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf-dist/fonts/type
-1/public/lm/lmsso10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso8.pfb
-></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (38 pages, 2626029 bytes).
+ 128i,14n,123p,1003b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid
+.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-
+dist/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf-dist/fonts/type1/public
+/lm/lmss12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/lm/lmssbo10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmssbx10
+.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf
+-dist/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/lm/lmsso8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/tex
+mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on main.pdf (13 pages, 1378056 bytes).
 PDF statistics:
- 1488 PDF objects out of 1728 (max. 8388607)
- 1284 compressed objects within 13 object streams
- 91 named destinations out of 1000 (max. 500000)
- 784 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 648 PDF objects out of 1000 (max. 8388607)
+ 527 compressed objects within 6 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 448 words of extra memory for PDF output out of 10000 (max. 10000000)
 
