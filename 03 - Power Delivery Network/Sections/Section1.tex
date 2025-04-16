@@ -181,10 +181,8 @@
         to [short] (10,1)
         ;
 
-        % TODO : MODIFIER LA DIODE POUR UNE TVS
-
         \draw [thick]
-        (3, -3) to [empty ZZener diode, color=red] (3, 1);
+        (3, -3) to [empty TVS diode, color=red] (3, 1);
 
         % Current spike as a waveform
         \draw[thick, ->] (-0.1, 2) -- (0,3) % Rising edge
@@ -197,10 +195,10 @@
         \node[right] at (1,2.1) {$i_{\text{ESD}}(t) \rightarrow \pm\SI{8}{\kilo\volt}$};
 
         \draw[->, thick, red] 
-        (1, 0.75) to[out=0, in=90] (2.75, -0.5);
+        (1, 0.75) to[out=0, in=90] (2.75, -0.25);
 
         \draw[->, thick, blue] 
-        (1, -2.75) to[out=0, in=-90] (2.75, -1.5);
+        (1, -2.75) to[out=0, in=-90] (2.75, -1.75);
     \end{circuitikz}
     }
     \end{center}
@@ -785,7 +783,7 @@
             % TVS
             \draw
             (C.pin 1 -| 4, 5) to [C, l_=$TVS$] (4, 0)
-            (6, 0) to [full ZZener diode, l_=$TVS$] (C.pin 1 -| 6, 5);
+            (6, 0) to [full TVS diode, l_=$TVS$] (C.pin 1 -| 6, 5);
 
             % RVP
             \draw   (C.pin 1 -| 9, 5) node[pigfete, bodydiode, rotate=90, xscale=2, yscale=-2] (fet) {}
@@ -799,9 +797,8 @@
             to [full ZZener diode] (C.pin 1 -| 11, 5);
 
             % Fuse Protection
-            % TODO: Replace afuse with wfuse
             \draw
-            (C.pin 1 -| 0, 5) to [afuse, l=$FUSE$] (C.pin 1 -| 4, 5)
+            (C.pin 1 -| 0, 5) to [wfuse, l=$FUSE$] (C.pin 1 -| 4, 5)
             %to [R, l=$R_{CS}$] (C.pin 1 -| 4, 5)
             to [short] (fet.D);
             
