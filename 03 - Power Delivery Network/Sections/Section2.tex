@@ -42,6 +42,9 @@
 
 \subsection{Régulateurs Linéaires}
 
+
+% TODO - REMOVE COMMENT
+\begin{comment}
 \begin{frame}{Régulateur Linéaire (LDO) - Résumé}
     \begin{columns}
         \begin{column}{0.5\textwidth}
@@ -344,7 +347,6 @@
     \end{figure}
 \end{frame}
 
-
 \begin{frame}{Régulateur Switching - Buck - Fonctionnement}
     \centering
     \resizebox{\textwidth}{!}{
@@ -464,4 +466,110 @@
         \centering
         \includegraphics[width=\textwidth]{pictures/buck-switching-output.png}
     \end{figure}
+\end{frame}
+
+\end{comment}
+
+\begin{frame}{Régulateur Switching - Boost - Fonctionnement}
+    \centering
+    \resizebox{\textwidth}{!}{
+    \ctikzset{inductors/scale=2}
+    \begin{circuitikz}[american voltages,
+        block/.style = {rectangle, draw, minimum height=1cm, minimum width=2.5cm, align=center},
+        node distance=0.8cm and 0.8cm,
+        >={Stealth[round]}
+    ]
+        \draw [thick]
+        (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
+        (19.5, 8) to [C] (19.5, 0) node [ground]{}
+        (0, 8) to [C] (0, 0) node [ground]{};
+        \draw
+        (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
+
+
+        % PMOS
+        \only<1> {
+            \draw [thick]
+            (10, 4) node[nigfete, bodydiode, xscale=2, yscale=2] (fet) {};
+        }
+        \only<2> {
+            \draw [thick]
+            (10, 4) node[nigfete, bodydiode, xscale=2, yscale=2, color=UDSgreenFierte] (fet) {};
+        }
+        \only<3> {
+            \draw [thick]
+            (10, 4) node[nigfete, bodydiode, xscale=2, yscale=2, color=red] (fet) {};
+        }
+
+        \draw [thick]
+        (fet.G) node [anchor=south, xshift=8pt] {G}
+        (fet.D) node [anchor=west, yshift=8pt] {D}
+        (fet.S) node [anchor=east, yshift=8pt] {S}
+        (fet.D) to [short] (fet.D |- 0, 8)
+        (fet.S) to [short] (fet.S |- 0, 0) node [ground] {};
+
+        % Control Block
+        \draw [thick]
+        (fet.G -| 3.5, 4) node [block, anchor=west] (control) {\LARGE Control}
+        (control.east) to [short] (fet.G);
+
+        % Inductor
+        \only<1> {
+            \draw [thick]
+            (0, 8) to [american inductor] (fet.D |- 0, 8);
+        }
+        \only<2-> {
+            \draw [thick]
+            (0, 8) to [american inductor, f>^={\Large$i$}] (fet.D |- 0, 8);
+        }
+
+        % Diode
+        \draw [thick]
+        (fet.D |- 0, 8) to [empty Schottky diode] (22, 8);
+
+
+        % Arrows
+        \only<2> {
+            \draw[->, ultra thick, red] 
+            (0.5, 5.5) to[out=90, in=180] (2.5, 7.5)
+            to [out=0, in=180] (6.5, 7.5)
+            to [out=0, in=90] (8.75, 5.5);
+            \draw[->, ultra thick, red] 
+            (8.75, 2) to[out=-90, in=0] (6.5, 0.5)
+            to [out=180, in=0] (2.5, 0.5)
+            to [out=180, in=-90] (0.5, 2.5);
+
+            \draw[->, ultra thick, red] 
+            (19.75, 6.5) to[out=90, in=180] (20.75, 7.5)
+            to[out=0, in=90] (21.75, 6.5);
+            \draw[->, ultra thick, red] 
+            (21.75, 1.5) to[out=-90, in=0] (20.75, 0.5)
+            to[out=180, in=-90] (19.75, 1.5);
+
+            \draw[->, line width=4pt, UDSgreenCreativite]
+            (11.5, 6) to [out=90, in=90] (11.5, 1);
+        }
+        \only<3> {
+            \draw[->, ultra thick, red] 
+            (4, 9.5) to[out=0, in=180] (8, 9.5);
+            \draw[->, ultra thick, red] 
+            (12.5, 9.5) to[out=0, in=180] (17, 9.5);
+            \draw[->, ultra thick, red] 
+            (19.5, 9.5) to[out=0, in=90] (21, 5);
+
+            \draw[->, ultra thick, red] 
+            (21, 3) to[out=-90, in=0] (19.5, -1);
+            \draw[->, ultra thick, red] 
+            (16, -1) to[out=180, in=0] (13, -1);
+            \draw[->, ultra thick, red] 
+            (9, -1) to[out=180, in=0] (5, -1);
+            \draw[->, ultra thick, red] 
+            (2.5, 1.5) to[out=120, in=240] (2.5, 6.5);
+        }
+        \only<2-> {
+            \draw[->, line width=4pt, UDSgreenCreativite]
+            (3, 9) to [out=0, in=180] (8, 9);
+        }
+    \end{circuitikz}
+    }
 \end{frame}
