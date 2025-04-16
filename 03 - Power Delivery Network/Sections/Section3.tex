@@ -2,6 +2,100 @@
 
 \section{Comment filtrer une alimentation?}
 
+\begin{comment}
+\begin{frame}{Pourquoi Filtrer?}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \textbf{Signal Integrity}
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \textbf{Electromagnetic Interference}
+            \end{center}
+        \end{column}
+    \end{columns}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Signaux Clean
+                \item Marges d'opérations respectées
+            \end{itemize}
+
+            \centering
+            \begin{tabular}{c l}
+                \textcolor{UDSgreenFierte}{\faUndo}   & Rélections \\
+                \textcolor{UDSgreenFierte}{\faExchange}         & Crosstalk \\
+                \textcolor{UDSgreenFierte}{\faCompress}     & Ground Bounce \\
+                \textcolor{UDSgreenFierte}{\faFilter}   & \textbf{Filtration de Power} \\
+            \end{tabular}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Passer les tests EMC
+                \item Ne pas influencer d'autres circuits
+                \begin{itemize}
+                    \item Émissions
+                    \item Immunité au bruit
+                \end{itemize}
+
+                \centering
+                \begin{tabular}{c l}
+                    \textcolor{UDSgreenFierte}{\faPuzzlePiece}   & Layout \\
+                    \textcolor{UDSgreenFierte}{\faArrowDown}         & Grounding \\
+                    \textcolor{UDSgreenFierte}{\faShield}     & Shielding \\
+                    \textcolor{UDSgreenFierte}{\faFilter}   & \textbf{Filtration de Power} \\
+                \end{tabular}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Filtration de Power}
+    \begin{itemize}
+        \item Tout commence avec le power
+        \item Le PDN devrait constituer 25\% à 50\% de la difficulté d'un projet
+        \bigskip
+        \item<2-> Plein de façon de filtrer
+        \item<2-> Réduire le bruit sur l'alimentation
+        \item<2-> Avoir une alimentation purement DC
+        \bigskip
+        \item<3-> Jouer avec les impédances de mon alimentation
+        \begin{itemize}
+            \item<3-> Découplage 
+            \item<3-> Rajouter des inductances
+            \item<3-> Faire attention à son layout 
+        \end{itemize}
+        \item<4-> Ajouter des composantes actives
+        \begin{itemize}
+            \item<4-> Régulateurs Linéaires
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{D'où provient le bruit}
+    \begin{itemize}
+        \item IC qui toggle
+        \item Longues lignes de transmission
+        \begin{itemize}
+            \item Crosstalk
+            \item Antennes
+        \end{itemize}
+        \item Mauvais chemins de retour
+        \begin{itemize}
+            \item Crosstalk
+            \item Ground Bounce
+            \item Antennes
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\end{comment}
+
 \subsection{Filtrer l'entrée}
+
+
 \subsection{Filtrer la sortie d'un régulateur}
 \subsection{Filtrer au IC}

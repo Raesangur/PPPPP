@@ -1,3 +1,10 @@
+flags := --time-statistics --no-shell-escape -jobname=PPPPP
+
+build:
+	# texify -b -p --engine=pdftex --tex-option='--synctex=1' main.tex
+	pdflatex main.tex ${flags} --tex-options='--synctex=1'
+	# latexmk -cd -f -pdf -interaction=nonstopmode -synctex=1 --output-directory=build -latexoption=-interaction=batchmode -shell-escape -synctex=-1 main.tex
+
 
 clean:
 	$(RM) *.aux
@@ -19,12 +26,6 @@ clean:
 	$(RM) *.fls
 	$(RM) *.nav
 	$(RM) *.snm
-
-flags := --time-statistics --no-shell-escape -jobname=PPPPP
-
-build:
-	#texify -b -p --engine=pdftex --tex-option='--synctex=1' main.tex
-	pdflatex main.tex ${flags} --tex-options='--synctex=1'
 
 draft:
 	pdflatex main.tex ${flags} --draftmode
