@@ -1,7 +1,0 @@
-\beamer@sectionintoc {1}{Quels sont les types de régulateurs?}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{Régulateurs Linéaires}{4}{0}{1}
-\beamer@sectionintoc {2}{Comment filtrer une alimentation?}{8}{0}{2}
-\beamer@subsectionintoc {2}{1}{Filtrer l'entrée}{9}{0}{2}
-\beamer@subsectionintoc {2}{2}{Filtrer la sortie d'un régulateur}{10}{0}{2}
-\beamer@subsectionintoc {2}{3}{Filtrer au IC}{11}{0}{2}
-\beamer@sectionintoc {3}{Comment conçevoir un arbre d'alimentation?}{12}{0}{3}
