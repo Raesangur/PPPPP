@@ -184,8 +184,8 @@
 
 \begin{frame}{Filtrage avancé d'une entrée d'alimentation}
     \begin{itemize}
-        \item Découplage permet de fournir un chemin de faible impédance aux signaux haute-vitesse
-        \item Bulk permet d'emmagasiner des charges et que le power provienne des condensateurs et non du fil
+        \item[] \textcolor{UDSgreenFierte}{\faTachometer*} ~Découplage permet de fournir un chemin de faible impédance aux signaux haute-vitesse
+        \item[] \textcolor{UDSgreenFierte}{\faBatteryThreeQuarters} ~Bulk permet d'emmagasiner des charges et que le power provienne des condensateurs et non du fil
         \bigskip
         \item<2-> \textbf{Contrôler la propagation du bruit}
         \begin{itemize}
@@ -193,6 +193,7 @@
             \item<2->[] \textcolor{UDSgreenFierte}{\faArrowLeft} ~Limiter le bruit hors du board
             \item<2->[] \textcolor{UDSgreenFierte}{\faFileContract} ~Passer EMC
         \end{itemize}
+        \item<3->[] \textcolor{UDSgreenFierte}{\faProjectDiagram} ~Principalement lorsque premier régulateur est un switching.
     \end{itemize}
 \end{frame}
 
@@ -213,6 +214,90 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Filtre de 2e ordre contrôlé}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            $f = \dfrac{1}{2 \pi \sqrt{LC}}$
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            $\zeta = \dfrac{1}{2 R_{_{LOAD}} \sqrt{LC}}$
+        \end{column}
+    \end{columns}
+
+    \vfill
+
+    \begin{center}
+    \resizebox{0.8\textwidth}{!}{
+    \ctikzset{bipoles/cuteinductor/height=0.15}
+    \ctikzset{bipoles/cuteinductor/width=0.5}
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0, 0) to [short, *-] (12, 0)
+        to [european resistor, l_=$R_{LOAD}$] (12, 4)
+        (0, 0) to [open, v<=$V$] (0, 4)
+        to [cute inductor, l=$wire$] (3, 4)
+        to [american inductor, l=$L$, color=red] (5, 4)
+        to [short] (9, 4)
+        to [cute inductor, l=$pcb$] (12, 4)
+        ;
+
+
+        \draw [thick] (5.5, 0) to [C, l=$C$, color=red] (5.5, 4);
+        \draw [thick] (8, 0) to [C, l=$bulk$] (8, 4);
+        \draw [thick] (9, 0) to [C, l_=$decoupling$] (9, 4);
+
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+\begin{frame}{Damping factor}
+    \centering
+    $\zeta = \dfrac{1}{2 R_{_{LOAD}} \sqrt{LC}}$
+    \vfill
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/lc-filter-damping-factor.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Common-Mode Noise}
+    \begin{itemize}
+        \item On veut contrôler les chemins de retour de courant
+        \item \textbf{Le retour de courant est aussi important que l'aller}
+        \bigskip
+        \item Common-mode Noise: Une partie du retour qui revient par ailleurs
+        \item Donc pas autant de courant qui rentre que qui sort
+    \end{itemize}
+    \vfill
+    \begin{figure}
+        \includegraphics[width=0.75\textwidth, height=0.75\textheight, keepaspectratio]{pictures/common-mode-noise.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Common-mode Choke}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            \begin{itemize}
+                \item[] \textcolor{UDSgreenFierte}{\faUnlink}
+                    ~Essentiellement un transformateur
+                \item[] \textcolor{UDSgreenFierte}{\faSync}
+                    ~Permet d'égaler le flux qui passe à un point
+                \item[] \textcolor{UDSgreenFierte}{\faExchange*}
+                    ~Du courant est forcé par la bonne place si les courants ne sont pas égaux
+                \bigskip
+                \item[] \textcolor{UDSgreenFierte}{\faLongArrowAltRight}
+                    ~Fournit un chemin de plus faible impédance vers là où on veut aller!
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/common-mode-choke.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
 
 \subsection{Filtrer la sortie d'un régulateur}
 \subsection{Filtrer au IC}
