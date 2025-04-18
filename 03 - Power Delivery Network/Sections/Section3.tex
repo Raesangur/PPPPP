@@ -162,6 +162,7 @@
         (0, 0) to [short, *-] (10, 0)
         to [european resistor, l_=${LOAD}$] (10, 4)
         (0, 0) to [open, v<=$V$] (0, 4)
+        to [short, *-] (1, 4)
         to [american inductor, l=$wire$, color=red] (5, 4)
         to [short] (6, 4)
         to [cute inductor, l=$pcb$, color=UDSgreenFierte] (10, 4)
@@ -210,6 +211,8 @@
             \item<2-> Les condensateurs de bulk fournissent la puissance basse fréquence
             \item<2-> Les condensateurs de bulk rechargent les condensateurs de découplage
             \item<2-> L'alimentation fournit du power DC pour recharger les condensateurs de bulk
+            \item<3->[] \hspace{-18pt} \textcolor{red}{\faBan}
+                ~La bobine fait du bruit électromagnétique
         \end{itemize}
     \end{itemize}
 \end{frame}
@@ -266,8 +269,15 @@
     \begin{itemize}
         \item On veut contrôler les chemins de retour de courant
         \item \textbf{Le retour de courant est aussi important que l'aller}
-        \bigskip
-        \item Common-mode Noise: Une partie du retour qui revient par ailleurs
+    \end{itemize}
+    \begin{center}
+        \textcolor{UDSgreenFierte}{\faLongArrowAltRight}
+        \textbf{Tous les grounds ne sont pas égaux!}
+        \textcolor{UDSgreenFierte}{\faLongArrowAltLeft}
+    \end{center}
+    \pause
+    \begin{itemize}
+        \item \textit{Common-mode Noise}: Une partie du retour qui revient par ailleurs
         \item Donc pas autant de courant qui rentre que qui sort
     \end{itemize}
     \vfill
@@ -342,5 +352,6 @@
         \end{column}
     \end{columns}
 \end{frame}
+
 
 \subsection{Filtrer au IC}

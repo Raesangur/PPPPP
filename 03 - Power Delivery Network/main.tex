@@ -90,7 +90,7 @@
 }
 \makeatother
 \author{Pascal-Emmanuel Lachance}
-\title{PPPPP02}
+\title{PPPPP03}
 \subtitle{Comment conçevoir un\\ Power Delivery Network?}
 \institute{Compétitions de Conception de Circuits Imprimés}
 \date{\today}
@@ -134,6 +134,13 @@
 \setbeamertemplate{itemize subsubitem}{\tiny$\bullet$}
 \usebeamertemplate{mytheme}
 
+\newif\ifINTRO
+\INTROfalse
+
+\ifINTRO
+    \includeonlyframes{intro}
+    \setbeamertemplate{navigation symbols}{}
+\fi
 
 
 
@@ -151,6 +158,42 @@
 
 \begin{frame}[plain]
     \maketitle
+\end{frame}
+
+\usebackgroundtemplate{
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            {\includegraphics[height=\paperheight,keepaspectratio]{pictures/background/background-pcb-poster.png}}
+        };
+    \end{tikzpicture}
+}
+
+\begin{frame}[plain, label=intro]
+    \centering
+    \Large
+
+    \textcolor{white}{
+        \LARGE{\textbf{\inserttitle}}\\
+        \textbf{\textit{\insertsubtitle}}\\
+        Par: \insertauthor\\
+    }
+    \vspace{24pt}
+    \begin{tabular}{c l}
+        \textcolor{UDSgreenFierte}{\faShield*}
+            & \textcolor{white}{~Comment protéger une alimentation?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faSlidersH}
+            & \textcolor{white}{~Quels sont les types de régulateurs?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faEquals}
+            & \textcolor{white}{~À quoi sert le découplage?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faWaveSquare}
+            & \textcolor{white}{~Comment filtrer une alimentation?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faProjectDiagram}
+            & \textcolor{white}{~Comment conçevoir un arbre d'alimentation?}\\
+    \end{tabular}
 \end{frame}
 
 
@@ -191,10 +234,11 @@
 }
 
 
+
 % ------------ SECTIONS -----------
 
-%\input{Sections/Section1}
-%\input{Sections/Section2}
+\input{Sections/Section1}
+\input{Sections/Section2}
 \input{Sections/Section3}
 \input{Sections/Section4}
 
