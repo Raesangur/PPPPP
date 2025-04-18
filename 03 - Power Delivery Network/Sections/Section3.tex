@@ -299,5 +299,48 @@
     \end{columns}
 \end{frame}
 
-\subsection{Filtrer la sortie d'un régulateur}
+\subsection{Filtrer un régulateur}
+
+\begin{frame}{Pourquoi filtrer les régulateurs?}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Un régulateur linéaire n'a pas besoin d'être filtré
+                \item Juste du bulk capacitance
+                \bigskip
+                \pause
+                \item Un régulateur switching doit avoir du bulk \textit{et} du découplage
+                \item Il faut éliminer le bruit à la fréquence de switching
+                \item Mettre des condensateurs dont la \textit{fréquence de résonnance} est celle du switching.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/switching-psu-ripple-types.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Fréquence de résonnance d'un condensateur}
+    \begin{itemize}
+        \item Chaque condensateur a sa fréquence de résonnance
+        \item Choisir le bon condensateur de découplage selon fréquence de résonnance du condensateur
+        \item \textbf{Il faut offrir la plus faible impédance vers le ground pour la fréquence visée}
+    \end{itemize}
+    \vspace{-18pt}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/capacitor-resonant-frequency.png}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/switching-psu-ripple.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
 \subsection{Filtrer au IC}
