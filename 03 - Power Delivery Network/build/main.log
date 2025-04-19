@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  18 APR 2025 22:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  18 APR 2025 22:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2550,12 +2550,12 @@ e 493.
 [36
 
  <./pictures/pcb-plane-capacitance.png>]
-<pictures/decoupling-example-pll.png, id=1174, 1019.30812pt x 929.72343pt>
+<pictures/decoupling-example-pll.png, id=1174, 971.88094pt x 835.62187pt>
 File: pictures/decoupling-example-pll.png Graphic file (type png)
 <use pictures/decoupling-example-pll.png>
 Package pdftex.def Info: pictures/decoupling-example-pll.png  used on input lin
 e 499.
-(pdftex.def)             Requested size: 214.16989pt x 195.34698pt.
+(pdftex.def)             Requested size: 227.20567pt x 195.35112pt.
 File: pictures/logo/c3i.png Graphic file (type png)
 <use pictures/logo/c3i.png>
 Package pdftex.def Info: pictures/logo/c3i.png  used on input line 499.
@@ -2573,14 +2573,44 @@ e 499.
 (pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
 [37
 
- <./pictures/decoupling-example-pll.png>])
+ <./pictures/decoupling-example-pll.png>]
+<pictures/ferrite-bead-impedance.png, id=1203, 692.5875pt x 375.4025pt>
+File: pictures/ferrite-bead-impedance.png Graphic file (type png)
+<use pictures/ferrite-bead-impedance.png>
+Package pdftex.def Info: pictures/ferrite-bead-impedance.png  used on input lin
+e 533.
+(pdftex.def)             Requested size: 171.1491pt x 92.76776pt.
+<pictures/ferrite-bead-cable.png, id=1204, 1681.28125pt x 227.85126pt>
+File: pictures/ferrite-bead-cable.png Graphic file (type png)
+<use pictures/ferrite-bead-cable.png>
+Package pdftex.def Info: pictures/ferrite-bead-cable.png  used on input line 53
+3.
+(pdftex.def)             Requested size: 342.27905pt x 46.38646pt.
+File: pictures/logo/c3i.png Graphic file (type png)
+<use pictures/logo/c3i.png>
+Package pdftex.def Info: pictures/logo/c3i.png  used on input line 533.
+(pdftex.def)             Requested size: 20.96577pt x 18.06734pt.
+File: pictures/logo/m1_alpha.pdf Graphic file (type pdf)
+<use pictures/logo/m1_alpha.pdf>
+Package pdftex.def Info: pictures/logo/m1_alpha.pdf  used on input line 533.
+(pdftex.def)             Requested size: 18.06685pt x 18.06734pt.
+
+
+File: pictures/background/background2.jpg Graphic file (type jpg)
+<use pictures/background/background2.jpg>
+Package pdftex.def Info: pictures/background/background2.jpg  used on input lin
+e 533.
+(pdftex.def)             Requested size: 364.19371pt x 273.14528pt.
+[38
+
+ <./pictures/ferrite-bead-impedance.png> <./pictures/ferrite-bead-cable.png>])
 
 File: pictures/background/background-PCB.png Graphic file (type png)
 <use pictures/background/background-PCB.png>
 Package pdftex.def Info: pictures/background/background-PCB.png  used on input 
 line 264.
 (pdftex.def)             Requested size: 440.3973pt x 273.14662pt.
-[38
+[39
 
 ]
 \tf@nav=\write8
@@ -2604,13 +2634,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 75041 strings out of 470848
- 1906135 string characters out of 5498004
- 2987828 words of memory out of 5000000
- 100561 multiletter control sequences out of 15000+600000
+ 75083 strings out of 470848
+ 1907094 string characters out of 5498004
+ 2987863 words of memory out of 5000000
+ 100601 multiletter control sequences out of 15000+600000
  721905 words of font info for 120 fonts, out of 8000000 for 9000
  417 hyphenation exceptions out of 8191
- 128i,14n,123p,1003b,1034s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,14n,123p,1003b,1257s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
 me5Brands-Regular.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/fo
 ntawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2025/texmf-dist/fonts
@@ -2623,10 +2653,10 @@ exlive/2025/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/texlive/2
 f-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/texlive/2025/texmf-dist/fo
 nts/type1/public/lm/lmsso8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/
 public/lm/lmsy10.pfb>
-Output written on build/main.pdf (38 pages, 3514594 bytes).
+Output written on build/main.pdf (39 pages, 3772794 bytes).
 PDF statistics:
- 1331 PDF objects out of 1440 (max. 8388607)
- 1159 compressed objects within 12 object streams
- 85 named destinations out of 1000 (max. 500000)
- 473 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1361 PDF objects out of 1440 (max. 8388607)
+ 1184 compressed objects within 12 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 483 words of extra memory for PDF output out of 10000 (max. 10000000)
 
