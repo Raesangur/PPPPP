@@ -355,3 +355,145 @@
 
 
 \subsection{Filtrer au IC}
+
+\begin{frame}{Pourquoi filtrer au IC?}
+    \vspace{-6pt}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \textbf{Protéger le IC du bruit}
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \textbf{Protéger les autres IC du bruit}
+            \end{center}
+        \end{column}
+    \end{columns}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Un IC analogique est sensible au bruit
+                \item Un IC digital est affecté aussi!
+                \begin{itemize}
+                    \item[] \textcolor{UDSgreenFierte}{\faNetworkWired} 
+                        ~Communication
+                    \item[] \textcolor{UDSgreenFierte}{\faWaveSquare} 
+                        ~Clock
+                    \item[] \textcolor{UDSgreenFierte}{\faBalanceScale} 
+                        ~Stabilité
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \vspace{-24pt}
+            \begin{itemize}
+                \item Un IC génère du bruit!
+                \begin{itemize}
+                    \item[] \textcolor{UDSgreenFierte}{\faNetworkWired} 
+                        ~Communication
+                    \item[] \textcolor{UDSgreenFierte}{\faWaveSquare} 
+                        ~Clock
+                    \item[] \textcolor{UDSgreenFierte}{\faRuler} 
+                        ~Mesures
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \vspace{-18pt}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[width=0.75\textwidth, height=0.75\textheight, keepaspectratio]{pictures/oscilloscope-noise.png}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/ic-noise.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Fréquences d'opération}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Chaque IC a plusieurs fréquences d'opération
+                \begin{itemize}
+                    \item[] \hspace{-20pt}\textcolor{UDSgreenFierte}{\faWaveSquare}
+                        ~Fréquence des clocks
+                    \item[] \hspace{-20pt}\textcolor{UDSgreenFierte}{\faNetworkWired}
+                        ~Fréquences de communication
+                    \item[] \hspace{-20pt}\textcolor{UDSgreenFierte}{\faRuler}
+                        ~Fréquence d'acquisition de données
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+            \begin{itemize}
+                \item Chaque fréquence d'opération fait du bruit sur le power!
+                \item \textbf{Il faut offrir le chemin de plus faible impédance au GND pour ces signaux haute-fréquence}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \vspace{12pt}
+    \pause
+    \begin{itemize}
+        \item Condensateurs dont la fréquence de résonnance match avec la fréquence d'opération
+    \end{itemize}
+
+    \begin{figure}
+        \includegraphics[width=0.8\textwidth, height=0.75\textheight, keepaspectratio]{pictures/decoupling-example-usb.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Fréquence d'opération - Découplage}
+    \begin{itemize}
+        \item Chaque condensateur a une fréquence de résonnance où son impédance est la plus faible
+        \item On veut offrir l'impédance la plus faible pour les fréquences d'opération
+        \item Il faut donc un condensateur spécifique par fréquence d'opération
+        \bigskip
+        \item Le conseil habituel de $\SI{100}{\nano\farad}$ fonctionne parce que ça tourne autours des fréquences habituelles, mais c'est overall un mauvais conseil!
+    \end{itemize}
+
+    \begin{figure}
+        \includegraphics[width=0.6\textwidth, height=0.75\textheight, keepaspectratio]{pictures/decoupling-example-osc.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Fréquence d'opération - Harmoniques}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            \begin{itemize}
+                \item Un onde carrée n'opère pas qu'à une seule fréquence
+                \item Décomposer une onde dans toutes ses harmoniques
+                \item Les harmoniques font partie du signal
+                \bigskip
+                \item Il faut rajouter des condensateurs pour les premières harmoniques!
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/square-wave-harmonic-series.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Harmoniques supérieures}
+    \begin{itemize}
+        \item Les fréquences les plus élevées ($> \SI{1}{\giga\hertz}$) sont couvertes
+        \item Le PCB lui-même agit comme un condensateur
+        \item Il faut un power plane et un ground plane adjacents!
+    \end{itemize}
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{pictures/pcb-plane-capacitance.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Découplage - Exemple}
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/decoupling-example-pll.png}
+    \end{figure}
+\end{frame}
