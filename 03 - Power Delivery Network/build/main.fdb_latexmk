@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber build/main"] 1745014698.60766 "build/main.bcf" "build/main.bbl" "build/main" 1745028678.08201 0
-  "build/main.bcf" 1745028677.88682 107186 eaaa4cd7e05e4b6c6a6fb3c31db72029 "pdflatex"
+["biber build/main"] 1745014698.60766 "build/main.bcf" "build/main.bbl" "build/main" 1745029727.18381 0
+  "build/main.bcf" 1745029726.98369 107186 eaaa4cd7e05e4b6c6a6fb3c31db72029 "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1745028673.19826 "main.tex" "build/main.pdf" "main" 1745028678.08229 0
+["pdflatex"] 1745029721.47449 "main.tex" "build/main.pdf" "main" 1745029727.18408 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands1.enc" 1651520503 2608 3139db8e1f9371a4f87c0715d17fa217 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc" 1622837620 3083 a707712f77b073b3833e4b1334a30e99 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -394,13 +394,13 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1744817502 5442417 4a01ad59d3949c542538c9da2d1ca655 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1744817649 2867807 35c8765ce5c6abc9b1430495cab1ebb7 ""
   "/usr/local/texlive/2025/texmf.cnf" 1744817498.30969 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "Sections/Section3.tex" 1745028635.74252 19713 90a5e906727c969e9262b0c8b4a0f5cf ""
-  "build/main.aux" 1745028677.88682 8126 a3bad8a96ef1a7ef0603fa94779a4d4f "pdflatex"
+  "Sections/Section3.tex" 1745029721.21176 20967 5b6f2a279f5c22ae3c924c70dbfdddf4 ""
+  "build/main.aux" 1745029726.97969 8306 c98c90f402384e6fbb8f43b38caa0dac "pdflatex"
   "build/main.bbl" 1745014699.63985 0 d41d8cd98f00b204e9800998ecf8427e "biber build/main"
-  "build/main.nav" 1745028677.89082 4176 a3ceee8db2ecec7505688d324e4c626f "pdflatex"
-  "build/main.out" 1745028677.88682 1024 44e395c9b9e4d5ae69d516c43d2826ef "pdflatex"
-  "build/main.run.xml" 1745028677.89082 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
-  "build/main.toc" 1745028677.89082 383 e966d043e4445bac824fbe7609d8639b "pdflatex"
+  "build/main.nav" 1745029726.98769 4281 be563a0114136922d4e281e929334088 "pdflatex"
+  "build/main.out" 1745029726.97969 1024 44e395c9b9e4d5ae69d516c43d2826ef "pdflatex"
+  "build/main.run.xml" 1745029726.98769 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "build/main.toc" 1745029726.98769 383 e966d043e4445bac824fbe7609d8639b "pdflatex"
   "main.tex" 1745016025.60905 7889 74a4bd51a96d01b29b1ac4ff2fb7a4be ""
   "pictures/background/background-PCB.png" 1743000964.68887 1032830 9f6c5cd5c2d634b7ef1acf30046e77b6 ""
   "pictures/background/background-pcb-poster.png" 1745010276.59304 497121 d9ad32154fbf6fcc2526d87ceb1a5b40 ""
@@ -409,8 +409,10 @@
   "pictures/common-mode-choke.png" 1744938097.74847 28929 adb8c35b23c30c1dc9334faf27ff6495 ""
   "pictures/common-mode-noise.png" 1744938198.51937 71575 9f5cfe45dd2159629704639a4b9444e4 ""
   "pictures/decoupling-example-osc.png" 1745017870.33551 931408 7593bb0d09f48b8cb379a4d2ca09ab11 ""
-  "pictures/decoupling-example-pll.png" 1745016834.09632 192850 e0c32248795673e3e20b8e833d177c55 ""
+  "pictures/decoupling-example-pll.png" 1745028842.95199 165639 19aa6e5c2d01b9c29300f5e93011e150 ""
   "pictures/decoupling-example-usb.png" 1745016865.31754 203038 e9d9609ac20e2602473f24190be9128e ""
+  "pictures/ferrite-bead-cable.png" 1745029123.45355 144940 44472efbd3fcbe53645827be96f7b755 ""
+  "pictures/ferrite-bead-impedance.png" 1745029318.76709 95418 11ad9aaa441fa3d8ff2a815f5584c68d ""
   "pictures/ic-noise.png" 1745016145.34733 67714 edd7f394add471236b6c63cd58a2fb83 ""
   "pictures/lc-filter-damping-factor.png" 1744937898.92987 69672 6f019758a8cc9789a7a1f49ee081e52d ""
   "pictures/logo/c3i.png" 1743000964.69287 29613 59cabec793b16d1bc1274efddd4a31fd ""

@@ -497,3 +497,46 @@
         \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/decoupling-example-pll.png}
     \end{figure}
 \end{frame}
+
+\begin{frame}{Ferrite Beads}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \textbf{Ferrite Bead}
+                \item Propriétés inductives
+                \item Laisse passer le DC, bloque les hautes fréquences
+                \bigskip
+                \item Contrôler le chemin des signaux haute-fréquence
+                \item Forcer à passer par les condensateurs
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \resizebox{0.75\textwidth}{!}{
+                \begin{circuitikz}[]
+                    \draw (0, 0) to[american inductor, name=L] ++(2,0);
+                    \draw[thick, double] (L.core west) -- (L.core east);
+                \end{circuitikz}
+                }
+
+                \begin{figure}
+                    \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/ferrite-bead-impedance.png}
+                \end{figure}
+            \end{center}
+        \end{column}
+    \end{columns}
+
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/ferrite-bead-cable.png}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Ferrite Bead - Fonctionnement}
+
+\end{frame}
+
+
+\begin{frame}{Pi Filter}
+\end{frame}
