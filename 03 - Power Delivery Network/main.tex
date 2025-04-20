@@ -1,4 +1,4 @@
-\documentclass[aspectratio=149]{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usetheme{Madrid}
 
 \usepackage[T1]{fontenc}
@@ -151,7 +151,7 @@
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            {\includegraphics[height=\paperheight,keepaspectratio]{pictures/background/background-PCB.png}}
+            {\includegraphics[width=\paperwidth,keepaspectratio]{pictures/background/background-PCB.png}}
         };
     \end{tikzpicture}
 }
@@ -163,7 +163,7 @@
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            {\includegraphics[height=\paperheight,keepaspectratio]{pictures/background/background-pcb-poster.png}}
+            {\includegraphics[width=\paperwidth,keepaspectratio]{pictures/background/background-pcb-poster.png}}
         };
     \end{tikzpicture}
 }
@@ -202,7 +202,7 @@
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            \includegraphics[height=\paperheight, keepaspectratio]{pictures/background/background3.jpg}
+            \includegraphics[width=\paperwidth, keepaspectratio]{pictures/background/background3.jpg}
         };
     \end{tikzpicture}
 }
@@ -237,8 +237,8 @@
 
 % ------------ SECTIONS -----------
 
-%\input{Sections/Section1}
-%\input{Sections/Section2}
+\input{Sections/Section1}
+\input{Sections/Section2}
 \input{Sections/Section3}
 %\input{Sections/Section4}
 
@@ -249,7 +249,7 @@
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            {\includegraphics[height=\paperheight,keepaspectratio]{pictures/background/background-PCB.png}}
+            {\includegraphics[width=\paperwidth,keepaspectratio]{pictures/background/background-PCB.png}}
         };
     \end{tikzpicture}
 }
