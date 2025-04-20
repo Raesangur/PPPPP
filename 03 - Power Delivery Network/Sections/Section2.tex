@@ -103,34 +103,35 @@
 
 
 \begin{frame}{Régulateur Linéaire - Fonctionnement}
+    \vspace{-12pt}
     \begin{center}
-        \resizebox{\textwidth}{!}{
+        \resizebox{\textwidth}{0.75\textheight}{
         \begin{circuitikz}[american voltages]
             \draw [thick]
             (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
-            (20.5, 8) to [C] (20.5, 0) node [ground]{}
-            (0, 8) to [C] (0, 0) node [ground]{};
+            (20.5, 8) to [C, *-] (20.5, 0) node [ground]{}
+            (0, 8) to [C, *-] (0, 0) node [ground]{};
             \draw
             (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
                 
             % Feedback Voltage Divider
             \only<-2> {
                 \draw [thick]
-                (17, 8) to [R] (17, 4) to [R] (17, 0) node[ground] {};
+                (17, 8) to [R, *-] (17, 4) to [R] (17, 0) node[ground] {};
             }
             \only<3-> {
                 \draw [thick]
-                (17, 8) to [R] (17, 4) to [R, v^=\LARGE{$V_{fb}$}] (17, 0) node[ground] {};
+                (17, 8) to [R, *-] (17, 4) to [R, v^=\LARGE{$V_{fb}$}] (17, 0) node[ground] {};
             }
 
             % Zener Voltage Reference
             \only<1> {
                 \draw [thick]
-                (5.5, 0) node[ground]{} to [empty ZZener diode] (5.5, 5) to [R] (5.5, 8);
+                (5.5, 0) node[ground]{} to [empty ZZener diode] (5.5, 5) to [R, -*] (5.5, 8);
             }
             \only<2-> {
                 \draw [thick]
-                (5.5, 0) node[ground]{} to [empty ZZener diode, v^<={\LARGE $V_{ref}$}] (5.5, 5) to [R, f<^={\LARGE $i_Q$}] (5.5, 8);
+                (5.5, 0) node[ground]{} to [empty ZZener diode, v^<={\LARGE $V_{ref}$}] (5.5, 5) to [R, f<^={\LARGE $i_Q$}, -*] (5.5, 8);
             }
 
 
@@ -255,17 +256,19 @@
                     \item<1-> Condensateurs \& bobines
                     \item<1-> Transistors et diodes
                 \end{itemize}
-                \item<1-> Topologies
+                \item<1-> Plusieurs topologies
                 \item<2-> Rajoute du bruit au circuit
                 \begin{itemize}
                     \item<2-> Fréquence de \textit{switching}
                 \end{itemize}
                 \item<3-> Output très grande selon topologie
+                \only<3>{
                 \begin{itemize}
-                    \item<3-> $V_{out} > V_{in}$
-                    \item<3-> $V_{out} < \SI{0}{\volt}$
-                    \only<3>{\item \textit{Sortie isolée possible}}
+                        \item $V_{out} > V_{in}$
+                        \item $V_{out} < \SI{0}{\volt}$
+                        \item \textit{Sortie isolée possible}
                 \end{itemize}
+                }
                 \item<4-> Extrèmement efficace
                 \begin{itemize}
                     \item<4-> 80\% - 90\%
@@ -353,8 +356,8 @@
     ]
         \draw [thick]
         (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
-        (19.5, 8) to [C] (19.5, 0) node [ground]{}
-        (0, 8) to [C] (0, 0) node [ground]{};
+        (19.5, 8) to [C, *-] (19.5, 0) node [ground]{}
+        (0, 8) to [C, *-] (0, 0) node [ground]{};
         \draw
         (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
 
@@ -395,7 +398,7 @@
 
         % Schottky Diode
         \draw [thick]
-        (12, 0) node[ground]{} to [empty Schottky diode] (12, 8);
+        (12, 0) node[ground]{} to [empty Schottky diode, -*] (12, 8);
 
 
         % Arrows
@@ -475,8 +478,8 @@
     ]
         \draw [thick]
         (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
-        (19.5, 8) to [C] (19.5, 0) node [ground]{}
-        (0, 8) to [C] (0, 0) node [ground]{};
+        (19.5, 8) to [C, *-] (19.5, 0) node [ground]{}
+        (0, 8) to [C, *-] (0, 0) node [ground]{};
         \draw
         (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
 
@@ -499,7 +502,7 @@
         (fet.G) node [anchor=south, xshift=8pt] {G}
         (fet.D) node [anchor=west, yshift=8pt] {D}
         (fet.S) node [anchor=east, yshift=8pt] {S}
-        (fet.D) to [short] (fet.D |- 0, 8)
+        (fet.D) to [short, -*] (fet.D |- 0, 8)
         (fet.S) to [short] (fet.S |- 0, 0) node [ground] {};
 
         % Control Block

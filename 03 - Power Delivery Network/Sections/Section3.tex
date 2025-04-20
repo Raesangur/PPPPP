@@ -489,7 +489,7 @@
         \item Il faut un power plane et un ground plane adjacents!
     \end{itemize}
     \begin{figure}
-        \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{pictures/pcb-plane-capacitance.png}
+        \includegraphics[width=\textwidth, height=0.55\textheight, keepaspectratio]{pictures/pcb-plane-capacitance.png}
     \end{figure}
 \end{frame}
 
@@ -508,11 +508,11 @@
         \item Faire des polygones - Chaque condensateur a un via
         \item \textbf{Offrir la plus faible impédance vers le GND pour les hautes fréquences}
     \end{itemize}
-    \vspace{-24pt}
+    \vspace{-12pt}
     \begin{columns}
         \begin{column}{0.7\textwidth}
             \begin{center}
-            \resizebox{\textwidth}{!}{
+            \resizebox{0.8\textwidth}{!}{
             \ctikzset{bipoles/cuteinductor/height=0.15}
             \ctikzset{bipoles/cuteinductor/width=0.5}
             \begin{circuitikz}[american voltages]
@@ -543,7 +543,7 @@
 
         \begin{column}{0.3\textwidth}
                 \begin{figure}
-                    \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/decoupling-placement.png}
+                    \includegraphics[width=\textwidth, height=0.66\textheight, keepaspectratio]{pictures/decoupling-placement.png}
                 \end{figure}
         \end{column}
     \end{columns}
@@ -564,7 +564,7 @@
 
         \begin{column}{0.5\textwidth}
             \begin{center}
-                \resizebox{0.75\textwidth}{!}{
+                \resizebox{0.4\textwidth}{!}{
                 \begin{circuitikz}[]
                     \draw[thick] (0, 0) to[american inductor, name=L] ++(2,0);
                     \draw[thick, double] (L.core west) -- (L.core east);
@@ -572,7 +572,7 @@
                 }
 
                 \begin{figure}
-                    \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/ferrite-bead-impedance.png}
+                    \includegraphics[width=\textwidth, height=0.66\textheight, keepaspectratio]{pictures/ferrite-bead-impedance.png}
                 \end{figure}
             \end{center}
         \end{column}
@@ -603,29 +603,36 @@
 
 
     \pause
-    \begin{center}
-    \resizebox{0.725\textwidth}{!}{
-    \ctikzset{bipoles/cuteinductor/height=0.15}
-    \ctikzset{bipoles/cuteinductor/width=0.5}
-    \begin{circuitikz}[american voltages]
-        \draw [thick]
-        (0, 0) to [short, *-] (10, 0)
-        to [european resistor, l_=${LOAD}$] (10, 4)
-        (0, 0) to [open, v<=$V$] (0, 4)
-        to [short, *-] (1, 4)
-        to [cute inductor, l=$pcb$] (3, 4)
-        to [short] (4, 4)
-        to [american inductor, l=$L$, name=L, color=red] (6.5, 4)
-        to [short] (10, 4)
-        ;
+    \vspace{-48pt}
+    \begin{columns}
+    \begin{column}{0.7\textwidth}
+        \begin{center}
+        \resizebox{\textwidth}{!}{
+        \ctikzset{bipoles/cuteinductor/height=0.15}
+        \ctikzset{bipoles/cuteinductor/width=0.5}
+        \begin{circuitikz}[american voltages]
+            \draw [thick]
+            (0, 0) to [short, *-] (10, 0)
+            to [european resistor, l_=${LOAD}$] (10, 4)
+            (0, 0) to [open, v<=$V$] (0, 4)
+            to [short, *-] (1, 4)
+            to [cute inductor, l=$pcb$] (3, 4)
+            to [short] (4, 4)
+            to [american inductor, l=$L$, name=L, color=red] (6.5, 4)
+            to [short] (10, 4)
+            ;
 
-        \draw[thick, double, color=red] (L.core west) -- (L.core east);
+            \draw[thick, double, color=red] (L.core west) -- (L.core east);
 
-        \draw [thick] (7, 0) to [C] (7, 4);
-        \draw         (8, 0) to [C] (8, 4);
-    \end{circuitikz}
-    }
-    \end{center}
+            \draw [thick] (7, 0) to [C] (7, 4);
+            \draw         (8, 0) to [C] (8, 4);
+        \end{circuitikz}
+        }
+        \end{center}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+    \end{column}
+    \end{columns}
 \end{frame}
 
 
@@ -690,7 +697,7 @@
 
     \vfill
     \begin{figure}
-        \includegraphics<3->[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/ferrite-bead-ringing.png}
+        \includegraphics<3->[width=\textwidth, height=0.55\textheight, keepaspectratio]{pictures/ferrite-bead-ringing.png}
     \end{figure}
 \end{frame}
 
@@ -795,7 +802,8 @@
     \vfill
     \pause
 
-    \resizebox{\textwidth}{!}{
+    \hspace{-14pt}
+    \resizebox{1.025\textwidth}{!}{
     \ctikzset{bipoles/cuteinductor/height=0.15}
     \ctikzset{bipoles/cuteinductor/width=0.5}
     \ctikzset{bipoles/resistor/height=0.15}
