@@ -2,6 +2,8 @@
 
 \section{Comment filtrer une alimentation?}
 
+
+\begin{comment}
 \subsection{Pourquoi filtrer une alimentation?}
 
 \begin{frame}{Pourquoi Filtrer?}
@@ -600,6 +602,8 @@
         \end{column}
     \end{columns}
 
+    % TODO: AJOUTER CORE FERRITE
+
     \pause
     \vfill
     \begin{center}
@@ -619,12 +623,13 @@
         ;
 
         \draw [thick] (7, 0) to [C] (7, 4);
-        \draw [thick] (8, 0) to [C] (8, 4);
+        \draw         (8, 0) to [C] (8, 4);
     \end{circuitikz}
     }
     \end{center}
 \end{frame}
 
+% TODO: AJOUTER CORE FERRITE
 
 \begin{frame}{Pi Filter}
     \begin{itemize}
@@ -649,9 +654,9 @@
         ;
 
         \draw [thick] (4, 0) to [C, color=red] (4, 4);
-        \draw [thick] (5, 0) to [C, color=red] (5, 4);
+        \draw         (5, 0) to [C, color=red] (5, 4);
         \draw [thick] (7, 0) to [C] (7, 4);
-        \draw [thick] (8, 0) to [C] (8, 4);
+        \draw         (8, 0) to [C] (8, 4);
     \end{circuitikz}
     }
     \end{center}
@@ -708,4 +713,257 @@
     \end{figure}
 \end{frame}
 
+\end{comment}
+
 \subsubsection{Filtration Complète}
+
+\begin{frame}{Filtration complète - Circuit électrique}
+    \begin{center}
+        \resizebox{0.8\textwidth}{!}{
+        \begin{tikzpicture}[
+            block/.style = {rectangle, draw, minimum height=1cm,        minimum width=2.5cm, align=center},
+            node distance=0.8cm and 0.6cm,
+            >={Stealth[round]}
+        ]
+        
+        % Nodes
+        \node[coordinate] (inlabel) {};
+
+        \only<1-2> {
+            \node[block, right=of inlabel] (prot) {Protections};
+            \node[block, right=of prot] (choke) {Chokes};
+            \node[block, right=of choke] (cap) {Bulk\\Capacitance};
+
+            \node[block, below=of prot] (sw) {Switching Regulator\\+ Decoupling};
+            \node[block, right=of sw] (pi) {Pi Filter};
+            \node[block, right=of pi] (ic) {Integrated\\Circuit};
+        }
+        \only<3> {
+            \node[block, right=of inlabel, color=gray]
+                (prot) {Protections};
+            \node[block, right=of prot, color=green]
+                (choke) {Chokes};
+            \node[block, right=of choke, color=magenta]
+                (cap) {Bulk\\Capacitance};
+
+            \node[block, below=of prot, color=red]
+                (sw) {Switching Regulator\\+ Decoupling};
+            \node[block, right=of sw, color=cyan]
+                (pi) {Pi Filter};
+            \node[block, right=of pi, color=blue]
+                (ic) {Integrated\\Circuit};
+        }
+
+        \node[coordinate, right=of ic] (outlabel) {};
+
+        % Input arrow with label
+        \draw[->] ($(inlabel)+(-0.75,0.0)$) -- (prot.west) node[midway, above] {Input};
+
+        % Top row
+        \draw[->] (prot) -- (choke);
+        \draw[->] (choke) -- (cap);
+
+        % Segmented down to second row
+        \draw[->] 
+        (cap.east)      
+        -- ++(0.5, 0)     
+        -- ++(0, -0.85)    
+        -| (sw.north);
+
+
+        % Bottom row
+        \draw[->] (sw) -- (pi);
+        \draw[->] (pi) -- (ic);
+
+        % Output arrow with label
+        \draw[->] (ic.east) -- ++(1.25,0) node[midway, above] {Load};
+
+
+        \only<1> {
+            \node[above=1 of prot, draw, inner sep=5pt, scale=0.5] (zoom) {
+                \begin{tikzpicture}
+                    \input{tikz/protection-diagram.tex}
+                \end{tikzpicture}
+            };
+
+            \draw (prot.north west) -- (zoom.south west);
+            \draw (prot.north east) -- (zoom.south east);
+        }
+        \end{tikzpicture}
+        }
+
+
+    \vfill
+    \pause
+
+    \resizebox{\textwidth}{!}{
+    \ctikzset{bipoles/cuteinductor/height=0.15}
+    \ctikzset{bipoles/cuteinductor/width=0.5}
+    \ctikzset{bipoles/resistor/height=0.15}
+    \ctikzset{bipoles/resistor/width=0.5}
+    \begin{circuitikz}[
+            american voltages,
+            american inductors,
+            block/.style = {rectangle, draw, minimum height=1cm,        minimum width=2.5cm, align=center},
+            node distance=0.8cm and 0.6cm,
+            >={Stealth[round]}
+        ]]
+        \only<2> {
+            \node[block] (prot) at (4, 5) {Protections};
+        }
+        \only<3> {
+            \node[block, color=gray] (prot) at (4, 5) {Protections};
+        }
+
+        % Circuit setup and wire inductance
+        \draw [thick]
+        (0, 0) to [open, v<=$V$] (0, 5)
+        to [short, *-] (0.5, 5)
+        to [cute inductor, l=$pcb$] (2.5, 5)
+        to [short] (prot.west)
+        ;
+
+        % Common-mode Choke
+        \draw [thick]
+        (7.5, 2.5) node[transformer core, rotate=90, transform shape](choke)
+            {
+                \begin{minipage}{4cm}
+                    \centering
+                    \rotatebox{-90}{
+                        \large{Choke}
+                    }
+                    \rotatebox{-90}{
+                        \hspace{-32pt}
+                        \large{Common-Mode}
+                    }
+                \end{minipage}
+            }
+        (choke.A1) to [short] (choke.A1 |- 0, 0)
+        to [short, -*] (0, 0)
+        (choke.A2) to [short] (choke.A2 |- 0, 0)
+        (choke.B1) to [short] (choke.B1 |- 0, 5)
+        to [short] (prot.east)
+        (choke.B2) to [short] (choke.B2 |- 0, 5)
+        ;
+
+        % Bulk Capacitance
+        \draw[thick]
+        (10, 5) to [curved capacitor, v=$ $, *-*] (10, 0)
+        (11, 5) to [C, *-*] (11, 0);
+
+        % Regulator
+        \ctikzset{multipoles/dipchip/width=2}
+        \draw (16.75, 5) node[dipchip,
+            num pins=6,
+            hide numbers,
+            external pins width=0.3,
+            external pad fraction=4,
+            anchor=bpin 1,
+            thick]
+            (reg){L6982};
+        \node [right, font=\tiny] at (reg.bpin 1) {VIN};
+        \node [right, font=\tiny] at (reg.bpin 2) {EN};
+        \node [right, font=\tiny] at (reg.bpin 3) {VCC};
+        \node [left,  font=\tiny] at (reg.bpin 4) {GND};
+        \node [left,  font=\tiny] at (reg.bpin 5) {FB};
+        \node [left,  font=\tiny] at (reg.bpin 6) {SW};
+
+        % Regulator Decoupling
+        \draw[thick]
+        (13, 5) to [C, *-*] (13, 0)
+        (23.5, 5) to [C, *-*] (23.5, 0)
+        ;
+
+        % Regulator Circuit
+        \draw[thick]
+        (reg.pin 1) to [short] (choke.B2 |- 0, 5)
+        (reg.pin 3) to [short] (reg.pin 3 -| 16, 0)
+        to [C, -*] (16, 0)
+
+        (reg.pin 2) to [short, -*] (reg.pin 2 -| 15, 0)
+        to [R, -*] (15, 0)
+        (reg.pin 2 -| 15, 0) to [R] (reg.pin 2 -| 13.5, 0)
+        to [short, -*] (13.5, 5)
+
+        (reg.pin 4) to [short] (reg.pin 4 -| 20.25, 0)
+        to [short, -*] (20.25, 0)
+
+        (reg.pin 5) to [short, -*] (reg.pin 5 -| 21, 0)
+        to [R, -*] (21, 0)
+        (reg.pin 5 -| 21, 0) to [R] (reg.pin 5 -| 23, 0)
+        to [short, -*] (23, 5)
+
+        (reg.pin 6) to [L, l=$L$] (23, 5)
+        ;
+
+
+        % Integrated Circuit
+        \draw (34, 5) node[qfpchip,
+            num pins=16,
+            hide numbers,
+            external pins width=0.3,
+            external pad fraction=4,
+            anchor=bpin 1,
+            thick]
+            (ic){STM32};
+        \node [right, font=\tiny] at (ic.bpin 1)  {VDD};
+        \node [right, font=\tiny] at (ic.bpin 4)  {GND};
+        \node [left,  font=\tiny] at (ic.bpin 9)  {GND};
+        \node [left,  font=\tiny] at (ic.bpin 12) {VDD};
+
+        % IC Decoupling
+        \draw[thick]
+        (ic.pin 1) to [short] (ic.pin 1 -| 31, 5)
+        (ic.pin 4) to [short] (ic.pin 4 -| 31, 0)
+                   to [short, -*] (31, 0)
+        (ic.pin 1 -| 33, 0) to [C, *-*] (ic.pin 4 -| 33, 0)
+        (ic.pin 1 -| 32, 0) to [C, *-*] (ic.pin 4 -| 32, 0)
+        (ic.pin 1 -| 31, 0) to [C, *-*] (ic.pin 4 -| 31, 0)
+        ;
+        \draw[thick]
+        (ic.pin 12) to [short] (ic.pin 12 -| 40, 5)
+        (ic.pin 9)  to [short] (ic.pin 9 -| 40, 0)
+                    to [short] (40, 0)
+                    to [short] (choke.A2 |- 0, 0)
+        (ic.pin 12 -| 38, 0) to [C, *-*] (ic.pin 9 -| 38, 0)
+        (ic.pin 12 -| 39, 0) to [C, *-*] (ic.pin 9 -| 39, 0)
+        (ic.pin 12 -| 40, 0) to [C, -*]  (ic.pin 9 -| 40, 0)
+        ;
+
+
+        % Pi Filter
+        \draw[thick]
+        (23, 5) to [short] (28, 5)
+                to [L, l=$FB$, name=fb] (30.5, 5)
+                to [short] (ic.pin 1);
+        \draw[thick, double] (fb.core west) -- (fb.core east);
+
+        \draw[thick]
+        (28, 5) to [C, *-*] (28, 0)
+        (27, 5) to [C, *-*] (27, 0)
+        (26, 5) to [C, *-*] (26, 0)
+        ;
+
+        \draw[thick]
+        (30.5, 5) to [short, *-] (30.5, 6.5)
+                  to [short]     (38.5, 6.5)
+                  to [short, -*] (38.5, 5);
+
+        % Boxes
+        \only<3> {
+            \draw[dashed, ultra thick, rounded corners, color=green] (3, 3.5) rectangle (9, 1.5);
+
+            \draw[dashed, ultra thick, rounded corners, color=magenta] (9.25, 6) rectangle (11.75, -1);
+
+            \draw[dashed, ultra thick, rounded corners, color=red] (12, 6) rectangle (24.5, -1);
+
+            \draw[dashed, ultra thick, rounded corners, color=cyan] (24.75, 6) rectangle (33.5, 1);
+
+            \draw[dashed, ultra thick, rounded corners, color=blue] (30, 7) rectangle (41, -1);
+
+        }
+
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
