@@ -1,2 +1,7 @@
 \beamer@sectionintoc {1}{Comment filtrer une alimentation?}{3}{0}{1}
-\beamer@subsubsectionintoc {1}{0}{1}{Filtration Complète}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{Pourquoi filtrer une alimentation?}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Démonstration}{10}{0}{1}
+\beamer@subsectionintoc {1}{3}{Filtrer l'entrée}{11}{0}{1}
+\beamer@subsectionintoc {1}{4}{Filtrer un régulateur}{26}{0}{1}
+\beamer@subsectionintoc {1}{5}{Filtrer au IC}{30}{0}{1}
+\beamer@subsubsectionintoc {1}{5}{1}{Filtration Complète}{48}{0}{1}

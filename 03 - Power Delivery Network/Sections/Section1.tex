@@ -38,7 +38,7 @@
 
 \begin{frame}{Décharge Électrostatique - Waveform}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.6\textwidth}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
@@ -92,7 +92,7 @@
 \begin{frame}{Diode Normale - IV Curve}
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{pictures/diode-iv-curve.png}
+        \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{pictures/diode-iv-curve.png}
     \end{figure}
 \end{frame}
 
@@ -113,7 +113,7 @@
         \begin{column}{0.6\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=\textwidth]{pictures/diode-zener-iv-curve.png}
+                \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{pictures/diode-zener-iv-curve.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -164,7 +164,7 @@
 
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{pictures/clamping-esd-pulse.png}
+        \includegraphics[width=\textwidth, height=0.5\textheight, keepaspectratio]{pictures/clamping-esd-pulse.png}
     \end{figure}
 \end{frame}
 
@@ -221,7 +221,7 @@
     \end{columns}
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{pictures/diode-tvs-iv-curve.png}
+        \includegraphics[width=\textwidth, height=0.55\textheight, keepaspectratio]{pictures/diode-tvs-iv-curve.png}
     \end{figure}
 \end{frame}
 
@@ -458,7 +458,7 @@
 
 \begin{frame}{Fusible}
     \begin{columns}
-        \begin{column}{0.33\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item Chauffage d'un filament central
                 \item Coupe un circuit lorsque trop de courant passe
@@ -469,14 +469,15 @@
             \vspace{12pt}
             \begin{figure}
                 \centering
-                \includegraphics[width=0.5\textwidth]{pictures/fuse.png}
+                \includegraphics[width=0.33\textwidth]{pictures/fuse.png}
             \end{figure}
         \end{column}
 
-        \begin{column}{0.66\textwidth}
+        \begin{column}{0.6\textwidth}
+            \vspace{-12pt}
             \begin{figure}
                 \centering
-                \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{pictures/fuse-curve.png}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/fuse-curve.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -484,7 +485,7 @@
 
 \begin{frame}{Polyfuse - Polyswitch - PTC - Resettable Fuse}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item \textit{Positive Temperature Coefficient}
                 \item Augmente sa résistance alors qu'il chauffe
@@ -501,10 +502,10 @@
             \end{figure}
         \end{column}
 
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.4\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=\textwidth, height=0.825\textheight, keepaspectratio]{pictures/polyfuse-curve.png}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/polyfuse-curve.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -529,7 +530,7 @@
 
 \begin{frame}{Inrush Current Limiter}
     \begin{columns}
-        \begin{column}{0.66\textwidth}
+        \begin{column}{0.6\textwidth}
             \textbf{Comment limiter la surge initiale?}
             \vspace{12pt}
             \begin{itemize}
@@ -550,10 +551,10 @@
             \end{itemize}
         \end{column}
 
-        \begin{column}{0.35\textwidth}
+        \begin{column}{0.4\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics<1->[width=0.5\textwidth]{pictures/inrush-current-limiter.png}
+                \includegraphics<1->[width=0.4\textwidth]{pictures/inrush-current-limiter.png}
             \end{figure}
             \begin{figure}
                 \centering
@@ -776,6 +777,7 @@
 \end{frame}
 
 \begin{frame}{Solution Miracle}
+    \vspace{-12pt}
     \begin{columns}
         \begin{column}{0.33\textwidth}
             \textbf<1>{Catégorie de device:}
@@ -880,9 +882,10 @@
         \item Wiré séparément au Neutre
     \end{itemize}
 
+    \vspace{-12pt}
     \begin{figure}
         \centering
-        \includegraphics[width=0.66\textwidth]{pictures/3-wire-ac-plug.png}
+        \includegraphics[width=0.66\textwidth, height=0.6\textheight, keepaspectratio]{pictures/3-wire-ac-plug.png}
     \end{figure}
 \end{frame}
 
@@ -897,7 +900,7 @@
             \vspace{-12pt}
             \begin{figure}
                 \centering
-                \includegraphics<1->[width=\textwidth]{pictures/uk-plug-wiring.png}
+                \includegraphics<1->[width=\textwidth, height=0.6\textheight, keepaspectratio]{pictures/uk-plug-wiring.png}
             \end{figure}
         \end{column}
         \begin{column}{0.4\textwidth}
@@ -918,7 +921,7 @@
         \begin{column}{0.7\textwidth}
             \begin{itemize}
                 \item Mesure le courant qui passe par Live \& Neutral
-                \item Coupe dès que $V_{in} \neq V_{out}$ 
+                \item Coupe dès que $I_{in} \neq I_{out}$ 
             \end{itemize}
             \vspace{24pt}
             \begin{figure}
@@ -929,7 +932,7 @@
         \begin{column}{0.3\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=0.66\textwidth]{pictures/gfci-outlet.png}
+                \includegraphics[width=0.6\textwidth]{pictures/gfci-outlet.png}
             \end{figure}
         \end{column}
     \end{columns}

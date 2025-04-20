@@ -3,7 +3,6 @@
 \section{Comment filtrer une alimentation?}
 
 
-\begin{comment}
 \subsection{Pourquoi filtrer une alimentation?}
 
 \begin{frame}{Pourquoi Filtrer?}
@@ -263,7 +262,7 @@
     $\zeta = \dfrac{1}{2 R_{_{LOAD}} \sqrt{LC}}$
     \vfill
     \begin{figure}
-        \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/lc-filter-damping-factor.png}
+        \includegraphics[width=\textwidth, height=0.7\textheight, keepaspectratio]{pictures/lc-filter-damping-factor.png}
     \end{figure}
 \end{frame}
 
@@ -284,7 +283,7 @@
     \end{itemize}
     \vfill
     \begin{figure}
-        \includegraphics[width=0.75\textwidth, height=0.75\textheight, keepaspectratio]{pictures/common-mode-noise.png}
+        \includegraphics[width=0.75\textwidth, height=0.5\textheight, keepaspectratio]{pictures/common-mode-noise.png}
     \end{figure}
 \end{frame}
 
@@ -338,18 +337,18 @@
     \begin{itemize}
         \item Chaque condensateur a sa fréquence de résonnance
         \item Choisir le bon condensateur de découplage selon fréquence de résonnance du condensateur
-        \item \textbf{Il faut offrir la plus faible impédance vers le ground pour la fréquence visée}
+        \item \textbf{Il faut offrir la plus faible impédance pour la fréquence visée}
     \end{itemize}
-    \vspace{-18pt}
+    \vspace{-12pt}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{figure}
-                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/capacitor-resonant-frequency.png}
+                \includegraphics[width=\textwidth, height=0.55\textheight, keepaspectratio]{pictures/capacitor-resonant-frequency.png}
             \end{figure}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{figure}
-                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/switching-psu-ripple.png}
+                \includegraphics[width=0.95\textwidth, height=0.75\textheight, keepaspectratio]{pictures/switching-psu-ripple.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -402,16 +401,16 @@
             \end{itemize}
         \end{column}
     \end{columns}
-    \vspace{-18pt}
+    \vspace{-12pt}
     \begin{columns}
         \begin{column}{0.45\textwidth}
             \begin{figure}
-                \includegraphics[width=0.75\textwidth, height=0.75\textheight, keepaspectratio]{pictures/oscilloscope-noise.png}
+                \includegraphics[width=0.9\textwidth, height=0.75\textheight, keepaspectratio]{pictures/oscilloscope-noise.png}
             \end{figure}
         \end{column}
         \begin{column}{0.45\textwidth}
             \begin{figure}
-                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/ic-noise.png}
+                \includegraphics[width=\textwidth, height=0.55\textheight, keepaspectratio]{pictures/ic-noise.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -442,11 +441,11 @@
     \vspace{12pt}
     \pause
     \begin{itemize}
-        \item Condensateurs dont la fréquence de résonnance match avec la fréquence d'opération
+        \item Matcher la fréquence de résonnance avec la fréquence d'opération
     \end{itemize}
 
     \begin{figure}
-        \includegraphics[width=0.8\textwidth, height=0.75\textheight, keepaspectratio]{pictures/decoupling-example-usb.png}
+        \includegraphics[width=0.8\textwidth, height=0.4\textheight, keepaspectratio]{pictures/decoupling-example-usb.png}
     \end{figure}
 \end{frame}
 
@@ -460,7 +459,7 @@
     \end{itemize}
 
     \begin{figure}
-        \includegraphics[width=0.6\textwidth, height=0.75\textheight, keepaspectratio]{pictures/decoupling-example-osc.png}
+        \includegraphics[width=0.6\textwidth, height=0.45\textheight, keepaspectratio]{pictures/decoupling-example-osc.png}
     \end{figure}
 \end{frame}
 
@@ -511,7 +510,7 @@
     \end{itemize}
     \vspace{-24pt}
     \begin{columns}
-        \begin{column}{0.66\textwidth}
+        \begin{column}{0.7\textwidth}
             \begin{center}
             \resizebox{\textwidth}{!}{
             \ctikzset{bipoles/cuteinductor/height=0.15}
@@ -542,7 +541,7 @@
             \end{center}
         \end{column}
 
-        \begin{column}{0.33\textwidth}
+        \begin{column}{0.3\textwidth}
                 \begin{figure}
                     \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/decoupling-placement.png}
                 \end{figure}
@@ -587,7 +586,7 @@
 
 \begin{frame}{Ferrite Bead - Fonctionnement}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item Agit comme une résistance sur sa plage d'opération
                 \item Utilisé comme une inductance dans un circuit
@@ -595,19 +594,17 @@
             \end{itemize}
         \end{column}
 
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.4\textwidth}
             \begin{figure}
                 \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/ferrite-bead-impedance-curve.png}
             \end{figure}
         \end{column}
     \end{columns}
 
-    % TODO: AJOUTER CORE FERRITE
 
     \pause
-    \vfill
     \begin{center}
-    \resizebox{0.8\textwidth}{!}{
+    \resizebox{0.725\textwidth}{!}{
     \ctikzset{bipoles/cuteinductor/height=0.15}
     \ctikzset{bipoles/cuteinductor/width=0.5}
     \begin{circuitikz}[american voltages]
@@ -618,9 +615,11 @@
         to [short, *-] (1, 4)
         to [cute inductor, l=$pcb$] (3, 4)
         to [short] (4, 4)
-        to [american inductor, l=$L$, color=red] (6.5, 4)
+        to [american inductor, l=$L$, name=L, color=red] (6.5, 4)
         to [short] (10, 4)
         ;
+
+        \draw[thick, double, color=red] (L.core west) -- (L.core east);
 
         \draw [thick] (7, 0) to [C] (7, 4);
         \draw         (8, 0) to [C] (8, 4);
@@ -629,7 +628,6 @@
     \end{center}
 \end{frame}
 
-% TODO: AJOUTER CORE FERRITE
 
 \begin{frame}{Pi Filter}
     \begin{itemize}
@@ -649,9 +647,11 @@
         to [short, *-] (1, 4)
         to [cute inductor, l=$pcb$] (3, 4)
         to [short] (5, 4)
-        to [american inductor, l=$L$] (7, 4)
+        to [american inductor, l=$L$, name=L] (7, 4)
         to [short] (10, 4)
         ;
+
+        \draw[thick, double] (L.core west) -- (L.core east);
 
         \draw [thick] (4, 0) to [C, color=red] (4, 4);
         \draw         (5, 0) to [C, color=red] (5, 4);
@@ -713,7 +713,6 @@
     \end{figure}
 \end{frame}
 
-\end{comment}
 
 \subsubsection{Filtration Complète}
 
@@ -819,7 +818,7 @@
         \draw [thick]
         (0, 0) to [open, v<=$V$] (0, 5)
         to [short, *-] (0.5, 5)
-        to [cute inductor, l=$pcb$] (2.5, 5)
+        to [cute inductor, l=$wire$] (2.5, 5)
         to [short] (prot.west)
         ;
 
