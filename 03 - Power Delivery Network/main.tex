@@ -32,6 +32,8 @@
 \usepackage{hyperref}
 \usepackage{mathtools}
 \usepackage{adjustbox}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
 \usepackage{animate}
 %\usepackage{cite}
@@ -270,6 +272,71 @@
     \vfill\null
     \columnbreak
     \end{multicols}
+\end{frame}
+
+
+% VOTE
+\usebackgroundtemplate{
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            {\includegraphics[width=\paperwidth,keepaspectratio]{pictures/background/background-pcb-poster.png}}
+        };
+    \end{tikzpicture}
+}
+
+\begin{frame}[plain, label=intro]
+    \centering
+    \Large
+
+    \textcolor{white}{\LARGE{\textbf{Vote sur le prochain PPPPP}}}\\
+    \vspace{24pt}
+
+    \only<1> {
+        \textcolor{white}{
+        \LARGE{\textbf{Deep-Dive sur les composantes Passives}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Derating de condensateurs}
+            \item \textcolor{white}{Courbes d'impédance}
+            \item \textcolor{white}{Saturation de bobines}
+            \item \textcolor{white}{Normes et spécifications}
+            \item \textcolor{white}{Comment choisir une composante}
+        \end{itemize}
+    }
+    \only<2> {
+        \textcolor{white}{
+        \LARGE{\textbf{Bonnes pratiques de Schéma \& Layout}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Quoi mettre sur un silkscreen}
+            \item \textcolor{white}{Notes sur un schéma}
+            \item \textcolor{white}{Protections de circuit}
+            \item \textcolor{white}{Comment utiliser les couches mécaniques}
+            \item \textcolor{white}{Comment bien faire un BOM}
+        \end{itemize}
+    }
+    \only<3> {
+        \textcolor{white}{
+        \LARGE{\textbf{Comment se déplace un signal sur un PCB}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Où l'impédance est la plus faible?}
+            \item \textcolor{white}{Retour de courant}
+            \item \textcolor{white}{Ground Bounce}
+            \item \textcolor{white}{Vitesse de déplacement d'un signal}
+            \item \textcolor{white}{Tout est une bobine}
+        \end{itemize}
+    }
+
+    \only<4> {
+        \begin{itemize}
+            \item \textcolor{white}{\LARGE{\textbf{Deep-Dive sur les composantes Passives}}}
+            \bigskip
+            \item \textcolor{white}{\LARGE{\textbf{Bonnes pratiques de Schéma \& Layout}}}
+            \bigskip
+            \item \textcolor{white}{\LARGE{\textbf{Comment se déplace un signal sur un PCB}}}
+        \end{itemize}
+    }
 \end{frame}
 
 
