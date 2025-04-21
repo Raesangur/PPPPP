@@ -64,6 +64,13 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}{Trouver le courant d'opération}
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/ad4050-power.png}
+    \end{figure}
+    \href{https://www.analog.com/media/en/technical-documentation/data-sheets/ad4050-ad4056.pdf}{Analog Devices - AD4050 - 12-Bit 2MSPS SAR ADC}
+\end{frame}
+
 \begin{frame}{Besoins en stabilité}
     \begin{itemize}
         \item Déterminer les besoins de chaque puce en stabilité
@@ -228,7 +235,7 @@
         rounded corners=0.1cm},
         node distance=0.8cm and 0.6cm,
         >={Stealth[round]},
-        x = 2.5cm,
+        x = 3cm,
         y = 1cm
     ]
 
@@ -246,8 +253,14 @@
         {\textcolor{UDSgreenFierte}{\faUsb} ~\textcolor{black}{USB}};
     \node[block] (3v3)  at (2,  -3)
         {\textcolor{UDSgreenFierte}{\faWaveSquare} ~\textcolor{black}{\SI{3.3}{\volt}}};
+
     \node[block] (3v3a) at (3.33,  -5)
         {\textcolor{UDSgreenFierte}{\faSync} ~\textcolor{black}{Ferrite}};
+    \node[block] (3v3ic1) at (3.33,  -3)
+        {\textcolor{UDSgreenFierte}{\faSync} ~\textcolor{black}{Ferrite}};
+    \node[block] (3v3ic2) at (3.33,  -4)
+        {\textcolor{UDSgreenFierte}{\faSync} ~\textcolor{black}{Ferrite}};
+
     \node[block] (ic1)  at (5,  -3)
         {\textcolor{UDSgreenFierte}{\faMicrochip} ~\textcolor{black}{IC 1}};
     \node[block] (ic2)  at (5,  -4)
@@ -287,20 +300,28 @@
          {\textcolor{black}{$\SI{500}{\milli\ampere}$}};
 
     \draw[->, ultra thick, color=blue]
-         (3v3) -- (ic1)
+         (3v3) -- (3v3ic1)
          node[midway, above]
          {\textcolor{black}{$\SI{17.5}{\milli\ampere}$}};
     \draw[->, ultra thick, color=blue]
-         (3v3) |- (ic2)
-         node[pos=0.79, above]
+         (3v3ic1) -- (ic1)
+         node[midway, above]
+         {\textcolor{black}{$\SI{17.5}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=blue]
+         (3v3) |- (3v3ic2)
+         node[pos=0.825, above]
+         {\textcolor{black}{$\SI{10}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=blue]
+         (3v3ic2) -- (ic2)
+         node[midway, above]
          {\textcolor{black}{$\SI{10}{\milli\ampere}$}};
     \draw[->, ultra thick, color=blue]
          (3v3) |- (3v3a)
-         node[pos=0.75, above]
+         node[pos=0.825, above]
          {\textcolor{black}{$\SI{50}{\milli\ampere}$}};
     \draw[->, ultra thick, color=blue]
          (3v3) |- (2v5)
-         node[pos=0.75, above]
+         node[pos=0.825, above]
          {\textcolor{black}{?$\SI{}{\milli\ampere}$}};
 
     \draw[->, ultra thick, color=green]
@@ -313,6 +334,13 @@
          {\textcolor{black}{$\SI{50}{\milli\ampere}$}};
     \end{tikzpicture}
     }
+\end{frame}
+
+
+\begin{frame}{Résolution des régulateurs - 5V}
+
+
+
 \end{frame}
 
 \subsection{Séquençage}
