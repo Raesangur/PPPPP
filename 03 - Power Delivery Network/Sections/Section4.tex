@@ -338,9 +338,403 @@
 
 
 \begin{frame}{Résolution des régulateurs - 5V}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \only<1> {
+                \begin{itemize}
+                    \item Remplir les informations de base
+                    \begin{itemize}
+                        \item Nom du régulateur
+                        \item Séquence
+                        \item Type de régulateur
+                        \item Courant maximum
+                        \item $R_{\theta JA}$
+                    \end{itemize}
+                    \item Remplir les informations de sortie
+                    \begin{itemize}
+                        \item Tension
+                        \item Courant min
+                        \item Courant nominal
+                        \item Courant max
+                    \end{itemize}
+                    \item \textit{Il manque le courant d'entrée}
+                \end{itemize}
+            }
+            \only<2> {
+                \begin{itemize}
+                    \item Pour le $I_{in}$ il nous faut le $P_{in}$
+                    \item Pour le $P_{in}$ il nous faut le $\eta$
+                \end{itemize}
+            }
+            \only<3> {
+                \begin{itemize}
+                    \item Trouver le $\eta$ dans le graphique
+                    \item Facilement $\pm 10\%$ entre $\eta_{nom}$ et $\eta_{max}$
+                \end{itemize}
+            }
+            \only<4> {
+                \begin{center}
+                    $P_{in_{nom}} = \frac{P_{out_{nom}}}{\eta_{nom}}$\\
+                    \vspace{6pt}
+                    $P_{in_{max}} = \frac{P_{out_{max}}}{\eta_{max}}$
+                \end{center}
+            }
+            \only<5> {
+                \begin{center}
+                    $P_{diss_{nom}} = P_{out_{nom}} - P_{in_{nom}}$\\
+                    \vspace{6pt}
+                    $P_{diss_{max}} = P_{out_{max}} - P_{in_{max}}$
+                \end{center}
+            }
+            \only<6> {
+                \begin{center}
+                    $I_{in_{nom}} = \frac{P_{out_{nom}}}{V_{in}}$\\
+                    \vspace{6pt}
+                    $I_{in_{max}} = \frac{P_{out_{max}}}{V_{in}}$
+                \end{center}
+            }
+            \only<7> {
+                \begin{center}
+                    $\Delta t_{_{nom}} = P_{diss_{nom}} \cdot R_{\theta JA}$\\
+                    \vspace{6pt}
+                    $\Delta t_{_{max}} = P_{diss_{max}} \cdot R_{\theta JA}$
+                \end{center}
+            }
+
+            \begin{figure}
+                \includegraphics<2> [width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/l6982-efficiency-curve-raw.png}
+                \includegraphics<3->[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/l6982-efficiency-curve-dual.png}
+            \end{figure}
+        \end{column}
+
+        \begin{column}{0.6\textwidth}
+            \centering
+            \vspace{-6pt}
+
+            \begin{tabular}{C{0.2\textwidth} | C{0.2\textwidth} | C{0.2\textwidth}}
+                \rowcolor{UDSgreenSolidarite}
+                \multicolumn{3}{c}{\textcolor{white}{\textbf{L6982}}}\\
+                \hline
+
+                Type         & $R_{\theta JA}$              & $I_{max}$\\
+                \textbf{SWR} & $\SI{55}{\celsius\per\watt}$ & $\SI{2}{\ampere}$\\
+                \hline
+
+                $V_{in}$         & & $V_{out}$\\
+                $\SI{12}{\volt}$ & & $\SI{5}{\volt}$\\
+                \hline
+
+                $I_{in_{nom}}$    & & $I_{out_{nom}}$\\
+                \only<2-5> {
+                    $?\SI{}{\ampere}$ & & $\SI{180}{\milli\ampere}$\\
+                }
+                \only<6-> {
+                    $\SI[parse-numbers=false]{83.\overline{3}}{\milli\ampere}$ & & $\SI{180}{\milli\ampere}$\\
+                    }
+                $I_{in_{max}}$    & & $I_{out_{max}}$\\
+                \only<2-5> {
+                    $?\SI{}{\ampere}$ & & $\SI{580}{\milli\ampere}$
+                }
+                \only<6-> {
+                    $\SI{260}{\milli\ampere}$ & & $\SI{580}{\milli\ampere}$\\
+                }
+                
+
+                \only<2-> {
+                    \\
+                    \hline
+
+                    \multicolumn{3}{c}{
+                        \begin{tabular}{C{0.3\textwidth} | C{0.3\textwidth}}
+                            \only<2> {
+                                $\eta_{nom} =\ ?\%$ &
+                                $\eta_{max} =\ ?\%$
+                            }
+                            \only<3-> {
+                                $\eta_{nom} =\ 90\%$ &
+                                $\eta_{max} =\ 93\%$
+                            }
+                        \end{tabular}
+                    }
+                }
+                \only<7-> {
+                    \\
+                    \hline
+
+                    \multicolumn{3}{c}{
+                        \begin{tabular}{C{0.3\textwidth} | C{0.3\textwidth}}
+                                $\Delta t_{_{nom}} =\ \SI{5.5}{\celsius}$ &
+                                $\Delta t_{_{max}} =\ \SI{12.1}{\celsius}$
+                        \end{tabular}
+                    }
+                }
+                
+                \only<4-> {
+                \\
+                    \hline
+
+                    $P_{in_{nom}}$      & $P_{diss_{nom}}$        & $P_{out_{nom}}$\\
+                    \only<4> {
+                        $\SI{1}{\watt}$ & $?\SI{}{\watt}$         & $\SI{900}{\milli\watt}$\\
+                    }
+                    \only<5-> {
+                        $\SI{1}{\watt}$ & $\SI{100}{\milli\watt}$ & $\SI{900}{\milli\watt}$\\
+                    }
+
+                    $P_{in_{max}}$         & $P_{diss_{max}}$        & $P_{out_{max}}$\\
+                    \only<4> {
+                        $\SI{3.12}{\watt}$ & $?\SI{}{\watt}$         & $\SI{2.9}{\watt}$
+                    }
+                    \only<5-> {
+                        $\SI{3.12}{\watt}$ & $\SI{220}{\milli\watt}$ & $\SI{2.9}{\watt}$
+                    }
+                }
+            \end{tabular}
+        \end{column}
+    \end{columns}
+\end{frame}
 
 
+\begin{frame}{Résolution des régulateurs}
+    \small
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \vspace{-6pt}
+            \begin{tabular}{C{0.25\textwidth} | C{0.25\textwidth} | C{0.25\textwidth}}
+                \rowcolor{UDSgreenSolidarite}
+                \multicolumn{3}{c}{\textcolor{white}{\textbf{TPS79025}}}\\
+                \hline
 
+                Type         & $R_{\theta JA}$                & $I_{max}$\\
+                \textbf{LIN} & $\SI{73.1}{\celsius\per\watt}$ & $\SI{2}{\ampere}$\\
+                \hline
+
+                $V_{in}$          & & $V_{out}$\\
+                $\SI{3.3}{\volt}$ & & $\SI{2.5}{\volt}$\\
+                \hline
+
+                $I_{in_{nom}}$           & & $I_{out_{nom}}$\\
+                $\SI{20}{\milli\ampere}$ & & $\SI{20}{\milli\ampere}$\\
+                $I_{in_{max}}$           & & $I_{out_{max}}$\\
+                $\SI{50}{\milli\ampere}$ & & $\SI{50}{\milli\ampere}$\\
+                \hline
+
+                \multicolumn{3}{c}{
+                    $\eta =\ 75.\overline{75}\%$
+                }\\
+                \hline
+
+                $P_{in_{nom}}$         & $P_{diss_{nom}}$       & $P_{out_{nom}}$\\
+                $\SI{66}{\milli\watt}$ & $\SI{16}{\milli\watt}$ & $\SI{50}{\milli\watt}$\\
+
+                $P_{in_{max}}$          & $P_{diss_{max}}$       & $P_{out_{max}}$\\
+                $\SI{165}{\milli\watt}$ & $\SI{40}{\milli\watt}$ & $\SI{125}{\milli\watt}$
+            \end{tabular}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \vspace{-6pt}
+            \begin{tabular}{C{0.25\textwidth} | C{0.25\textwidth} | C{0.25\textwidth}}
+                \rowcolor{UDSgreenSolidarite}
+                \multicolumn{3}{c}{\textcolor{white}{\textbf{L6982}}}\\
+                \hline
+
+                Type         & $R_{\theta JA}$              & $I_{max}$\\
+                \textbf{SWR} & $\SI{55}{\celsius\per\watt}$ & $\SI{2}{\ampere}$\\
+                \hline
+
+                $V_{in}$         & & $V_{out}$\\
+                $\SI{12}{\volt}$ & & $\SI{3.3}{\volt}$\\
+                \hline
+
+                $I_{in_{nom}}$         & & $I_{out_{nom}}$\\
+                $\SI{19}{\milli\ampere}$ & & $\SI{58}{\milli\ampere}$\\
+                $I_{in_{max}}$         & & $I_{out_{max}}$\\
+                $\SI{39}{\milli\ampere}$ & & $\SI{128}{\milli\ampere}$\\
+                \hline
+
+                \multicolumn{3}{c}{
+                    \begin{tabular}{C{0.375\textwidth} | C{0.375\textwidth}}
+                        $\eta_{nom} =\ 86\%$ &
+                        $\eta_{max} =\ 90\%$
+                    \end{tabular}
+                }\\
+                \hline
+
+                $P_{in_{nom}}$  & $P_{diss_{nom}}$        & $P_{out_{nom}}$\\
+                $\SI{221}{\milli\watt}$ & $\SI{31}{\milli\watt}$ & $\SI{190}{\milli\watt}$\\
+
+                $P_{in_{max}}$     & $P_{diss_{max}}$        & $P_{out_{max}}$\\
+                $\SI{468}{\milli\watt}$ & $\SI{47}{\milli\watt}$ & $\SI{420}{\milli\watt}$
+            \end{tabular}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \vspace{-6pt}
+            \begin{tabular}{C{0.25\textwidth} | C{0.25\textwidth} | C{0.25\textwidth}}
+                \rowcolor{UDSgreenSolidarite}
+                \multicolumn{3}{c}{\textcolor{white}{\textbf{L6982}}}\\
+                \hline
+
+                Type         & $R_{\theta JA}$              & $I_{max}$\\
+                \textbf{SWR} & $\SI{55}{\celsius\per\watt}$ & $\SI{2}{\ampere}$\\
+                \hline
+
+                $V_{in}$         & & $V_{out}$\\
+                $\SI{12}{\volt}$ & & $\SI{5}{\volt}$\\
+                \hline
+
+                $I_{in_{nom}}$            & & $I_{out_{nom}}$\\
+                $\SI{83}{\milli\ampere}$  & & $\SI{180}{\milli\ampere}$\\
+                $I_{in_{max}}$            & & $I_{out_{max}}$\\
+                $\SI{260}{\milli\ampere}$ & & $\SI{580}{\milli\ampere}$\\
+                \hline
+
+                \multicolumn{3}{c}{
+                    \begin{tabular}{C{0.375\textwidth} | C{0.375\textwidth}}
+                        $\eta_{nom} =\ 90\%$ &
+                        $\eta_{max} =\ 93\%$
+                    \end{tabular}
+                }\\
+                \hline
+
+                $P_{in_{nom}}$  & $P_{diss_{nom}}$        & $P_{out_{nom}}$\\
+                $\SI{1}{\watt}$ & $\SI{100}{\milli\watt}$ & $\SI{900}{\milli\watt}$\\
+
+                $P_{in_{max}}$    & $P_{diss_{max}}$        & $P_{out_{max}}$\\
+                $\SI{3.1}{\watt}$ & $\SI{220}{\milli\watt}$ & $\SI{2.9}{\watt}$
+            \end{tabular}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Diagramme d'alimentation}
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tikzpicture}[
+        block/.style = {rectangle, draw,
+        minimum height=0.75cm,
+        minimum width=2cm,
+        align=center,
+        very thick,
+        rounded corners=0.1cm},
+        node distance=0.8cm and 0.6cm,
+        >={Stealth[round]},
+        x = 3cm,
+        y = 1cm
+    ]
+
+    \node(inlabel) at (0, 0) {};
+
+    \node[block] (prot) at (0.5, 0)
+        {\textcolor{UDSgreenFierte}{\faShield*} ~\textcolor{black}{Protections}};
+    \node[block] (step) at (5,   0)
+        {\textcolor{UDSgreenFierte}{\faFan} ~\textcolor{black}{Stepper}};
+    \node[block] (5v)   at (2,  -1)
+        {\textcolor{UDSgreenFierte}{\faWaveSquare} ~\textcolor{black}{\SI{5}{\volt}}};
+    \node[block] (led)  at (5,  -1)
+        {\textcolor{UDSgreenFierte}{\faLightbulb} ~\textcolor{black}{LED}};
+    \node[block] (usb)  at (5,  -2)
+        {\textcolor{UDSgreenFierte}{\faUsb} ~\textcolor{black}{USB}};
+    \node[block] (3v3)  at (2,  -3)
+        {\textcolor{UDSgreenFierte}{\faWaveSquare} ~\textcolor{black}{\SI{3.3}{\volt}}};
+
+    \node[block] (3v3a) at (3.33,  -5)
+        {\textcolor{UDSgreenFierte}{\faSync} ~\textcolor{black}{Ferrite}};
+    \node[block] (3v3ic1) at (3.33,  -3)
+        {\textcolor{UDSgreenFierte}{\faSync} ~\textcolor{black}{Ferrite}};
+    \node[block] (3v3ic2) at (3.33,  -4)
+        {\textcolor{UDSgreenFierte}{\faSync} ~\textcolor{black}{Ferrite}};
+
+    \node[block] (ic1)  at (5,  -3)
+        {\textcolor{UDSgreenFierte}{\faMicrochip} ~\textcolor{black}{IC 1}};
+    \node[block] (ic2)  at (5,  -4)
+        {\textcolor{UDSgreenFierte}{\faMicrochip} ~\textcolor{black}{IC 2}};
+    \node[block] (ic2a) at (5,  -5)
+        {\textcolor{UDSgreenFierte}{\faMicrochip} ~\textcolor{black}{IC 2A}};
+    \node[block] (2v5)  at (3.33,  -6)
+        {\textcolor{UDSgreenFierte}{\faLongArrowAltRight} ~\textcolor{black}{\SI{2.5}{\volt}}};
+    \node[block] (ic3)  at (5,  -6)
+        {\textcolor{UDSgreenFierte}{\faMicrochip} ~\textcolor{black}{IC 3}};
+
+    \draw[->, ultra thick, color=red]
+         ($(inlabel)+(-1.25, 0)$) -- (prot.west)
+         node[midway, above]
+         {\textcolor{black}{Input $\SI{12}{\volt}$}};
+
+    \draw[->, ultra thick, color=red]
+         (prot) -- (step)
+         node[midway, above]
+         {\textcolor{black}{$\SI{750}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=red]
+         (prot) |- (5v)
+         node[pos=0.75, above]
+         {\textcolor{black}{$260\SI{}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=red]
+         (prot) |- (3v3)
+         node[pos=0.75, above]
+         {\textcolor{black}{$40\SI{}{\milli\ampere}$}};
+
+    \draw[->, ultra thick, color=magenta]
+         (5v) -- (led)
+         node[midway, above]
+         {\textcolor{black}{$\SI{80}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=magenta]
+         (5v) |- (usb)
+         node[pos=0.79, above]
+         {\textcolor{black}{$\SI{500}{\milli\ampere}$}};
+
+    \draw[->, ultra thick, color=blue]
+         (3v3) -- (3v3ic1)
+         node[midway, above]
+         {\textcolor{black}{$\SI{17.5}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=blue]
+         (3v3ic1) -- (ic1)
+         node[midway, above]
+         {\textcolor{black}{$\SI{17.5}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=blue]
+         (3v3) |- (3v3ic2)
+         node[pos=0.825, above]
+         {\textcolor{black}{$\SI{10}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=blue]
+         (3v3ic2) -- (ic2)
+         node[midway, above]
+         {\textcolor{black}{$\SI{10}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=blue]
+         (3v3) |- (3v3a)
+         node[pos=0.825, above]
+         {\textcolor{black}{$\SI{50}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=blue]
+         (3v3) |- (2v5)
+         node[pos=0.825, above]
+         {\textcolor{black}{?$\SI{}{\milli\ampere}$}};
+
+    \draw[->, ultra thick, color=green]
+         (3v3a) -- (ic2a)
+         node[midway, above]
+         {\textcolor{black}{$\SI{50}{\milli\ampere}$}};
+    \draw[->, ultra thick, color=orange]
+         (2v5)  -- (ic3)
+         node[midway, above]
+         {\textcolor{black}{$\SI{50}{\milli\ampere}$}};
+
+    \node[block] (power) at (0, -5.5) {
+        $I_{in_{total}} = \SI{750}{\milli\ampere} + \SI{260}{\milli\ampere} + \SI{40}{\milli\ampere}$\\
+        $I_{in_{total}} = \SI{1.05}{\ampere}$\\
+        \vspace{12pt}
+        $P_{in_{total}} = \SI{12.6}{\watt}$\\
+        \vspace{12pt}
+        $\eta_{total} = \dfrac{\SI{12.445}{\watt}}{\SI{12.6}{\watt}} = 97.7\%$
+    };
+    \end{tikzpicture}
+    }
 \end{frame}
 
 \subsection{Séquençage}
+\subsection{Courbes}
+
+\subsection{Optimisation}
