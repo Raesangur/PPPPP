@@ -2,6 +2,8 @@
 
 \section{Comment conçevoir un arbre d'alimentation?}
 
+\begin{comment}
+
 \subsection{Déterminer les besoins}
 
 \begin{frame}{Tensions d'opération}
@@ -734,7 +736,243 @@
     }
 \end{frame}
 
-\subsection{Séquençage}
-\subsection{Courbes}
+\end{comment}
 
-\subsection{Optimisation}
+\subsection{Séquençage}
+
+\begin{frame}{Séquençage - Exemple}
+    \begin{itemize}
+        \item Puces avec plusieurs alimentations ont parfois besoin de séquence
+        \item Mauvais comportement, dommages possibles
+        \item Séquence de power-up, mais aussi de power-down
+    \end{itemize}
+
+    \vfill
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.55\textheight, keepaspectratio]{pictures/ice40-power-supply-sequence.png}
+    \end{figure}
+    \href{https://www.latticesemi.com/view_document?document_id=49312}{Lattice - ICE40 - Ultra-low power non-volatile FPGA}
+\end{frame}
+
+\begin{frame}{Séquençage - Power Good}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \vspace{-20pt}
+            \begin{itemize}
+                \item Plusieurs régulateurs ont une sortie Power-Good
+                \item S'active après que la sortie ait atteint un threshold
+                \bigskip
+                \item Besoin d'une pull-up
+                \bigskip
+                \item Allumer des LEDs une fois la sortie active
+                \item Enchaîner des régulateurs en séquence
+                \item PG dans EN en cascade
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.6\textwidth}
+            \centering
+            \footnotesize
+            \vspace{-8pt}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.33\textheight, keepaspectratio]{pictures/power-good-sequence.png}
+            \end{figure}
+            \vspace{-8pt}
+            \href{https://www.ti.com/lit/an/slyt598/slyt598.pdf}{TI - SLYT598 - Power-Supply Sequencing for FPGAs}
+            \vfill
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.33\textheight, keepaspectratio]{pictures/power-good.png}
+            \end{figure}
+            \vspace{-8pt}
+            \href{https://www.latticesemi.com/view_document?document_id=49312}{ST - LDLN030 - Ultra-low noise LDO with PG and SS}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Séquençage - Multi-Output Reset IC Sequencer}
+    \begin{itemize}
+        \item Chips dédiés - Regardent les $V_{out}$
+        \item Diviseurs de tension - UVLO
+        \item Délais programmables avec condensateurs
+    \end{itemize}
+    \vfill
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.6\textheight, keepaspectratio]{pictures/power-supply-sequencer.png}
+    \end{figure}
+    \vspace{-8pt}
+    \href{https://www.ti.com/lit/an/slyt598/slyt598.pdf}{TI - SLYT598 - Power-Supply Sequencing for FPGAs}
+\end{frame}
+
+% Séquence brisée avec mauvaise dépendance
+
+\begin{frame}
+    \begin{itemize}
+        \item Parfois la séquence ne fonctionne pas
+        \item Reg $\SI{3.3}{\volt}$ doit s'allumer avant reg $\SI{5}{\volt}$
+        \item Mais reg $\SI{3.3}{\volt}$ est alimenté par le reg $\SI{5}{\volt}$
+        \bigskip
+        \only<2-> {
+            \item Utiliser une loadswitch!
+        }
+    \end{itemize}
+
+    \vfill
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tikzpicture}[
+        block/.style = {rectangle, draw,
+        minimum height=0.75cm,
+        minimum width=2cm,
+        align=center,
+        very thick,
+        rounded corners=0.1cm},
+        node distance=0.8cm and 0.6cm,
+        >={Stealth[round]},
+        x = 3cm,
+        y = 1cm
+    ]
+
+    \node(inlabel) at (0, 0) {};
+
+    \node[block] (5v) at (0.5, 0)
+        {\textcolor{UDSgreenFierte}{\faWaveSquare} ~\textcolor{black}{\SI{5}{\volt}}};
+    \node[block] (fpga) at (4, -2)
+        {\textcolor{UDSgreenFierte}{\faMicrochip} ~\textcolor{black}{FPGA}};
+    \node[block] (3v3)   at (2,  -2)
+        {\textcolor{UDSgreenFierte}{\faWaveSquare} ~\textcolor{black}{\SI{3.3}{\volt}}};
+
+    \only<2-> {
+        \node[block] (ls)  at (2,  0)
+            {\textcolor{UDSgreenFierte}{\faLongArrowAltRight} ~\textcolor{black}{Loadswitch}};
+    }
+
+
+    \draw[->, ultra thick, color=black]
+         ($(inlabel)+(-0.75, 0)$) -- (5v.west)
+         node[midway, above]
+         {\textcolor{black}{Input $\SI{12}{\volt}$}};
+
+    \only<1> {
+        \draw[->, ultra thick, color=red]
+        (5v) -| (fpga);
+    }
+    \only<2-> {
+        \draw[->, ultra thick, color=red]
+        (5v) -- (ls);
+        \draw[->, ultra thick, color=red]
+        (ls) -| (fpga);
+    }
+
+    \only<2-> {
+        \draw[->, ultra thick, color=cyan]
+        (3v3.north) -- (ls.south)
+        node[midway, right]
+        {Power Good};
+    }
+
+    \draw[->, ultra thick, color=red]
+         (5v) |- (3v3);
+
+    \draw[->, ultra thick, color=blue]
+         (3v3) -- (fpga);
+    \end{tikzpicture}
+    }
+\end{frame}
+
+\begin{frame}{Ramp-Up time}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item FPGA ont parfois des requis de timing de power spéciaux
+                \item En plus des requis de séquence
+                \item Temps entre des alimentations
+                \item Requis de slope min/max
+                \bigskip
+                \item Affecté par Soft-Start!
+                \item Affecté par capacitance sur la ligne
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{pictures/power-supply-ramp-up.png}
+            \end{figure}
+            \vspace{-8pt}
+            \href{https://www.intel.com/content/www/us/en/docs/programmable/683889/current/fpga-power-supplies-ramp-time-requirement.html}{Intel - Power Supplies Ramp Time Requirement}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\subsection{Trucs et astuces}
+\begin{frame}{Quoi mettre autour d'un régulateur}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Testpoints!
+                \begin{itemize}
+                    \item Paire Power-GND directement à la sortie
+                    \item Sur le Power Good
+                \end{itemize}
+
+                \only<2-> {
+                \item Résistances de $\SI{0}{\ohm}$
+                \begin{itemize}
+                    \item Aux pins que vous ne pensez pas utiliser (EN, configuration etc.)
+                    \item Directement à la sortie du chip
+                \end{itemize}
+                }
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \only<3-> {
+            \begin{itemize}
+                \item Jumper à la sortie
+                \begin{itemize}
+                    \item Permet d'isoler la sortie pendant l'assemblage et les tests initiaux
+                    \item Permet de faire une mesure du courant au besoin
+                \end{itemize}
+
+                \only<4-> {
+                \item Shunt resistor
+                \begin{itemize}
+                    \item Directement à la sortie
+                    \item À côté de la bobine
+                \end{itemize}
+                }
+            \end{itemize}
+            }
+        \end{column}
+    \end{columns}
+    
+    \vfill
+    \begin{figure}
+        \includegraphics<2->[width=0.8\textwidth, height=\textheight, keepaspectratio]{pictures/en-0r.png}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{Quoi optimiser}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \vspace{-48pt}
+            \large
+            \begin{itemize}
+                \item Efficacité Énergétique
+                \item Coûts
+                \item Temps de conception et risque
+                \item Espace
+                \item Performance et bruit
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=0.8\textwidth, height=0.33\textheight,
+                keepaspectratio]{pictures/ptn0405aas.png}
+            \end{figure}
+            \vfill
+            \begin{figure}
+                \includegraphics[width=0.8\textwidth, height=0.33\textheight, keepaspectratio]{pictures/ire-q12.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
