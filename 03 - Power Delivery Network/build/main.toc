@@ -12,13 +12,12 @@
 \beamer@subsectionintoc {2}{3}{Efficacité et Température}{79}{0}{2}
 \beamer@sectionintoc {3}{Comment filtrer une alimentation?}{94}{0}{3}
 \beamer@subsectionintoc {3}{1}{Pourquoi filtrer une alimentation?}{95}{0}{3}
-\beamer@subsectionintoc {3}{2}{Démonstration}{101}{0}{3}
-\beamer@subsectionintoc {3}{3}{Filtrer l'entrée}{102}{0}{3}
-\beamer@subsectionintoc {3}{4}{Filtrer un régulateur}{117}{0}{3}
-\beamer@subsectionintoc {3}{5}{Filtrer au IC}{121}{0}{3}
-\beamer@subsubsectionintoc {3}{5}{1}{Filtration Complète}{139}{0}{3}
-\beamer@sectionintoc {4}{Comment conçevoir un arbre d'alimentation?}{144}{0}{4}
-\beamer@subsectionintoc {4}{1}{Déterminer les besoins}{145}{0}{4}
-\beamer@subsectionintoc {4}{2}{Bilan d'alimentation}{153}{0}{4}
-\beamer@subsectionintoc {4}{3}{Séquençage}{166}{0}{4}
-\beamer@subsectionintoc {4}{4}{Trucs et astuces}{173}{0}{4}
+\beamer@subsectionintoc {3}{2}{Filtrer l'entrée}{101}{0}{3}
+\beamer@subsectionintoc {3}{3}{Filtrer un régulateur}{116}{0}{3}
+\beamer@subsectionintoc {3}{4}{Filtrer au IC}{120}{0}{3}
+\beamer@subsubsectionintoc {3}{4}{1}{Filtration Complète}{138}{0}{3}
+\beamer@sectionintoc {4}{Comment conçevoir un arbre d'alimentation?}{143}{0}{4}
+\beamer@subsectionintoc {4}{1}{Déterminer les besoins}{144}{0}{4}
+\beamer@subsectionintoc {4}{2}{Bilan d'alimentation}{152}{0}{4}
+\beamer@subsectionintoc {4}{3}{Séquençage}{165}{0}{4}
+\beamer@subsectionintoc {4}{4}{Trucs et astuces}{172}{0}{4}
