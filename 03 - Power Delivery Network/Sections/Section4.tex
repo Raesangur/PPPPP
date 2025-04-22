@@ -2,17 +2,15 @@
 
 \section{Comment conçevoir un arbre d'alimentation?}
 
-\begin{comment}
-
 \subsection{Déterminer les besoins}
 
 \begin{frame}{Tensions d'opération}
     \begin{itemize}
-        \item Chaque puce a une tension d'opération
-        \item Parfois plusieurs tensions possible ($\SI{3.3}{\volt}$ jusqu'à $\SI{5}{\volt}$)
-        \item Parfois plusieurs tensions nécessaires!
+        \item[] \textcolor{UDSgreenFierte}{\faToggleOn} ~Chaque puce a une tension d'opération
+        \item[] \textcolor{UDSgreenFierte}{\faList} ~Parfois plusieurs tensions possible ($\SI{3.3}{\volt}$ jusqu'à $\SI{5}{\volt}$)
+        \item[] \textcolor{UDSgreenFierte}{\faSignal} ~Parfois plusieurs tensions nécessaires!
         \bigskip
-        \item Parfois les puces peuvent avoir des IO à des tensions différentes
+        \item[] \textcolor{UDSgreenFierte}{\faWaveSquare} ~Parfois les puces peuvent avoir des IO à des tensions différentes
     \end{itemize}
 \end{frame}
 
@@ -25,25 +23,32 @@
             \begin{column}{0.66\textwidth}
         }
             \begin{itemize}
-                \item Pour chaque puce, à sa tension d'opération, récupérer:
+                \item[] \textcolor{UDSgreenFierte}{\faListOl} ~Pour chaque puce, à ses tension d'opération, récupérer:
                 \begin{itemize}
-                    \item Le courant minimal (sleep)
-                    \item Le courant normal d'opération
-                    \item Le courant maximal d'opération
+                    \item[] \hspace{-12pt}\textcolor{UDSgreenFierte}{\faBed}
+                        ~Le courant minimal (sleep)
+                    \item[] \hspace{-12pt}\textcolor{UDSgreenFierte}{\faWalking}
+                        ~Le courant normal d'opération
+                    \item[] \hspace{-12pt}\textcolor{UDSgreenFierte}{\faRunning}
+                        ~Le courant maximal d'opération
+                    \item[] \hspace{-12pt}\textcolor{UDSgreenFierte}{\faEquals}
+                        ~Parfois tout le même
                 \end{itemize}
-                \item Parfois tout le même
                 \only<2-> {
-                    \bigskip
-                    \item Conçevoir circuit pour pouvoir passer le courant maximal
-                    \item Choisir régulateurs pour avoir efficacité maximale au courant nominal
+                    \item[] \hspace{-6pt}\textcolor{UDSgreenFierte}{\faArrowRight}
+                        ~Conçevoir circuit pour pouvoir passer le courant maximal
+                    \item[] \hspace{-6pt}\textcolor{UDSgreenFierte}{\faChartLine}
+                        ~Choisir régulateurs pour avoir efficacité maximale au courant nominal
                 }
                 \only<3> {
-                    \bigskip
-                    \item Aussi rassembler tous les courants autres
+                    \item[] \hspace{-6pt}\textcolor{UDSgreenFierte}{\faList} ~Aussi rassembler tous les courants autres
                     \begin{itemize}
-                        \item Moteurs
-                        \item LEDs et affichage
-                        \item Connecteurs et sous-cartes
+                        \item[] \hspace{-12pt}\textcolor{UDSgreenFierte}{\faSync}
+                            ~Moteurs
+                        \item[] \hspace{-12pt}\textcolor{UDSgreenFierte}{\faLightbulb}
+                            ~LEDs et affichage
+                        \item[] \hspace{-12pt}\textcolor{UDSgreenFierte}{\faEthernet}
+                            ~Connecteurs et sous-cartes
                     \end{itemize}
                 }
             \end{itemize}
@@ -75,18 +80,18 @@
 
 \begin{frame}{Besoins en stabilité}
     \begin{itemize}
-        \item Déterminer les besoins de chaque puce en stabilité
-        \item Quel est le $\Delta V$ maximum tolérable pour l'opération de la puce
-        \item Quelle est la précision nécessaire pour une puce analogique
-        \item À quel point un $\Delta V$ peut introduire un $\Delta f$ pour la fréquence?
+        \item[] \textcolor{UDSgreenFierte}{\faWater} ~Déterminer les besoins de chaque puce en stabilité
+        \item[] \textcolor{UDSgreenFierte}{\faBatteryQuarter} ~Quel est le $\Delta V$ maximum tolérable pour l'opération de la puce
+        \item[] \textcolor{UDSgreenFierte}{\faTachometer*} ~Quelle est la précision nécessaire pour une puce analogique
+        \item[] \textcolor{UDSgreenFierte}{\faClock} ~À quel point un $\Delta V$ peut introduire un $\Delta f$ pour la fréquence?
     \end{itemize}
 
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \only<2-> {
             \begin{itemize}
-                \item Toujours mieux de quantifier
-                \item \textbf{Permet de déterminer type de régulateur}
+                \item[] \textcolor{UDSgreenFierte}{\faChartBar} ~Toujours mieux de quantifier
+                \item[] \textcolor{UDSgreenFierte}{\faList} ~\textbf{Permet de déterminer type de régulateur}
             \end{itemize}
             }
         \end{column}
@@ -346,18 +351,27 @@
                 \begin{itemize}
                     \item Remplir les informations de base
                     \begin{itemize}
-                        \item Nom du régulateur
-                        \item Séquence
-                        \item Type de régulateur
-                        \item Courant maximum
-                        \item $R_{\theta JA}$
+                        \item[] \textcolor{UDSgreenFierte}{\faFileSignature}
+                            ~Nom du régulateur
+                        \item[] \textcolor{UDSgreenFierte}{\faTasks}
+                            ~Séquence
+                        \item[] \textcolor{UDSgreenFierte}{\faWaveSquare}
+                            ~Type de régulateur
+                        \item[] \textcolor{UDSgreenFierte}{\faArrowRight}
+                            ~Courant maximum
+                        \item[] \textcolor{UDSgreenFierte}{\faTemperatureHigh}
+                            ~$R_{\theta JA}$
                     \end{itemize}
                     \item Remplir les informations de sortie
                     \begin{itemize}
-                        \item Tension
-                        \item Courant min
-                        \item Courant nominal
-                        \item Courant max
+                        \item[] \textcolor{UDSgreenFierte}{\faBatteryThreeQuarters}
+                            ~Tension
+                        \item[] \textcolor{UDSgreenFierte}{\faBed}
+                            ~Courant min
+                        \item[] \textcolor{UDSgreenFierte}{\faWalking}
+                            ~Courant nominal
+                        \item[] \textcolor{UDSgreenFierte}{\faRunning}
+                            ~Courant max
                     \end{itemize}
                     \item \textit{Il manque le courant d'entrée}
                 \end{itemize}
@@ -736,15 +750,14 @@
     }
 \end{frame}
 
-\end{comment}
 
 \subsection{Séquençage}
 
 \begin{frame}{Séquençage - Exemple}
     \begin{itemize}
-        \item Puces avec plusieurs alimentations ont parfois besoin de séquence
-        \item Mauvais comportement, dommages possibles
-        \item Séquence de power-up, mais aussi de power-down
+        \item[] \textcolor{UDSgreenFierte}{\faList} ~Puces avec plusieurs alimentations ont parfois besoin de séquence
+        \item[] \textcolor{UDSgreenFierte}{\faLevelDown*} ~Séquence de power-up, mais aussi de power-down
+        \item[] \textcolor{red}{\faBurn} ~Mauvais comportement, dommages possibles
     \end{itemize}
 
     \vfill
@@ -759,14 +772,20 @@
         \begin{column}{0.4\textwidth}
             \vspace{-20pt}
             \begin{itemize}
-                \item Plusieurs régulateurs ont une sortie Power-Good
-                \item S'active après que la sortie ait atteint un threshold
+                \item[] \textcolor{UDSgreenFierte}{\faSignIn*}
+                    ~Plusieurs régulateurs ont une sortie Power-Good
+                \item[] \textcolor{UDSgreenFierte}{\faStopwatch}
+                    ~S'active après que la sortie ait atteint un threshold
                 \bigskip
-                \item Besoin d'une pull-up
+                \item[] \textcolor{UDSgreenFierte}{\faLevelUp*}
+                    ~Besoin d'une pull-up
                 \bigskip
-                \item Allumer des LEDs une fois la sortie active
-                \item Enchaîner des régulateurs en séquence
-                \item PG dans EN en cascade
+                \item[] \textcolor{UDSgreenFierte}{\faLightbulb}
+                    ~Allumer des LEDs une fois la sortie active
+                \item[] \textcolor{UDSgreenFierte}{\faProjectDiagram}
+                    ~Enchaîner des régulateurs en séquence
+                \item[] \textcolor{UDSgreenFierte}{\faArrowAltCircleRight}
+                    ~PG dans EN en cascade
             \end{itemize}
         \end{column}
 
@@ -954,15 +973,25 @@
 \begin{frame}{Quoi optimiser}
     \begin{columns}
         \begin{column}{0.5\textwidth}
-            \vspace{-48pt}
-            \large
-            \begin{itemize}
-                \item Efficacité Énergétique
-                \item Coûts
-                \item Temps de conception et risque
-                \item Espace
-                \item Performance et bruit
-            \end{itemize}
+            \Large
+            \centering
+            \begin{tabular}{c l}
+                \textcolor{UDSgreenFierte}{\faBatteryHalf} &
+                    ~Efficacité Énergétique \\
+                    [0.6em]
+                \textcolor{UDSgreenFierte}{\faDollarSign} &
+                    ~Coûts \\
+                    [0.6em]
+                \textcolor{UDSgreenFierte}{\faUserClock} &
+                    ~Temps de conception et risque \\
+                    [0.6em]
+                \textcolor{UDSgreenFierte}{\faCompress*} &
+                    ~Espace \\
+                    [0.6em]
+                \textcolor{UDSgreenFierte}{\faSignal} &
+                    ~Performance et bruit\\
+                    [0.6em]
+            \end{tabular}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{figure}
@@ -975,4 +1004,31 @@
             \end{figure}
         \end{column}
     \end{columns}
+\end{frame}
+
+\begin{frame}{À garder en tête}
+    \begin{itemize}
+        \item Plus le $\Delta V$ est petit, plus le régulateur sera efficace
+        \item Ne pas trop surdimensionner les régulateurs
+        \item Régulateur switching juste avant un régulateur linéaire est une très bonne option
+        \begin{itemize}
+            \item Efficacité d'un switching
+            \item Bruit d'un régulateur linéaire
+            \item $\SI{12}{\volt}$
+                  ~\faLongArrowAltRight
+                  ~$\SI{4}{\volt}$ 
+                  ~\faLongArrowAltRight
+                  ~$\SI{3.3}{\volt}$
+            \item Plus coûteux
+        \end{itemize}
+        \item Les différents types de condensateurs ont des courbes d'impédance différentes
+        \item Les IC contiennent de la capacitance dans le chip
+        \item Des pads vide ça coûte rien d'autre que de l'espace
+        \begin{itemize}
+            \item Prévoyez plus de capacitance
+            \item Prévoyez des filtre
+            \item Prévoyez plus de protections antistatiques que nécessaire
+            \item Les $\SI{0}{\ohm}$ sont vos amis
+        \end{itemize}
+    \end{itemize}
 \end{frame}
