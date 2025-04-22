@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber build/main"] 1745287067.81734 "build/main.bcf" "build/main.bbl" "build/main" 1745292192.09236 0
-  "build/main.bcf" 1745292191.67811 107186 eaaa4cd7e05e4b6c6a6fb3c31db72029 "pdflatex"
+["biber build/main"] 1745287067.81734 "build/main.bcf" "build/main.bbl" "build/main" 1745355994.63684 0
+  "build/main.bcf" 1745355994.18247 107186 eaaa4cd7e05e4b6c6a6fb3c31db72029 "pdflatex"
   (generated)
   "build/main.bbl"
   "build/main.blg"
   (rewritten before read)
-["pdflatex"] 1745292167.6302 "main.tex" "build/main.pdf" "main" 1745292192.0926 0
+["pdflatex"] 1745355965.44356 "main.tex" "build/main.pdf" "main" 1745355994.63716 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands1.enc" 1651520503 2608 3139db8e1f9371a4f87c0715d17fa217 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc" 1622837620 3083 a707712f77b073b3833e4b1334a30e99 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1622837620 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -431,14 +431,14 @@
   "/usr/local/texlive/2025/texmf.cnf" 1744817498.30969 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "Sections/Section1.tex" 1745121266.40528 32120 88b3d127ff3dfeb38eebda54b7e05e61 ""
   "Sections/Section2.tex" 1745168935.03027 25253 314bd652c34969608f88109aa1f5e005 ""
-  "Sections/Section3.tex" 1745289622.10988 36862 2cf869c5766f78cfed33fff51084fc0c ""
+  "Sections/Section3.tex" 1745355934.68183 36833 562d33178754905bc066c383975cce1d ""
   "Sections/Section4.tex" 1745289226.23301 39579 77ce75ad72f6b14df25a1047173a8b6f ""
-  "build/main.aux" 1745292191.67411 32761 44c5d35dfe24bbad16206c508dde3429 "pdflatex"
+  "build/main.aux" 1745355994.17447 32342 4943c0c283aba509fea995ed1ac1101f "pdflatex"
   "build/main.bbl" 1745287068.50231 0 d41d8cd98f00b204e9800998ecf8427e "biber build/main"
-  "build/main.nav" 1745292191.67811 17450 ff49b5ccb873d5de81e1f54c3d36a528 "pdflatex"
-  "build/main.out" 1745292191.67411 4104 28a2d71be8822eb6df61b83662b19fbf "pdflatex"
-  "build/main.run.xml" 1745292191.67811 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
-  "build/main.toc" 1745292191.67811 1594 3a13c4da3c60a055fcab4ca13cd1ae72 "pdflatex"
+  "build/main.nav" 1745355994.18247 17220 c096fd29ed18ba29561522828d5c0cec "pdflatex"
+  "build/main.out" 1745355994.17847 3976 77802607b30bf86f01a0d4e258ac84b9 "pdflatex"
+  "build/main.run.xml" 1745355994.18247 2224 bc6149f5caee4074188e1b81a66978d0 "pdflatex"
+  "build/main.toc" 1745355994.18247 1536 9f09ea2342053cc71842a0791613cfd0 "pdflatex"
   "main.tex" 1745292167.35733 10435 09f0485a0338c87d27bf0386e490a88f ""
   "pictures/120v-wire.png" 1744229665.21283 68899 f891e7830850ef0cd61ba6392f58de94 ""
   "pictures/3-wire-ac-plug.png" 1744234769.33285 133307 c9c49a1501c5fbcc513858eac14808f7 ""
