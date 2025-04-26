@@ -38,7 +38,7 @@
 
 \begin{frame}{Décharge Électrostatique - Waveform}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.6\textwidth}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
@@ -63,7 +63,7 @@
 \begin{frame}{Circuit protégé antistatiquement - Zener}
     \begin{center}
     \vspace{-24pt}
-    \resizebox{\textwidth}{!}{
+    \resizebox{\textwidth}{0.8\textheight}{
     \begin{circuitikz}[american voltages]
         \draw [thick]
         (0,-3) to [short, *-] (10,-3)
@@ -92,7 +92,7 @@
 \begin{frame}{Diode Normale - IV Curve}
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{pictures/diode-iv-curve.png}
+        \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{pictures/diode-iv-curve.png}
     \end{figure}
 \end{frame}
 
@@ -113,7 +113,7 @@
         \begin{column}{0.6\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=\textwidth]{pictures/diode-zener-iv-curve.png}
+                \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{pictures/diode-zener-iv-curve.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -122,7 +122,7 @@
 \begin{frame}{Circuit protégé antistatiquement}
     \begin{center}
     \vspace{-24pt}
-    \resizebox{\textwidth}{!}{
+    \resizebox{\textwidth}{0.8\textheight}{
     \begin{circuitikz}[american voltages]
         \draw [thick]
         (0,-3) to [short, *-] (10,-3)
@@ -164,7 +164,7 @@
 
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{pictures/clamping-esd-pulse.png}
+        \includegraphics[width=\textwidth, height=0.5\textheight, keepaspectratio]{pictures/clamping-esd-pulse.png}
     \end{figure}
 \end{frame}
 
@@ -172,7 +172,7 @@
 \begin{frame}{Circuit protégé antistatiquement - TVS}
     \begin{center}
     \vspace{-24pt}
-    \resizebox{\textwidth}{!}{
+    \resizebox{\textwidth}{0.8\textheight}{
     \begin{circuitikz}[american voltages]
         \draw [thick]
         (0,-3) to [short, *-] (10,-3)
@@ -221,14 +221,14 @@
     \end{columns}
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{pictures/diode-tvs-iv-curve.png}
+        \includegraphics[width=\textwidth, height=0.55\textheight, keepaspectratio]{pictures/diode-tvs-iv-curve.png}
     \end{figure}
 \end{frame}
 
 \begin{frame}{Circuit protégé antistatiquement - Condensateur}
     \begin{center}
     \vspace{-24pt}
-    \resizebox{\textwidth}{!}{
+    \resizebox{\textwidth}{0.8\textheight}{
     \begin{circuitikz}[american voltages]
         \draw [thick]
         (0,-3) to [short, *-] (10,-3)
@@ -441,10 +441,10 @@
                 (fet.G) node [anchor=south, xshift=8pt] {G}
                 (fet.D) node [anchor=west, yshift=8pt] {D}
                 (fet.S) node [anchor=east, yshift=8pt] {S}
-                (fet.G) to [R] (fet.G |- 0,0)
+                (fet.G) to [R, -*] (fet.G |- 0, 0)
                 (fet.D) to [short, -*] (0, 5)
                 (fet.S) to (10, 5)
-                (fet.G) to [short] (fet.G -| 6,3)
+                (fet.G) to [short, *-] (fet.G -| 6,3)
                 to [empty ZZener diode, color=red] (6, 5);
             \end{circuitikz}
             }
@@ -458,7 +458,7 @@
 
 \begin{frame}{Fusible}
     \begin{columns}
-        \begin{column}{0.33\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item Chauffage d'un filament central
                 \item Coupe un circuit lorsque trop de courant passe
@@ -469,14 +469,15 @@
             \vspace{12pt}
             \begin{figure}
                 \centering
-                \includegraphics[width=0.5\textwidth]{pictures/fuse.png}
+                \includegraphics[width=0.33\textwidth]{pictures/fuse.png}
             \end{figure}
         \end{column}
 
-        \begin{column}{0.66\textwidth}
+        \begin{column}{0.6\textwidth}
+            \vspace{-12pt}
             \begin{figure}
                 \centering
-                \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{pictures/fuse-curve.png}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/fuse-curve.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -484,7 +485,7 @@
 
 \begin{frame}{Polyfuse - Polyswitch - PTC - Resettable Fuse}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item \textit{Positive Temperature Coefficient}
                 \item Augmente sa résistance alors qu'il chauffe
@@ -501,10 +502,10 @@
             \end{figure}
         \end{column}
 
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.4\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=\textwidth, height=0.825\textheight, keepaspectratio]{pictures/polyfuse-curve.png}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/polyfuse-curve.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -529,7 +530,7 @@
 
 \begin{frame}{Inrush Current Limiter}
     \begin{columns}
-        \begin{column}{0.66\textwidth}
+        \begin{column}{0.6\textwidth}
             \textbf{Comment limiter la surge initiale?}
             \vspace{12pt}
             \begin{itemize}
@@ -550,10 +551,10 @@
             \end{itemize}
         \end{column}
 
-        \begin{column}{0.35\textwidth}
+        \begin{column}{0.4\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics<1->[width=0.5\textwidth]{pictures/inrush-current-limiter.png}
+                \includegraphics<1->[width=0.4\textwidth]{pictures/inrush-current-limiter.png}
             \end{figure}
             \begin{figure}
                 \centering
@@ -602,15 +603,17 @@
             \draw [thick]
             (0, 0) to [short, *-] (10, 0)
             to [european resistor, l_=${LOAD}$] (10, 5)
-            (8, 5) to [C, color=red] (8,0)
+            (8, 5) to [short, *-] (8, 4) 
+            to [C, color=red] (8, 1)
+            to [short, -*] (8,0)
             (0, 0) to [open, v<=$400V$] (0, 5)
             to [short] (3, 5)
             to [normal open switch] (5, 5)
             to [short] (10, 5)
-            (2, 5) to [short] (2, 3)
+            (2, 5) to [short, *-] (2, 3)
             to [closing switch, color=red] (4, 3)
             to [R] (6, 3)
-            to [short] (6, 5)
+            to [short, -*] (6, 5)
             ;
         \end{circuitikz}
         }
@@ -633,7 +636,7 @@
 \vfill
 \begin{figure}
     \centering
-    \includegraphics[width=0.66\textwidth]{pictures/battery-discharge-curve.png}
+    \includegraphics[width=0.66\textwidth, height=0.45\textheight, keepaspectratio]{pictures/battery-discharge-curve.png}
 \end{figure}
 \end{frame}
 
@@ -661,7 +664,7 @@
     \vfill
 
     \begin{center}
-        \resizebox{!}{0.4\textheight}{
+        \resizebox{!}{0.5\textheight}{
         \begin{circuitikz}[american voltages]
         \ctikzset{multipoles/thickness=4}
         \ctikzset{multipoles/external pins thickness=2}
@@ -678,15 +681,15 @@
             % UVLO
             \draw (C.pin 2) to [short] (C.pin 2 -| 5, 5)
             to [R, l2=$R_1$ and $\SI{100}{\kilo\ohm}$, l2 halign=c] (C.pin 2 -| 2, 5) 
-            to [short] (C.pin 1 -| 2, 5)
-            (C.pin 2 -| 5, 5) to [R, l2=$R_2$ and $\SI{47}{\kilo\ohm}$, l2 halign=c] (5, 0);
+            to [short, -*] (C.pin 1 -| 2, 5)
+            (C.pin 2 -| 5, 5) to [R, l2=$R_2$ and $\SI{47}{\kilo\ohm}$, l2 halign=c, -*] (5, 0);
 
             % Source & Load
             \draw
             (0, 0) to [short, *-] (10, 0)
             to [european resistor, l_=${LOAD}$] (C.pin 4 -| 10, 5)
             to [short] (C.pin 4)
-            (C.pin 4 -| 9, 5) to [C] (9, 0)
+            (C.pin 4 -| 9, 5) to [C, *-*] (9, 0)
             (0, 0) to [open, v<=$4.2V$] (C.pin 1 -| 0, 5)
             to [short] (C.pin 1);
         \end{circuitikz}
@@ -697,54 +700,22 @@
 
 \subsection{Protection complète}
 
-
 \begin{frame}{Protection complète - Circuit électrique}
     \begin{center}
-        \resizebox{0.8\textwidth}{!}{
+        \resizebox{0.8\textwidth}{0.30\textheight}{
         \begin{tikzpicture}[
             block/.style = {rectangle, draw, minimum height=1cm,        minimum width=2.5cm, align=center},
             node distance=0.8cm and 0.6cm,
             >={Stealth[round]}
         ]
         
-        % Nodes
-        \node[coordinate] (inlabel) {};
-        \node[block, right=of inlabel] (scp) {Short-circuit\\       Protection};
-        \node[block, right=of scp] (tvs) {Transient Voltage\\       Suppression};
-        \node[block, right=of tvs] (rvp) {Reverse Voltage\\     Protection};
-        
-        \node[block, below=of scp] (uvlo) {Undervoltage\\Lockout};
-        \node[block, right=of uvlo] (ss) {Soft Start};
-        \node[block, right=of ss] (cm) {Current\\Measurement};
-        \node[coordinate, right=of cm] (outlabel) {};
-        
-        % Input arrow with label
-        \draw[->] ($(inlabel)+(-0.75,0.0)$) -- (scp.west) node[     midway, above] {Input};
-        
-        % Top row
-        \draw[->] (scp) -- (tvs);
-        \draw[->] (tvs) -- (rvp);
-        
-        % Segmented down to second row
-        \draw[->] 
-        (rvp.east)      
-        -- ++(0.5, 0)     
-        -- ++(0, -0.75)    
-        -| (uvlo.north);
-
-        
-        % Bottom row
-        \draw[->] (uvlo) -- (ss);
-        \draw[->] (ss) -- (cm);
-        
-        % Output arrow with label
-        \draw[->] (cm.east) -- ++(1.25,0) node[midway, above] {Load};
+        \input{tikz/protection-diagram.tex}
         
         \end{tikzpicture}
         }
     \end{center}
     \pause
-    %\vfill
+    \vspace{-12pt}
     \begin{center}
         \resizebox{\textwidth}{!}{
         \begin{circuitikz}[american voltages]
@@ -764,37 +735,37 @@
             % Soft Start
             \draw
             (C.pin 3) to [short] (C.pin 3 -| 16, 5)
-            to [C, l=$C_{SS}$] (16, 0);
+            to [C, l=$C_{SS}$, -*] (16, 0);
 
             % UVLO
-            \draw (C.pin 2) to [short] (C.pin 2 -| 15, 5)
+            \draw (C.pin 2) to [short, -*] (C.pin 2 -| 15, 5)
             to [R] (C.pin 2 -| 13, 5) 
-            to [short] (C.pin 1 -| 13, 5)
-            (C.pin 2 -| 15, 5) to [R] (15, 0);
+            to [short, -*] (C.pin 1 -| 13, 5)
+            (C.pin 2 -| 15, 5) to [R, -*] (15, 0);
 
             % Source & Load
             \draw
             (0, 0) to [short, *-] (24, 0)
             to [european resistor, l_=${LOAD}$] (C.pin 6 -| 24, 5)
             to [R, l=$R_{CS}$] (C.pin 6)
-            (C.pin 6 -| 23, 5) to [C] (23, 0)
+            (C.pin 6 -| 23, 5) to [C, *-*] (23, 0)
             (0, 0) to [open, v<=$V$] (C.pin 1 -| 0, 5);
 
             % TVS
             \draw
-            (C.pin 1 -| 4, 5) to [C, l_=$TVS$] (4, 0)
-            (6, 0) to [full TVS diode, l_=$TVS$] (C.pin 1 -| 6, 5);
+            (C.pin 1 -| 4, 5) to [C, l_=$TVS$, *-*] (4, 0)
+            (6, 0) to [full TVS diode, l_=$TVS$, *-*] (C.pin 1 -| 6, 5);
 
             % RVP
             \draw   (C.pin 1 -| 9, 5) node[pigfete, bodydiode, rotate=90, xscale=2, yscale=-2] (fet) {}
             (fet.G) node [anchor=south, xshift=8pt] {G}
             (fet.D) node [anchor=west, yshift=8pt] {D}
             (fet.S) node [anchor=east, yshift=8pt] {S}
-            (fet.G) to [R] (fet.G |- 0,0)
+            (fet.G) to [R, -*] (fet.G |- 0,0)
             %(fet.D) to [short, -*] (C.pin 1 -| 0, 5)
             (fet.S) to (C.pin 1)
-            (fet.G) to [short] (fet.G -| 11, 3)
-            to [full ZZener diode] (C.pin 1 -| 11, 5);
+            (fet.G) to [short, *-] (fet.G -| 11, 3)
+            to [full ZZener diode, -*] (C.pin 1 -| 11, 5);
 
             % Fuse Protection
             \draw
@@ -808,6 +779,7 @@
 \end{frame}
 
 \begin{frame}{Solution Miracle}
+    \vspace{-12pt}
     \begin{columns}
         \begin{column}{0.33\textwidth}
             \textbf<1>{Catégorie de device:}
@@ -847,7 +819,7 @@
     \vfill
     \begin{figure}
         \centering
-        \includegraphics[width=0.75\textwidth]{pictures/load-switch.png}
+        \includegraphics[width=0.75\textwidth, height=0.4\textheight, keepaspectratio]{pictures/load-switch.png}
     \end{figure}
 \end{frame}
 
@@ -912,9 +884,10 @@
         \item Wiré séparément au Neutre
     \end{itemize}
 
+    \vspace{-12pt}
     \begin{figure}
         \centering
-        \includegraphics[width=0.66\textwidth]{pictures/3-wire-ac-plug.png}
+        \includegraphics[width=0.66\textwidth, height=0.6\textheight, keepaspectratio]{pictures/3-wire-ac-plug.png}
     \end{figure}
 \end{frame}
 
@@ -929,7 +902,7 @@
             \vspace{-12pt}
             \begin{figure}
                 \centering
-                \includegraphics<1->[width=\textwidth]{pictures/uk-plug-wiring.png}
+                \includegraphics<1->[width=\textwidth, height=0.6\textheight, keepaspectratio]{pictures/uk-plug-wiring.png}
             \end{figure}
         \end{column}
         \begin{column}{0.4\textwidth}
@@ -950,18 +923,18 @@
         \begin{column}{0.7\textwidth}
             \begin{itemize}
                 \item Mesure le courant qui passe par Live \& Neutral
-                \item Coupe dès que $V_{in} \neq V_{out}$ 
+                \item Coupe dès que $I_{in} \neq I_{out}$ 
             \end{itemize}
             \vspace{24pt}
             \begin{figure}
                 \centering
-                \includegraphics[width=0.9\textwidth]{pictures/gfci-example.png}
+                \includegraphics[width=0.75\textwidth]{pictures/gfci-example.png}
             \end{figure}
         \end{column}
         \begin{column}{0.3\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=0.66\textwidth]{pictures/gfci-outlet.png}
+                \includegraphics[width=0.6\textwidth]{pictures/gfci-outlet.png}
             \end{figure}
         \end{column}
     \end{columns}

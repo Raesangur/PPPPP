@@ -1,7 +1,7 @@
 %!TEX root = ../main.tex 
 
-\section{Quels sont les types de régulateurs?}
 
+\section{Quels sont les types de régulateurs?}
 
 \begin{frame}{DC-DC - Régulateurs Linéaires vs Switching}
 \renewcommand{\arraystretch}{1.4}
@@ -40,8 +40,8 @@
 \end{table}
 \end{frame}
 
-\subsection{Régulateurs Linéaires}
 
+\subsection{Régulateurs Linéaires}
 
 \begin{frame}{Régulateur Linéaire (LDO) - Résumé}
     \begin{columns}
@@ -95,7 +95,7 @@
             \vfill
             \begin{figure}
                 \centering
-                \includegraphics<-3>[width=0.33\textwidth]{pictures/linear-regulator-7805.png}
+                \includegraphics<-2>[width=0.33\textwidth]{pictures/linear-regulator-7805.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -103,34 +103,35 @@
 
 
 \begin{frame}{Régulateur Linéaire - Fonctionnement}
+    \vspace{-12pt}
     \begin{center}
-        \resizebox{\textwidth}{!}{
+        \resizebox{\textwidth}{0.75\textheight}{
         \begin{circuitikz}[american voltages]
             \draw [thick]
             (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
-            (20.5, 8) to [C] (20.5, 0) node [ground]{}
-            (0, 8) to [C] (0, 0) node [ground]{};
+            (20.5, 8) to [C, *-] (20.5, 0) node [ground]{}
+            (0, 8) to [C, *-] (0, 0) node [ground]{};
             \draw
             (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
                 
             % Feedback Voltage Divider
             \only<-2> {
                 \draw [thick]
-                (17, 8) to [R] (17, 4) to [R] (17, 0) node[ground] {};
+                (17, 8) to [R, *-] (17, 4) to [R] (17, 0) node[ground] {};
             }
             \only<3-> {
                 \draw [thick]
-                (17, 8) to [R] (17, 4) to [R, v^=\LARGE{$V_{fb}$}] (17, 0) node[ground] {};
+                (17, 8) to [R, *-] (17, 4) to [R, v^=\LARGE{$V_{fb}$}] (17, 0) node[ground] {};
             }
 
             % Zener Voltage Reference
             \only<1> {
                 \draw [thick]
-                (5.5, 0) node[ground]{} to [empty ZZener diode] (5.5, 5) to [R] (5.5, 8);
+                (5.5, 0) node[ground]{} to [empty ZZener diode] (5.5, 5) to [R, -*] (5.5, 8);
             }
             \only<2-> {
                 \draw [thick]
-                (5.5, 0) node[ground]{} to [empty ZZener diode, v^<={\LARGE $V_{ref}$}] (5.5, 5) to [R, f<^={\LARGE $i_Q$}] (5.5, 8);
+                (5.5, 0) node[ground]{} to [empty ZZener diode, v^<={\LARGE $V_{ref}$}] (5.5, 5) to [R, f<^={\LARGE $i_Q$}, -*] (5.5, 8);
             }
 
 
@@ -164,9 +165,6 @@
             \only<-4> {
                 \draw[dashed, ultra thick, rounded corners] (3, 9.5) rectangle (19, -1.5);
             }
-            %\only<4-> {
-            %    \draw[dashed, ultra thick, rounded %corners] (1.5, 9.5) rectangle (19, -1.5);
-            %}
 
 
             % Arrows
@@ -219,7 +217,7 @@
         \begin{column}{0.66\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[width=\textwidth]{pictures/psrr-graph.png}
+                \includegraphics[width=\textwidth, height=0.6\textheight, keepaspectratio]{pictures/psrr-graph.png}
             \end{figure}
         \end{column}
     \end{columns}
@@ -250,7 +248,7 @@
 \begin{frame}{Régulateur Switching - Résumé}
     \begin{columns}
         \begin{column}{0.6\textwidth}
-            \vspace{-18pt}
+            \vspace{-12pt}
             \begin{itemize}
                 \item<1-> Régulateur plus complexe
                 \begin{itemize}
@@ -258,17 +256,19 @@
                     \item<1-> Condensateurs \& bobines
                     \item<1-> Transistors et diodes
                 \end{itemize}
-                \item<1-> Topologies
+                \item<1-> Plusieurs topologies
                 \item<2-> Rajoute du bruit au circuit
                 \begin{itemize}
                     \item<2-> Fréquence de \textit{switching}
                 \end{itemize}
                 \item<3-> Output très grande selon topologie
+                \only<3>{
                 \begin{itemize}
-                    \item<3-> $V_{out} > V_{in}$
-                    \item<3-> $V_{out} < \SI{0}{\volt}$
-                    \only<3>{\item \textit{Sortie isolée possible}}
+                        \item $V_{out} > V_{in}$
+                        \item $V_{out} < \SI{0}{\volt}$
+                        \item \textit{Sortie isolée possible}
                 \end{itemize}
+                }
                 \item<4-> Extrèmement efficace
                 \begin{itemize}
                     \item<4-> 80\% - 90\%
@@ -356,8 +356,8 @@
     ]
         \draw [thick]
         (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
-        (19.5, 8) to [C] (19.5, 0) node [ground]{}
-        (0, 8) to [C] (0, 0) node [ground]{};
+        (19.5, 8) to [C, *-] (19.5, 0) node [ground]{}
+        (0, 8) to [C, *-] (0, 0) node [ground]{};
         \draw
         (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
 
@@ -398,7 +398,7 @@
 
         % Schottky Diode
         \draw [thick]
-        (12, 0) node[ground]{} to [empty Schottky diode] (12, 8);
+        (12, 0) node[ground]{} to [empty Schottky diode, -*] (12, 8);
 
 
         % Arrows
@@ -462,7 +462,7 @@
     \vfill
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{pictures/buck-switching-output.png}
+        \includegraphics[width=\textwidth, height=0.8\textheight, keepaspectratio]{pictures/buck-switching-output.png}
     \end{figure}
 \end{frame}
 
@@ -477,8 +477,8 @@
     ]
         \draw [thick]
         (22, 8) to [european resistor, l=${LOAD}$] (22, 0) node [ground] {}
-        (19.5, 8) to [C] (19.5, 0) node [ground]{}
-        (0, 8) to [C] (0, 0) node [ground]{};
+        (19.5, 8) to [C, *-] (19.5, 0) node [ground]{}
+        (0, 8) to [C, *-] (0, 0) node [ground]{};
         \draw
         (0, 8) node [vcc, xscale=1.5, yscale=1.5] {$V_{in}$};
 
@@ -501,7 +501,7 @@
         (fet.G) node [anchor=south, xshift=8pt] {G}
         (fet.D) node [anchor=west, yshift=8pt] {D}
         (fet.S) node [anchor=east, yshift=8pt] {S}
-        (fet.D) to [short] (fet.D |- 0, 8)
+        (fet.D) to [short, -*] (fet.D |- 0, 8)
         (fet.S) to [short] (fet.S |- 0, 0) node [ground] {};
 
         % Control Block
@@ -570,4 +570,135 @@
         }
     \end{circuitikz}
     }
+\end{frame}
+
+
+\subsection{Efficacité et Température}
+
+\begin{frame}{Efficacité d'un régulateur linéaire}
+    \begin{center}
+        $\eta = \dfrac{P_{out}}{P_{in}} = \dfrac{V_{out}}{V_{in}}$
+
+        \vfill
+
+        \pause
+
+        \begin{columns}
+            \begin{column}{0.125\textwidth}\end{column}
+
+
+            \begin{column}{0.375\textwidth}
+                \centering
+                \only<2-> {
+                    $V_{in} = \SI{12}{\volt}$\\
+                }
+                \only<3-> {
+                    $I_{in} = \SI{500}{\milli\ampere}$\\
+                }
+                \only<4-> {
+                    $P_{in} = \SI{12}{\volt} \cdot \SI{500}{\milli\ampere} = \SI{6}{\watt}$\\
+                }
+
+            \end{column}
+
+            \begin{column}{0.375\textwidth}
+                \centering
+                \only<2-> {
+                    $V_{out} = \SI{5}{\volt}$\\
+                    $I_{out} = \SI{500}{\milli\ampere}$\\
+                }
+                \only<4-> {
+                    $P_{out} = \SI{5}{\volt} \cdot \SI{500}{\milli\ampere} = \SI{2.5}{\watt}$\\
+                }
+            \end{column}
+
+            \begin{column}{0.125\textwidth}\end{column}
+        \end{columns}
+
+        \vfill
+        \only<5> {
+            $P_{in} - P_{out} = \SI{3.5}{\watt}$\\
+            \vspace{6pt}
+            $\eta = \dfrac{\SI{2.5}{\watt}}{\SI{6}{\watt}}
+                  = 41.\overline{6} \% $\\
+        }
+        
+        \only<6-> {
+            $P_{in} - P_{out} = \SI{3.5}{\watt}$\\
+            \vspace{6pt}
+            $\eta = \dfrac{\SI{2.5}{\watt}}{\SI{6}{\watt}}      = \dfrac{\SI{5}{\volt}}{\SI{12}{\volt}}
+                  = 41.\overline{6} \% $\\
+        }
+    \end{center}
+\end{frame}
+
+\begin{frame}{Température d'un régulateur linéaire}
+    \centering
+    \only<2-> {
+        $\Delta T = (P_{in} - P_{out}) \cdot R_{\theta JA}$\\
+        \vspace{6pt}
+        $\SI{3.5}{\watt} \cdot \SI{23.9}{\celsius\per\watt} = \SI{83.85}{\celsius}$
+    }
+
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/7805-thermal-information.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Efficacité Régulateur Switching}
+    Pour un \href{https://www.st.com/resource/en/datasheet/l6982.pdf}{ST L6982 Synchronous Monolithic Step-Down regulator}
+
+    \begin{figure}
+        \includegraphics[width=0.66\textwidth, height=0.75\textheight, keepaspectratio]{pictures/l6982-efficiency-curve.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Efficacité Régulateur Switching}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            \centering
+            \only<1-> {
+                $\eta = 93\%$\\
+                \vspace{12pt}
+                $V_{in}  = \SI{12}{\volt}$\\
+                $V_{out} = \SI{5}{\volt}$\\
+                $I_{out} = \SI{500}{\milli\ampere}$\\
+                $P_{out} = \SI{2.5}{\watt}$\\
+            }
+            \only<2-> {
+                \vspace{18pt}
+                $P_{in} = \dfrac{P_{out}}{\eta} = \dfrac{\SI{2.5}{\watt}}{93\%} = \SI{2.688}{\watt}$\\
+                \vspace{6pt}
+                $I_{in} = \frac{P_{in}}{V_{in}} = \SI{224}{\milli\ampere}$\\
+            }
+        \end{column}
+        \begin{column}{0.55\textwidth}
+            \begin{figure}
+                \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/l6982-efficiency-curve.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Température Régulateur Switching}
+    \centering
+    $P_{in} - P_{out} = \SI{2.688}{\watt} - \SI{2.5}{\watt} = \SI{188}{\milli\watt}$\\
+    \vspace{12pt}
+    $\Delta T = (P_{in} - P_{out}) \cdot R_{\theta JA}$\\
+
+    \vspace{24pt}
+    \only<2-> {
+        $\SI{0.188}{\watt} \cdot \SI{55}{\celsius\per\watt} = \SI{10.34}{\celsius}$
+    }
+
+    \vfill
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/l6982-thermal-information.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Sortie Régulateur Switching}
+    \begin{figure}
+        \includegraphics[width=\textwidth, height=0.75\textheight, keepaspectratio]{pictures/l6982-output.png}
+    \end{figure}
 \end{frame}
