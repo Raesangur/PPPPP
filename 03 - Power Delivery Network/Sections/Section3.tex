@@ -2,8 +2,10 @@
 
 \section{Comment filtrer une alimentation?}
 
-\begin{comment}
+\subsection{Pourquoi Filtrer une alimentation}
+
 \begin{frame}{Pourquoi Filtrer?}
+    \vspace{-36pt}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{center}
@@ -16,20 +18,13 @@
             \end{center}
         \end{column}
     \end{columns}
+
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item Signaux Clean
                 \item Marges d'opérations respectées
             \end{itemize}
-
-            \centering
-            \begin{tabular}{c l}
-                \textcolor{UDSgreenFierte}{\faUndo}   & Rélections \\
-                \textcolor{UDSgreenFierte}{\faExchange}         & Crosstalk \\
-                \textcolor{UDSgreenFierte}{\faCompress}     & Ground Bounce \\
-                \textcolor{UDSgreenFierte}{\faFilter}   & \textbf{Filtration de Power} \\
-            \end{tabular}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
@@ -39,15 +34,30 @@
                     \item Émissions
                     \item Immunité au bruit
                 \end{itemize}
-
-                \centering
-                \begin{tabular}{c l}
-                    \textcolor{UDSgreenFierte}{\faPuzzlePiece}   & Layout \\
-                    \textcolor{UDSgreenFierte}{\faArrowDown}         & Grounding \\
-                    \textcolor{UDSgreenFierte}{\faShield}     & Shielding \\
-                    \textcolor{UDSgreenFierte}{\faFilter}   & \textbf{Filtration de Power} \\
-                \end{tabular}
             \end{itemize}
+        \end{column}
+    \end{columns}
+
+    \vspace{24pt}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \begin{tabular}{c l}
+                \textcolor{UDSgreenFierte}{\faUndo}   & Rélections \\
+                \textcolor{UDSgreenFierte}{\faExchange*}         & Crosstalk \\
+                \textcolor{UDSgreenFierte}{\faCompress}     & Ground Bounce \\
+                \textcolor{UDSgreenFierte}{\faSlidersH}   & \textbf{Filtration de Power} \\
+            \end{tabular}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \centering
+            \begin{tabular}{c l}
+                \textcolor{UDSgreenFierte}{\faPuzzlePiece}   & Layout \\
+                \textcolor{UDSgreenFierte}{\faArrowDown}         & Grounding \\
+                \textcolor{UDSgreenFierte}{\faShield*}     & Shielding \\
+                \textcolor{UDSgreenFierte}{\faSlidersH}   & \textbf{Filtration de Power} \\
+            \end{tabular}
         \end{column}
     \end{columns}
 \end{frame}
@@ -58,44 +68,44 @@
         \item Tout commence avec le power
         \item Le PDN devrait constituer 25\% à 50\% de la difficulté d'un projet
         \bigskip
-        \item<2-> Plein de façon de filtrer
-        \item<2-> Réduire le bruit sur l'alimentation
-        \item<2-> Avoir une alimentation purement DC
+        \item<1-> Plein de façon de filtrer
+        \item<1-> Réduire le bruit sur l'alimentation
+        \item<1-> Avoir une alimentation purement DC
         \bigskip
-        \item<3-> Jouer avec les impédances de mon alimentation
+        \item<2-> Jouer avec les impédances de mon alimentation
         \begin{itemize}
-            \item<3-> Découplage 
-            \item<3-> Rajouter des inductances
-            \item<3-> Faire attention à son layout 
+            \item<2->[]\textcolor{UDSgreenFierte}{\faEquals} ~Découplage 
+            \item<2->[]\textcolor{UDSgreenFierte}{\faSync} ~Rajouter des inductances
+            \item<2->[]\textcolor{UDSgreenFierte}{\faPuzzlePiece} ~Faire attention à son layout 
         \end{itemize}
-        \item<4-> Ajouter des composantes actives
+        \item<2-> Ajouter des composantes actives
         \begin{itemize}
-            \item<4-> Régulateurs Linéaires
+            \item<2->[]\textcolor{UDSgreenFierte}{\faArrowsAltH} ~Régulateurs Linéaires
         \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}{D'où provient le bruit}
-    \begin{itemize}
-        \item IC qui toggle
-        \item Longues lignes de transmission
-        \begin{itemize}
-            \item Crosstalk
-            \item Antennes
-        \end{itemize}
-        \item Mauvais chemins de retour
-        \begin{itemize}
-            \item Crosstalk
-            \item Ground Bounce
-            \item Antennes
-        \end{itemize}
-    \end{itemize}
+    \large
+    \centering
+    \begin{tabular}{c l}
+        \textcolor{UDSgreenFierte}{\faWaveSquare} & IC qui toggle \\
+        [0.6em]
+        \textcolor{UDSgreenFierte}{\faLongArrowAltRight} & Longues lignes de transmission \\
+        [0.2em]
+        \hspace{18pt}\textcolor{UDSgreenFierte}{\faExchange*} & \normalsize{Crosstalk} \\
+        \hspace{18pt}\textcolor{UDSgreenFierte}{\faBroadcastTower} & \normalsize{Antennes} \\
+        [0.6em]
+        \textcolor{UDSgreenFierte}{\faRecycle} & Mauvais chemins de retour \\
+        [0.2em]
+        \hspace{18pt}\textcolor{UDSgreenFierte}{\faExchange*} & \normalsize{Crosstalk} \\
+        \hspace{18pt}\textcolor{UDSgreenFierte}{\faStumbleupon} & \normalsize{Ground} Bounce \\
+        \hspace{18pt}\textcolor{UDSgreenFierte}{\faBroadcastTower} & \normalsize{Antennes} \\
+    \end{tabular}
 \end{frame}
 
-\end{comment}
+\subsection{Démonstration!}
 
 \subsection{Filtrer l'entrée}
-
-
 \subsection{Filtrer la sortie d'un régulateur}
 \subsection{Filtrer au IC}
