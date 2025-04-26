@@ -1,12 +1,21 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 \usetheme{Madrid}
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nicefrac}
 \usepackage{comment}
 \usepackage{multicol}
 \usepackage{siunitx}
+\sisetup{
+  per-mode=fraction,
+  fraction-function=\nicefrac,
+  detect-weight=true,
+  detect-family=true
+}
 
 \usepackage{colortbl}
 \usepackage{xcolor}
@@ -23,6 +32,8 @@
 \usepackage{hyperref}
 \usepackage{mathtools}
 \usepackage{adjustbox}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
 \usepackage{animate}
 %\usepackage{cite}
@@ -90,7 +101,7 @@
 }
 \makeatother
 \author{Pascal-Emmanuel Lachance}
-\title{PPPPP02}
+\title{PPPPP03}
 \subtitle{Comment conçevoir un\\ Power Delivery Network?}
 \institute{Compétitions de Conception de Circuits Imprimés}
 \date{\today}
@@ -134,6 +145,13 @@
 \setbeamertemplate{itemize subsubitem}{\tiny$\bullet$}
 \usebeamertemplate{mytheme}
 
+\newif\ifINTRO
+\INTROfalse
+
+\ifINTRO
+    \includeonlyframes{intro}
+    \setbeamertemplate{navigation symbols}{}
+\fi
 
 
 
@@ -144,7 +162,7 @@
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            {\includegraphics[height=\paperheight,keepaspectratio]{pictures/background/background-PCB.png}}
+            {\includegraphics[width=\paperwidth,keepaspectratio]{pictures/background/background-PCB.png}}
         };
     \end{tikzpicture}
 }
@@ -153,13 +171,49 @@
     \maketitle
 \end{frame}
 
+\usebackgroundtemplate{
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            {\includegraphics[width=\paperwidth,keepaspectratio]{pictures/background/background-pcb-poster.png}}
+        };
+    \end{tikzpicture}
+}
+
+\begin{frame}[plain, label=intro]
+    \centering
+    \Large
+
+    \textcolor{white}{
+        \LARGE{\textbf{\inserttitle}}\\
+        \textbf{\textit{\insertsubtitle}}\\
+        Par: \insertauthor\\
+    }
+    \vspace{24pt}
+    \begin{tabular}{c l}
+        \textcolor{UDSgreenFierte}{\faShield*}
+            & \textcolor{white}{~Comment protéger une alimentation?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faSlidersH}
+            & \textcolor{white}{~Quels sont les types de régulateurs?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faEquals}
+            & \textcolor{white}{~À quoi sert le découplage?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faWaveSquare}
+            & \textcolor{white}{~Comment filtrer une alimentation?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faProjectDiagram}
+            & \textcolor{white}{~Comment conçevoir un arbre d'alimentation?}\\
+    \end{tabular}
+\end{frame}
+
 
 
 % - TOC -
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{pictures/background/background2.jpg}
+            \includegraphics[width=\paperwidth, keepaspectratio]{pictures/background/background5.png}
         };
     \end{tikzpicture}
 }
@@ -191,6 +245,7 @@
 }
 
 
+
 % ------------ SECTIONS -----------
 
 %\input{Sections/Section1}
@@ -205,7 +260,7 @@
 \usebackgroundtemplate{
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            {\includegraphics[height=\paperheight,keepaspectratio]{pictures/background/background-PCB.png}}
+            {\includegraphics[width=\paperwidth,keepaspectratio]{pictures/background/background-PCB.png}}
         };
     \end{tikzpicture}
 }
@@ -217,6 +272,72 @@
     \vfill\null
     \columnbreak
     \end{multicols}
+\end{frame}
+
+
+% VOTE
+\usebackgroundtemplate{
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            {\includegraphics[width=\paperwidth,keepaspectratio]{pictures/background/background-pcb-poster.png}}
+        };
+    \end{tikzpicture}
+}
+
+\begin{frame}
+    \centering
+    \Large
+
+    \textcolor{white}{\LARGE{\textbf{Vote sur le prochain PPPPP}}}\\
+    \vspace{24pt}
+
+    \only<1> {
+        \textcolor{white}{
+        \LARGE{\textbf{Deep-Dive sur les composantes Passives}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Types de condensateurs}
+            \item \textcolor{white}{Derating de condensateurs}
+            \item \textcolor{white}{Courbes d'impédance}
+            \item \textcolor{white}{Saturation de bobines}
+            \item \textcolor{white}{Normes et spécifications}
+            \item \textcolor{white}{Comment choisir une composante}
+        \end{itemize}
+    }
+    \only<2> {
+        \textcolor{white}{
+        \LARGE{\textbf{Bonnes pratiques de Schéma \& Layout}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Quoi mettre sur un silkscreen}
+            \item \textcolor{white}{Notes sur un schéma}
+            \item \textcolor{white}{Protections de circuit}
+            \item \textcolor{white}{Comment utiliser les couches mécaniques}
+            \item \textcolor{white}{Comment bien faire un BOM}
+        \end{itemize}
+    }
+    \only<3> {
+        \textcolor{white}{
+        \LARGE{\textbf{Comment se déplace un signal sur un PCB}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Où l'impédance est la plus faible?}
+            \item \textcolor{white}{Retour de courant}
+            \item \textcolor{white}{Ground Bounce}
+            \item \textcolor{white}{Vitesse de déplacement d'un signal}
+            \item \textcolor{white}{Tout est une ligne de transmission}
+        \end{itemize}
+    }
+
+    \only<4> {
+        \begin{itemize}
+            \item \textcolor{white}{\LARGE{\textbf{Deep-Dive sur les composantes Passives}}}
+            \bigskip
+            \item \textcolor{white}{\LARGE{\textbf{Bonnes pratiques de Schéma \& Layout}}}
+            \bigskip
+            \item \textcolor{white}{\LARGE{\textbf{Comment se déplace un signal sur un PCB}}}
+        \end{itemize}
+    }
 \end{frame}
 
 
