@@ -1,0 +1,6 @@
+PWD /home/raesangur/github/PPPPP/03 - Power Delivery Network/tikz
+INPUT /usr/local/texlive/2025/texmf.cnf
+INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT protection-diagram.tex
+OUTPUT build/protection-diagram.log

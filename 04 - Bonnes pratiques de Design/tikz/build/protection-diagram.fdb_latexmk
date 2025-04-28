@@ -1,0 +1,12 @@
+# Fdb version 4
+["pdflatex"] 1745099306.80152 "protection-diagram.tex" "build/protection-diagram.pdf" "protection-diagram" 1745099307.07732 2
+  "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1739380943 42148 61becc7c670cd061bb319c643c27fdd4 ""
+  "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1744817649 2867807 35c8765ce5c6abc9b1430495cab1ebb7 ""
+  "/usr/local/texlive/2025/texmf.cnf" 1744817498.30969 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "build/protection-diagram.aux" 1745099198.7254 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "protection-diagram.tex" 1745099306.50069 906 135762bd728f72a8017d4811b62c7d51 ""
+  (generated)
+  "build/protection-diagram.aux"
+  "build/protection-diagram.log"
+  "build/protection-diagram.pdf"
+  (rewritten before read)

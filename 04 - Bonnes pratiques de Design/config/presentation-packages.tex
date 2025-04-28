@@ -1,0 +1,70 @@
+%!TEX root = ../presentation.tex
+
+%%%%%%%%%%%%
+% PACKAGES %
+%%%%%%%%%%%%
+
+% =============== General Formatting ============
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fontawesome5}
+\usepackage{comment}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[yyyymmdd]{datetime}
+
+% =============== Colors ============
+\usepackage{colortbl}
+\usepackage[many]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% =============== Math ============
+\usepackage{mathtools}
+\usepackage{nicefrac}
+\usepackage{siunitx}
+\usepackage{calc}
+
+% =============== Figures ============
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{pgfplots}
+\usepackage{animate}
+\usepackage{environ}
+
+% =============== Listings ============
+\tcbuselibrary{listings}      % Raesangur
+\usepackage{listings}         % Main package for inserting code
+\tcbset{listing engine={listings}}
+\usepackage[scaled]{beramono} % For using the beramono font
+
+
+% =============== Bibliography ============
+%\usepackage{cite}
+
+\usepackage[style=alphabetic,backend=biber, style=numeric, sorting=none]{biblatex}
+%\addbibresource{references.bib}
+\renewcommand*{\mkbibacro}[1]{#1}
+
+
+
+
+% =============== Package Setup ============
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\renewcommand{\dateseparator}{--}
+
+\newcommand{\cmark}{\ding{51}} % ✓
+\newcommand{\xmark}{\ding{55}} % ✗
+
+
+% ------ Tikz ------
+\usetikzlibrary{arrows, shapes, calc, positioning}
+%\usetikzlibrary{external}
+%\usepgfplotslibrary{external}
+%\tikzexternalize
+\pgfplotsset{compat=1.18}
