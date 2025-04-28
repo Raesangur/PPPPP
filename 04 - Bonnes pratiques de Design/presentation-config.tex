@@ -1,0 +1,56 @@
+%!TEX root = ./presentation.tex 
+
+\documentclass[aspectratio=169]
+    {beamer}
+\usetheme{Madrid}
+
+
+% -------------- COMPILE VARIABLES --------------
+\newif\ifTiKZ
+\newif\ifINTRO
+
+\TiKZtrue        % TiKZ toggle
+\INTROfalse      % Build only intro slide
+
+
+% ------------------ VARIABLES ------------------
+\newcommand{\userName}{Pascal-Emmanuel Lachance}
+\newcommand{\projectName}{PPPPP03}
+\newcommand{\institution}{C3i}
+\newcommand{\repo}{PPPPP}
+\newcommand{\user}{raesangur}
+\newcommand{\docName}{Presentation}
+
+\author{\userName}
+\title{\projectName}
+\subtitle{Comment conçevoir un\\ Power Delivery Network?}
+\institute{Compétitions de Conception de Circuits Imprimés}
+\date{\today}
+\titlegraphic{\includegraphics[scale = 0.3]{pictures/logo/udes_logo.pdf}}
+
+
+% ----------- CONFIGURATION INCLUDES ------------
+\input{config/presentation-packages}
+\input{config/presentation-sections}
+%\input{config/presentation-objects}
+\input{config/presentation-format}
+\input{config/presentation-code}
+%\input{config/presentation-bibliography}
+\input{config/presentation-beamer}
+
+
+
+% --------------- BUILD SETTINGS ----------------
+\pdfcompresslevel=1
+\pdfobjcompresslevel=1
+
+\ifTiKZ
+% \tikzexternalize
+\fi
+
+% Use this command to generate the precompiled format file
+% pdftex -ini -jobname="logbook" "&pdflatex" mylatexformat.ltx logbook.tex
+
+\csname endofdump\endcsname
+\endofdump
+%mylatex

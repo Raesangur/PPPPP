@@ -1,0 +1,130 @@
+%!TEX root = ../presentation.tex
+
+
+% ----------------- INLINE CODE -----------------
+
+% Display monospace text in a grey box. Similar to ` text in markdown.
+% 1: Color of the text in the textbox - default: [black]
+% 2: Text to display
+% 3: Following punctuation
+%
+% Note: This command sometimes continues in the margins of the page, 
+% putting the punctuation as the 3rd argument prevents the following punctuation
+% to be alone at the start of the next line.
+%
+% Example:
+% This is an \inline{example}{,} without a specified color.
+% This is another \href{https://www.example.com}{\inline[blue]{example}{.}}
+\newcommand{\inline}[3][black]{ %
+  \hspace{-8pt}%
+  \begingroup%
+  \raggedright%
+  {
+    \mbox{%
+      \raggedright\tcbox[on line,%
+                         boxsep=4pt, left=-1pt,right=-1pt,top=-4pt,bottom=-4.5pt,%
+                         opacityframe=0, colback=gray!50,%
+                         fontupper={\strut},%
+                         enhanced, breakable]%
+      {%
+        \raggedright\lstinline[basicstyle=\ttfamily\small\color{#1},%
+                               breaklines=true, breakatwhitespace=true,%
+                               moredelim={[s][\ttfamily]{_}{_}}]%
+      {#2}%
+      }#3%
+    }%
+  }
+  \endgroup%
+  \hspace*{-8pt}~%
+}
+
+
+% --------------- REGULAR LISTING ---------------
+
+% Create a lstlisting environment with custom syntax highlighting.
+% 1: Syntax highlighting language - default: [logbook]
+% 
+% Note: The syntax highlighting argument is currently unused, as no other styles than logbook have been defined.
+%
+% Example:
+% \begin{makelisting}{python}
+% if __name__ == "__main__":
+%     print("Example")
+% \end{makelisting}
+\lstnewenvironment{makelisting}[2][]
+{
+  \vspace{-8pt}
+  \lstset{style=logbook #1}
+}
+{
+  \vspace{-12pt}
+}
+
+% Create two aligned columns with proper spacing.
+% Used to compare two listings or figures easily.
+%
+% Example:
+% \begin{makecompare}
+%   This is the first example, on the left.
+%   \newcol
+%   This second example is on the right!
+% \end{makecompare}
+\newenvironment{makecompare}
+{
+  \vspace{-1.25\cringlineskip}
+  \begin{multicols}{2}
+}
+{
+  \end{multicols}
+  \vspace{-2\cringlineskip}
+}
+
+
+ % ----------------- CODE BLOCK -----------------
+% https://tex.stackexchange.com/a/468526
+\newtcbinputlisting[auto counter, list inside = lol, list type = {lstlisting}]{\makecode}[3][logbook]{
+  breakable,
+  listing file = {code/#3},
+  listing options={style = logbook},
+  listing only,
+  boxrule = 1pt,
+  title = {\textbf{Code \thetcbcounter:} \textbf{#2} \hfill \textbf{#3}},
+  label = code:#3
+}
+
+
+% ---------------- CODE FORMATS -----------------
+\lstdefinestyle{logbook}{
+  escapeinside={<@}{@>},
+  language=C,
+  aboveskip=0.5cm,
+  breakatwhitespace=false,
+  breaklines=true,
+  numbers=left,
+  numbersep=8pt,
+  numberfirstline = false,
+  linewidth=\textwidth,
+  stepnumber=1,
+  frame=lines,
+  framesep=0pt,
+  framerule=0pt,
+  framextopmargin=3pt,
+  framexbottommargin=3pt,
+  framexleftmargin=0.4cm,
+  xleftmargin={0.75cm},
+  rulecolor=\color{Black},
+  rulesep=.4pt,
+  %backgroundcolor=\color{background},
+  basicstyle=\small\ttfamily,
+  identifierstyle=\color{RoyalBlue},
+  commentstyle=\color{ForestGreen}\itshape,
+  keywordstyle=\color{Plum}\bfseries,
+  numberstyle=\small\ttfamily,
+  stringstyle=\ttfamily\color{RedOrange},
+  showstringspaces=false,
+  showspaces=false,
+  keepspaces=true,
+  showtabs=false,
+  tabsize=4,
+  captionpos=t,
+}

@@ -1,0 +1,828 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  19 APR 2025 17:48
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**protection-diagram.tex
+(./protection-diagram.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-03-26>
+! Undefined control sequence.
+l.2 \node
+         [coordinate] (inlabel) {};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \node[
+          coordinate] (inlabel) {};
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+! Undefined control sequence.
+l.3 \node
+         [block, right=of inlabel] (scp) {Short-circuit\\       Protection};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ; in font nullfont!
+! Undefined control sequence.
+l.4 \node
+         [block, right=of scp] (tvs) {Transient Voltage\\       Suppression};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ; in font nullfont!
+! Undefined control sequence.
+l.5 \node
+         [block, right=of tvs] (rvp) {Reverse Voltage\\     Protection};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no V in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--6
+[]
+ []
+
+! Undefined control sequence.
+l.7 \node
+         [block, below=of scp] (uvlo) {Undervoltage\\Lockout};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \node[
+          block, below=of scp] (uvlo) {Undervoltage\\Lockout};
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ; in font nullfont!
+! Undefined control sequence.
+l.8 \node
+         [block, right=of uvlo] (ss) {Soft Start};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ; in font nullfont!
+! Undefined control sequence.
+l.9 \node
+         [block, right=of ss] (cm) {Current\\Measurement};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ; in font nullfont!
+! Undefined control sequence.
+l.10 \node
+          [coordinate, right=of cm] (outlabel) {};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--11
+[]
+ []
+
+! Undefined control sequence.
+l.13 \draw
+          [->] ($(inlabel)+(-0.75,0.0)$) -- (scp.west) node[     midway, abo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \draw[
+           ->] ($(inlabel)+(-0.75,0.0)$) -- (scp.west) node[     midway, abo...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 13--14
+[]
+ []
+
+
+Overfull \hbox (45.59804pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 inlabel\OT1/cmr/m/n/10 ) +
+ []
+
+
+Overfull \hbox (50.55566pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cm
+r/m/n/10 75\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
+0 0)$
+ []
+
+! Undefined control sequence.
+l.16 \draw
+          [->] (scp) -- (tvs);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \draw[
+           ->] (scp) -- (tvs);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+! Undefined control sequence.
+l.17 \draw
+          [->] (tvs) -- (rvp);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 16--18
+[]
+ []
+
+! Undefined control sequence.
+l.20 \draw
+          [->]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \draw[
+           ->]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no | in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 20--25
+[]
+ []
+
+! Undefined control sequence.
+l.28 \draw
+          [->] (uvlo) -- (ss);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \draw[
+           ->] (uvlo) -- (ss);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+! Undefined control sequence.
+l.29 \draw
+          [->] (ss) -- (cm);
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 28--30
+[]
+ []
+
+! Undefined control sequence.
+l.32 \draw
+          [->] (cm.east) -- ++(1.25,0) node[midway, above] {Load};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \draw[
+           ->] (cm.east) -- ++(1.25,0) node[midway, above] {Load};
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no > in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ; in font nullfont!
+)
+! Emergency stop.
+<*> protection-diagram.tex
+                          
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 17 strings out of 470848
+ 428 string characters out of 5498004
+ 423118 words of memory out of 5000000
+ 26741 multiletter control sequences out of 15000+600000
+ 626825 words of font info for 40 fonts, out of 8000000 for 9000
+ 417 hyphenation exceptions out of 8191
+ 18i,1n,20p,141b,57s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
