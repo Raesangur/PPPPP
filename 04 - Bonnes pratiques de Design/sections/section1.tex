@@ -1,4 +1,4 @@
-%!TEX root = ../main.tex 
+%!TEX root = ../presentation.tex 
 
 \section{Bonnes pratiques de schémas}
 
@@ -27,14 +27,8 @@
         \end{column}
 
         \begin{column}{0.33\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width=\textwidth]{pictures/ESD-discharge-finger.png}
-            \end{figure}
-            \begin{figure}
-                \centering
-                \includegraphics[width=0.5\textwidth]{pictures/ESD-logo.png}
-            \end{figure}
+            \makefigure{ESD-discharge-finger}
+            \makefigure[0.5]{ESD-logo}
         \end{column}
     \end{columns}
 \end{frame}
@@ -64,10 +58,7 @@
 \end{frame}
 
 \begin{frame}{Circuit protégé antistatiquement - Zener}
-    \begin{center}
-    \vspace{-24pt}
-    \resizebox{\textwidth}{0.8\textheight}{
-    \begin{circuitikz}[american voltages]
+    \begin{maketikzfigure}
         \draw [thick]
         (0,-3) to [short, *-] (10,-3)
         to [european resistor, l_=${LOAD}$] (10,1)
@@ -87,9 +78,7 @@
         -- (1,2.1); % Settling
 
         \node[right] at (1,2.1) {$i_{\text{ESD}}(t) \rightarrow \SI{8}{\kilo\volt}$};
-    \end{circuitikz}
-    }
-    \end{center}
+    \end{maketikzfigure}
 \end{frame}
 
 \begin{frame}{Diode Normale - IV Curve}
@@ -208,24 +197,21 @@
 \end{frame}
 
 \begin{frame}{Diode TVS (Transient Voltage Suppression)}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item \textbf{Faite pour protection antistatique!}
-                \item \textbf{Bidirectionnel!!}
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item Deux diodes Zener qui se font face
-                \item \textit{iv curve} symmétrique
-            \end{itemize}
-        \end{column}
-    \end{columns}
-    \begin{figure}
-        \centering
-        \includegraphics[width=\textwidth, height=0.55\textheight, keepaspectratio]{pictures/diode-tvs-iv-curve.png}
-    \end{figure}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item \textbf{Faite pour protection antistatique!}
+            \item \textbf{Bidirectionnel!!}
+        \end{itemize}
+
+        \rightcol
+        \begin{itemize}
+            \item Deux diodes Zener qui se font face
+            \item \textit{iv curve} symmétrique
+        \end{itemize}
+    \end{twocolumns}
+
+    \makefigure[1][0.55]{diode-tvs-iv-curve}
 \end{frame}
 
 \begin{frame}{Circuit protégé antistatiquement - Condensateur}

@@ -1,10 +1,30 @@
 01 - Comment est fait un PCB
 02 - Qu'est-ce qu'une impédance
 03 - Power Delivery Networks
+04 - Bonnes pratiques de schéma et layout
+
 
 Circuit communs et outils
+    - Sallen-key
+    - Source de courant
+    - Comparateur
+    - Sommateur
+    - Intégrateur
+    - Digipot
+    - Mux Analogique
+    - Transimpedance Amplifier / Transconductance amplifier
+    - Shunt (mesure de courant)
+    - Isolateur Galvanique
+    - RTC (coincell)
+    - Crystal (comment calculer capacitance)
+    
+
+
+USB
 Deep dive Passives (RLC)
-Protections antistatique
-PCB Flexibles
+Protections (antistatique et autre)
+PCB Funky (flexible, aluminium)
 Comment se déplace un signal dans un PCB
 Gestion de température
+Batterie
+

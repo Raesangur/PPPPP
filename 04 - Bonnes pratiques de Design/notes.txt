@@ -71,6 +71,7 @@ Schematic:
         Ajouter IO, LED, Testpoint, UART
     Mettre des systèmes de mesure de courant
     Met toujours plus de testpoints qu'on pense
+        - Différents types de testpoints
     Bien faire son découplage
     Mettre des couleurs sur les nets
     Toujours mettre des protections
@@ -94,7 +95,8 @@ Layout:
     Met toi plus de place que tu penses
     Met du texte partout
         Tous les testpoints, toutes les LEDs, tous les connecteurs
-    Mettre le silkscreen plus loin
+        Mettre le silkscreen plus loin
+        Toujours avoir le silkscreen dans les mêmes orientations
     Utiliser les fonctions de locking et de grouping
     Faire des polygones pour le power
     Faire le stackup en fonction du fanout

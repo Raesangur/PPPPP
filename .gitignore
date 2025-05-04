@@ -1,5 +1,5 @@
 */build/*
-
+.vscode/*
 
 *.aux
 *.bcf
@@ -7,10 +7,13 @@
 *.fls
 *.log
 *.nav
+*.hd
 *.out
-*.pdf
 *.run.xml
 *.snm
 *.synctex.gz
 *.tex
 *.toc
+
+Thumbs.db
+package-lock.json
