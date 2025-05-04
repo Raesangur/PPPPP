@@ -17,6 +17,9 @@ Circuit communs et outils
     - Isolateur Galvanique
     - RTC (coincell)
     - Crystal (comment calculer capacitance)
+    - Transceiver
+    - Tristate Buffer
+    - Fonctionnement d'une paire différentielle
     
 
 
