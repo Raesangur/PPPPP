@@ -1,9 +1,7 @@
 flags := --time-statistics --no-shell-escape -jobname=PPPPP
 
 build:
-	# texify -b -p --engine=pdftex --tex-option='--synctex=1' main.tex
-	pdflatex main.tex ${flags} --tex-options='--synctex=1'
-	# latexmk -cd -f -pdf -interaction=nonstopmode -synctex=1 --output-directory=build -latexoption=-interaction=batchmode -shell-escape -synctex=-1 main.tex
+	pdflatex presentation.tex ${flags} --tex-options='--synctex=1'
 
 
 clean:
@@ -28,7 +26,7 @@ clean:
 	$(RM) *.snm
 
 draft:
-	pdflatex main.tex ${flags} --draftmode
+	pdflatex presentation.tex ${flags} --draftmode
 
 format:
-	pdftex -ini -jobname="PPPPP" "&pdflatex" mylatexformat.ltx main.tex
+	pdftex -ini -jobname="PPPPP" "&pdflatex" mylatexformat.ltx presentation.tex
