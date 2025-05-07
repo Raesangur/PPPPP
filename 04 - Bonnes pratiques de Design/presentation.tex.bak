@@ -1,0 +1,135 @@
+%&presentation.fmt
+% !TEX program = pdflatex
+% !BIB program = biber
+
+% UNCOMMENT THIS WHEN NOT USING .fmt FILE OR WHEN GENERATING .fmt FILE
+% \input{presentation-config}
+
+
+
+% ----------------------- BEGIN DOCUMENT ------------------------
+
+\begin{document}
+
+\titlebackground
+
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\introbackground
+
+\begin{frame}[plain, label=intro]
+    \centering
+    \Large
+
+    \textcolor{white}{
+        \LARGE{\textbf{\inserttitle}}\\
+        \textbf{\textit{\insertsubtitle}}\\
+        Par: \insertauthor\\
+    }
+    \vspace{24pt}
+    \begin{tabular}{c l}
+        \textcolor{UDSgreenFierte}{\faShield*}
+            & \textcolor{white}{~Comment protéger une alimentation?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faSlidersH}
+            & \textcolor{white}{~Quels sont les types de régulateurs?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faEquals}
+            & \textcolor{white}{~À quoi sert le découplage?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faWaveSquare}
+            & \textcolor{white}{~Comment filtrer une alimentation?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faProjectDiagram}
+            & \textcolor{white}{~Comment conçevoir un arbre d'alimentation?}\\
+    \end{tabular}
+\end{frame}
+
+
+
+% - TOC -
+\maketoc
+
+% ------------ SECTIONS -----------
+
+\defaultbackground
+\input{chapters/chapter-1}
+\input{chapters/chapter-2}
+\input{chapters/chapter-3}
+\input{chapters/chapter-4}
+
+
+
+% - END -
+
+\titlebackground
+\thankyouframe
+
+
+% VOTE
+\introbackground
+\begin{frame}
+    \centering
+    \Large
+
+    \textcolor{white}{\LARGE{\textbf{Vote sur le prochain PPPPP}}}\\
+    \vspace{24pt}
+
+    \only<1> {
+        \textcolor{white}{
+        \LARGE{\textbf{Deep-Dive sur les composantes Passives}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Types de condensateurs}
+            \item \textcolor{white}{Derating de condensateurs}
+            \item \textcolor{white}{Courbes d'impédance}
+            \item \textcolor{white}{Saturation de bobines}
+            \item \textcolor{white}{Normes et spécifications}
+            \item \textcolor{white}{Comment choisir une composante}
+        \end{itemize}
+    }
+    \only<2> {
+        \textcolor{white}{
+        \LARGE{\textbf{Bonnes pratiques de Schéma \& Layout}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Quoi mettre sur un silkscreen}
+            \item \textcolor{white}{Notes sur un schéma}
+            \item \textcolor{white}{Protections de circuit}
+            \item \textcolor{white}{Comment utiliser les couches mécaniques}
+            \item \textcolor{white}{Comment bien faire un BOM}
+        \end{itemize}
+    }
+    \only<3> {
+        \textcolor{white}{
+        \LARGE{\textbf{Comment se déplace un signal sur un PCB}}}\\
+
+        \begin{itemize}
+            \item \textcolor{white}{Où l'impédance est la plus faible?}
+            \item \textcolor{white}{Retour de courant}
+            \item \textcolor{white}{Ground Bounce}
+            \item \textcolor{white}{Vitesse de déplacement d'un signal}
+            \item \textcolor{white}{Tout est une ligne de transmission}
+        \end{itemize}
+    }
+
+    \only<4> {
+        \begin{itemize}
+            \item \textcolor{white}{\LARGE{\textbf{Deep-Dive sur les composantes Passives}}}
+            \bigskip
+            \item \textcolor{white}{\LARGE{\textbf{Bonnes pratiques de Schéma \& Layout}}}
+            \bigskip
+            \item \textcolor{white}{\LARGE{\textbf{Comment se déplace un signal sur un PCB}}}
+        \end{itemize}
+    }
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Références}
+    \printbibliography{references.bib}
+\end{frame}
+
+
+
+\end{document}

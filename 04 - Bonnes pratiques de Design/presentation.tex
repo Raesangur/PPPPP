@@ -1,7 +1,9 @@
-%!TEX root = ./presentation.tex
 %&presentation.fmt
+% !TEX program = pdflatex
+% !BIB program = biber
 
-\input{presentation-config}
+% UNCOMMENT THIS WHEN NOT USING .fmt FILE OR WHEN GENERATING .fmt FILE
+% \input{presentation-config}
 
 
 
@@ -53,10 +55,10 @@
 % ------------ SECTIONS -----------
 
 \defaultbackground
-%\input{sections/section1}
-%\input{sections/section2}
-%\input{sections/section3}
-\input{sections/section4}
+\input{chapters/chapter-1}
+\input{chapters/chapter-2}
+\input{chapters/chapter-3}
+\input{chapters/chapter-4}
 
 
 
@@ -123,6 +125,11 @@
         \end{itemize}
     }
 \end{frame}
+
+\begin{frame}[allowframebreaks]{Références}
+    \printbibliography{references.bib}
+\end{frame}
+
 
 
 \end{document}

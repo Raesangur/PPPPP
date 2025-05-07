@@ -42,16 +42,9 @@
 \tcbset{listing engine={listings}}
 \usepackage[scaled]{beramono} % For using the beramono font
 
-
 % =============== Bibliography ============
-%\usepackage{cite}
-
-\usepackage[style=alphabetic,backend=biber, style=numeric, sorting=none]{biblatex}
-%\addbibresource{references.bib}
-\renewcommand*{\mkbibacro}[1]{#1}
-
-
-
+\usepackage[style=ieee,backend=biber]{biblatex}
+\addbibresource{references.bib}
 
 % =============== Package Setup ============
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
