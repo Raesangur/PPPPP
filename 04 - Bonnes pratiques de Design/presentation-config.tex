@@ -1,21 +1,19 @@
 %!TEX root = ./presentation.tex 
+\scrollmode
 
-\documentclass[aspectratio=169]
-    {beamer}
+\documentclass[aspectratio=169]{beamer}
 \usetheme{Madrid}
 
 
 % -------------- COMPILE VARIABLES --------------
-\newif\ifTiKZ
 \newif\ifINTRO
 
-\TiKZtrue        % TiKZ toggle
 \INTROfalse      % Build only intro slide
 
 
 % ------------------ VARIABLES ------------------
 \newcommand{\userName}{Pascal-Emmanuel Lachance}
-\newcommand{\projectName}{PPPPP03}
+\newcommand{\projectName}{PPPPP04}
 \newcommand{\institution}{C3i}
 \newcommand{\repo}{PPPPP}
 \newcommand{\user}{raesangur}
@@ -44,13 +42,9 @@
 \pdfcompresslevel=1
 \pdfobjcompresslevel=1
 
-\ifTiKZ
 % \tikzexternalize
-\fi
 
-% Use this command to generate the precompiled format file
-% pdftex -ini -jobname="logbook" "&pdflatex" mylatexformat.ltx logbook.tex
-
+% \dump
 \csname endofdump\endcsname
 \endofdump
 %mylatex
