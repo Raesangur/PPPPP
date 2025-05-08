@@ -2,7 +2,7 @@
 02 - Qu'est-ce qu'une impédance
 03 - Power Delivery Networks
 04 - Bonnes pratiques de schéma et layout
-
+05 - Comment se déplace un signal
 
 Circuit communs et outils
     - Sallen-key
@@ -14,6 +14,7 @@ Circuit communs et outils
     - Mux Analogique
     - Transimpedance Amplifier / Transconductance amplifier
     - Shunt (mesure de courant)
+    - Crystal (capacitance de load)
     - Isolateur Galvanique
     - RTC (coincell)
     - Crystal (comment calculer capacitance)
@@ -27,7 +28,6 @@ USB
 Deep dive Passives (RLC)
 Protections (antistatique et autre)
 PCB Funky (flexible, aluminium)
-Comment se déplace un signal dans un PCB
 Gestion de température
 Batterie
 
