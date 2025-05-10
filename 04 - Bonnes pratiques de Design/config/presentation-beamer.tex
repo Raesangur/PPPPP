@@ -110,9 +110,11 @@
                 \path (mainbox) node[rectangle, minimum width=\boxwidth, rounded corners=\cornerradius, minimum height=\boxheight, save path=\inbox] at (0, 0) {};
                 \tikzset{protect=\inbox}
 
-                \fill[black, opacity=0.3, rounded corners=\cornerradius] 
+                \begin{scope}[transparency group, opacity=0.5]
+                \fill[color=black, opacity=0.3, rounded corners=\cornerradius, blur shadow = {shadow xshift=.25ex, shadow yshift=-.25ex}] 
                     (-0.5\boxwidth + \shadowshift, 0.5*\boxheight - \shadowshift) rectangle 
                     (0.5\boxwidth + \shadowshift, -0.5*\boxheight - \shadowshift);
+                \end{scope}
             \end{tikzpicture}
             \vfill%
             \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
