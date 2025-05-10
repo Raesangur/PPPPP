@@ -43,33 +43,49 @@
 
 % -------------- TITLE PAGE --------------
 \makeatletter
-\newcommand\titlegraphicii[1]{\def\inserttitlegraphicii{#1}}
-\titlegraphicii{}
 \setbeamertemplate{title page}
 {
-    {
-        \usebeamercolor[fg]{titlegraphic}
-        \inserttitlegraphic\hfill\inserttitlegraphicii
-        \\
-    }
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            {
+                \includegraphics[scale = 0.35]{pictures/logo/udes_logo.pdf}\\
+            }
+            \vspace{24pt}
+            \begin{tikzpicture}
+                \def\boxwidth{\textwidth}
+                \def\boxheight{3cm}
+                \def\cornerradius{6pt}
+                \def\shadowshift{0.5ex}
+                
+                \node[fill=UDSgreenSolidarite,
+                      fill opacity=0.9,
+                      rounded corners=6pt,
+                      minimum width=\boxwidth, minimum height=\boxheight,
+                      text=white,
+                      text opacity=1,
+                      align=center] (mainbox) at (0, 0){
+                    \usebeamerfont{title}
+                    \textbf{\inserttitle}\\
+                    \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
+                    \textbf{\insertsubtitle}\\\\
+                    \small\usebeamerfont{author}\insertauthor
+                };
 
-    \begin{multicols}{2}
-        \begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true, wd=0.5\textwidth, bgopacity=0.85]{title}
-            \usebeamerfont{title}
-            \textbf{\inserttitle}\\
-            {
-                \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
-                \textbf{\insertsubtitle}\\
-            }
-            {
-                \vspace{24pt}
-                \small\usebeamerfont{author}
-                \insertauthor\\
-            }
-        \end{beamercolorbox}
-    \vfill\null
-    \columnbreak
-    \end{multicols}
+                \path (mainbox) node[rectangle, minimum width=0.999\boxwidth, minimum height=0.996*\boxheight, rounded corners=\cornerradius, save path=\inbox] at (0, 0) {};
+                \tikzset{protect=\inbox}
+
+                \begin{scope}[transparency group, opacity=1]
+                    \fill[color=black, opacity=0.33, rounded corners=\cornerradius,
+                          blur shadow = {shadow xshift=.25ex, shadow yshift=-.25ex}]
+                        (-0.5\boxwidth + \shadowshift, 0.5*\boxheight - \shadowshift) rectangle 
+                        (0.5\boxwidth + \shadowshift, -0.5*\boxheight - \shadowshift);
+                \end{scope}
+            \end{tikzpicture}
+            \vspace{24pt}
+        \end{column}
+        \begin{column}{0.55\textwidth}
+        \end{column}
+    \end{columns}
 }
 \makeatother
 

@@ -54,68 +54,52 @@
 
 % -------------- TABLE OF CONTENT --------------
 
+\newcommand\maketoctitleheader{
+    \begin{tikzpicture}
+        \def\boxwidth{\linewidth}
+        \def\boxheight{1.25cm}
+        \def\cornerradius{6pt}
+        \def\shadowshift{0.8ex}
+        
+        \node[fill=header,
+              fill opacity=0.5,
+              rounded corners=6pt,
+              minimum width=\linewidth, minimum height=1.25cm,
+              text=white,
+              text opacity=1,
+              align=center] (mainbox) at (0, 0)
+        {\textbf{\usebeamerfont{title}\insertsectionhead}};
+
+        \path (mainbox) node[rectangle, minimum width=\boxwidth, minimum height=0.99*\boxheight, rounded corners=\cornerradius, save path=\inbox] at (0, 0) {};
+        \tikzset{protect=\inbox}
+
+        \begin{scope}[transparency group, opacity=0.5]
+            \fill[color=black, opacity=0.3, rounded corners=\cornerradius, blur shadow = {shadow xshift=.25ex, shadow yshift=-.25ex}] 
+                (-0.5\boxwidth + \shadowshift, 0.5*\boxheight - \shadowshift) rectangle 
+                (0.5\boxwidth + \shadowshift, -0.5*\boxheight - \shadowshift);
+        \end{scope}
+    \end{tikzpicture}
+}
+
 \newcommand\maketoc{%
     \AtBeginSection[]{%
         \defaultbackground%
         \begin{frame}[plain]%
-             \vfill%
-             \centering%
-             \begin{tikzpicture}
-                \def\boxwidth{\linewidth}
-                \def\boxheight{1.25cm}
-                \def\cornerradius{6pt}
-                \def\shadowshift{0.8ex}
-                
-                \node[fill=header,
-                      fill opacity=0.5,
-                      rounded corners=6pt,
-                      minimum width=\linewidth, minimum height=1.25cm,
-                      text=white,
-                      text opacity=1,
-                      align=center] (mainbox) at (0, 0)
-                {\textbf{\usebeamerfont{title}\insertsectionhead}};
-
-                \path (mainbox) node[rectangle, minimum width=\boxwidth, rounded corners=\cornerradius, minimum height=\boxheight, save path=\inbox] at (0, 0) {};
-                \tikzset{protect=\inbox}
-
-                \fill[black, opacity=0.3, rounded corners=\cornerradius] 
-                    (-0.5\boxwidth + \shadowshift, 0.5*\boxheight - \shadowshift) rectangle 
-                    (0.5\boxwidth + \shadowshift, -0.5*\boxheight - \shadowshift);
-            \end{tikzpicture}
-             \tableofcontents[currentsection, hideothersubsections]%
-             \vfill%
+            \vfill%
+            \centering%
+            \maketoctitleheader%
+            \vfill%
+            \tableofcontents[currentsection, hideothersubsections]%
+            \vfill%
       \end{frame}%
     }%
 
     \AtBeginSubsection[]{%
         \defaultbackground%
         \begin{frame}[plain]%
-            \vspace{12pt}%
+            \vfill%
             \centering%
-            \begin{tikzpicture}
-                \def\boxwidth{\linewidth}
-                \def\boxheight{1.25cm}
-                \def\cornerradius{6pt}
-                \def\shadowshift{0.8ex}
-                
-                \node[fill=header,
-                      fill opacity=0.45,
-                      rounded corners=6pt,
-                      minimum width=\linewidth, minimum height=1.25cm,
-                      text=white,
-                      text opacity=1,
-                      align=center] (mainbox) at (0, 0)
-                {\textbf{\usebeamerfont{title}\insertsectionhead}};
-
-                \path (mainbox) node[rectangle, minimum width=\boxwidth, rounded corners=\cornerradius, minimum height=\boxheight, save path=\inbox] at (0, 0) {};
-                \tikzset{protect=\inbox}
-
-                \begin{scope}[transparency group, opacity=0.5]
-                \fill[color=black, opacity=0.3, rounded corners=\cornerradius, blur shadow = {shadow xshift=.25ex, shadow yshift=-.25ex}] 
-                    (-0.5\boxwidth + \shadowshift, 0.5*\boxheight - \shadowshift) rectangle 
-                    (0.5\boxwidth + \shadowshift, -0.5*\boxheight - \shadowshift);
-                \end{scope}
-            \end{tikzpicture}
+            \maketoctitleheader%
             \vfill%
             \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
             \vfill%
