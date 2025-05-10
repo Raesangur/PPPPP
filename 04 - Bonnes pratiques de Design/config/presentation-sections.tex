@@ -54,12 +54,12 @@
     }
 
     \begin{multicols}{2}
-        \begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true, wd=0.5\textwidth]{title}
+        \begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true, wd=0.5\textwidth, bgopacity=0.85]{title}
             \usebeamerfont{title}
-            \inserttitle\\
+            \textbf{\inserttitle}\\
             {
                 \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
-                \insertsubtitle\\
+                \textbf{\insertsubtitle}\\
             }
             {
                 \vspace{24pt}
@@ -77,7 +77,7 @@
 \newcommand\thankyouframe{
     \begin{frame}
     \begin{multicols}{2}
-        \begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true, wd=0.5\textwidth]{title}
+        \begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true, wd=0.5\textwidth, bgopacity=0.85]{title}
             \usebeamerfont{title}Merci!\\
         \end{beamercolorbox}%
     \vfill\null

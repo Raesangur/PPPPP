@@ -55,9 +55,22 @@
 \newcommand{\xmark}{\ding{55}} % ✗
 
 
-% ------ Tikz ------
-\usetikzlibrary{arrows, shapes, calc, positioning}
+% =============== TiKz & PGF ============
+\usetikzlibrary{arrows, shapes, calc, positioning, shadings}
 %\usetikzlibrary{external}
 %\usepgfplotslibrary{external}
 %\tikzexternalize
 \pgfplotsset{compat=1.18}
+
+% https://tex.stackexchange.com/a/539963/324686
+% For title box shadow clippings
+\makeatletter
+\tikzset{
+    reuse path/.code={\pgfsyssoftpath@setcurrentpath{#1}}
+}
+\makeatother
+\tikzset{even odd clip/.code={\pgfseteorule},
+    protect/.code={
+        \clip[overlay,even odd clip,reuse path=#1]
+        (-5383.99999pt,-5383.99999pt) rectangle (5383.99999pt,5383.99999pt);
+}}
