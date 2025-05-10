@@ -20,38 +20,105 @@
 \setbeamertemplate{itemize item}{\large$\bullet$}
 \setbeamertemplate{itemize subitem}{\small$\bullet$}
 \setbeamertemplate{itemize subsubitem}{\tiny$\bullet$}
+
+\makeatletter
+\setbeamertemplate{section in toc}{%
+    \begin{raggedright}%
+      \leavevmode%
+      \hspace{1em}%
+      \Large{$\bullet$}%
+      \hspace{0.5em}%
+      \large{\inserttocsection}\par%
+    \end{raggedright}%
+}
+\makeatother
+\makeatletter
+\setbeamertemplate{subsection in toc}{%
+    \begin{raggedright}%
+      \leavevmode%
+      \hspace{3em}%
+      \large{$\bullet$}%
+      \hspace{0.5em}%
+      \normalsize{\inserttocsubsection}\par%
+    \end{raggedright}%
+}
+\makeatother
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip1em}{}{}
+\makeatother
+
+
 \usebeamertemplate{mytheme}
 
 
 % -------------- TABLE OF CONTENT --------------
+
 \newcommand\maketoc{%
-    \defaultbackground
     \AtBeginSection[]{%
+        \defaultbackground%
         \begin{frame}[plain]%
              \vfill%
              \centering%
-             \begin{beamercolorbox}
-             [sep=6pt, center, shadow=true, rounded=true]{title}%
-                 \usebeamerfont{title}%
-                 \insertsectionhead\\
-             \end{beamercolorbox}%
-             \tableofcontents%
-                [currentsection, hideothersubsections]%
+             \begin{tikzpicture}
+                \def\boxwidth{\linewidth}
+                \def\boxheight{1.25cm}
+                \def\cornerradius{6pt}
+                \def\shadowshift{0.8ex}
+                
+                \node[fill=header,
+                      fill opacity=0.5,
+                      rounded corners=6pt,
+                      minimum width=\linewidth, minimum height=1.25cm,
+                      text=white,
+                      text opacity=1,
+                      align=center] (mainbox) at (0, 0)
+                {\textbf{\usebeamerfont{title}\insertsectionhead}};
+
+                \path (mainbox) node[rectangle, minimum width=\boxwidth, rounded corners=\cornerradius, minimum height=\boxheight, save path=\inbox] at (0, 0) {};
+                \tikzset{protect=\inbox}
+
+                \fill[black, opacity=0.3, rounded corners=\cornerradius] 
+                    (-0.5\boxwidth + \shadowshift, 0.5*\boxheight - \shadowshift) rectangle 
+                    (0.5\boxwidth + \shadowshift, -0.5*\boxheight - \shadowshift);
+            \end{tikzpicture}
+             \tableofcontents[currentsection, hideothersubsections]%
              \vfill%
       \end{frame}%
     }%
 
-    \AtBeginSubsection[]{
-        \begin{frame}[plain]
-             \vfill
-             \centering
-             \begin{beamercolorbox}[sep=6pt,center,shadow=true,rounded=true]{title}
-                 \usebeamerfont{title}\insertsectionhead\par%
-             \end{beamercolorbox}
-             \tableofcontents[currentsection,currentsubsection,subsectionstyle=show/shaded/hide]
-             \vfill
-        \end{frame}
-    }
+    \AtBeginSubsection[]{%
+        \defaultbackground%
+        \begin{frame}[plain]%
+            \vspace{12pt}%
+            \centering%
+            \begin{tikzpicture}
+                \def\boxwidth{\linewidth}
+                \def\boxheight{1.25cm}
+                \def\cornerradius{6pt}
+                \def\shadowshift{0.8ex}
+                
+                \node[fill=header,
+                      fill opacity=0.45,
+                      rounded corners=6pt,
+                      minimum width=\linewidth, minimum height=1.25cm,
+                      text=white,
+                      text opacity=1,
+                      align=center] (mainbox) at (0, 0)
+                {\textbf{\usebeamerfont{title}\insertsectionhead}};
+
+                \path (mainbox) node[rectangle, minimum width=\boxwidth, rounded corners=\cornerradius, minimum height=\boxheight, save path=\inbox] at (0, 0) {};
+                \tikzset{protect=\inbox}
+
+                \fill[black, opacity=0.3, rounded corners=\cornerradius] 
+                    (-0.5\boxwidth + \shadowshift, 0.5*\boxheight - \shadowshift) rectangle 
+                    (0.5\boxwidth + \shadowshift, -0.5*\boxheight - \shadowshift);
+            \end{tikzpicture}
+            \vfill%
+            \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
+            \vfill%
+        \end{frame}%
+    }%
 }%
 
 % -------------- HEADER AND FOOTER --------------
@@ -63,7 +130,8 @@
     \vspace{-0.55cm}%
     \hfill%
     \includegraphics[height=0.635cm]{pictures/logo/c3i.png}%
-    \includegraphics[height=0.635cm]{pictures/logo/m1_alpha.pdf}\\
+    \hspace{0.25cm}%
+    \includegraphics[height=0.635cm]{pictures/logo/m1_alpha.pdf}\par
     \vspace{-0.3cm}%
     \textcolor{UDSgreenSolidarite}{%
         \noindent\rule{\textwidth}{1pt}%

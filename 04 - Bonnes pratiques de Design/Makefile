@@ -55,6 +55,8 @@ rebuild: clean ready-rebuild
 format: ready-format
 	pdftex -ini -jobname="${project}" "&pdflatex" ${project}.tex
 
+simple: ready-rebuild
+	pdflatex ${flags} ${project}.tex
 
 clean:
 	$(RM) $(call FixPath, *.aux)
