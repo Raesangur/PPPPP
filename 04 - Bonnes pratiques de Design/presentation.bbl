@@ -19,57 +19,21 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{rossignol-2020-thesis}{thesis}{}{}
-      \name{author}{1}{}{%
-        {{hash=388dc163d35b2384d1898b79f90f92f1}{%
-           family={Rossignol},
-           familyi={R\bibinitperiod},
-           given={Tommy},
-           giveni={T\bibinitperiod}}}%
+    \entry{kicad-symbol}{misc}{}{}
+      \list{publisher}{1}{%
+        {KiCad}%
       }
-      \list{institution}{1}{%
-        {Université de Sherbrooke}%
-      }
-      \list{location}{1}{%
-        {Sherbrooke}%
-      }
-      \strng{namehash}{388dc163d35b2384d1898b79f90f92f1}
-      \strng{fullhash}{388dc163d35b2384d1898b79f90f92f1}
-      \strng{fullhashraw}{388dc163d35b2384d1898b79f90f92f1}
-      \strng{bibnamehash}{388dc163d35b2384d1898b79f90f92f1}
-      \strng{authorbibnamehash}{388dc163d35b2384d1898b79f90f92f1}
-      \strng{authornamehash}{388dc163d35b2384d1898b79f90f92f1}
-      \strng{authorfullhash}{388dc163d35b2384d1898b79f90f92f1}
-      \strng{authorfullhashraw}{388dc163d35b2384d1898b79f90f92f1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{08}
-      \field{title}{Conception d’un circuit de lecture d’une matrice de photodiodes à avalanche monophotonique pour les détecteurs de physique des particules dans les gaz nobles liquéfiés}
-      \field{type}{Mémoire de maîtrise}
-      \field{year}{2020}
-      \verb{urlraw}
-      \verb http://hdl.handle.net/11143/17286
-      \endverb
-      \verb{url}
-      \verb http://hdl.handle.net/11143/17286
-      \endverb
-    \endentry
-    \entry{pareto}{misc}{}{}
-      \list{publisher}{1}{%
-        {Interaction Design Foundation}%
-      }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{journaltitle}{The Interaction Design Foundation}
       \field{month}{3}
+      \field{title}{Symbols and Symbol Libraries}
       \field{year}{2025}
       \verb{urlraw}
-      \verb https://www.interaction-design.org/literature/topics/pareto-principle
+      \verb https://docs.kicad.org/8.0/fr/eeschema/eeschema_symbols_and_libraries.html
       \endverb
       \verb{url}
-      \verb https://www.interaction-design.org/literature/topics/pareto-principle
+      \verb https://docs.kicad.org/8.0/fr/eeschema/eeschema_symbols_and_libraries.html
       \endverb
     \endentry
   \enddatalist
