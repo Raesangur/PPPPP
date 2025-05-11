@@ -56,6 +56,22 @@
       \verb http://hdl.handle.net/11143/17286
       \endverb
     \endentry
+    \entry{pareto}{misc}{}{}
+      \list{publisher}{1}{%
+        {Interaction Design Foundation}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{journaltitle}{The Interaction Design Foundation}
+      \field{month}{3}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.interaction-design.org/literature/topics/pareto-principle
+      \endverb
+      \verb{url}
+      \verb https://www.interaction-design.org/literature/topics/pareto-principle
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

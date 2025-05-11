@@ -1,0 +1,49 @@
+%!TEX root = ./presentation.tex 
+\scrollmode
+
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+
+
+% -------------- COMPILE VARIABLES --------------
+\newif\ifINTRO
+
+\INTROfalse      % Build only intro slide
+
+
+% ------------------ VARIABLES ------------------
+\newcommand{\userName}{Pascal-Emmanuel Lachance}
+\newcommand{\projectName}{PPPPP04}
+\newcommand{\institution}{C3i}
+\newcommand{\repo}{PPPPP}
+\newcommand{\user}{raesangur}
+\newcommand{\docName}{Presentation}
+
+\author{\userName}
+\title{\projectName}
+\subtitle{Bonnes pratiques de design}
+\institute{Compétitions de Conception de Circuits Imprimés}
+\date{\today}
+
+
+% ----------- CONFIGURATION INCLUDES ------------
+\input{config/presentation-packages}
+\input{config/presentation-sections}
+\input{config/presentation-objects}
+\input{config/presentation-format}
+\input{config/presentation-code}
+%\input{config/presentation-bibliography}
+\input{config/presentation-beamer}
+
+
+
+% --------------- BUILD SETTINGS ----------------
+\pdfcompresslevel=1
+\pdfobjcompresslevel=0
+
+% \tikzexternalize
+
+% \dump
+\csname endofdump\endcsname
+\endofdump
+%mylatex
