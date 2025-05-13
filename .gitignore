@@ -2,17 +2,25 @@
 .vscode/*
 
 *.aux
+*.auxlock
+*.bak
+*.bbl
 *.bcf
+*.blg
 *.fdb_latexmk
 *.fls
-*.log
-*.nav
 *.hd
+*.lof
+*.log
+*.lol
+*.lot
+*.md5
+*.nav
 *.out
+*.ptc
 *.run.xml
 *.snm
 *.synctex.gz
-*.tex
 *.toc
 
 Thumbs.db
