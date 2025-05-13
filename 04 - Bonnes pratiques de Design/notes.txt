@@ -1,6 +1,6 @@
-
+Stencil dans le BOM
+Laisser l'espace pour des passives dans le symbole
 
 Collaborateur: Julien Guay & Maxime Grenier-Castillo
 
-Passer au travers de la checklist de EMI Robert Yu
 Checklist du GRAMS + A
