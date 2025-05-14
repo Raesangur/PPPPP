@@ -1,0 +1,119 @@
+%!TEX root = ../presentation.tex
+
+
+
+% Insert a figure with optional scaling and caption.
+% 1: Width as a fraction of \textwidth   (default: 1)
+% 2: Height as a fraction of \textheight (default: 0.8)
+% 3: Caption text (optional)
+% 4: Filename of the image (relative to 'pictures/' directory, no extension needed)
+%
+% Example:
+% \makefigure[0.9][0.5][A sample image]{example-image}
+\NewDocumentCommand{\makefigure}{O{1} O{0.8} o m}{%
+    \begin{figure}%
+        \centering%
+        \includegraphics%
+            [width=#1\textwidth, height=#2\textheight, keepaspectratio, page=1]%
+            {pictures/#4}%
+        \IfValueTF{#3}{%
+            \caption*{#3}%
+        }{}%
+    \end{figure}%
+}
+
+
+% Create a TikZ circuit figure with adjustable size.
+% 1: Width as a fraction of \textwidth   (default: 1)
+% 2: Height as a fraction of \textheight (default: 0.8)
+%
+% Example:
+% \begin{maketikzfigure}[0.7][0.5]
+%     \draw (0,0) to[battery] (0,2);
+% \end{maketikzfigure}
+\NewDocumentEnvironment{maketikzfigure}{O{1} O{0.8}}{%
+    \vspace{-16pt}%
+    \begin{center}%
+        \begin{adjustbox}{width=#1\textwidth, height=#2\textheight, keepaspectratio}%
+            \begin{circuitikz}[american voltages]%
+}
+{%
+            \end{circuitikz}%
+        \end{adjustbox}%
+    \end{center}%
+}
+
+
+
+
+% Begin a two-column layout with adjustable left column width.
+% 1: Width of the left column as a fraction of \textwidth (default: 0.5)
+%    The right column will take the remaining space after the left column
+%
+% Example:
+% \begin{twocolumns}[0.6]
+%   \leftcol
+%     Left side content.
+%   \rightcol
+%     Right side content.
+% \end{twocolumns}
+\NewDocumentEnvironment{twocolumns}{O{0.5}}{%  
+  \def\leftcolwidth{#1\textwidth}%
+  \def\rightcolwidth{\dimexpr \textwidth - #1\textwidth\relax}%
+  
+  \begin{columns}%
+}{%
+  \end{column}%
+  \end{columns}%
+}
+
+\NewDocumentCommand{\leftcol}{}{%
+  \begin{column}{\leftcolwidth}%
+}
+
+\NewDocumentCommand{\rightcol}{}{%
+  \end{column}%
+  \begin{column}{\rightcolwidth}%
+}
+
+
+% Color an icon
+% 1: Color name   (optional, default: accent)
+% 2: Icon command (e.g., \faCheck)
+%
+% Example:
+% \icon{\faCheck}
+% \icon[red]{\faTimes}
+\newcommand{\icon}    [2][accent] {\textcolor{#1}{#2}}
+
+% Display an icon at the start of a list item with customizable color and spacing.
+% 1: Color name       (optional, default: accent)
+% 2: Horizontal space (optional, default: -12pt)
+% 3: Icon command     (e.g., \faCheck)
+%
+% Example:
+% \item[] \itemicon           {\faCheck}
+% \item[] \itemicon[gray]     {\faCircle}
+% \item[] \itemicon[red][-6pt]{\faTimes}
+\NewDocumentCommand{\itemicon}{O{accent} O{-12pt} m}{\hspace{#2}\icon[#1]{#3}}
+
+
+
+% Create a two-column list using a tabular environment.
+% 1: Font size or formatting command (optional, default: \normalsize)
+% 2: Row spacing via \arraystretch   (optional, default: 1.25)
+% 3: Tabular column format           (optional, default: c l)
+%
+% Example:
+% \begin{makelist}[\small][1.5]
+%   \item{\faCheck} & Item one \\
+%   \item{\faTimes} & Item two \\
+% \end{makelist}
+\NewDocumentEnvironment{makelist}{O{\normalsize} O{1.25} O{c l}}{%
+    #1%
+    \renewcommand{\arraystretch}{#2}%
+    \begin{tabular}{#3}%
+}{%
+    \end{tabular}%
+    \renewcommand{\arraystretch}{1}%
+}

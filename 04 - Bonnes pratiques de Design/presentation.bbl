@@ -19,12 +19,29 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{pareto}{misc}{}{}
+      \list{publisher}{1}{%
+        {Interaction Design Foundation}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{The Pareto Principle}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.interaction-design.org/literature/topics/pareto-principle
+      \endverb
+      \verb{url}
+      \verb https://www.interaction-design.org/literature/topics/pareto-principle
+      \endverb
+    \endentry
     \entry{kicad-symbol}{misc}{}{}
       \list{publisher}{1}{%
         {KiCad}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{month}{3}
       \field{title}{Symbols and Symbol Libraries}

@@ -1,17 +1,18 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'presentation.blg'
-[43] biber:340> INFO - === Sun May 11, 2025, 13:01:07
-[53] Biber.pm:420> INFO - Reading 'presentation.bcf'
-[89] Biber.pm:994> INFO - Found 1 citekeys in bib section 0
-[98] Biber.pm:4463> INFO - Processing section 0
-[104] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[105] bibtex.pm:1713> INFO - LaTeX decoding ...
-[106] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[125] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[125] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[125] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[125] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[128] bbl.pm:676> INFO - Writing 'presentation.bbl' with encoding 'UTF-8'
-[128] bbl.pm:779> INFO - Output to presentation.bbl
-[128] Biber.pm:131> WARN - legacy month field 'Mar' in entry 'kicad-symbol' is not an integer - this will probably not sort properly.
-[128] Biber.pm:133> INFO - WARNINGS: 1
+[43] biber:340> INFO - === Sun May 11, 2025, 14:21:55
+[51] Biber.pm:420> INFO - Reading 'presentation.bcf'
+[87] Biber.pm:994> INFO - Found 2 citekeys in bib section 0
+[96] Biber.pm:4463> INFO - Processing section 0
+[102] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[102] bibtex.pm:1713> INFO - LaTeX decoding ...
+[103] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[119] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[119] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[119] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[120] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[123] bbl.pm:676> INFO - Writing 'presentation.bbl' with encoding 'UTF-8'
+[124] bbl.pm:779> INFO - Output to presentation.bbl
+[124] Biber.pm:131> WARN - legacy month field 'Mar' in entry 'pareto' is not an integer - this will probably not sort properly.
+[124] Biber.pm:131> WARN - legacy month field 'Mar' in entry 'kicad-symbol' is not an integer - this will probably not sort properly.
+[124] Biber.pm:133> INFO - WARNINGS: 2

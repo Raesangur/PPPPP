@@ -1,0 +1,86 @@
+%!TEX root = ../main.tex 
+
+\section{Bonnes pratiques de schéma}
+
+\subsection{Clareté}
+% Éviter tous les croisements, pas de GND dans les airs, aligner
+% Utiliser la grille
+% Utiliser des net names
+% Quand utiliser des net locaux, globaux, power
+% Inputs à gauche, output à droite
+% Garder les sections modulaires, bien indiquer les sections, prend de l'espace
+% Tout devrait être dans le schematics
+%  - Mettre plus que pas assez
+%  - Notes pour le programmeur, pour le layouteur, pour l'assembleur
+%  - Tu ne devrais pas avoir à réouvrir une datasheet
+% Mettre des couleurs sur les nets
+% Utiliser des net classes
+% Éviter les longues traces qui passent au travers du schéma
+% Regrouper des nets en bus
+
+\subsection{Notes}
+% Mettre un schéma-bloc et un arbre d'alimentation
+%     Draw.io
+%     Travailler en hiérarchique
+% Calculer le power pour chaque bloc et page
+% Mettre des notes avec tous les calculs
+% Mettre des notes avec pages de datasheets
+% Mettre les courbes d'efficacité etc.
+% Cartouche
+% Indiquer les tailles et tolérances de composantes sur le schematic
+% Notes pour les pins
+% - Qu'est-ce qu'elles font, comment configurer
+% Essayer le plus possible de garder tout le texte horizontal
+
+\subsection{Testpoints et Debugging}
+% Valider les boot sequences & power-sequence
+% Se servir des pins flottantes
+%  - Ajouter IO, LED, Testpoint, UART
+% Mettre des systèmes de mesure de courant
+% Met toujours plus de testpoints qu'on pense
+%  - Différents types de testpoints
+
+\subsection{Outils}
+% Les 0R sont tes amis
+%  - Peut remplacer une ferrite ou une shunt
+%  - Pins EN et CFG
+%  - Solder Bridge Pads
+% Pull-ups / Pull-downs pour des pins de configuration
+% Utiliser plusieurs pages / Faire un schéma hiérarchique
+% Utiliser les Net Classes
+
+\subsection{Autre}
+% Toujours mettre des protections
+%  - ESD
+%  - Power
+% Une connection I2C inter-board; mettre des pull-ups sur les deux boards
+% Export ton schematic en PDF pour l'ouvrir sans logiciel
+% 0.1µF
+
+\subsection{Design Review}
+% Faire réviser par quelqu'un d'autre après
+% Passer le DRC / ERC
+% Pour chaque composante:
+%  - Valider le footprint
+%  - Valider le symbole
+%    - Numéros de pins selon la pièce choisie dans le BOM
+%  - Valider chacune des connections en retournant vérifier dans la datasheet
+%    - Est-ce que je suis au bon niveau de tension?
+%    - Est-ce que j'ai besoin de pull-ups / pull-downs / autres passives
+%  - Valider le découplage selon les fréquences
+%  - Est-ce que le schéma est facilement lisible?
+% Faire une review du BOM
+%  - Est-ce que j'ai des erreurs de copier-coller?
+%  - Est-ce que j'ai le bon modèle de pièce dans le BOM?
+%    - Version SOIC vs version QFN
+%    - Version pour un autre niveau de tension
+%    - Version qui vient dans un paquet de 1000 au minimum
+%  - Est-ce que j'ai toutes mes pièces mécaniques dans le BOM (standoffs, vis, washer, nut, heatsinks)
+% Valider le debugging
+%  - Est-ce que j'ai assez de testpoints (+ de GND!)
+%  - Est-ce que j'ai des ports de debug sur mon MCU/FPGA
+%  - Est-ce que j'ai des 0R pour ma configuration?
+% Revalider tous les calculs
+%  - Trucs changent pendant le design et ne sont pas toujours mis à jour
+%  - Diviseurs de tension
+%  - Dimentionnement des pièces

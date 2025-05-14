@@ -1,0 +1,484 @@
+%!TEX root = ../presentation.tex 
+
+
+\section{Bonnes pratiques des composantes \& BOM}
+
+\subsection{Footprints}
+% Toujours valider les footprints
+% Faire tes footprints toi-même
+% Faire très attention aux transistors!
+% Marqueurs de pin 1 (plusieurs marqueurs!)
+% Modèle 3D pour toutes les pièces
+% S'assurer de respecter les couches mécaniques
+
+\subsection{Symboles}
+
+\begin{frame}{Fabrication du symbole}
+    \begin{twocolumns}[0.6]
+        \leftcol
+        \begin{itemize}
+            \item Un des éléments de clareté les plus importants
+            \item Affecte aussi le BOM
+            \bigskip
+            \item La pièce devrait être représentative
+            \item La pièce devrait être facile à lire
+            \item La pièce devrait contenir toutes les informations pour le BOM
+            \bigskip
+            \item Faire la pièce soi-même
+            \begin{itemize}
+                \item Suivre un standard
+                \item Modifier plus tard pour fitter le schéma
+                \item Customize le BOM
+                \item Valider la datasheet
+                \item Mettre les types électriques
+            \end{itemize}
+        \end{itemize}
+
+        \rightcol
+        \makefigure[1][0.8][Source: \cite{kicad-symbol}]{kicad-pin-electrical-type}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Pinout du symbole}
+    \begin{itemize}
+        \item Garder les inputs à gauche et outputs à droite
+        \item Ne pas numéroter le symbole comme le footprint
+        \item Utiliser des symboles représentatifs lorsque possible
+        \item Tu ne devrais pas avoir à aller dans la datasheet pour comprendre la pièce
+    \end{itemize}
+    \vfill
+    \only<2-> {
+    \begin{columns}
+        \only<2> {
+        \begin{column}{\textwidth}
+        }
+        \only<3> {
+        \begin{column}{0.5\textwidth}
+        }
+        \only<4-> {
+        \begin{column}{0.3\textwidth}
+        }
+            \begin{maketikzfigure}[1][0.4]
+                \only<1-4>{
+                \draw (0, 0) node
+                   [dipchip,
+                    num pins = 8,
+                    %hide numbers,
+                    external pins width=0.3,
+                    external pad fraction=4,
+                    anchor=bpin 1,
+                    thick](op){\scriptsize OPA1632};
+                }
+                \only<5->{
+                \draw (0, 0) node
+                   [dipchip,
+                    num pins = 8,
+                    %hide numbers,
+                    external pins width=0.3,
+                    external pad fraction=4,
+                    anchor=bpin 1,
+                    thick, color=red](op){\scriptsize OPA1632};
+                }
+                \node [left,  font=\tiny] at (op.pin 1) {$V_{IN_-}$};
+                \node [left,  font=\tiny] at (op.pin 2) {$V_{OCM}$};
+                \node [left,  font=\tiny] at (op.pin 3) {$V_+$};
+                \node [left,  font=\tiny] at (op.pin 4) {$V_{OUT_+}$};
+                \node [right, font=\tiny] at (op.pin 5) {$V_{OUT_-}$};
+                \node [right, font=\tiny] at (op.pin 6) {$V_-$};
+                \node [right, font=\tiny] at (op.pin 7) {$EN$};
+                \node [right, font=\tiny] at (op.pin 8) {$V_{IN_+}$};
+            \end{maketikzfigure}
+            \only<5-> {
+                \begin{center}
+                    \textcolor{red}{\textbf{BAD}}
+                \end{center}
+            }
+        \end{column}
+
+        \only<3> {
+        \begin{column}{0.5\textwidth}
+        }
+        \only<4-> {
+        \begin{column}{0.3\textwidth}
+        }
+        \only<3-> {
+            \begin{maketikzfigure}[1][0.4]
+                \only<1-4>{
+                \draw (0, 0) node
+                   [dipchip,
+                    num pins = 8,
+                    hide numbers,
+                    external pins width=0.3,
+                    external pad fraction=4,
+                    anchor=bpin 1,
+                    thick](op){\scriptsize OPA1632};
+                }
+                \only<5->{
+                \draw (0, 0) node
+                   [dipchip,
+                    num pins = 8,
+                    hide numbers,
+                    external pins width=0.3,
+                    external pad fraction=4,
+                    anchor=bpin 1,
+                    thick, color=blue](op){\scriptsize OPA1632};
+                }
+                \node [left,  font=\tiny] at (op.pin 1) {$V_{OCM}$};
+                \node [right, font=\tiny] at (op.bpin 1) {$2$};
+                \node [left,  font=\tiny] at (op.pin 2) {$V_{IN_+}$};
+                \node [right, font=\tiny] at (op.bpin 2) {$8$};
+                \node [left,  font=\tiny] at (op.pin 3) {$V_{IN_-}$};
+                \node [right, font=\tiny] at (op.bpin 3) {$1$};
+                \node [left,  font=\tiny] at (op.pin 4) {$EN$};
+                \node [right, font=\tiny] at (op.bpin 4) {$7$};
+                \node [right, font=\tiny] at (op.pin 5) {$V_-$};
+                \node [left,  font=\tiny] at (op.bpin 5) {$6$};
+                \node [right, font=\tiny] at (op.pin 6) {$V_{OUT_-}$};
+                \node [left,  font=\tiny] at (op.bpin 6) {$5$};
+                \node [right, font=\tiny] at (op.pin 7) {$V_{OUT_+}$};
+                \node [left,  font=\tiny] at (op.bpin 7) {$4$};
+                \node [right, font=\tiny] at (op.pin 8) {$V_+$};
+                \node [left,  font=\tiny] at (op.bpin 8) {$3$};
+            \end{maketikzfigure}
+            \only<5-> {
+                \begin{center}
+                    \textcolor{blue}{\textbf{GOOD}}
+                \end{center}
+            }
+        \end{column}
+        }
+
+        \only<4-> {
+        \begin{column}{0.4\textwidth}
+            \begin{maketikzfigure}[1][0.4]
+                \only<1-4>{
+                \draw (0, 0) node[fd op amp,
+                                  thick, font=\normalsize,
+                                  xscale=2, yscale=2,
+                                  component text=left](op){\tiny OPA1632};
+                }
+                \only<5->{
+                \draw (0, 0) node[fd op amp,
+                                  thick, font=\normalsize,
+                                  xscale=2, yscale=2,
+                                  component text=left, color=accent](op){\tiny OPA1632};
+                }
+                \node[left,  font=\normalsize, label =15:{\scriptsize 8}] at (op.+)       {$V_{IN_+}$};
+                \node[left,  font=\normalsize, label =15:{\scriptsize 1}] at (op.-)       {$V_{IN_-}$};
+                \node[right, font=\normalsize, label=195:{\scriptsize 5}] at (op.out -)   {$V_{OUT_-}$};
+                \node[right, font=\normalsize, label=165:{\scriptsize 4}] at (op.out +)   {$V_{OUT_+}$};
+                \node[left,  font=\normalsize, label =15:{\scriptsize 2}] at (-2.4, 0)    {$V_{OCM}$};
+                \node[left,  font=\normalsize, label =15:{\scriptsize 2}] at (-2.4, -2.4) {$EN$};
+
+                \only<1-4>{
+                    \draw[thick]
+                    (-2.4, 0) to [short] (op.leftedge)
+                    (op.up)   to (op.up   |- 0, 2)  node[vcc, font=\normalsize, label=285:{\scriptsize 3}] {$V_+$}
+                    (op.down) to (op.down |- 0, -2) node[vee, font=\normalsize, label=105:{\scriptsize 6}] {$V_-$}
+                    (-2.4, -2.4) to [short] (-1, -2.4) to [short] (-1, -1.6)
+                    ;
+                }
+                \only<5->{
+                    \draw[thick, color=accent]
+                    (-2.4, 0) to [short] (op.leftedge)
+                    (op.up)   to (op.up   |- 0, 2)  node[vcc, font=\normalsize, label=285:{\scriptsize 3}] {$V_+$}
+                    (op.down) to (op.down |- 0, -2) node[vee, font=\normalsize, label=105:{\scriptsize 6}] {$V_-$}
+                    (-2.4, -2.4) to [short] (-1, -2.4) to [short] (-1, -1.6)
+                    ;
+                }
+            \end{maketikzfigure}
+            \only<5-> {
+                \begin{center}
+                    \textcolor{accent}{\textbf{BEST}}
+                \end{center}
+            }
+        \end{column}
+        }
+    \end{columns}
+    }
+\end{frame}
+
+\begin{frame}{Symboles représentatifs}
+    \begin{columns}
+        \only<1>{
+        \begin{column}{\textwidth}
+        }
+        \only<2->{
+        \begin{column}{0.5\textwidth}
+        }
+
+        \only<1-2>{
+            \begin{maketikzfigure}[1][0.8]
+                \draw
+                (0, 0) to [short, l={$ENABLE$}] (2, 0) to [R] (4, 0)
+                to [full led, color=accent] (6, 0);
+                \draw
+                (0, -2) to [short, l={$POWER GOOD$}] (2, -2) to [R] (4, -2)
+                to [full led, color=accent] (6, -2);
+                \draw
+                (0, -4) to [short, l={$STATUS$}] (2, -4) to [R] (4, -4)
+                to [full led, color=red] (6, -4);
+                \draw
+                (0, -6) to [short, l={$HEARTBEAT$}] (2, -6) to [R] (4, -6)
+                to [full led, color=orange] (6, -6);
+                \draw
+                (6, 0) to [short] (6, -7) node[ground, xscale=2, yscale=2]{};
+            \end{maketikzfigure}
+        }
+
+
+        \only<3->{
+            \ctikzset{multipoles/dipchip/width=2}
+            \ctikzset{diodes/scale=0.5}
+            \begin{maketikzfigure}[1][0.8]
+                \draw (0, 0) node
+                   [dipchip,
+                    num pins = 12,
+                    hide numbers, no topmark,
+                    external pins width=0.3,
+                    external pad fraction=4,
+                    draw only pins={1, 3-4, 6}](esd){};
+                \node at ($(esd.bpin 1) + (0.825, 0.4)$) {\tiny EPD2E001DRLR};
+
+                \node [right, font=\tiny] at (esd.bpin 1) {$VCC$};
+                \node [left,  font=\tiny] at (esd.pin  1) {$1$};
+                \node [right, font=\tiny] at (esd.bpin 3) {$IO1$};
+                \node [left,  font=\tiny] at (esd.pin  3) {$3$};
+                \node [right, font=\tiny] at (esd.bpin 4) {$IO2$};
+                \node [left,  font=\tiny] at (esd.pin  4) {$5$};
+                \node [right, font=\tiny] at (esd.bpin 6) {$GND$};
+                \node [left,  font=\tiny] at (esd.pin  6) {$4$};
+
+
+                \draw ($(esd.bpin 1) + (0.65, 0)$) to ($(esd.bpin 1) + (2.25, 0)$);
+                \draw ($(esd.bpin 3) + (0.5,  0)$) to ($(esd.bpin 3) + (1, 0)$);
+                \draw ($(esd.bpin 4) + (0.5,  0)$) to ($(esd.bpin 4) + (1.75, 0)$);
+                \draw ($(esd.bpin 6) + (0.65, 0)$) to ($(esd.bpin 6) + (2.25, 0)$);
+
+                \draw ($(esd.bpin 3) + (1, 0)$) to
+                      [full diode] ($(esd.bpin 1) + (1, 0)$);
+                \draw ($(esd.bpin 4) + (1.75, 0)$) to
+                      [short] ($(esd.bpin 3) + (1.75, 0)$) to
+                      [full diode] ($(esd.bpin 1) + (1.75, 0)$);
+
+                \draw ($(esd.bpin 6) + (1, 0)$) to 
+                      [full diode] ($(esd.bpin 4) + (1, 0)$) to
+                      [short] ($(esd.bpin 3) + (1, 0)$);
+                \draw ($(esd.bpin 6) + (1.75, 0)$) to 
+                      [full diode] ($(esd.bpin 4) + (1.75, 0)$);
+
+                \draw ($(esd.bpin 6) + (2.25, 0)$) to
+                      [full ZZener diode] ($(esd.bpin 1) + (2.25, 0)$);
+            \end{maketikzfigure}
+        }
+        \end{column}
+
+        \only<2-3>{
+        \begin{column}{0.5\textwidth}
+            \ctikzset{multipoles/dipchip/width=5}
+            \begin{maketikzfigure}[1][0.8]
+                \draw (0, 0) node
+                   [dipchip,
+                    num pins = 40,
+                    hide numbers, no topmark,
+                    external pins width=0.3,
+                    external pad fraction=4,
+                    draw only pins={1, 2, 4-5, 10, 11, 17, 18, 20, 21-22, 24-25, 27-28, 30-31, 33-34, 36-37, 39-40},
+                    thick](adc){};
+                \node at ($(adc.bpin 1) + (1.65, 0.5)$) {\textbf{ADS62P48IRGCT}};
+
+                \node [right] at (adc.bpin 1) {$DVDD$};
+                \node [left]  at (adc.pin  1) {$1$};
+                \node [right] at (adc.bpin 2) {$AVDD$};
+                \node [left]  at (adc.pin  2) {$16$};
+
+                \node [right] at (adc.bpin 4) {$CLK_+$};
+                \node [left]  at (adc.pin  4) {$25$};
+                \node [right] at (adc.bpin 5) {$CLK_-$};
+                \node [left]  at (adc.pin  5) {$26$};
+
+                \node [right] at (adc.bpin 10) {$IN_+$};
+                \node [left]  at (adc.pin  10) {$19$};
+                \node [right] at (adc.bpin 11) {$IN_-$};
+                \node [left]  at (adc.pin  11) {$20$};
+
+                \node [right] at (adc.bpin 17) {$EN$};
+                \node [left]  at (adc.pin  17) {$12$};
+                \node [right] at (adc.bpin 18) {$RST$};
+                \node [left]  at (adc.pin  18) {$15$};
+                \node [right] at (adc.bpin 20) {$GND$};
+                \node [left]  at (adc.pin  20) {$17$};
+
+                \node [left]  at (adc.bpin 40) {$D0_+$};
+                \node [right] at (adc.pin  40) {$61$};
+                \node [left]  at (adc.bpin 39) {$D0_-$};
+                \node [right] at (adc.pin  39) {$60$};
+                \node [left]  at (adc.bpin 37) {$D1_+$};
+                \node [right] at (adc.pin  37) {$63$};
+                \node [left]  at (adc.bpin 36) {$D1_-$};
+                \node [right] at (adc.pin  36) {$62$};
+                \node [left]  at (adc.bpin 34) {$D2_+$};
+                \node [right] at (adc.pin  34) {$3$};
+                \node [left]  at (adc.bpin 33) {$D2_-$};
+                \node [right] at (adc.pin  33) {$2$};
+                \node [left]  at (adc.bpin 31) {$D3_+$};
+                \node [right] at (adc.pin  31) {$5$};
+                \node [left]  at (adc.bpin 30) {$D3_-$};
+                \node [right] at (adc.pin  30) {$4$};
+                \node [left]  at (adc.bpin 28) {$D4_+$};
+                \node [right] at (adc.pin  28) {$7$};
+                \node [left]  at (adc.bpin 27) {$D4_-$};
+                \node [right] at (adc.pin  27) {$6$};
+                \node [left]  at (adc.bpin 25) {$D5_+$};
+                \node [right] at (adc.pin  25) {$9$};
+                \node [left]  at (adc.bpin 24) {$D5_-$};
+                \node [right] at (adc.pin  24) {$8$};
+                \node [left]  at (adc.bpin 22) {$D6_+$};
+                \node [right] at (adc.pin  22) {$11$};
+                \node [left]  at (adc.bpin 21) {$D6_-$};
+                \node [right] at (adc.pin  21) {$10$};
+
+                % ADC
+                \draw (-2.5, 0) to (-1.5, 1) to (-0.5, 1) to (-0.5, -1) to (-1.5, -1) to (-2.5, 0);
+                \draw (adc.bpin 10 -| -2.75, 0) to (adc.bpin 10 -| -2.225, 0);
+                \draw (adc.bpin 11 -| -2.75, 0) to (adc.bpin 11 -| -2.225, 0);
+                \node at (-1.5, 0) {ADC};
+
+                % DIFFERENTIAL DRIVERS
+                \draw ($(adc.bpin 40) + (-1.75, 0.15)$) to ($(adc.bpin 39) + (-1.75, -0.15)$)
+                to ($(adc.bpin 40) - (adc.bpin 31) + (2.5, 0)$) to ($(adc.bpin 40) + (-1.75, 0.15)$)
+                ($(adc.bpin 40) - (1.485, 0)$) to ($(adc.bpin 40) - (1, 0)$)
+                ($(adc.bpin 39) - (1.485, 0)$) to ($(adc.bpin 39) - (1, 0)$);
+
+                \draw ($(adc.bpin 37) + (-1.75, 0.15)$) to ($(adc.bpin 36) + (-1.75, -0.15)$)
+                to ($(adc.bpin 37) - (adc.bpin 31) + (2.5, 0)$) to ($(adc.bpin 37) + (-1.75, 0.15)$)
+                ($(adc.bpin 37) - (1.485, 0)$) to ($(adc.bpin 37) - (1, 0)$)
+                ($(adc.bpin 36) - (1.485, 0)$) to ($(adc.bpin 36) - (1, 0)$);
+
+                \draw ($(adc.bpin 34) + (-1.75, 0.15)$) to ($(adc.bpin 33) + (-1.75, -0.15)$)
+                to ($(adc.bpin 34) - (adc.bpin 31) + (2.5, 0)$) to ($(adc.bpin 34) + (-1.75, 0.15)$)
+                ($(adc.bpin 34) - (1.485, 0)$) to ($(adc.bpin 34) - (1, 0)$)
+                ($(adc.bpin 33) - (1.485, 0)$) to ($(adc.bpin 33) - (1, 0)$);
+
+                \draw ($(adc.bpin 31) + (-1.75, 0.15)$) to ($(adc.bpin 30) + (-1.75, -0.15)$)
+                to (2.5, 0) to ($(adc.bpin 31) + (-1.75, 0.15)$)
+                ($(adc.bpin 31) - (1.485, 0)$) to ($(adc.bpin 31) - (1, 0)$)
+                ($(adc.bpin 30) - (1.485, 0)$) to ($(adc.bpin 30) - (1, 0)$);
+
+                \draw ($(adc.bpin 28) + (-1.75, 0.15)$) to ($(adc.bpin 27) + (-1.75, -0.15)$)
+                to ($(adc.bpin 28) - (adc.bpin 31) + (2.5, 0)$) to ($(adc.bpin 28) + (-1.75, 0.15)$)
+                ($(adc.bpin 28) - (1.485, 0)$) to ($(adc.bpin 28) - (1, 0)$)
+                ($(adc.bpin 27) - (1.485, 0)$) to ($(adc.bpin 27) - (1, 0)$);
+
+                \draw ($(adc.bpin 25) + (-1.75, 0.15)$) to ($(adc.bpin 24) + (-1.75, -0.15)$)
+                to ($(adc.bpin 25) - (adc.bpin 31) + (2.5, 0)$) to ($(adc.bpin 25) + (-1.75, 0.15)$)
+                ($(adc.bpin 25) - (1.485, 0)$) to ($(adc.bpin 25) - (1, 0)$)
+                ($(adc.bpin 24) - (1.485, 0)$) to ($(adc.bpin 24) - (1, 0)$);
+
+                \draw ($(adc.bpin 22) + (-1.75, 0.15)$) to ($(adc.bpin 21) + (-1.75, -0.15)$)
+                to ($(adc.bpin 22) - (adc.bpin 31) + (2.5, 0)$) to ($(adc.bpin 22) + (-1.75, 0.15)$)
+                ($(adc.bpin 22) - (1.485, 0)$) to ($(adc.bpin 22) - (1, 0)$)
+                ($(adc.bpin 21) - (1.485, 0)$) to ($(adc.bpin 21) - (1, 0)$);
+
+                % BUS
+                \draw[very thick]
+                (-0.5, 0) to (1.75, 0)
+                (1, 0) to ($(adc.bpin 40) - (adc.bpin 31) + (1, 0)$)
+                (1, 0) to ($(adc.bpin 22) - (adc.bpin 31) + (1, 0)$)
+                ($(adc.bpin 40) - (adc.bpin 31) + (1, 0)$) to ($(adc.bpin 40) - (adc.bpin 31) + (1.75, 0)$)
+                ($(adc.bpin 37) - (adc.bpin 31) + (1, 0)$) to ($(adc.bpin 37) - (adc.bpin 31) + (1.75, 0)$)
+                ($(adc.bpin 34) - (adc.bpin 31) + (1, 0)$) to ($(adc.bpin 34) - (adc.bpin 31) + (1.75, 0)$)
+                ($(adc.bpin 28) - (adc.bpin 31) + (1, 0)$) to ($(adc.bpin 28) - (adc.bpin 31) + (1.75, 0)$)
+                ($(adc.bpin 25) - (adc.bpin 31) + (1, 0)$) to ($(adc.bpin 25) - (adc.bpin 31) + (1.75, 0)$)
+                ($(adc.bpin 22) - (adc.bpin 31) + (1, 0)$) to ($(adc.bpin 22) - (adc.bpin 31) + (1.75, 0)$);
+            \end{maketikzfigure}
+        \end{column}
+        }
+        \only<4->{
+            \begin{column}{0.5\textwidth}
+                \ctikzset{multipoles/dipchip/width=2}
+                \begin{maketikzfigure}[1][0.8]
+                    \draw (0, 0) node
+                       [dipchip,
+                        num pins = 12,
+                        hide numbers, no topmark,
+                        external pins width=0.3,
+                        external pad fraction=4,
+                        draw only pins={1, 3, 5-6, 7-8, 10, 12}](reg){};
+                \node at ($(reg.bpin 1) + (0.825, 0.4)$) {\tiny LMZ23605TZE};
+
+                \node [right, font=\tiny] at (reg.bpin 1) {$V_{IN}$};
+                \node [left,  font=\tiny] at (reg.pin  1) {$1$};
+                \node [right, font=\tiny] at (reg.bpin 3) {$EN$};
+                \node [left,  font=\tiny] at (reg.pin  3) {$3$};
+                \node [right, font=\tiny] at (reg.bpin 5) {$SYNC$};
+                \node [left,  font=\tiny] at (reg.pin  5) {$2$};
+                \node [right, font=\tiny] at (reg.bpin 6) {$SS$};
+                \node [left,  font=\tiny] at (reg.pin  6) {$6$};
+
+                \node [left,  font=\tiny] at (reg.bpin 7)  {$PGND$};
+                \node [right, font=\tiny] at (reg.pin  7)  {$8$};
+                \node [left,  font=\tiny] at (reg.bpin 8)  {$AGND$};
+                \node [right, font=\tiny] at (reg.pin  8)  {$4$};
+                \node [left,  font=\tiny] at (reg.bpin 10) {$FB$};
+                \node [right, font=\tiny] at (reg.pin  10) {$5$};
+                \node [left,  font=\tiny] at (reg.bpin 12) {$V_{OUT}$};
+                \node [right, font=\tiny] at (reg.pin  12) {$7$};
+
+                \end{maketikzfigure}
+            \end{column}
+        }
+    \end{columns}
+\end{frame}
+
+% TODO
+% IO EXPANDER OUTPUT 
+
+% Mettre des informations dans la pièce
+%  - Manufacturier et Part#
+%  - Lien vers la datasheet
+%  - Plages d'opération
+%  - Fournisseurs
+
+\begin{frame}{Informations du BOM}
+    \begin{twocolumns}
+        \leftcol
+
+        \rightcol
+    \end{twocolumns}
+\end{frame}
+
+\subsection{Datasheets}
+% Lis la datasheet au complet!
+% Lire les schematics des evaluation boards
+% Lire les application notes faites par les fabricants de pièces
+%  - Application notes sur le board design
+% Toujours valider les courbes de power
+%  - Combien de courant est-ce que la chip va prendre?
+% Manufacturier donne parfois des configurateurs
+% Valider les plages de température, de tension
+%  - Comment le chip va chauffer dans ton utilisation?
+%  - Est-ce que tu as besoin d'un heatsink ou de considérations thermiques?
+
+\subsection{Recherche de pièces}
+% Comment browser Digikey, Mouser, LCSC
+%  - Marketplace components sur Digikey
+% Not recommended for new designs
+%  - Aller sur le site du manufacturier
+% Liste de fournisseurs
+%  - Carte du monde
+%  - Attention aux tarrifs
+%  - Attention aux fausses pièces
+
+\subsection{BOM}
+% Page de pièces de références (à copier-coller)
+% Faire valider le BOM par quelqu'un d'autre
+% Consolidation du BOM
+% Un assemblage va coûter autant que les pièces
+% Prix de vente = Fab price * 2.5 (eevblog)
+% Limiter la taille du BOM (assemblage)
+% Toujours tout mettre dans le BOM
+%  - Fusibles
+%  - Vis & Mechanical
+%  - Alimentations
+% Quand utiliser des passives qui coûtent cher

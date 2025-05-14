@@ -1,0 +1,350 @@
+%!TEX root = ../presentation.tex 
+
+\section{Bonnes pratiques générales}
+
+\subsection{Définition des besoins}
+
+\begin{frame}{Mise en contexte --- Haptic Board}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Dernier board que j'ai design
+            \begin{itemize}
+                \item A24, pour PMC
+            \end{itemize}
+            \item Placé au dos de la main au-dessus d'un autre board
+            \item Contrôle des éléments d'haptique
+            \item Dernière partie d'une intégration de 10 PCBs sur le bras
+        \end{itemize}
+        \rightcol
+        \makefigure[0.8]{haptic-board-layout}
+        \makefigure[0.8]{haptic-board-3d}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Définition des besoins}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item     Dresser une liste des fonctionalités
+            \item<2-> Dresser des requis techniques quantifiables
+            \bigskip
+            \only<3->{
+            \item Combien en as-tu besoin?
+            \item A quel point ils doivent êtres fiables
+            \item Comment tu vas les tester?
+            \begin{itemize}
+                \item Dresser un plan de test!
+            \end{itemize}
+            \item Envisager la complexité dès le début
+            }
+        \end{itemize}
+
+        \rightcol
+        \begin{itemize}
+            \item Activation de 4 solénoïdes
+            \only<2->{
+            \begin{itemize}
+                \item $\SI{5}{\volt}$ @ $\SI{500}{\milli\ampere}$ chaque
+            \end{itemize}
+            }
+            \item Activation de 4 piézo
+            \only<2->{
+            \begin{itemize}
+                \item $\SI{60}{\volt}$ @ $\SI{200}{\hertz}$ AC
+            \end{itemize}
+            }
+            \item Petit
+            \only<2->{
+            \begin{itemize}
+                \item $\SI{25.5}{\milli\meter} \times \SI{45}{\milli\meter}$ 
+            \end{itemize}
+            }
+            \item Ne chauffe pas
+            \only<2->{
+            \begin{itemize}
+                \item $\Delta T_{max} = \SI{40}{\celsius}$
+            \end{itemize}
+            }
+            \item Alimenté $\SI{5}{\volt}$ et/ou $\SI{3.3}{\volt}$
+            \item Contrôlé par ${I^2}C$ \& ${I^2}S$
+            \item Contraintes de bruit électronique
+        \end{itemize}
+    \end{twocolumns}
+\end{frame}
+
+% TODO : Refaire le diagramme avec TiKz
+\begin{frame}{Schéma-Blocs}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Faire un schéma-bloc des différentes portions du projet
+            \item À inclure dans le schéma final 
+        \end{itemize}
+
+        \rightcol
+        \begin{itemize}
+            \item Général
+            \item Power Delivery Network
+            \item MCU/CPU/FPGA
+            \item Communications
+            \item Séquences
+        \end{itemize}
+    \end{twocolumns}
+    \vfill
+    \makefigure[1][0.5]{haptic-board-block-diagram}
+\end{frame}
+
+% TODO : Refaire le diagramme avec TiKz
+\begin{frame}{Principe de Pareto --- Règle du 80-20}
+    \begin{itemize}
+        \item Principe simple:
+        \begin{itemize}
+            \item 80\% de tes résultats viennent de 20\% des efforts
+            \item Pour obtenir le dernier 20\% des résultats, il faut mettre 80\% des efforts
+        \end{itemize}
+    \end{itemize}
+    \vfill
+    \only<1> {
+        \makefigure[1][0.5][Source: \cite{pareto}]{pareto}
+    }
+
+    \only<2-> {
+    \begin{twocolumns}[0.6]
+        \leftcol
+        \begin{itemize}
+            \item 80\% des coûts vient de 20\% des pièces
+            \item 80\% de la complexité vient de 20\% du design
+            \item 80\% du power consommé par 20\% des pièces
+            \item 80\% du temps de debug sur 20\% des problèmes
+        \end{itemize}
+        \rightcol
+        \makefigure[1][0.5][Source: \cite{pareto}]{pareto}
+    \end{twocolumns}
+    }
+\end{frame}
+
+
+\subsection{Debugging}
+
+\begin{frame}[t]{Outils de debugging}
+    \vspace{-8pt}
+    \begin{columns}[T]
+        \begin{column}{0.25\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Multimètre}
+            \end{center}
+            \begin{itemize}
+                \item Mesures DC
+                \bigskip
+                \item Mesures de l'alimentation
+                \item Vérifier des shorts
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+
+        \begin{column}{0.25\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Oscilloscope}
+            \end{center}
+            \begin{itemize}
+                \item Temporel
+                \item Meilleur outil
+                \bigskip
+                \item Bruit
+                \item Communication
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+
+        \begin{column}{0.25\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Analyseur Logique}
+            \end{center}
+            \begin{itemize}
+                \item Protocole
+                \bigskip
+                \item Décodage protocole
+                \item Validation communication
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+
+        \begin{column}{0.25\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Caméra Thermique}
+            \end{center}
+            \begin{itemize}
+                \item Température
+                \bigskip
+                \item Trouver pièce brisée
+                \item Valider requis thermiques
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \vspace{-0.25\textwidth}
+    \begin{columns}
+        \begin{column}{0.25\textwidth}
+            \makefigure[1][0.4]{multimeter}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+            \makefigure[1][0.4]{oscilloscope}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+            \makefigure[1][0.4]{logic-analyzer}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+            \makefigure[1][0.4]{thermal-camera}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[t]{Outils de debugging}
+    \vspace{-8pt}
+    \begin{columns}[T]
+        \begin{column}{0.33\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Current Clamp}
+            \end{center}
+            \begin{itemize}
+                \item Courant
+                \bigskip
+                \item Mesures de l'alimentation
+                \item Non-intrusif
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+
+        \begin{column}{0.33\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Power Analyzer --- SMU}
+            \end{center}
+            \begin{itemize}
+                \item Mesure power DC
+                \bigskip
+                \item Précision
+                \item Logging
+                \item Source
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+
+        \begin{column}{0.33\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{LCR Meter}
+            \end{center}
+            \begin{itemize}
+                \item Réactance
+                \bigskip
+                \item Mesure de composants passives
+                \item Impédance
+                \item Quality Factor
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \vspace{-0.25\textwidth}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.4]{current-probe}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.4]{power-analyzer}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.4]{lcr-meter}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[t]{Outils de debugging}
+    \vspace{-8pt}
+    \begin{columns}[T]
+        \begin{column}{0.33\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Vector Network Analyzer}
+            \end{center}
+            \begin{itemize}
+                \item Caractéristiques électriques
+                \item Mesure signal et retour
+                \bigskip
+                \item Mesure Impédance
+                \item S-Parameter
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+
+        \begin{column}{0.33\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Spectrum Analyzer}
+            \end{center}
+            \begin{itemize}
+                \item Oscilloscope sur stéroïdes
+                \item Fourier
+                \bigskip
+                \item Mesure signal
+                \item Mesure du bruit
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.001\textwidth}
+            \rule{0.1mm}{0.85\textheight}
+        \end{column}
+
+        \begin{column}{0.33\textwidth}
+            \vspace{-12pt}
+            \begin{center}
+                \textbf{Near-Field Probe}
+            \end{center}
+            \begin{itemize}
+                \item EMI
+                \bigskip
+                \item Mesure bruit électromagnétique
+                \item Fréquence précise
+                \item EMC
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \vspace{-0.25\textwidth}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.4]{vector-network-analyzer}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.4]{spectrum-analyzer}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.4]{near-field-probe}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Debugging \& Testing}
+    \begin{itemize}
+        \item Avoir plusieurs méthodes de debug
+        \item Design pour pouvoir être debug
+        \item Être conscient des outils de debugging à ta disposition
+        \item Prévoir comment débugger et tester toutes les fonctionalités
+    \end{itemize}
+\end{frame}
+
+\subsection{Simulation}

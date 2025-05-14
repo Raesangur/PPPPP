@@ -1,0 +1,102 @@
+%!TEX root = ../main.tex 
+
+\section{Bonnes pratiques de Layout}
+
+\subsection{Routing}
+% Toujours des plans continus sous les traces
+%  - Ne jamais séparer les ground planes
+% Un plan de GND par plan de signal
+% - Alterner tes GND avec tes couches de signaux
+% Faire des polygones pour le power
+% Faire le stackup en fonction du fanout
+% Teardrops
+% Ordre de routing
+% Faire attention au couplage
+% Angle (30° acid trap)
+% Règle du 3H
+% Ne pas connecter une trace plus large que le pad auquel il se connecte
+% Garder les traces le plus court possible, éviter des vias lorsque possible de router autrement
+% Éviter de router sous des composantes
+
+\subsection{Placement}
+% Met toi plus de place que tu penses
+% Placer les passives de l'autre bord
+% Découplage
+% Garder de l'espace sur les côtés du board
+% Garder de l'espace autour des trous de vis
+% Garder de l'espace avec les grosses composantes
+% ESD entre l'entrée de la pin et la chip
+% Orientation des chips
+% Vue 3D pour le placement
+% Fiducials
+
+\subsection{Silkscreen}
+% Met du texte partout
+%  - Tous les testpoints, toutes les LEDs, tous les connecteurs
+%  - Mettre le silkscreen plus loin
+%  - Toujours avoir le silkscreen dans les mêmes orientations
+% Orientation du texte
+
+\subsection{Outils}
+% Faire toutes les design rules en premier
+%  - Net classes & impédance
+% Grille
+% Utiliser les fonctions de locking et de grouping
+% Utilise les fonctions de keepout
+%  - Annectode Carte SD
+% Passer le DRC
+% Nommer les nets critiques
+
+\subsection{Communication avec le manufacturier}
+% Fabrication Notes
+% Fiducials
+% Coupon de layers
+% Coupon
+%  - Tous les requirements les plus difficiles à faire
+%  - Si ça passe pas sur le coupon, ça passe pas sur le panel
+%  - Aller voir ce que le monde mettent sur le coupon
+% Draftsman
+% Assembly Drawing
+
+\subsection{Autre}
+% Thermal Relief
+% Comment router un USB-C 2.0
+% Perfectionisme (savoir quand arrêter)
+
+\subsection{Design Review}
+% Review les dimensions
+%  - Taille du panneau
+%  - Position des trous de montage
+%    - Est-ce qu'ils doivent êtres connectés au GND?
+%  - Clearance verticale (plus hautes composantes)
+%  - Est-ce que c'est possible d'insérer un connecteur / carte SD?
+% Review toutes les design rules
+%  - Passer le DRC
+%  - Valider avec le manufacturier (back and forth)
+% Placement des pièces
+%  - Est-ce que toutes les pièces sont placées
+%  - Est-ce que les pièces sont accessibles pour rework
+%  - Bon côté du board (connecteurs, LEDs, EMI...)
+% Tout le texte est lisible
+%  - Pas d'overlap avec des composantes
+%  - Pas d'overlap avec des vias non-tented
+%  - Deux orientations maximales
+%  - Texte pour les testpoints, connecteurs, LEDs et autre
+%  - Date, auteur, projet, logo, nom du board etc. visible
+% Toutes les pins #1 sont visibles!
+% Panelisation et fiducials
+% Valider les impédances avec un autre outil (SaturnPCB, calculatrice en ligne)
+% Vérifier toutes les largeurs de traces (courant, impédance, largeur par rapport au pad)
+% Valider toutes les couches une par une (gerber viewer efficace pour ça)
+%  - Est-ce que j'ai des coupures dans mes plans de PWR/GND
+%  - Est-ce que je peux savoir quelle layer est laquelle
+%  - Est-ce que mon stencil couvre tout, ou est-ce qu'il est ouvert là où il ne devrait pas l'être
+%  - Est-ce que mon stencil est segmenté sous mes gros pads?
+%  - Est-ce que j'ai une couverture de soldermask entre tous mes pads?
+%  - Est-ce que toutes les informations sont là sur mes couches d'assemblage et de fabrication
+%  - Est-ce que j'ai des couches de dimensions?
+% Valider le routing
+%  - Est-ce que toutes mes traces sont connectées?
+%  - Est-ce que mes traces de PWR/GND sont très courtes et larges vers un/des vias
+%  - Est-ce que je peux éloigner certaines traces l'unes de l'autre
+%  - Est-ce que j'ai des ilôts non-connectés de cuivre
