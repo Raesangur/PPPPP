@@ -1,6 +1,3 @@
-Stencil dans le BOM
-Laisser l'espace pour des passives dans le symbole
-
 Collaborateur: Julien Guay & Maxime Grenier-Castillo
 
 Checklist du GRAMS + A

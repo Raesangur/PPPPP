@@ -4,6 +4,10 @@
 \section{Bonnes pratiques des composantes \& BOM}
 
 \subsection{Footprints}
+
+%\begin{frame}{Fabrication du footprint}
+
+%\end{frame}
 % Toujours valider les footprints
 % Faire tes footprints toi-même
 % Faire très attention aux transistors!
@@ -227,7 +231,7 @@
         }
 
 
-        \only<3->{
+        \only<3-4>{
             \ctikzset{multipoles/dipchip/width=2}
             \ctikzset{diodes/scale=0.5}
             \begin{maketikzfigure}[1][0.8]
@@ -269,6 +273,38 @@
 
                 \draw ($(esd.bpin 6) + (2.25, 0)$) to
                       [full ZZener diode] ($(esd.bpin 1) + (2.25, 0)$);
+            \end{maketikzfigure}
+        }
+        \only<5->{
+            \ctikzset{multipoles/dipchip/width=2}
+            \begin{maketikzfigure}[1][0.8]
+                \draw (0, 0) node
+                   [dipchip,
+                    num pins = 12,
+                    hide numbers, no topmark,
+                    external pins width=0.3,
+                    external pad fraction=4,
+                    draw only pins={1, 3, 5-6, 7-8, 10, 12}](reg){};
+            \node at ($(reg.bpin 1) + (0.825, 0.4)$) {\tiny LMZ23605TZE};
+
+            \node [right, font=\tiny] at (reg.bpin 1) {$V_{IN}$};
+            \node [left,  font=\tiny] at (reg.pin  1) {$1$};
+            \node [right, font=\tiny] at (reg.bpin 3) {$EN$};
+            \node [left,  font=\tiny] at (reg.pin  3) {$3$};
+            \node [right, font=\tiny] at (reg.bpin 5) {$SYNC$};
+            \node [left,  font=\tiny] at (reg.pin  5) {$2$};
+            \node [right, font=\tiny] at (reg.bpin 6) {$SS$};
+            \node [left,  font=\tiny] at (reg.pin  6) {$6$};
+
+            \node [left,  font=\tiny] at (reg.bpin 7)  {$PGND$};
+            \node [right, font=\tiny] at (reg.pin  7)  {$8$};
+            \node [left,  font=\tiny] at (reg.bpin 8)  {$AGND$};
+            \node [right, font=\tiny] at (reg.pin  8)  {$4$};
+            \node [left,  font=\tiny] at (reg.bpin 10) {$FB$};
+            \node [right, font=\tiny] at (reg.pin  10) {$5$};
+            \node [left,  font=\tiny] at (reg.bpin 12) {$V_{OUT}$};
+            \node [right, font=\tiny] at (reg.pin  12) {$7$};
+
             \end{maketikzfigure}
         }
         \end{column}
@@ -397,6 +433,221 @@
         \only<4->{
             \begin{column}{0.5\textwidth}
                 \ctikzset{multipoles/dipchip/width=2}
+                \ctikzset{bipoles/resistor/height=0.1}
+                \ctikzset{bipoles/resistor/width=0.3}
+                \tikzset{vcc/.style={shape=vcc,/tikz/circuitikz/bipoles/length=0.75cm}}
+                \begin{maketikzfigure}[1][0.8]
+                    \draw (0, 0) node
+                       [dipchip,
+                        num pins = 22,
+                        hide numbers, no topmark,
+                        external pins width=0.3,
+                        external pad fraction=4,
+                        draw only pins={1, 3-4, 6-8, 10-11, 14-21}](io){};
+                \node at ($(io.bpin 1) + (0.825, 0.4)$) {\tiny TCA9555RTWR};
+
+                \node [right, font=\tiny] at (io.bpin 1) {$V_{CC}$};
+                \node [right, font=\tiny] at (io.bpin 3) {$SDA$};
+                \node [right, font=\tiny] at (io.bpin 4) {$SCL$};
+                \node [right, font=\tiny] at (io.bpin 6) {$A0$};
+                \node [right, font=\tiny] at (io.bpin 7) {$A1$};
+                \node [right, font=\tiny] at (io.bpin 8) {$A2$};
+                \node [right, font=\tiny] at (io.bpin 10) {$GND$};
+                \node [right, font=\tiny] at (io.bpin 11) {$PAD$};
+
+                \node [left, font=\tiny] at (io.bpin 21) {$P0$};
+                \node [left, font=\tiny] at (io.bpin 20) {$P1$};
+                \node [left, font=\tiny] at (io.bpin 19) {$P2$};
+                \node [left, font=\tiny] at (io.bpin 18) {$P3$};
+                \node [left, font=\tiny] at (io.bpin 17) {$P4$};
+                \node [left, font=\tiny] at (io.bpin 16) {$P5$};
+                \node [left, font=\tiny] at (io.bpin 15) {$P6$};
+                \node [left, font=\tiny] at (io.bpin 14) {$P7$};
+
+                \draw[densely dashed] ($(io.bpin 14) - (0.5,  0)$) to
+                                      ($(io.bpin 14) - (0.75, 0)$) to
+                                      ($(io.bpin 21) - (0.75, 0)$) to
+                                      ($(io.bpin 21) - (0.5,  0)$);
+
+                \draw (0.25, 0) to [R, l={\tiny$100K$}] node[vcc] {} (0.25, 1);
+                \node [font=\tiny] at (0, -0.33) {Pull-up (8x)};
+                \end{maketikzfigure}
+            \end{column}
+        }
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Laisser l'espace pour les composantes passives}
+    \begin{columns}
+        \only<1-4, 7>{
+        \only<1-4>{
+        \begin{column}{\textwidth}
+        }
+        \only<5->{
+        \begin{column}{0.4\textwidth}
+        }
+            \ctikzset{multipoles/dipchip/width=2.5}
+            \ctikzset{bipoles/resistor/height=0.2}
+            \ctikzset{bipoles/resistor/width=0.5}
+            \ctikzset{bipoles/capacitor/height=0.5}
+            \ctikzset{bipoles/capacitor/width=0.15}
+            \begin{maketikzfigure}[1][0.8]
+                \draw (0, 0) node
+                   [dipchip,
+                    num pins = 8,
+                    hide numbers, no topmark,
+                    external pins width=0.3,
+                    external pad fraction=4](reg){};
+            \node at ($(reg.bpin 1) + (1.2, 0.5)$) {LMZ23605TZE};
+
+            \node [right] at (reg.bpin 1) {$V_{IN}$};
+            \node [right] at (reg.bpin 2) {$EN$};
+            \node [right] at (reg.bpin 3) {$SYNC$};
+            \node [right] at (reg.bpin 4) {$SS$};
+
+            \node [left] at (reg.bpin 5)  {$PGND$};
+            \node [left] at (reg.bpin 6)  {$AGND$};
+            \node [left] at (reg.bpin 7) {$FB$};
+            \node [left] at (reg.bpin 8) {$V_{OUT}$};
+
+            % Vin
+            \only<2->{
+                \draw (reg.pin 1) to [short] ($(reg.pin 1) - (4.5, 0)$)
+                to [short]      ($(reg.pin 1) - (4.5, -0.25)$)
+                to node[vcc] {} ($(reg.pin 1) - (4.5, -0.25)$);
+            }
+
+            % EN
+            \only<2-3>{
+                \draw (reg.pin 2) to [short] ($(reg.pin 2) - (2.5, 0)$)
+                    to [R]     ($(reg.pin 2) - (4.5, 0)$)
+                to [short] ($(reg.pin 1) - (4.5, -0.25)$)
+                ($(reg.pin 2) - (2.5, 0)$) to [R] ($(reg.pin 4) - (2.5, 1.5)$)
+                to node[ground]{} ($(reg.pin 4) - (2.5, 1.5)$);
+            }
+            \only<4->{
+                \draw (reg.pin 2) to [short] ($(reg.pin 2) - (2.5, 0)$)
+                    to [R, l2={$R_1$} and {$\SI{4.7}{\kilo\ohm}$},
+                        a2={$0603$} and {$5\%$},
+                        l2 halign=c, a2 halign=c,
+                        label distance=-1pt, annotation distance=-56pt]
+                    ($(reg.pin 2) - (4.5, 0)$)
+                to [short] ($(reg.pin 1) - (4.5, -0.25)$)
+                ($(reg.pin 2) - (2.5, 0)$)
+                    to [R, l2={$R_2$} and {$\SI{10}{\kilo\ohm}$},
+                        a2={$0603$} and {$5\%$},
+                        l2 halign=c, a2 halign=c]
+                    ($(reg.pin 4) - (2.5, 1.5)$)
+                to node[ground]{} ($(reg.pin 4) - (2.5, 1.5)$);
+            }
+
+
+            % SS
+            \only<2-3>{
+                \draw (reg.pin 4) to [short] ($(reg.pin 4) - (0.5, 0)$)
+                    to [C] ($(reg.pin 4) - (0.5, 1)$)
+                    to node[ground]{} ($(reg.pin 4) - (0.5, 1.5)$);
+            }
+            \only<4->{
+                \draw (reg.pin 4) to [short] ($(reg.pin 4) - (0.5, 0)$)
+                    to [C, l2={$C_1$} and {$\SI{100}{\nano\farad}$},
+                           a2={$0603$} and {$25V$},
+                           l2 halign=c, a2 halign=c]
+                        ($(reg.pin 4) - (0.5, 1)$)
+                    to node[ground]{} ($(reg.pin 4) - (0.5, 1.5)$);
+            }
+
+            % SYNC
+            \only<2-3>{
+                \draw (reg.pin 3) to [short] ($(reg.pin 3) - (1.5, 0)$)
+                    to [C] ($(reg.pin 4) - (1.5, 1)$)
+                    to node[ground]{} ($(reg.pin 4) - (1.5, 1.5)$);
+            }
+            \only<4->{
+                \draw (reg.pin 3) to [short] ($(reg.pin 3) - (1.5, 0)$)
+                    to [C, l2={$C_1$} and {$\SI{100}{\nano\farad}$},
+                           a2={$0603$} and {$25V$},
+                           l2 halign=c, a2 halign=c]
+                        ($(reg.pin 4) - (1.5, 1)$)
+                    to node[ground]{} ($(reg.pin 4) - (1.5, 1.5)$);
+            }
+
+            % GND
+            \only<2->{
+                \draw (reg.pin 5) to [short] ($(reg.pin 5) + (1, 0)$)
+                to [short] ($(reg.pin 5) + (1, -1.25)$)
+                to node[ground]{} ($(reg.pin 5) + (1, -1.5)$);
+
+            \draw (reg.pin 6) to [short] ($(reg.pin 6) + (1.25, 0)$)
+            to ($(reg.pin 5) + (1.25, -1)$)
+            to ($(reg.pin 5) + (1, -1)$);
+            }
+
+            % FB
+            \only<2-3>{
+                \draw (reg.pin 7) to [short] ($(reg.pin 7) + (2.5, 0)$)
+                to [R]     ($(reg.pin 7) + (4.5, 0)$)
+                to [short] ($(reg.pin 8) + (4.5, 0.25)$)
+                ($(reg.pin 7) + (2.5, 0)$) to [R] ($(reg.pin 5) + (2.5, -1.5)$)
+                to node[ground]{} ($(reg.pin 5) + (2.5, -1.5)$);
+            }
+            \only<4->{
+                \draw (reg.pin 7) to [short] ($(reg.pin 7) + (2.5, 0)$)
+                to [R, l2={$R_3$} and {$\SI{5.9}{\kilo\ohm}$},
+                        a2={$0603$} and {$5\%$},
+                        l2 halign=c, a2 halign=c,
+                        label distance=-28pt, annotation distance=44pt]
+                    ($(reg.pin 7) + (4.5, 0)$)
+                to [short] ($(reg.pin 8) + (4.5, 0.25)$)
+                ($(reg.pin 7) + (2.5, 0)$)
+                to [R, l2={$R_4$} and {$\SI{10}{\kilo\ohm}$},
+                        a2={$0603$} and {$5\%$},
+                        l2 halign=c, a2 halign=c]
+                    ($(reg.pin 5) + (2.5, -1.5)$)
+                to node[ground]{} ($(reg.pin 5) + (2.5, -1.5)$);
+            }
+
+            % Vout
+            \only<2->{
+                \draw (reg.pin 8) to [short] ($(reg.pin 8) + (4.5, 0)$)
+                to [short]      ($(reg.pin 8) + (4.5, 0.25)$)
+                to node[vcc] {} ($(reg.pin 8) + (4.5, 0.25)$);
+            }
+
+            % Boxes
+            \only<3> {
+                \draw[dashed, thick, color=red]
+                    ($(reg.pin 5) + (2.25, -2.1)$) to ($(reg.pin 4) - (2.25, 2.1)$);
+
+                \draw[dashed, thick, rounded corners, color=red]
+                    ($(reg.pin 2) - (4.25, -0.45)$) rectangle ($(reg.pin 2) - (2.75, 0.45)$);
+
+                \draw[dashed, thick, rounded corners, color=red]
+                    ($(reg.pin 7) + (4.25, 0.45)$) rectangle ($(reg.pin 7) + (2.75, -0.45)$);
+
+                \draw[dashed, thick, rounded corners, color=red]
+                    ($(reg.pin 3) - (2, 0.25)$) rectangle ($(reg.pin 4) - (-0.1, 1)$);
+
+                \draw[dashed, thick, rounded corners, color=red]
+                    ($(reg.pin 6) + (0.75, 0.15)$) rectangle ($(reg.pin 6) + (1.5, -1.65)$);
+            }
+            \end{maketikzfigure}
+        \end{column}
+        }
+
+        \only<5->{
+        \only<5-6>{
+        \begin{column}{\textwidth}
+        }
+        \only<7->{
+        \begin{column}{0.5\textwidth}
+        }
+            \ctikzset{multipoles/dipchip/width=2.5}
+            \ctikzset{bipoles/resistor/height=0.2}
+            \ctikzset{bipoles/resistor/width=0.5}
+            \ctikzset{bipoles/capacitor/height=0.5}
+            \ctikzset{bipoles/capacitor/width=0.15}
                 \begin{maketikzfigure}[1][0.8]
                     \draw (0, 0) node
                        [dipchip,
@@ -408,32 +659,144 @@
                 \node at ($(reg.bpin 1) + (0.825, 0.4)$) {\tiny LMZ23605TZE};
 
                 \node [right, font=\tiny] at (reg.bpin 1) {$V_{IN}$};
-                \node [left,  font=\tiny] at (reg.pin  1) {$1$};
                 \node [right, font=\tiny] at (reg.bpin 3) {$EN$};
-                \node [left,  font=\tiny] at (reg.pin  3) {$3$};
                 \node [right, font=\tiny] at (reg.bpin 5) {$SYNC$};
-                \node [left,  font=\tiny] at (reg.pin  5) {$2$};
                 \node [right, font=\tiny] at (reg.bpin 6) {$SS$};
-                \node [left,  font=\tiny] at (reg.pin  6) {$6$};
 
                 \node [left,  font=\tiny] at (reg.bpin 7)  {$PGND$};
-                \node [right, font=\tiny] at (reg.pin  7)  {$8$};
                 \node [left,  font=\tiny] at (reg.bpin 8)  {$AGND$};
-                \node [right, font=\tiny] at (reg.pin  8)  {$4$};
                 \node [left,  font=\tiny] at (reg.bpin 10) {$FB$};
-                \node [right, font=\tiny] at (reg.pin  10) {$5$};
                 \node [left,  font=\tiny] at (reg.bpin 12) {$V_{OUT}$};
-                \node [right, font=\tiny] at (reg.pin  12) {$7$};
 
+                % Vin
+                \only<6->{
+                \draw (reg.pin 1) to [short] ($(reg.pin 1) - (3.5, 0)$)
+                to [short]      ($(reg.pin 1) - (3.5, -0.25)$)
+                to node[vcc] {} ($(reg.pin 1) - (3.5, -0.25)$);
+                }
+
+                % EN
+                \only<6->{
+                    \draw (reg.pin 3) to [short] ($(reg.pin 3) - (3.5, 0)$)
+                        to [R]     ($(reg.pin 1) - (3.5, 0)$)
+                    to [short] ($(reg.pin 1) - (3.5, -0.25)$)
+                    ($(reg.pin 3) - (3.5, 0)$) to [R] ($(reg.pin 6) - (3.5, 1.5)$)
+                    to node[ground]{} ($(reg.pin 6) - (3.5, 2)$);
+                }
+
+                % SS
+                \only<6->{
+                    \draw (reg.pin 6) to [short] ($(reg.pin 6) - (0.5, 0)$)
+                        to [C] ($(reg.pin 6) - (0.5, 1.5)$)
+                        to node[ground]{} ($(reg.pin 6) - (0.5, 2)$);
+                }
+
+                % SYNC
+                \only<6->{
+                    \draw (reg.pin 5) to [short] ($(reg.pin 5) - (1.75, 0)$)
+                        to [short] ($(reg.pin 6) - (1.75, 0)$)
+                        to [C] ($(reg.pin 6) - (1.75, 1.5)$)
+                        to node[ground]{} ($(reg.pin 6) - (1.75, 2)$);
+                }
+
+
+                % Vout
+                \only<6->{
+                \draw (reg.pin 12) to [short] ($(reg.pin 12) + (1.5, 0)$)
+                to [short]      ($(reg.pin 12) + (1.5, 0.25)$)
+                to node[vcc] {} ($(reg.pin 12) + (1.5, 0.25)$);
+                }
+
+
+                % FB
+                \only<6->{
+                    \draw (reg.pin 10) to [short] ($(reg.pin 10) + (1.5, 0)$)
+                        to [R]     ($(reg.pin 12) + (1.5, 0)$)
+                    to [short] ($(reg.pin 12) + (1.5, 0.25)$)
+                    ($(reg.pin 10) + (1.5, 0)$) to [R] ($(reg.pin 7) + (1.5, -1.5)$)
+                    to node[ground]{} ($(reg.pin 7) + (1.5, -2)$);
+                }
+
+                % GND
+                \only<6->{
+                    \draw (reg.pin 7) to [short] ($(reg.pin 7) + (0.5, 0)$);
+                    \draw (reg.pin 8) to [short] ($(reg.pin 8) + (0.5, 0)$)
+                        to ($(reg.pin 7) + (0.5, -1.5)$)
+                        to node[ground]{} ($(reg.pin 7) + (0.5, -2)$);
+                }
+
+                % Text
+                \only<6->{
+                    \node at ($(reg.pin 6) - (-0.25, 1.25)$) {
+                        \begin{minipage}{2cm}
+                            \centering
+                            \footnotesize
+                            $C_2$\\
+                            $\SI{100}{\nano\farad}$\\
+                            $0603$\\
+                            $\SI{50}{\volt}$
+                        \end{minipage}
+                    };
+                    \node at ($(reg.pin 6) - (2.5, 1.25)$) {
+                        \begin{minipage}{2cm}
+                            \centering
+                            \footnotesize
+                            $C_1$\\
+                            $\SI{100}{\nano\farad}$\\
+                            $0603$\\
+                            $\SI{50}{\volt}$
+                        \end{minipage}
+                    };
+                    \node at ($(reg.pin 2) - (4.65, 0.1)$) {
+                        \begin{minipage}{2cm}
+                            \centering
+                            \footnotesize
+                            $R_1$\\
+                            $\SI{4.7}{\kilo\ohm}$\\
+                            $0603$\\
+                            $5\%$
+                        \end{minipage}
+                    };
+                    \node at ($(reg.pin 2) - (4.65, 2.25)$) {
+                        \begin{minipage}{2cm}
+                            \centering
+                            \footnotesize
+                            $R_2$\\
+                            $\SI{10}{\kilo\ohm}$\\
+                            $0603$\\
+                            $5\%$
+                        \end{minipage}
+                    };
+                    \node at ($(reg.pin 10) + (2.15, 0.5)$) {
+                        \begin{minipage}{2cm}
+                            \centering
+                            \footnotesize
+                            $R_3$\\
+                            $\SI{5.9}{\kilo\ohm}$\\
+                            $0603$\\
+                            $5\%$
+                        \end{minipage}
+                    };
+                    \node at ($(reg.pin 10) + (2.15, -1.75)$) {
+                        \begin{minipage}{2cm}
+                            \centering
+                            \footnotesize
+                            $R_4$\\
+                            $\SI{10}{\kilo\ohm}$\\
+                            $0603$\\
+                            $5\%$
+                        \end{minipage}
+                    };
+                }
                 \end{maketikzfigure}
-            \end{column}
+        \end{column}
         }
     \end{columns}
 \end{frame}
 
 % TODO
 % IO EXPANDER OUTPUT 
-
+% Laisser la place pour des composantes passives
 % Mettre des informations dans la pièce
 %  - Manufacturier et Part#
 %  - Lien vers la datasheet
@@ -481,4 +844,5 @@
 %  - Fusibles
 %  - Vis & Mechanical
 %  - Alimentations
+%  - Stencils!
 % Quand utiliser des passives qui coûtent cher
