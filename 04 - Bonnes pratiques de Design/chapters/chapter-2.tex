@@ -871,33 +871,139 @@
     \end{columns}
 \end{frame}
 
-% TODO
-% Mettre des informations dans la pièce
-%  - Manufacturier et Part#
-%  - Lien vers la datasheet
-%  - Plages d'opération
-%  - Fournisseurs
-
 
 \begin{frame}{Informations du BOM}
-    \begin{twocolumns}
-        \leftcol
-
-        \rightcol
-    \end{twocolumns}
+    \begin{itemize}
+        \item Toujours mettre la datasheet dans la pièce
+        \item Manufacturier et part number complet (ce qui va être commandé au final)
+        \item Plages d'opérations (température, tension, courant)
+        \item Fournisseurs (avec liens pour les achats)
+        \item Qui a fait le symbole, qui l'a révisé et quand (suivi)
+    \end{itemize}
+    \makefigure[1][0.45]{kicad-symbol-parameters}
 \end{frame}
 
 \subsection{Datasheets}
-% Lis la datasheet au complet!
-% Lire les schematics des evaluation boards
-% Lire les application notes faites par les fabricants de pièces
-%  - Application notes sur le board design
-% Toujours valider les courbes de power
-%  - Combien de courant est-ce que la chip va prendre?
-% Manufacturier donne parfois des configurateurs
-% Valider les plages de température, de tension
-%  - Comment le chip va chauffer dans ton utilisation?
-%  - Est-ce que tu as besoin d'un heatsink ou de considérations thermiques?
+
+\begin{frame}{Lecture de datasheets}
+    \begin{twocolumns}[0.4]
+        \leftcol
+        \begin{itemize}
+            \item<1-> Toujours lire la datasheet au complet!
+            \item<2-> Lire les schémas d'\textit{evaluation boards}
+            \item<3-> Lire les application notes
+        \end{itemize}
+
+        \only<1>{
+            \makefigure{datasheet-mcp3561-block-diagram}
+            \vfill
+        }
+        \only<2>{
+            \vspace{-32pt}
+            \makefigure{datasheet-mcp3561-eval}
+            \vfill
+        }
+        \rightcol
+        % Datasheet
+        \only<1>{
+        \begin{itemize}
+            \item \textbf{\textit{Absolute Maximum Ratings}}
+            \item Toutes les \textit{electrical Characteristics}
+            \item \textbf{Spécifications et équations}
+            \item \textbf{Description des pins}
+            \item Graphiques (surtout les courbes de power)
+            \item Overview des fonctionalités
+            \item \textbf{Modes d'opérations}
+            \item \textbf{Modes de configurations}
+            \item Alimentation
+            \item \textbf{Schémas et Layout recommandés}
+            \item Registres
+        \end{itemize}
+        }
+        % Evaluation Board
+        \only<2>{
+        \begin{itemize}
+            \item Modes d'utilisation
+            \item \textbf{Schémas}
+            \item \textbf{Layout}
+            \item Logiciel / Code / Firmware
+            \item \textbf{BOM et choix de pièces}
+            \item Calculs
+        \end{itemize}
+        }
+        % Application Notes
+        \only<3>{
+        \begin{itemize}
+            \item Modes d'utilisation
+            \item Séquences d'alimentation
+            \item Programmation
+            \item Layouts spécifiques
+            \item Calculs
+        \end{itemize}
+        }
+        \only<4>{
+        \footnotesize
+        \begin{itemize}
+            \item ECP5 and ECP5-5G Family Data Sheet
+            \item ECP5 and ECP5-5G Hardware Checklist
+            \item ECP5 and ECP5-5G High-Speed I/O Interface
+            \item ECP5 and ECP5-5G Memory User Guide
+            \item ECP5 and ECP5-5G SerDes/PCS Usage Guide
+            \item ECP5 and ECP5-5G sysCLOCK PLL/DLL
+            \item ECP5 and ECP5-5G sysIO Usage Guide
+            \item ECP5 Automotive Family Data Sheet
+            \item ECP5 Errata - SED Function with Distributed RAM
+            \item Electrical Recommendations for Lattice SERDES
+            \item PCB Layout Recommendations for BGA Packages
+            \item Power Consumption and Management for ECP5 Devices
+            \item Thermal Management for Lattice Devices
+        \end{itemize}
+        }
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Configurateurs}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Manufacturier donne parfois des configurateurs
+            \item Valider les calculs avec la datasheet
+            \item Ne pas utiliser uniquement le configurateur!
+            \item Donne aussi un BOM sur lequel se fier
+        \end{itemize}
+        \rightcol
+        \makefigure{pllatinum}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Configurateurs (TI WeBench)}
+    \makefigure[1][0.9]{webench}
+\end{frame}
+
+\begin{frame}{Plages et courbes}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Valider toutes les courbes au point d'opération
+            \item Valider les plages d'opérations
+            \begin{itemize}
+                \item Sur toutes les IO
+                \item Sur les alimentations
+            \end{itemize}
+        \end{itemize}
+        \rightcol
+        \begin{itemize}
+            \item Valider les plages de tension
+            \begin{itemize}
+                \item Besoin d'un heatsink?
+                \item Besoin de dissipation thermique?
+                \item A quel point est-ce que ça va chauffer?
+            \end{itemize}
+        \end{itemize}
+    \end{twocolumns}
+
+    \makefigure[0.8][0.7]{datasheet-mcp3561-thermal}
+\end{frame}
 
 \subsection{Recherche de pièces}
 % Comment browser Digikey, Mouser, LCSC
