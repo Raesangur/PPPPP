@@ -4,15 +4,92 @@
 \section{Bonnes pratiques des composantes \& BOM}
 
 \subsection{Footprints}
+\begin{frame}{Fabrication du footprint}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Élément très important de la conception de pièces
+            \item Affecte le layout et l'assemblage
+            \bigskip
+            \item Le footprint devrait être clair
+            \item Le footprint devrait être représentatif
+            \item Le footprint devrait avoir des bonnes informations mécaniques
+            \item Le footprint devrait respecter tes capacités d'assemblage
+            \item Le footprint devrait avoir un modèle 3D
+        \end{itemize}
 
-%\begin{frame}{Fabrication du footprint}
+        \rightcol
+        \begin{itemize}
+            \item Faire le footprint soi-même
+            \begin{itemize}
+                \item Suivre un standard
+                \item Modifier la pièce plus tard au besoin
+                \item Avoir des marqueurs de pin 1 consistants
+                \item Avoir les bonnes couches mécaniques
+                \item Avoir des bons modèles 3D
+                \item Valider que le footprint est bon
+            \end{itemize}
+        \end{itemize}
+    \end{twocolumns}
+\end{frame}
 
-%\end{frame}
-% Toujours valider les footprints
-% Faire tes footprints toi-même
-% Faire très attention aux transistors!
-% Marqueurs de pin 1 (plusieurs marqueurs!)
-% Modèle 3D pour toutes les pièces
+\begin{frame}{Attention aux footprints!}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Toujours valider tous les footprints
+            \item Faire attention aux sources de footprints
+            \item Faire attention particulière aux transistors!
+            \bigskip
+            \item La meilleure option est de faire le footprint
+        \end{itemize}
+        \rightcol
+        \makefigure[1][0.25][Microchip LND150]{transistor-lnd150-sgd}
+        \makefigure[1][0.25][Vishay SQ2318]{transistor-sq2318-dgs}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Marqueurs de pin 1}
+    \begin{twocolumns}
+        \leftcol
+        \only<1-2>{
+            \begin{itemize}
+                \item Doit être visible clairement pendant l'assemblage
+                \begin{itemize}
+                    \item Couche d'assemblage avec les marqueurs
+                \end{itemize}
+                \item Doit être visible après l'assemblage!
+                \item Plusieurs marqueurs possibles
+            \end{itemize}
+        }
+        \only<3->{
+            \makefigureborder[0.75][0.7]{footprint-qfn32-5x5}
+        }
+        \rightcol
+        \only<1-2>{
+            \tcbox[colframe=accent, colback=background]{
+                \begin{tikzpicture}
+                    \node[anchor=south west, inner sep=0] at (0,0) {
+                        \includegraphics[width=0.75\textwidth,
+                                         height=0.7\textheight,
+                                         keepaspectratio]{
+                            pictures/footprint-soic14-3_8mm}};
+                    \only<2>{
+                        \draw[accent, ultra thick, rounded corners] (-0.15, 5.35) rectangle (0.3, 5.8);
+                        \draw[accent, ultra thick, rounded corners] (0.3, 5.8) rectangle (2, 6.1);
+                        \draw[accent, ultra thick, rounded corners] (2.25, 5.35) rectangle (3.35, 6.1);
+                        \draw[accent, ultra thick, rounded corners] (1.5, 5.25) rectangle (2, 5.5);
+                    }
+                \end{tikzpicture}
+            }
+        }
+        \only<3->{
+            \makefigureborder[0.75][0.7]{footprint-tssop20-4_4mm}
+            }
+    \end{twocolumns}
+\end{frame}
+
+% TODO: Couches mécaniques
 % S'assurer de respecter les couches mécaniques
 
 \subsection{Symboles}
@@ -33,7 +110,7 @@
                 \item Suivre un standard
                 \item Modifier plus tard pour fitter le schéma
                 \item Customize le BOM
-                \item Valider la datasheet
+                \item Validation de la pièce
                 \item Mettre les types électriques
             \end{itemize}
         \end{itemize}
@@ -795,13 +872,12 @@
 \end{frame}
 
 % TODO
-% IO EXPANDER OUTPUT 
-% Laisser la place pour des composantes passives
 % Mettre des informations dans la pièce
 %  - Manufacturier et Part#
 %  - Lien vers la datasheet
 %  - Plages d'opération
 %  - Fournisseurs
+
 
 \begin{frame}{Informations du BOM}
     \begin{twocolumns}
@@ -828,10 +904,83 @@
 %  - Marketplace components sur Digikey
 % Not recommended for new designs
 %  - Aller sur le site du manufacturier
-% Liste de fournisseurs
-%  - Carte du monde
-%  - Attention aux tarrifs
-%  - Attention aux fausses pièces
+
+\begin{frame}
+    \begin{tikzpicture}
+        \node[anchor=south west, inner sep=0] at (0,0) {
+            \includegraphics[width=\textwidth,
+                             height=\textheight,
+                             keepaspectratio]{
+                pictures/world}};
+
+        \node[color=accent] at (3.75, 6.25) {\faMapMarker*};
+        \node[color=accent] at (3.75, 6.55) {\includegraphics[width=0.045\textwidth,
+                                                             height=0.045\textheight,
+                                                             keepaspectratio]
+                                                {pictures/distributors/digikey}};
+
+        \node[color=accent] at (3, 5.8) {\faMapMarker*};
+        \node[color=accent] at (3, 6.1) {\includegraphics[width=0.04\textwidth,
+                                                         height=0.04\textheight,
+                                                         keepaspectratio]
+                                                {pictures/distributors/arrow}};
+
+        \node[color=accent] at (4.5, 6.25) {\faMapMarker*};
+        \node[color=accent] at (4.5, 6.65)  {\includegraphics[width=0.03\textwidth,
+                                                            height=0.03\textheight,
+                                                            keepaspectratio]
+                                                {pictures/distributors/future-electronics}};
+
+        \node[color=accent] at (11.825, 5.15) {\faMapMarker*};
+        \node[color=accent] at (11.825, 5.55)  {\includegraphics[width=0.03\textwidth,
+                                                              height=0.03\textheight,
+                                                              keepaspectratio]
+                                                {pictures/distributors/lcsc}};
+
+        \node[color=accent] at (3.4, 5.6)  {\faMapMarker*};
+        \node[color=accent] at (3.4, 5.95) {\includegraphics[width=0.03\textwidth,
+                                                              height=0.03\textheight,
+                                                              keepaspectratio]
+                                                {pictures/distributors/mouser}};
+
+        \node[color=accent] at (7.25, 6.6)  {\faMapMarker*};
+        \node[color=accent] at (7.25, 6.95) {\includegraphics[width=0.03\textwidth,
+                                                              height=0.03\textheight,
+                                                              keepaspectratio]
+                                                {pictures/distributors/newark}};
+
+        \node[color=accent] at (7.15, 6.5)  {\faMapMarker*};
+        \node[color=accent] at (6.8, 6.55) {\includegraphics[width=0.03\textwidth,
+                                                              height=0.03\textheight,
+                                                              keepaspectratio]
+                                                {pictures/distributors/rs}};
+
+        \node[color=accent] at (8, 6.5)  {\faMapMarker*};
+        \node[color=accent] at (8, 6.9) {\includegraphics[width=0.04\textwidth,
+                                                          height=0.04\textheight,
+                                                          keepaspectratio]
+                                                {pictures/distributors/tme}};
+
+
+        \node[color=accent] at (11.6, 4.2) {\faMapMarker*};
+        \node[color=accent] at (11.6, 4.5) {\includegraphics[width=0.066\textwidth,
+                                                             height=0.05\textheight,
+                                                             keepaspectratio]
+                                                {pictures/distributors/element14}};
+
+        \node[color=accent] at (12.125, 5.375) {\faMapMarker*};
+        \node[color=accent] at (12.8, 5.375) {\includegraphics[width=0.066\textwidth,
+                                                               height=0.05\textheight,
+                                                               keepaspectratio]
+                                                {pictures/distributors/aliexpress}};
+
+        \node[color=accent] at (12.7, 5.8) {\faMapMarker*};
+        \node[color=accent] at (12.7, 6.15) {\includegraphics[width=0.066\textwidth,
+                                                               height=0.05\textheight,
+                                                               keepaspectratio]
+                                                {pictures/distributors/torex}};
+    \end{tikzpicture}
+\end{frame}
 
 \subsection{BOM}
 % Page de pièces de références (à copier-coller)

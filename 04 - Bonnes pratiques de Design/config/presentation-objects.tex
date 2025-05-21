@@ -23,6 +23,29 @@
 }
 
 
+% Insert a figure with border and with optional scaling and caption.
+% 1: Width as a fraction of \textwidth   (default: 1)
+% 2: Height as a fraction of \textheight (default: 0.8)
+% 3: Caption text (optional)
+% 4: Filename of the image (relative to 'pictures/' directory, no extension needed)
+%
+% Example:
+% \makefigureborder[0.75][0.7][A sample image]{example-image}
+\NewDocumentCommand{\makefigureborder}{O{1} O{0.8} o m}{%
+    \begin{figure}%
+        \centering%
+        \tcbox[colframe=accent, colback=background]{
+            \includegraphics%
+                [width=#1\textwidth, height=#2\textheight, keepaspectratio, page=1]%
+                {pictures/#4}%
+            \IfValueTF{#3}{%
+                \caption*{#3}%
+            }{}%
+        }
+    \end{figure}%
+}
+
+
 % Create a TikZ circuit figure with adjustable size.
 % 1: Width as a fraction of \textwidth   (default: 1)
 % 2: Height as a fraction of \textheight (default: 0.8)
