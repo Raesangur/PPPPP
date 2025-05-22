@@ -1006,10 +1006,6 @@
 \end{frame}
 
 \subsection{Recherche de pièces}
-% Comment browser Digikey, Mouser, LCSC
-%  - Marketplace components sur Digikey
-% Not recommended for new designs
-%  - Aller sur le site du manufacturier
 
 \begin{frame}
     \begin{tikzpicture}
@@ -1021,57 +1017,57 @@
 
         \node[color=accent] at (3.75, 6.25) {\faMapMarker*};
         \node[color=accent] at (3.75, 6.55) {\includegraphics[width=0.045\textwidth,
-                                                             height=0.045\textheight,
-                                                             keepaspectratio]
+                                                              height=0.045\textheight,
+                                                              keepaspectratio]
                                                 {pictures/distributors/digikey}};
 
         \node[color=accent] at (3, 5.8) {\faMapMarker*};
         \node[color=accent] at (3, 6.1) {\includegraphics[width=0.04\textwidth,
-                                                         height=0.04\textheight,
-                                                         keepaspectratio]
+                                                          height=0.04\textheight,
+                                                          keepaspectratio]
                                                 {pictures/distributors/arrow}};
 
         \node[color=accent] at (4.5, 6.25) {\faMapMarker*};
         \node[color=accent] at (4.5, 6.65)  {\includegraphics[width=0.03\textwidth,
-                                                            height=0.03\textheight,
-                                                            keepaspectratio]
+                                                              height=0.03\textheight,
+                                                              keepaspectratio]
                                                 {pictures/distributors/future-electronics}};
 
         \node[color=accent] at (11.825, 5.15) {\faMapMarker*};
         \node[color=accent] at (11.825, 5.55)  {\includegraphics[width=0.03\textwidth,
-                                                              height=0.03\textheight,
-                                                              keepaspectratio]
+                                                                 height=0.03\textheight,
+                                                                 keepaspectratio]
                                                 {pictures/distributors/lcsc}};
 
         \node[color=accent] at (3.4, 5.6)  {\faMapMarker*};
         \node[color=accent] at (3.4, 5.95) {\includegraphics[width=0.03\textwidth,
-                                                              height=0.03\textheight,
-                                                              keepaspectratio]
+                                                             height=0.03\textheight,
+                                                             keepaspectratio]
                                                 {pictures/distributors/mouser}};
 
         \node[color=accent] at (7.25, 6.6)  {\faMapMarker*};
         \node[color=accent] at (7.25, 6.95) {\includegraphics[width=0.03\textwidth,
-                                                              height=0.03\textheight,
-                                                              keepaspectratio]
+                                                             height=0.03\textheight,
+                                                             keepaspectratio]
                                                 {pictures/distributors/newark}};
 
         \node[color=accent] at (7.15, 6.5)  {\faMapMarker*};
         \node[color=accent] at (6.8, 6.55) {\includegraphics[width=0.03\textwidth,
-                                                              height=0.03\textheight,
-                                                              keepaspectratio]
+                                                            height=0.03\textheight,
+                                                            keepaspectratio]
                                                 {pictures/distributors/rs}};
 
         \node[color=accent] at (8, 6.5)  {\faMapMarker*};
         \node[color=accent] at (8, 6.9) {\includegraphics[width=0.04\textwidth,
-                                                          height=0.04\textheight,
-                                                          keepaspectratio]
+                                                         height=0.04\textheight,
+                                                         keepaspectratio]
                                                 {pictures/distributors/tme}};
 
 
         \node[color=accent] at (11.6, 4.2) {\faMapMarker*};
         \node[color=accent] at (11.6, 4.5) {\includegraphics[width=0.066\textwidth,
-                                                             height=0.05\textheight,
-                                                             keepaspectratio]
+                                                            height=0.05\textheight,
+                                                            keepaspectratio]
                                                 {pictures/distributors/element14}};
 
         \node[color=accent] at (12.125, 5.375) {\faMapMarker*};
@@ -1082,11 +1078,80 @@
 
         \node[color=accent] at (12.7, 5.8) {\faMapMarker*};
         \node[color=accent] at (12.7, 6.15) {\includegraphics[width=0.066\textwidth,
-                                                               height=0.05\textheight,
-                                                               keepaspectratio]
+                                                             height=0.05\textheight,
+                                                             keepaspectratio]
                                                 {pictures/distributors/torex}};
     \end{tikzpicture}
 \end{frame}
+
+\begin{frame}{Comment naviguer un distributeur}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Beaucoup d'outils de recherche
+            \bigskip
+            \hrule
+            \bigskip
+            \item Mise en situation
+            \begin{itemize}
+                \item Besoin d'un régulateur $\SI{12}{\volt}$ -->$\SI{5}{\volt}$
+                \item Consommation de $\SI{2}{\ampere}$
+                \item Besoin de \textit{Undervoltage Lockout}, \textit{Soft Start}
+                \item Pas trop cher
+            \end{itemize}
+        \end{itemize}
+        \rightcol
+        \centering
+        \makefigure[0.5]{distributors/digikey}
+        \href{https://www.digikey.ca/}{https://www.digikey.ca/}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Recherche de régulateur sur Digikey}
+    \only<+>{
+        \makefigure[1][0.9]{digikey/search}
+    }
+    \only<+>{
+        \makefigure[1][0.8]{digikey/main-page}
+    }
+    \only<+>{
+        \makefigure[1][0.9]{digikey/first-filters}
+    }
+    \only<+>{
+        \makefigure[1][0.9]{digikey/power-filters}
+    }
+    \only<+>{
+        \makefigure[1][0.9]{digikey/mfr-filters}
+    }
+    \only<+>{
+        \makefigure[1][0.8]{digikey/ordering}
+    }
+    \only<+>{
+        \begin{twocolumns}
+            \leftcol
+            \makefigure[1][0.8]{digikey/tps562243}
+            \rightcol
+            \makefigure[1][0.8]{digikey/tps562243-datasheet}
+        \end{twocolumns}
+    }
+    \only<+>{
+        \makefigure[1][0.8]{digikey/tps562243-uvlo}
+    }
+    \only<+>{
+        \begin{twocolumns}
+            \leftcol
+            \makefigure[1][0.8]{digikey/bd95841}
+            \rightcol
+            \makefigure[1][0.8]{digikey/bd95841-datasheet}
+        \end{twocolumns}
+    }
+\end{frame}
+
+% Comment browser Digikey, Mouser, LCSC
+%  - Marketplace components sur Digikey
+% Not recommended for new designs
+%  - Aller sur le site du manufacturier
+
 
 \subsection{BOM}
 % Page de pièces de références (à copier-coller)
