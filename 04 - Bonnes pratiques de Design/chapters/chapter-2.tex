@@ -1107,26 +1107,114 @@
     \end{twocolumns}
 \end{frame}
 
+
 \begin{frame}{Recherche de régulateur sur Digikey}
-    \only<+>{
-        \makefigure[1][0.9]{digikey/search}
+    \begin{center}
+    \only<1>{
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] at (0,0) {
+                \includegraphics[width=\textwidth,
+                                 height=0.9\textheight,
+                                 keepaspectratio]{
+                    pictures/digikey/search}
+            };
+
+            \draw[-Stealth, accent, ultra thick, rounded corners] (6.5, 6.2) -- (4.5, 6.2);
+            \draw[-Stealth, accent, ultra thick, rounded corners] (8.25, 2.5) -- (7, 3.75);
+
+            \node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (7, 6.2) {1};
+            \node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (8.55, 2.2) {2};
+        \end{tikzpicture}
     }
-    \only<+>{
-        \makefigure[1][0.8]{digikey/main-page}
+    \only<2>{
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] at (0,0) {
+                \includegraphics[width=\textwidth,
+                                 height=0.8\textheight,
+                                 keepaspectratio]{
+                    pictures/digikey/main-page}
+            };
+ 
+            \draw[-Stealth, accent, very thick, rounded corners] (0.15, 6)   -- (2, 6);
+            \draw[-Stealth, accent, very thick, rounded corners] (0.15, 2.45) -- (2, 2.45);
+            \draw[-Stealth, accent, very thick, rounded corners] (2.4,  4.65) -- (4.1, 4.65);
+            \draw[-Stealth, accent, very thick, rounded corners] (4.5,  3.58) -- (6.2, 3.58);
+
+            \node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (0.5, 6.4)  {1};
+            \node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (0.5, 2.85) {2};
+            \node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (1.9, 4.65) {3};
+            \node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (4,   3.58) {4};
+        \end{tikzpicture}
     }
-    \only<+>{
-        \makefigure[1][0.9]{digikey/first-filters}
+    \only<3-4>{
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] (image) at (0,0) {
+                \includegraphics[width=\textwidth,
+                                 height=0.9\textheight,
+                                 keepaspectratio]{
+                    pictures/digikey/first-filters}
+            };
+ 
+            \begin{scope}[x={(image.south east)}, y={(image.north west)}]
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.08, 0)   -- (0.015, 0.09);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.2, 0)   -- (0.15, 0.09);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.36, 0)   -- (0.29, 0.09);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.48, 0)   -- (0.425, 0.09);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.32, 0.68)   -- (0.4, 0.68);
+
+                \only<4>
+                \draw[-Stealth, accent2, ultra thick, rounded corners] (0.2, 0.04)   -- (0.27, 0.02);
+            \end{scope}
+        \end{tikzpicture}
     }
-    \only<+>{
-        \makefigure[1][0.9]{digikey/power-filters}
+    \only<5>{
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] (image) at (0,0) {
+                \includegraphics[width=\textwidth,
+                                 height=0.9\textheight,
+                                 keepaspectratio]{
+                    pictures/digikey/power-filters}
+            };
+ 
+            \begin{scope}[x={(image.south east)}, y={(image.north west)}]
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.1, 0.68)   -- (0.18, 0.68);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.34, 0.9)   -- (0.34, 0.65);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.44, 0)   -- (0.44, 0.2);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.56, 0.9)   -- (0.56, 0.65);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.69, 0)   -- (0.69, 0.2);
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.82, 0)   -- (0.82, 0.2);
+            \end{scope}
+        \end{tikzpicture}
     }
-    \only<+>{
-        \makefigure[1][0.9]{digikey/mfr-filters}
+    \only<6>{
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] (image) at (0,0) {
+                \includegraphics[width=\textwidth,
+                                 height=0.9\textheight,
+                                 keepaspectratio]{
+                    pictures/digikey/mfr-filters}
+            };
+ 
+            \begin{scope}[x={(image.south east)}, y={(image.north west)}]
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.08, 0.9)   -- (0.08, 0.725);
+            \end{scope}
+        \end{tikzpicture}
     }
-    \only<+>{
-        \makefigure[1][0.8]{digikey/ordering}
+    \only<7>{
+        \begin{tikzpicture}
+            \node[anchor=south west, inner sep=0] (image) at (0,0) {
+                \includegraphics[width=\textwidth,
+                                 height=0.8\textheight,
+                                 keepaspectratio]{
+                    pictures/digikey/ordering}
+            };
+ 
+            \begin{scope}[x={(image.south east)}, y={(image.north west)}]
+                \draw[-Stealth, accent, ultra thick, rounded corners] (0.3, 0.75)   -- (0.335, 0.62);
+            \end{scope}
+        \end{tikzpicture}
     }
-    \only<+>{
+    \only<8>{
         \begin{twocolumns}
             \leftcol
             \makefigure[1][0.8]{digikey/tps562243}
@@ -1134,10 +1222,10 @@
             \makefigure[1][0.8]{digikey/tps562243-datasheet}
         \end{twocolumns}
     }
-    \only<+>{
+    \only<9>{
         \makefigure[1][0.8]{digikey/tps562243-uvlo}
     }
-    \only<+>{
+    \only<10>{
         \begin{twocolumns}
             \leftcol
             \makefigure[1][0.8]{digikey/bd95841}
@@ -1145,24 +1233,121 @@
             \makefigure[1][0.8]{digikey/bd95841-datasheet}
         \end{twocolumns}
     }
+    \end{center}
 \end{frame}
 
-% Comment browser Digikey, Mouser, LCSC
-%  - Marketplace components sur Digikey
-% Not recommended for new designs
-%  - Aller sur le site du manufacturier
-
-
 \subsection{BOM}
-% Page de pièces de références (à copier-coller)
-% Faire valider le BOM par quelqu'un d'autre
+
+\begin{frame}{Erreurs communes dans un BOM}
+    \begin{twocolumns}[0.33]
+        \leftcol
+        \begin{itemize}
+            \item Erreurs de copier-coller
+            \item Items manquants
+            \item Mauvaise pièce commandée
+        \end{itemize}
+
+        \rightcol
+        \centering
+        \only<2->{
+            \begin{tabular}{l | c | c}
+                \textbf{Designators} & \textbf{Value} & \textbf{Footprint}\\
+                \hline
+                C1, C3, C4, C5, C9 & $\SI{10}{\micro\farad}$ & 1206\\
+                C2, C7, C8, C11    & $\SI{100}{\nano\farad}$ & 0402\\
+                C6                 & $\SI{10}{\micro\farad}$ & \textcolor{red}{1206}\\
+            \end{tabular}\\
+            \vspace{24pt}
+            \begin{tabular}{l | l}
+                \textbf{Designators} & \textbf{Description}\\
+                \hline
+                F1 & Fuse Holderr\\
+                \textcolor{red}{\st{F2}} & \textcolor{red}{\st{Fuse 2A}}\\
+            \end{tabular}\\
+            \vspace{24pt}
+            \begin{tabular}{c | l | l}
+                \textbf{Designators} & \textbf{Description} & \textbf{Part number}\\
+                \hline
+                U1 & Régulateur 1.8V & AP2120N-3.3TRG1\\
+            \end{tabular}
+        }
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Éviter des erreurs de copier-coller}
+    \begin{itemize}
+        \item Se faire une page avec une liste des composantes passives utilisées
+        \item Retourner à la page et copier la composante désirée
+    \end{itemize}
+
+    \makefigure[1][0.66]{bom-component-list}
+\end{frame}
+
+\begin{frame}{Éviter des erreurs de copier-coller}
+    \begin{itemize}
+        \item Créer une librairie spécifique au projet
+        \item Créer des symboles spécifiques pour toutes les composantes passives
+        \item Pas besoin de page bizarre ou de fignolage avec les options
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Quoi mettre dans un BOM}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Tout ce qui fait partie d'un assemblage
+            \item Pas juste ce qui va directement sur le PCB
+        \end{itemize}
+
+        \footnotesize
+        \begin{columns}
+            \begin{column}{0.05\textwidth}
+            \end{column}
+            \begin{column}{0.95\textwidth}
+                \begin{itemize}
+                    \item Vis, standoffs, washers
+                    \item Câbles, alimentations, boîtiers
+                    \item Fusibles, connecteurs, écrans, jumpers
+                    \item Stencils, pâte
+                \end{itemize}
+            \end{column}
+        \end{columns}
+        \rightcol
+        \makefigure[1][0.35]{bom-wall-adapter}
+    \end{twocolumns}
+    
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.33]{bom-fuse}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.33]{bom-jumper}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \makefigure[1][0.35]{bom-screws}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Révision du BOM}
+    \begin{itemize}
+        \item Plusieurs personnes impliquées
+        \begin{itemize}
+            \item Achats
+            \item Assemblage du PCB
+            \item Assemblage du produit
+            \item Debugging
+        \end{itemize}
+        \bigskip
+        \item Valider qu'il y a tout ce qu'il faut acheter
+        \item Valider qu'il ne manque rien
+        \item Valider que toutes les composantes font du sens
+        \item Valider qu'il n'y a pas d'incompatibilité
+        \item Valider que les part\,\# matchent
+    \end{itemize}
+\end{frame}
 % Consolidation du BOM
 % Un assemblage va coûter autant que les pièces
 % Prix de vente = Fab price * 2.5 (eevblog)
 % Limiter la taille du BOM (assemblage)
-% Toujours tout mettre dans le BOM
-%  - Fusibles
-%  - Vis & Mechanical
-%  - Alimentations
-%  - Stencils!
 % Quand utiliser des passives qui coûtent cher
