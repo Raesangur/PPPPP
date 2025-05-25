@@ -3,7 +3,7 @@
 % !BIB program = biber
 
 % UNCOMMENT THIS WHEN NOT USING .fmt FILE OR WHEN GENERATING .fmt FILE
-\input{presentation-config}
+% \input{presentation-config}
 
 
 
@@ -37,7 +37,7 @@
             & \textcolor{white}{~Comment bien conçevoir un symbole et un footprint?}\\
             [0.3em]
         \textcolor{UDSgreenFierte}{\faFirstdraft}
-            & \textcolor{white}{~Bonnes pratiques de schématisation}\\
+            & \textcolor{white}{~Bonnes pratiques de schémas}\\
             [0.3em]
         \textcolor{UDSgreenFierte}{\faProjectDiagram}
             & \textcolor{white}{~Bonnes pratiques de layout}\\
@@ -60,8 +60,9 @@
 \defaultbackground
 \input{chapters/chapter-1}
 \input{chapters/chapter-2}
-%\input{chapters/chapter-3}
+\input{chapters/chapter-3}
 %\input{chapters/chapter-4}
+\input{chapters/current}
 
 
 

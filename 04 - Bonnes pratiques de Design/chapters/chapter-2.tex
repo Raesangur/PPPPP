@@ -1,4 +1,4 @@
-%!TEX root = ../presentation.tex 
+%!TEX root = ../presentation.tex
 
 
 \section{Bonnes pratiques des composantes \& BOM}
@@ -60,6 +60,9 @@
                 \end{itemize}
                 \item Doit être visible après l'assemblage!
                 \item Plusieurs marqueurs possibles
+                \bigskip
+                \item En vue 3D, il faut pouvoir immédiatement le voir
+                \item Ne pas couvrir avec un via ou d'autre silkscreen!
             \end{itemize}
         }
         \only<3->{
@@ -90,6 +93,7 @@
 \end{frame}
 
 % TODO: Couches mécaniques
+% TODO: Vues 3D des pièces avec les marqueurs de pin #1
 % S'assurer de respecter les couches mécaniques
 
 \subsection{Symboles}
@@ -886,21 +890,26 @@
 \subsection{Datasheets}
 
 \begin{frame}{Lecture de datasheets}
+    \only<1-2>{
+    \begin{twocolumns}[0.5]
+    }
+    \only<3->{
     \begin{twocolumns}[0.4]
+    }
         \leftcol
         \begin{itemize}
-            \item<1-> Toujours lire la datasheet au complet!
+            \item<1-> Toujours lire \href{https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP3561_2_4R-Data-Sheet-DS200006391C.pdf}{la datasheet} au complet!
             \item<2-> Lire les schémas d'\textit{evaluation boards}
             \item<3-> Lire les application notes
         \end{itemize}
 
         \only<1>{
-            \makefigure{datasheet-mcp3561-block-diagram}
+            \makefigure[1][0.45]{datasheet-mcp3561-block-diagram}
             \vfill
         }
         \only<2>{
-            \vspace{-32pt}
-            \makefigure{datasheet-mcp3561-eval}
+            \vspace{-24pt}
+            \makefigure[1][0.45]{datasheet-mcp3561-eval}
             \vfill
         }
         \rightcol
@@ -908,7 +917,7 @@
         \only<1>{
         \begin{itemize}
             \item \textbf{\textit{Absolute Maximum Ratings}}
-            \item Toutes les \textit{electrical Characteristics}
+            \item Toutes les \textit{Electrical Characteristics}
             \item \textbf{Spécifications et équations}
             \item \textbf{Description des pins}
             \item Graphiques (surtout les courbes de power)
@@ -1005,6 +1014,9 @@
     \makefigure[0.8][0.7]{datasheet-mcp3561-thermal}
 \end{frame}
 
+% TODO: Passer au travers d'une datasheet
+% https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP3561_2_4R-Data-Sheet-DS200006391C.pdf
+
 \subsection{Recherche de pièces}
 
 \begin{frame}
@@ -1094,9 +1106,9 @@
             \bigskip
             \item Mise en situation
             \begin{itemize}
-                \item Besoin d'un régulateur $\SI{12}{\volt}$ -->$\SI{5}{\volt}$
+                \item Besoin d'un régulateur $\SI{12}{\volt}$ --> $\SI{5}{\volt}$
                 \item Consommation de $\SI{2}{\ampere}$
-                \item Besoin de \textit{Undervoltage Lockout}, \textit{Soft Start}
+                \item Besoin de \textit{Undervoltage Lockout}, \textit{Soft Start} et d'une sortie \textit{Power Good}
                 \item Pas trop cher
             \end{itemize}
         \end{itemize}
@@ -1106,6 +1118,7 @@
         \href{https://www.digikey.ca/}{https://www.digikey.ca/}
     \end{twocolumns}
 \end{frame}
+
 
 
 \begin{frame}{Recherche de régulateur sur Digikey}
@@ -1155,16 +1168,24 @@
                     pictures/digikey/first-filters}
             };
  
-            \begin{scope}[x={(image.south east)}, y={(image.north west)}]
-                \draw[-Stealth, accent, ultra thick, rounded corners] (0.08, 0)   -- (0.015, 0.09);
-                \draw[-Stealth, accent, ultra thick, rounded corners] (0.2, 0)   -- (0.15, 0.09);
-                \draw[-Stealth, accent, ultra thick, rounded corners] (0.36, 0)   -- (0.29, 0.09);
-                \draw[-Stealth, accent, ultra thick, rounded corners] (0.48, 0)   -- (0.425, 0.09);
-                \draw[-Stealth, accent, ultra thick, rounded corners] (0.32, 0.68)   -- (0.4, 0.68);
+        \begin{scope}[x={(image.south east)}, y={(image.north west)}]
+            \draw[-Stealth, accent, ultra thick, rounded corners] (0.08, 0)    -- (0.015, 0.09);
+            \draw[-Stealth, accent, ultra thick, rounded corners] (0.2, 0)     -- (0.14, 0.09);
+            \draw[-Stealth, accent, ultra thick, rounded corners] (0.2, 0.15) -- (0.27, 0.11);
+            \draw[-Stealth, accent, ultra thick, rounded corners] (0.48, 0)    -- (0.425, 0.09);
+            \draw[-Stealth, accent, ultra thick, rounded corners] (0.32, 0.68) -- (0.4, 0.68);
 
-                \only<4>
-                \draw[-Stealth, accent2, ultra thick, rounded corners] (0.2, 0.04)   -- (0.27, 0.02);
-            \end{scope}
+            \only<4> {
+            \draw[-Stealth, accent2, ultra thick, rounded corners] (0.2, 0.04) -- (0.27, 0.02);
+            %\node[circle, draw=accent2, fill=white, inner sep=2pt, thick] at (0.23, -0.05) {6};
+            }
+
+            %\node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (0.07, 0.09) {1};
+            %\node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (0.16, -0.02) {2};
+            %\node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (0.23, 0.2)  {3};
+            %\node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (0.47, 0.09) {4};
+            %\node[circle, draw=accent, fill=white, inner sep=2pt, thick] at (0.29, 0.68) {5};
+        \end{scope}
         \end{tikzpicture}
     }
     \only<5>{
@@ -1288,6 +1309,11 @@
         \item Créer une librairie spécifique au projet
         \item Créer des symboles spécifiques pour toutes les composantes passives
         \item Pas besoin de page bizarre ou de fignolage avec les options
+        \bigskip
+        \item Dans les deux cas:
+        \begin{itemize}
+            \item Choisir des modèles de passives dès le début du projet
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -1308,7 +1334,7 @@
                     \item Vis, standoffs, washers
                     \item Câbles, alimentations, boîtiers
                     \item Fusibles, connecteurs, écrans, jumpers
-                    \item Stencils, pâte
+                    \item Stencils, pâte, heatsinks
                 \end{itemize}
             \end{column}
         \end{columns}
@@ -1346,8 +1372,221 @@
         \item Valider que les part\,\# matchent
     \end{itemize}
 \end{frame}
-% Consolidation du BOM
-% Un assemblage va coûter autant que les pièces
-% Prix de vente = Fab price * 2.5 (eevblog)
-% Limiter la taille du BOM (assemblage)
-% Quand utiliser des passives qui coûtent cher
+
+\begin{frame}{Coûts -- Règles du pouce}
+    \begin{twocolumns}[0.55]
+        \leftcol
+        \centering
+        \textbf{Un assemblage va coûter environ autant que les pièces}
+
+        \rightcol
+        \centering
+        \textbf{Ton coût de vente devrait être 2.5× ton coût de production}\\
+        Source: \cite{eevblog-economics}
+    \end{twocolumns}
+
+    \begin{twocolumns}[0.555]
+        \leftcol
+        \begin{itemize}
+            \item Pièces plus petites ont besoin de procédés avancés
+            \begin{itemize}
+                \item BGA
+                \item Small-pitch
+                \item 0201
+            \end{itemize}
+            \item Pièces complexes = assemblages complexes
+            \begin{itemize}
+                \item Heatsinks et pâte thermique
+                \item Shielding EMI
+                \item Connecteurs funky
+                \item Pogo pins
+            \end{itemize}
+            \item Beaucoup de pièces = + passages dans la PnP
+            \item Courbes de températures spécifiques
+        \end{itemize}
+
+        \rightcol
+        \begin{itemize}
+            \item Frais de shipping, packaging, retour
+            \item Yield et testing
+            \item Distributeurs veulent une part du profit
+            \bigskip
+            \item Il faut tirer un profit assez gros pour être sustenable
+            \item Il faut tirer un profit assez gros pour que ça vaille la peine
+        \end{itemize}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Consolidation du BOM}
+    \begin{itemize}
+        \item On veut donc \textit{diminuer la taille du BOM}
+        \item Nombre de pièces limitées dans la PnP ($\sim 48$ dans la PnP du 3iT)
+        \item Chaque pièce est commandée en quantité minimum
+        \item Gaspillage + Augmenter complexité assemblage
+        \bigskip
+        \item Il faut donc \textbf{consolider} le BOM
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Consolidation du BOM}
+    \begin{columns}
+        \begin{column}{0.05\textwidth}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{centering}
+            \textbf{Minimum Order Quantity: 70}\\
+            \end{centering}
+            \vspace{12pt}
+            \begin{tabular}{c | c | c | c | c}
+                \textbf{Value} & \textbf{Qty} & \textbf{Cost} & \textbf{Total} & \textbf{Real Total}\\
+                \hline
+                $\SI{1}{\kilo\ohm}$ & 20 & 2¢ & 40¢ & 1.4\$\\
+                $\SI{2}{\kilo\ohm}$ & 1  & 2¢ & 2¢  & 1.4\$\\
+                \textbf{Total}      &    &    &     & 2.8\$
+            \end{tabular}
+
+            \vspace{24pt}
+
+            \only<1>{
+                \begin{itemize}
+                    \item Les minimum order quantity peuvent affecter le prix
+                    \item Une seule résistance peut en valoir 70
+                    \bigskip
+                    \item Combiner des résistances en série ou parallèle!
+                \end{itemize}
+            }
+            \only<2>{
+            \begin{tabular}{c | c | c | c | c}
+                \textbf{Value} & \textbf{Qty} & \textbf{Cost} & \textbf{Total} & \textbf{Real Total}\\
+                \hline
+                $\SI{1}{\kilo\ohm}$ & 22 & 2¢ & 44¢ & 1.4\$\\
+                \textbf{Total}      &    &    &     & 1.4\$
+            \end{tabular}
+            }
+
+        \end{column}
+        \begin{column}{0.25\textwidth}
+            \begin{maketikzfigure}
+                \node[vcc] at (0, 0) {};
+
+                \draw (0, 0)
+                to [R, l=$\SI{1}{\kilo\ohm}$] (0, -2)
+                to [short, -*] (1, -2);
+
+                \only<1>{
+                    \draw (0, -2)
+                    to [R, l=$\SI{2}{\kilo\ohm}$] (0, -4)
+                    to node[ground]{} (0, -4);
+                }
+                \only<2>{
+                    \draw (0, -2)
+                    to [R, l=$\SI{2}{\kilo\ohm}$, color=accent2] (0, -4)
+                    to node[ground]{} (0, -4);
+                }
+            \end{maketikzfigure}
+        \end{column}
+
+        \begin{column}{0.25\textwidth}
+            \only<2>{
+            \begin{maketikzfigure}
+                \node[vcc] at (0, 0) {};
+
+                \draw (0, 0)
+                to [R, l=$\SI{1}{\kilo\ohm}$] (0, -2)
+                to [short, -*] (1, -2);
+                \draw (0, -2)
+                to [R, l=$\SI{1}{\kilo\ohm}$, color=accent] (0, -4)
+                to [R, l=$\SI{1}{\kilo\ohm}$, color=accent] (0, -6)
+                to node[ground]{} (0, -6);
+            \end{maketikzfigure}
+            }
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Consolidation du BOM}
+    \textbf{Minimum Order Quantity: 70}\\
+    \vspace{12pt}
+    \begin{tabular}{m{12em} | c | c | c | c | c | c}
+        \textbf{Designators} & \textbf{Value} & \textbf{Footprint} & \textbf{Qty} & \textbf{Cost} & \textbf{Total} & \textbf{Real Total}\\
+        \hline
+        C14, C15, C16, C17 & $\SI{1}{\micro\farad}$ & 0603 & 4 & 10¢ & 40¢ & 7\$\\
+        C25, C26, C27, C28 & $\SI{1}{\micro\farad}$ & 1206 & 4 & 1¢  & 4¢  & 70¢\\
+        \textbf{Total}     &                        &      &   &     &     & 7.7\$
+    \end{tabular}
+
+    \vspace{24pt}
+
+    \only<1>{
+        \begin{itemize}
+            \item C25, C26, C27 \& C28 sont des condensateurs gros et cheap
+            \item C14, C15, C16 \& C17 sont des condensateurs plus chers
+            \bigskip
+            \item On a besoin des caractéristiques de ces condensateurs plus chers dans une section
+            \item Dans des faibles quantités d'assemblage, il peut être mieux d'acheter juste des condensateurs chers
+        \end{itemize}
+    }
+
+    \only<2>{
+    \begin{tabular}{m{12em} | c | c | c | c | c | c}
+        \textbf{Designators} & \textbf{Value} & \textbf{Footprint} & \textbf{Qty} & \textbf{Cost} & \textbf{Total} & \textbf{Real Total}\\
+        \hline
+        C14, C15, C16, C17, C25 & $\SI{1}{\micro\farad}$ & 0603 & 5 & 10¢ & 50¢ & 7\$\\
+        \textbf{Total}          &                        &      &   &     &     & 7\$
+    \end{tabular}
+    }
+\end{frame}
+
+\begin{frame}{Quand utiliser des pièces qui coûtent cher?}
+    \vspace{-6pt}
+    \begin{center}
+        \begin{tabular}{c | c | c | c | c | c}
+            \textbf{Part Number} & \textbf{Type} & \textbf{Voltage} & \textbf{Tolérance} & \textbf{Ratings} & \textbf{Coût/100}\\
+            \hline
+            CGA2B3X7R1H473K050EB & X7R           & $\SI{50}{\volt}$ & 10\% & AEC-Q200 & 2.94\$\\
+            GRM155R71E473KA88D   & X7R           & $\SI{16}{\volt}$ & 20\% & --       & 1.86\$\\
+        \end{tabular}\\
+        \vspace{6pt}
+        \textbf{On PCB: 10}\\
+        \textbf{Minimum Order Quantity: 100}\\
+        \vspace{-6pt}
+    \end{center}
+    \begin{twocolumns}
+        \leftcol
+        \begin{center}
+            \textbf{2 Million / année}\\
+        \end{center}
+        \rightcol
+        \begin{center}
+            \textbf{2 prototypes pour l'uni}\\
+        \end{center}
+    \end{twocolumns}
+    \pause
+    \begin{twocolumns}
+        \leftcol
+        \textbf{Option 1:}\\
+        \begin{center}
+            $\frac{2.94\$}{100} \cdot 10 \cdot 2\,000\,000 = 588\,000\$$\\
+        \end{center}
+
+        \textbf{Option 2:}\\
+        \begin{center}
+            $\frac{1.86\$}{100} \cdot 10 \cdot 2\,000\,000 = 372\,000\$$\\
+        \end{center}
+
+        \begin{center}
+        $588\,000\$ - 372\,000\$ = 216\,000\$$
+        \end{center}
+
+        \rightcol
+        Commande = quantité minimale\\
+
+        \textbf{Option 1:} $2.94\$$\\
+        \textbf{Option 2:} $1.86\$$\\
+
+        \begin{center}
+        $2.94\$ - 1.86\$ = 1.08\$$
+        \end{center}
+
+    \end{twocolumns}
+\end{frame}
