@@ -1,18 +1,9 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'presentation.blg'
-[43] biber:340> INFO - === Sun May 25, 2025, 00:34:30
-[53] Biber.pm:420> INFO - Reading 'presentation.bcf'
-[90] Biber.pm:994> INFO - Found 3 citekeys in bib section 0
-[100] Biber.pm:4463> INFO - Processing section 0
-[105] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[106] bibtex.pm:1713> INFO - LaTeX decoding ...
-[108] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[128] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[128] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[128] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[128] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[132] bbl.pm:676> INFO - Writing 'presentation.bbl' with encoding 'UTF-8'
-[132] bbl.pm:779> INFO - Output to presentation.bbl
-[132] Biber.pm:131> WARN - legacy month field 'Mar' in entry 'pareto' is not an integer - this will probably not sort properly.
-[132] Biber.pm:131> WARN - legacy month field 'Mar' in entry 'kicad-symbol' is not an integer - this will probably not sort properly.
-[132] Biber.pm:133> INFO - WARNINGS: 2
+[43] biber:340> INFO - === Tue May 27, 2025, 15:58:12
+[52] Biber.pm:420> INFO - Reading 'presentation.bcf'
+[87] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[97] bbl.pm:676> INFO - Writing 'presentation.bbl' with encoding 'UTF-8'
+[97] bbl.pm:779> INFO - Output to presentation.bbl
+[97] Biber.pm:131> WARN - The file 'presentation.bcf' does not contain any citations!
+[97] Biber.pm:133> INFO - WARNINGS: 1

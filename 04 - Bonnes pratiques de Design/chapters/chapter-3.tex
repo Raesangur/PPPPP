@@ -2,26 +2,140 @@
 
 \section{Bonnes pratiques de schéma}
 
+\begin{frame}{Rôle du schéma}
+    \begin{itemize}
+        \item \textbf{Tout devrait être dans le schéma électrique}
+        \item C'est un outil et un document de référence pour \textit{tout le monde}
+        \begin{itemize}
+            \item Layout
+            \item Programmation
+            \item Assemblage
+            \item Surtout, un outil de debugging
+        \end{itemize}
+        \item Un bon schéma contient toute l'information nécessaire pour faire ces tâches
+        \item En mettre plus que pas assez
+        \bigskip
+        \item Tu ne devrais pas avoir à ouvrir une datasheet pour comprendre un schéma
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]
+    \makefigure[1][1]{s7-app1-p14}
+\end{frame}
+
+
 \subsection{Clareté}
-% Éviter tous les croisements, pas de GND dans les airs, aligner
-% Utiliser la grille
-% Utiliser des net names
-% Quand utiliser des net locaux, globaux, power
-% Inputs à gauche, output à droite
-% Garder les sections modulaires, bien indiquer les sections, prend de l'espace
-% Tout devrait être dans le schematics
-%  - Mettre plus que pas assez
-%  - Notes pour le programmeur, pour le layouteur, pour l'assembleur
-%  - Tu ne devrais pas avoir à réouvrir une datasheet
-% Mettre des couleurs sur les nets
-% Utiliser des net classes
-% Éviter les longues traces qui passent au travers du schéma
-% Regrouper des nets en bus
+
+\begin{frame}{Règles de base - Flow du schéma}
+    \begin{itemize}
+        \item \textbf{Mettre les inputs à gauche et les outputs à droite}
+        \begin{itemize}
+            \item Le schéma devrait "flow" naturellement
+            \item Devraient bien se faire si les symboles sont bien faits
+        \end{itemize}
+        \bigskip
+        \item \textbf{Faire des groupes ou "modules" avec des fonctionalités distinctes}
+        \begin{itemize}
+            \item Bien indiquer les sections
+            \item Les sections devraient aussi flow de gauche à droite
+            \item Prendre de l'espace lorsque nécessaire
+        \end{itemize}
+        \bigskip
+        \item \textbf{Prendre de l'espace lorsque nécessaire}
+        \begin{itemize}
+            \item Laisser le schéma respirer
+            \item Laisser la place pour du texte
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Règles de base - Outils de schéma}
+    \begin{itemize}
+        \item \textbf{Toujours travailler sur une grille}
+        \begin{itemize}
+            \item Toujours garder la même taille de grille
+            \item Je recommande 100\,mils
+        \end{itemize}
+        \bigskip
+        \item \textbf{Éviter des longues traces qui passent au travers du schéma}
+        \begin{itemize}
+            \item Utiliser des net names
+            \item Mettre les parties du schéma en sections
+            \item Regrouper des groupes de plusieurs nets en bus
+        \end{itemize}
+        \bigskip
+        \item \textbf{Rentre le schéma le plus lisible possible}
+        \begin{itemize}
+            \item Laisser le schéma respirer
+            \item Éviter tous les croisements
+            \item Aligner tout ce qui est alignable
+            \item Pas de GND dans les airs; pas de VCC sur le côté
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Nets}
+    \begin{itemize}
+        \item \textbf{Utiliser des noms de nets clairs sur les connexions importantes}
+        \begin{itemize}
+            \item Aide le layout
+            \item Indique la fonctionalité des connexions
+            \item Permet de séparer une page en sous-blocs
+        \end{itemize}
+        \bigskip
+        \item \textbf{Utiliser les types de nets}
+        \begin{itemize}
+            \item Local Net Labels \faLongArrowAltRight~Entre les sous-blocs
+            \item Global Net Labels \faLongArrowAltRight~Apparaît sur le diagramme hiérarchique, connecte les pages
+            \item Power Labels \faLongArrowAltRight~Pour toutes les connexions au PDN
+        \end{itemize}
+        \bigskip
+        \item Utiliser des net classes
+        \begin{itemize}
+            \item Indications pour les design rules
+        \end{itemize}
+        \item Mettre des couleurs sur les nets
+        \begin{itemize}
+            \item Code de couleurs sur le PDN
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Modèle Hiérarchique}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Possible de tout mettre sur une page
+            \item Mieux de séparer les fonctionalités par pages
+            \item Sous-fonctionalités dans des sous-blocs
+            \bigskip
+            \item Page hiérarchique contient les plus grosses interconnexion
+            \item Permet de répéter plusieurs fois un module similaire
+            \bigskip
+            \item Code de couleur
+            \item Nom représentatifs
+            \item Inputs à gauche, outputs à droite
+        \end{itemize}
+
+        \rightcol
+        \makefigure{s7-app1-p3}
+    \end{twocolumns}
+\end{frame}
+
 
 \subsection{Notes}
-% Mettre un schéma-bloc et un arbre d'alimentation
-%     Draw.io
-%     Travailler en hiérarchique
+
+\begin{frame}{Schémas blocs}
+    \begin{itemize}
+        \item \textbf{Le schéma électrique devrait contenir des schémas-blocs}
+        \item Schémas comme au chapitre 1
+        \bigskip
+        \item Draw.io intégré dans le schéma électrique
+        \item Utiliser les blocs hiérarchique comme schéma-bloc!
+    \end{itemize}
+\end{frame}
+
+
 % Calculer le power pour chaque bloc et page
 % Mettre des notes avec tous les calculs
 % Mettre des notes avec pages de datasheets
