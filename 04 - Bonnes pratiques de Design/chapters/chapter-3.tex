@@ -19,11 +19,6 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}[plain]
-    \makefigure[1][1]{s7-app1-p14}
-\end{frame}
-
-
 \subsection{Clareté}
 
 \begin{frame}{Règles de base - Flow du schéma}
@@ -45,6 +40,7 @@
         \begin{itemize}
             \item Laisser le schéma respirer
             \item Laisser la place pour du texte
+            \item Mettre le découplage à part
         \end{itemize}
     \end{itemize}
 \end{frame}
@@ -123,6 +119,19 @@
 \end{frame}
 
 
+\begin{frame}[plain]
+    \only<1>{
+        \makefigure[1][1]{s7-app1-p14}
+    }
+    \only<2>{
+        \makefigure[1][1]{s7-app1-p14-main}
+    }
+    \only<3>{
+        \makefigure[1][1]{s7-app1-p14-modules}
+    }
+\end{frame}
+
+
 \subsection{Notes}
 
 \begin{frame}{Schémas blocs}
@@ -133,18 +142,92 @@
         \item Draw.io intégré dans le schéma électrique
         \item Utiliser les blocs hiérarchique comme schéma-bloc!
     \end{itemize}
+    \vfill
+    \makefigure[1][0.45]{haptic-board-block-diagram}
 \end{frame}
 
+\begin{frame}{Notes générales}
+    \begin{twocolumns}[0.55]
+        \leftcol
+        \begin{itemize}
+            \item Notes pour l'assemblage et le placement
+            \item Notes pour tous les calculs
+            \item Extraits pertinents de datasheet (avec p\#)
+            \item Configurations choisies
+            \item Addresses de chips, modes de contrôle
+            \item Courbes et graphiques
+            \item Informations sur les pins (configuration etc.)
+        \end{itemize}
+        \vspace{-6pt}
+        \makefigure[1][0.33]{s7-app1-p12-thermal}
+        \rightcol
+        \vspace{-12pt}
+        \makefigure{s7-app1-p2-notes}
+    \end{twocolumns}
+\end{frame}
 
-% Calculer le power pour chaque bloc et page
-% Mettre des notes avec tous les calculs
-% Mettre des notes avec pages de datasheets
-% Mettre les courbes d'efficacité etc.
-% Cartouche
-% Indiquer les tailles et tolérances de composantes sur le schematic
-% Notes pour les pins
-% - Qu'est-ce qu'elles font, comment configurer
-% Essayer le plus possible de garder tout le texte horizontal
+\begin{frame}[plain]
+    \only<1>{
+    \makefigure[1][1]{s7-app1-p10}
+    }
+    \only<2>{
+    \makefigure[1][1]{s7-app1-p10-adc}
+    }
+\end{frame}
+
+\begin{frame}{Power}
+    \begin{twocolumns}[0.66]
+        \leftcol
+        \begin{itemize}
+            \item \textbf{Calculer le power pour chaque bloc / chaque page}
+            \begin{itemize}
+                \item Très important pour le design du PDN
+            \end{itemize}
+            \item Indiquer les courbes d'efficacité des régulateurs
+            \item Indiquer les courbes d'impédance du découplage des chips
+        \end{itemize}
+        \rightcol
+        \makefigure[0.9]{s7-app1-p10-power}
+    \end{twocolumns}
+    \vfill
+    \makefigure[1][0.45]{s7-app1-p5-oscillator}
+\end{frame}
+
+\begin{frame}[plain]
+    \only<1>{
+    \makefigure[1][1]{s7-app1-p20}
+    }
+    \only<2>{
+    \makefigure[1][1]{s7-app1-p20-3v3}
+    }
+    \only<3>{
+    \makefigure[1][1]{s7-app1-p20-powerup}
+    }
+\end{frame}
+
+\begin{frame}{Texte}
+    \begin{twocolumns}[0.8]
+        \leftcol
+        \begin{itemize}
+            \item Indiquer les informations pertinentes sur les composantes
+            \begin{itemize}
+                \item Tolérances
+                \item Packages
+                \item Types
+                \item Puissance
+                \item Part \#
+            \end{itemize}
+            \item Essayer de toujours garder tout le texte horizontal
+            \item Tous les noms de nets et de pièces en MAJUSCULES
+            \item Donner des noms aux testpoints, boutons, switches, LEDs, connecteurs...
+        \end{itemize}
+
+        \rightcol
+        \vspace{-24pt}
+        \makefigure[1][0.25]{s7-app1-p14-passive}
+        \makefigure[1][0.55]{s7-app1-p14-passives}
+    \end{twocolumns}
+\end{frame}
 
 \subsection{Testpoints et Debugging}
 % Valider les boot sequences & power-sequence
@@ -153,6 +236,7 @@
 % Mettre des systèmes de mesure de courant
 % Met toujours plus de testpoints qu'on pense
 %  - Différents types de testpoints
+% Donner des noms aux testpoints
 
 \subsection{Outils}
 % Les 0R sont tes amis
