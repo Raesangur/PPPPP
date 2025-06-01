@@ -229,8 +229,97 @@
     \end{twocolumns}
 \end{frame}
 
+
+
 \subsection{Testpoints et Debugging}
-% Valider les boot sequences & power-sequence
+\begin{frame}[plain]
+    \begin{center}
+        \large\textbf{Mettre plus de testpoints qu'on pense en avoir besoin}
+    \end{center}
+
+    \textbf{Questions que je ne me suis jamais posé:}
+    \only<2->{
+    \begin{itemize}
+        \item Pourquoi j'ai mis autant de testpoints?
+        \item J'aurais tu été mieux sans autant de testpoints?
+        \item Est-ce que mon board aurait mieux marché avec moins de testpoints?
+        \item J'aurais probablement été mieux avec moins de testpoints de ground, hein?
+    \end{itemize}
+    }
+
+    \textbf{Questions que je me suis déjà posé:}
+    \only<2->{
+    \begin{itemize}
+        \item Comment ça j'ai rien pour checker mon I²C?
+        \item J'ai tu vraiment besoin de me plugger sur mon condensateur pour lire mon $\SI{3.3}{\volt}$?
+        \item Pourquoi j'ai pas mis de testpoint sur ma loop de feedback?
+        \item Combien de courant y consomme mon circuit?
+        \item Est-ce que j'ai vraiment juste un seul testpoint de GND?
+    \end{itemize}
+    }
+\end{frame}
+
+\begin{frame}{Où mettre des testpoints}
+    \begin{itemize}
+        \item Tous les rails d'alimentation
+        \item Liens de communication (SPI, I²C, UART...)
+        \item À plusieurs niveaux dans une chaîne analogique
+        \item Pins de configuration, d'état
+        \item IO
+        \item Clocks
+        \item GND GND GND
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pourquoi mettre plusieurs testpoints de GND?}
+    \vspace{-6pt}
+    \only<2->{
+    \begin{center}
+        \textcolor{UDSgreenFierte}{\faLongArrowAltRight}
+        \textbf{Tous les grounds ne sont pas égaux!}
+        \textcolor{UDSgreenFierte}{\faLongArrowAltLeft}
+    \end{center}
+    }
+    \vspace{-12pt}
+
+    \begin{twocolumns}
+        \leftcol
+        \begin{center}
+            \textbf{Prendre plusieurs mesures en même temps}
+        \end{center}
+        \rightcol
+        \begin{center}
+            \textbf{Minimiser la taille de la loop}
+        \end{center}
+    \end{twocolumns}
+
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Plusieurs rails d'alimentation
+            \item SCA + SCL
+            \item Différent points dans une chaîne analogique
+            \item All of the above, at once
+        \end{itemize}
+
+        \rightcol
+        \begin{itemize}
+            \item Mesure plus loin = plus d'inductance
+            \item Plus d'inductance = plus de bruit sur la mesure
+        \end{itemize}
+    \end{twocolumns}
+    \vspace{-12pt}
+    \only<2->{
+    \begin{twocolumns}
+        \leftcol
+        \makefigure[1][0.33]{oscilloscope-normal}
+
+        \rightcol
+        \makefigure[1][0.33][\cite{hamdand-2011}]{oscilloscope-improved}
+    \end{twocolumns}
+    }
+\end{frame}
+
 % Se servir des pins flottantes
 %  - Ajouter IO, LED, Testpoint, UART
 % Mettre des systèmes de mesure de courant
@@ -239,6 +328,7 @@
 % Donner des noms aux testpoints
 
 \subsection{Outils}
+% Valider les boot sequences & power-sequence
 % Les 0R sont tes amis
 %  - Peut remplacer une ferrite ou une shunt
 %  - Pins EN et CFG
