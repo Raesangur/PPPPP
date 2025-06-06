@@ -320,11 +320,74 @@
     }
 \end{frame}
 
+\begin{frame}{Utiliser différent types de testpoints}
+    \makefigure{s7-app1-p10-control-testpoints}
+\end{frame}
+
+\begin{frame}{Tailles de testpoints}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Pas toujours la taille pour des gros testpoints
+            \bigskip
+            \item Mesure plus importante et plus fréquente
+            \begin{itemize}
+                \item Testpoint plus gros
+                \item Pièce de testpoint dédié
+                \item Trou dans les testpoints
+            \end{itemize}
+            \item Mesure moins importante et moins fréquente
+            \begin{itemize}
+                \item Testpoints plus petits
+                \item Pad de résistance
+            \end{itemize}
+        \end{itemize}
+        \rightcol
+
+        % TODO : Pictures of the testpoints side-by-side with a chip
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Testpoints dédiés}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item<1-> Hook
+            \item<2-> Headers 100mil
+            \begin{itemize}
+                \item<2-> Lien de communication (SPI / I²C)
+            \end{itemize}
+            \item<3-> Connecteurs dédiés
+            \item<4-> Testpoints différentiels
+        \end{itemize}
+        \rightcol
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Astuces de testpoints}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Mettre plus de testpoints que tu penses en avoir besoin
+            \item Toujours nommer ses testpoints
+            \begin{itemize}
+                \item Pas avoir à regarder le schéma pour trouver TP26
+                \item Pas avoir après à chercher TP26 sur le PCB
+            \end{itemize}
+            \item Mettre ses testpoints sur une grille
+            \begin{itemize}
+                \item 100\,mil
+                \item Trouver plus facilement
+                \item Bed of nails
+            \end{itemize}
+        \end{itemize}
+        \rightcol
+    \end{twocolumns}
+\end{frame}
+
 % Se servir des pins flottantes
 %  - Ajouter IO, LED, Testpoint, UART
 % Mettre des systèmes de mesure de courant
-% Met toujours plus de testpoints qu'on pense
-%  - Différents types de testpoints
 % Donner des noms aux testpoints
 
 \subsection{Outils}
