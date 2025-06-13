@@ -1,0 +1,104 @@
+%&presentation.fmt
+% !TEX program = pdflatex
+% !BIB program = biber
+
+% UNCOMMENT THIS WHEN NOT USING .fmt FILE OR WHEN GENERATING .fmt FILE
+% \input{presentation-config}
+
+
+
+% ----------------------- BEGIN DOCUMENT ------------------------
+
+\begin{document}
+
+\titlebackground
+
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+
+\introbackground
+
+\begin{frame}[plain, label=intro]
+    \centering
+    \Large
+
+    \textcolor{white}{
+        \LARGE{\textbf{\inserttitle}}\\
+        \textbf{\textit{\insertsubtitle}}\\
+        Par: \insertauthor\\
+    }
+    \vspace{24pt}
+    \begin{tabular}{c l}
+        \textcolor{UDSgreenFierte}{\faListOl}
+            & \textcolor{white}{Où l'impédance est la plus faible?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faMicrochip}
+            & \textcolor{white}{Retour de courant}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faFirstdraft}
+            & \textcolor{white}{Vitesse de déplacement d'un signal}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faProjectDiagram}
+            & \textcolor{white}{Tout est une ligne de transmission}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faClipboardList}
+            & \textcolor{white}{~Comment faire un design review?}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faComments}
+            & \textcolor{white}{~Communication avec fabricants, assembleurs et programmeurs}\\
+    \end{tabular}
+\end{frame}
+
+
+
+% - TOC -
+\maketoc
+
+% ------------ SECTIONS -----------
+
+\defaultbackground
+\input{chapters/chapter-1}
+\input{chapters/chapter-2}
+%\input{chapters/chapter-3}
+%\input{chapters/chapter-4}
+%\input{chapters/current}
+
+
+
+% - END -
+
+\titlebackground
+\thankyouframe
+
+
+% VOTE
+\introbackground
+\begin{frame}
+    \centering
+    \Large
+
+    \textcolor{white}{\LARGE{\textbf{Prochain PPPPP}}}\\
+    \vspace{18pt}
+
+    \textcolor{white}{
+    \LARGE{\textbf{Bonnes pratiques de design}}}\\
+    \vspace{24pt}
+
+    \begin{itemize}
+        \item \textcolor{white}{Comment choisir ses composantes et optimiser son BOM?}
+        \item \textcolor{white}{Comment bien conçevoir un symbole et un footprint?}
+        \item \textcolor{white}{Bonnes pratiques de schémas}
+        \item \textcolor{white}{Bonnes pratiques de layout}
+        \item \textcolor{white}{Communication avec fabricants, assembleurs et programmeurs}
+    \end{itemize}
+\end{frame}
+
+\defaultbackground
+\begin{frame}[allowframebreaks]{Références}
+    \printbibliography
+\end{frame}
+
+
+
+\end{document}

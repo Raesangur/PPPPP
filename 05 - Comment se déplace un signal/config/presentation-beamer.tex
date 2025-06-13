@@ -1,0 +1,152 @@
+%!TEX root = ../presentation.tex 
+
+
+\makeatletter
+\let\slideno\beamer@slideinframe
+\makeatother
+
+\setbeamertemplate{caption}[numbered]
+
+
+% Remove nagivation symbols for intro frame generation
+\ifINTRO
+    \includeonlyframes{intro}
+    \setbeamertemplate{navigation symbols}{}
+\fi
+
+
+% -------------- ITEMS --------------
+
+\setbeamertemplate{itemize item}{\large$\bullet$}
+\setbeamertemplate{itemize subitem}{\small$\bullet$}
+\setbeamertemplate{itemize subsubitem}{\tiny$\bullet$}
+
+\makeatletter
+\setbeamertemplate{section in toc}{%
+    \begin{raggedright}%
+      \leavevmode%
+      \hspace{1em}%
+      \Large{$\bullet$}%
+      \hspace{0.5em}%
+      \large{\inserttocsection}\par%
+    \end{raggedright}%
+}
+\makeatother
+\makeatletter
+\setbeamertemplate{subsection in toc}{%
+    \begin{raggedright}%
+      \leavevmode%
+      \hspace{3em}%
+      \large{$\bullet$}%
+      \hspace{0.5em}%
+      \normalsize{\inserttocsubsection}\par%
+    \end{raggedright}%
+}
+\makeatother
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip1em}{}{}
+\makeatother
+
+
+\usebeamertemplate{mytheme}
+
+
+% -------------- TABLE OF CONTENT --------------
+
+\newcommand\maketoctitleheader{
+    \begin{tikzpicture}
+        \def\boxwidth{\linewidth}
+        \def\boxheight{1.25cm}
+        \def\cornerradius{6pt}
+        \def\shadowshift{0.8ex}
+        
+        \node[fill=header,
+              fill opacity=0.5,
+              rounded corners=6pt,
+              minimum width=\linewidth, minimum height=1.25cm,
+              text=white,
+              text opacity=1,
+              align=center] (mainbox) at (0, 0)
+        {\textbf{\usebeamerfont{title}\insertsectionhead}};
+
+        \path (mainbox) node[rectangle, minimum width=\boxwidth, minimum height=0.989*\boxheight, rounded corners=\cornerradius, save path=\inbox] at (0, 0) {};
+        \tikzset{protect=\inbox}
+
+        \begin{scope}[transparency group, opacity=0.5]
+            \fill[color=black, opacity=0.3, rounded corners=\cornerradius, blur shadow = {shadow xshift=.25ex, shadow yshift=-.25ex}] 
+                (-0.5\boxwidth + \shadowshift, 0.5*\boxheight - \shadowshift) rectangle 
+                (0.5\boxwidth + \shadowshift, -0.5*\boxheight - \shadowshift);
+        \end{scope}
+    \end{tikzpicture}
+}
+
+\newcommand\maketoc{%
+    \AtBeginSection[]{%
+        \defaultbackground%
+        \begin{frame}[plain]%
+            \vfill%
+            \centering%
+            \maketoctitleheader%
+            \vfill%
+            \tableofcontents[currentsection, hideothersubsections]%
+            \vfill%
+      \end{frame}%
+    }%
+
+    \AtBeginSubsection[]{%
+        \defaultbackground%
+        \begin{frame}[plain]%
+            \vfill%
+            \centering%
+            \maketoctitleheader%
+            \vfill%
+            \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
+            \vfill%
+        \end{frame}%
+    }%
+}%
+
+% -------------- HEADER AND FOOTER --------------
+
+\defbeamertemplate*{frametitle}{mytheme}{%
+    \vspace{0cm}{
+        \usebeamerfont{title}\usebeamercolor[bg]{title}%
+        \insertframetitle}\\
+    \vspace{-0.55cm}%
+    \hfill%
+    \includegraphics[height=0.635cm]{pictures/logo/c3i.png}%
+    \hspace{0.25cm}%
+    \includegraphics[height=0.635cm]{pictures/logo/m1_alpha.pdf}\par
+    \vspace{-0.3cm}%
+    \textcolor{UDSgreenSolidarite}{%
+        \noindent\rule{\textwidth}{1pt}%
+    }%
+}%
+
+\defbeamertemplate*{footline}{mytheme}{%
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}%
+            [wd=.33\paperwidth, ht=2.25ex, dp=1ex, center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}%
+                \initials
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}%
+            [wd=.34\paperwidth, ht=2.25ex, dp=1ex, center]%
+            {title in head/foot}%
+            \usebeamerfont{title in head/foot}%
+                \textbf{\inserttitle}%
+        \end{beamercolorbox}%
+    }%
+    \begin{beamercolorbox}%
+        [wd=.33\paperwidth, ht=2.25ex, dp=1ex, right]%
+        {date in head/foot}%
+        \hfill\usebeamerfont{date in head/foot}%
+            \today{}%
+        \hfill%
+        \insertframenumber{} / \inserttotalframenumber%
+        \hspace*{2ex}%
+    \end{beamercolorbox}%
+}%
+

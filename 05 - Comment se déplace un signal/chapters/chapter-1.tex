@@ -1,0 +1,159 @@
+%!TEX root = ../presentation.tex 
+
+\section{Présentation de la présentation}
+
+\subsection{Fonctionnement du projet}
+
+\begin{frame}{Architecture du projet}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item /chapters
+            \begin{itemize}
+                \item /chapters/chapter-1.tex
+                \item /chapters/chapter-2.tex
+                \item \dots
+                \item /chapters/current.tex
+            \end{itemize}
+            \item /config
+            \begin{itemize}
+                \item /config/presentation-beamer.tex
+                \item /config/presentation-code.tex
+                \item /config/presentation-format.tex
+                \item /config/presentation-objects.tex
+                \item /config/presentation-packages.tex
+                \item /config/presentation-sections.tex
+            \end{itemize}
+        \end{itemize}
+        \rightcol
+        \begin{itemize}
+            \item /pictures
+            \begin{itemize}
+                \item /pictures/background
+                \item /pictures/logo
+                \item /pictures/raw
+                \item /pictures/\dots .pdf
+                \item /pictures/\dots .png
+            \end{itemize}
+            \item /tikz
+            \item presentation-config.tex
+            \item presentation.tex
+            \item presentation.pdf
+            \item Makefile
+        \end{itemize}
+    \end{twocolumns}
+\end{frame}
+
+
+
+\begin{frame}{Building}
+    \begin{itemize}
+        \item Template buildé local avec TeXLive
+        \item Buildé avec un \inline{makefile}
+        \bigskip
+        \only<2->{
+        \item \inline{make clean}
+        \only<3->{
+        \begin{itemize}
+            \item Supprime tous les fichiers non-source du projet
+        \end{itemize}
+        }
+        \item \inline{make format}
+        \only<3->{
+        \begin{itemize}
+            \item Recrée le fichier de format précompilé
+            \item À refaire à chaque modification aux fichiers dans \inline{config/}
+            \item Permet d'accélérer grandement le build du projet
+        \end{itemize}
+        }
+        \item \inline{make build}
+        \only<3->{
+        \begin{itemize}
+            \item Commande principale, build le pdf
+        \end{itemize}
+        }
+        \item \inline{make simple}
+        \only<3->{
+        \begin{itemize}
+            \item Build le pdf mais ne gère pas la bibliographie ou des affaires récursives
+            \item page numbers might be wrong
+        \end{itemize}
+        }
+        }
+    \end{itemize}
+\end{frame}
+
+
+\subsection{Outils et commandes}
+\begin{frame}{Frame avec deux colonnes}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item On utilise un environnement \inline{/twocolumns}
+            \begin{itemize}
+                \item \inline{/leftcol} Commence la colonne gauche
+                \item \inline{/rightcol} Commence la colonne droite
+                \item Il faut toujours les deux!
+            \end{itemize}
+        \end{itemize}
+        \rightcol
+        \begin{itemize}
+            \item L'espacement des colonnes se fait avec un paramètre optionnel
+            \begin{itemize}
+                \item \inline{/begin\{twocolumns\}[0.66]}
+            \end{itemize}
+        \end{itemize}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Figures}
+    \begin{twocolumns}[0.4]
+        \leftcol
+        \begin{itemize}
+            \item Toujours avoir de la transparence
+            \item en \inline{.pdf} ou \inline{.png}
+            \item Si une image est modifiée, l'image source devrait être dans \inline{/pictures/raw/}
+            \begin{itemize}
+                \item Transparence
+                \item Cropping
+                \item Flèches \& shits
+            \end{itemize}
+        \end{itemize}
+        \makefigure[0.5]{mcp3561-ic}
+        \rightcol
+        \makefigure[1][0.75][Figure avec une caption]{s7-app1-p5-oscillator}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Animations}
+    \begin{itemize}
+        \item<1-> Toujours hardcodé
+        \item<2-> Jamais de \inline{/pause}
+        \item<3>  Cet item disparaît à la prochaine slide
+        \item<4-> Préférablement utiliser des \inline{/only<>}
+        \only<4>{
+            \item Cet item disparaît de façon propre à la prochaine slide
+        }
+        \only<6->{
+            \bigskip
+        }
+        \item<5->[] \itemicon{\faCheck} On peut utiliser des icônes de \inline{fontawesome5}
+        \item<6->[] \itemicon{\faCircle} Les icônes remplacent des bulletpoints avec \inline{/itemicon}
+        \item<6-> Icônes normales avec \inline{/icon} \icon{\faChartLine}
+        \item<6-> Icônes de couleur avec \inline{/icon[red]} \icon[red]{\faCity}
+        \bigskip
+        \item<7-> Les colonnes et icônes sont genre \inline{config/presentation-objects.tex}
+        \item<7-> Avec les figures!
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Bullet points}
+    \centering
+    \begin{makelist}[\normalsize][1.5]
+        \icon{\faCheck} & Item one \\
+        \icon{\faTimes} & Item two \\
+        \icon{\faList}  & Liste d'item avec des icônes \\
+        \icon{\faClipboardCheck}  & Mieux qu'un \inline{/itemize} \\
+        \icon[red]{\faClock}  & Un peu plus long à faire, ça peut être une passe finale \\
+    \end{makelist}
+\end{frame}

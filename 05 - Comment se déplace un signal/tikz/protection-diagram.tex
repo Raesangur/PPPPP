@@ -1,0 +1,32 @@
+% Nodes
+\node[coordinate] (inlabel) {};
+\node[block, right=of inlabel] (scp) {Short-circuit\\       Protection};
+\node[block, right=of scp] (tvs) {Transient Voltage\\       Suppression};
+\node[block, right=of tvs] (rvp) {Reverse Voltage\\     Protection};
+
+\node[block, below=of scp] (uvlo) {Undervoltage\\Lockout};
+\node[block, right=of uvlo] (ss) {Soft Start};
+\node[block, right=of ss] (cm) {Current\\Measurement};
+\node[coordinate, right=of cm] (outlabel) {};
+
+% Input arrow with label
+\draw[->] ($(inlabel)+(-0.75,0.0)$) -- (scp.west) node[     midway, above] {Input};
+
+% Top row
+\draw[->] (scp) -- (tvs);
+\draw[->] (tvs) -- (rvp);
+
+% Segmented down to second row
+\draw[->] 
+(rvp.east)      
+-- ++(0.5, 0)     
+-- ++(0, -0.85)    
+-| (uvlo.north);
+
+
+% Bottom row
+\draw[->] (uvlo) -- (ss);
+\draw[->] (ss) -- (cm);
+
+% Output arrow with label
+\draw[->] (cm.east) -- ++(1.25,0) node[midway, above] {Load};
