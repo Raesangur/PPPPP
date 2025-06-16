@@ -13,8 +13,8 @@
 % ---------------------------------------------------------------------------
 \newcount\IceSecNum        % counts the *current* section number
 \IceSecNum=0               % start at zero
-\newcommand{\IceEasePower}{2} % 1 = linear, 2 = quadratic, 3 = cubic, …
-\newcommand{\TotalSecs}{11} % <-- CHANGE if you have more / fewer layers
+
+\newcommand{\TotalSecs}{14} % <-- CHANGE if you have more / fewer layers
 \newcommand{\IcebergImg}{pictures/iceberg/iceberg-background.png} % <-- path to your tall iceberg
 
 % ---------------------------------------------------------------------------
@@ -66,11 +66,12 @@
 \newcommand{\RightSideTOC}{%
  \UpdateIcebergTocColor
   \begin{columns}[T] % [T] aligns the tops
-    \column{.55\textwidth}%
+    \column{.85\textwidth}%
           {\raggedleft
         \tableofcontents[
         sectionstyle=shaded/show,
         subsectionstyle=show/show,
+        hideothersubsections,
           sections={
             \number\numexpr\IceSecNum-1\relax,
             \number\IceSecNum,
@@ -78,7 +79,7 @@
           }
         ]
         }
-    \column{.45\textwidth}%
+    \column{.15\textwidth}%
         %\vfill\centering\maketoctitleheader\vfill
 
   \end{columns}}
