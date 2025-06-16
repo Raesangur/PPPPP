@@ -81,30 +81,42 @@
     \end{tikzpicture}
 }
 
+
+
 \newcommand\maketoc{%
     \AtBeginSection[]{%
-        \defaultbackground%
+        \icebergbackground%  <-- set the shifted background
         \begin{frame}[plain]%
             \vfill%
             \centering%
             \maketoctitleheader%
             \vfill%
-            \tableofcontents[currentsection, hideothersubsections]%
-            \vfill%
-      \end{frame}%
-    }%
+        \RightSideTOC%
+         
+    \end{frame}}
+%    \AtBeginSection[]{%
+%        \defaultbackground%
+%        \begin{frame}[plain]%
+%            \vfill%
+%            \centering%
+%            \maketoctitleheader%
+%            \vfill%
+%            \tableofcontents[currentsection, hideothersubsections]%
+%            \vfill%
+%      \end{frame}%
+%    }%
 
-    \AtBeginSubsection[]{%
-        \defaultbackground%
-        \begin{frame}[plain]%
-            \vfill%
-            \centering%
-            \maketoctitleheader%
-            \vfill%
-            \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
-            \vfill%
-        \end{frame}%
-    }%
+    %\AtBeginSubsection[]{%
+    %    \defaultbackground%
+    %    \begin{frame}[plain]%
+    %        \vfill%
+    %        \centering%
+    %        \maketoctitleheader%
+    %        \vfill%
+    %        \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
+    %        \vfill%
+    %    \end{frame}%
+    %}%
 }%
 
 % -------------- HEADER AND FOOTER --------------

@@ -1,0 +1,86 @@
+%!TEX root = ../presentation.tex 
+
+
+% ---------------------------------------------------------------------------
+%  PACKAGES
+% ---------------------------------------------------------------------------
+\usepackage{tikz}          % draw/shift the background
+\usepackage{etoolbox}      % hook into \section to keep a counter
+\usepackage{ifthen}        % simple math in LaTeX
+
+% ---------------------------------------------------------------------------
+%  GLOBAL DATA
+% ---------------------------------------------------------------------------
+\newcount\IceSecNum        % counts the *current* section number
+\IceSecNum=0               % start at zero
+\newcommand{\IceEasePower}{2} % 1 = linear, 2 = quadratic, 3 = cubic, …
+\newcommand{\TotalSecs}{11} % <-- CHANGE if you have more / fewer layers
+\newcommand{\IcebergImg}{pictures/iceberg/iceberg-background.png} % <-- path to your tall iceberg
+
+% ---------------------------------------------------------------------------
+%  TEXT COLOR
+% ---------------------------------------------------------------------------
+\RequirePackage{xcolor} % already loaded by most themes, but be sure
+% --- choose break‑points that match your picture ----------
+\newcommand{\UpdateIcebergTocColor}{%
+  \ifnum\IceSecNum<4
+      \colorlet{IceFg}{black}% sky & ice
+  \else\ifnum\IceSecNum<5
+      \colorlet{IceFg}{gray!20!white}% mid‑blue water
+  \else
+      \colorlet{IceFg}{white}% deep ocean
+  \fi\fi
+  % apply to all TOC elements we’ll show
+  \setbeamercolor{section in toc}{fg=IceFg}%
+  \setbeamercolor{subsection in toc}{fg=IceFg}%
+  \setbeamercolor{section in toc shaded}{fg=IceFg}%
+  \setbeamercolor{subsection in toc shaded}{fg=IceFg}%
+}
+
+% ---------------------------------------------------------------------------
+%  BACKGROUND TEMPLATE (called for every section title slide)
+% ---------------------------------------------------------------------------
+\newcommand{\icebergbackground}{%
+  % Shift amount = –(section‑1) × (paperheight / TotalSecs)
+        \pgfmathsetmacro{\t}{(\IceSecNum-1)/(\TotalSecs-1)}
+        \pgfmathsetmacro{\ease}{1/(1+exp(-4*(\t-0.85)))}
+        \pgfmathsetmacro{\yShift}{\ease*2872}
+  %
+  \usebackgroundtemplate{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north west, xshift=-10pt] at (current page.north west)
+            [yshift=\yShift]  % scroll down as \IceSecNum grows
+            {\includegraphics[width=\paperwidth+10pt]{\IcebergImg}};
+    \end{tikzpicture}}}
+
+% ---------------------------------------------------------------------------
+%  HOOK: increment counter every time \section is called
+% ---------------------------------------------------------------------------
+\pretocmd{\section}{\global\advance\IceSecNum by 1\relax}{}{}
+
+% ---------------------------------------------------------------------------
+%  TOC COLUMN MACRO
+% ---------------------------------------------------------------------------
+
+
+\newcommand{\RightSideTOC}{%
+ \UpdateIcebergTocColor
+  \begin{columns}[T] % [T] aligns the tops
+    \column{.55\textwidth}%
+          {\raggedleft
+        \tableofcontents[
+        sectionstyle=shaded/show,
+        subsectionstyle=show/show,
+          sections={
+            \number\numexpr\IceSecNum-1\relax,
+            \number\IceSecNum,
+            \number\numexpr\IceSecNum+1\relax
+          }
+        ]
+        }
+    \column{.45\textwidth}%
+        %\vfill\centering\maketoctitleheader\vfill
+
+  \end{columns}}
+
+
