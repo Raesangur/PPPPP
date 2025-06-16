@@ -67,7 +67,7 @@
               text=white,
               text opacity=1,
               align=center] (mainbox) at (0, 0)
-        {\textbf{\usebeamerfont{title}\insertsectionhead}};
+        {\textbf{\usebeamerfont{title}\insertsectionhead:\;\insertsection}};
 
         \path (mainbox) node[rectangle, minimum width=\boxwidth, minimum height=0.989*\boxheight, rounded corners=\cornerradius, save path=\inbox] at (0, 0) {};
         \tikzset{protect=\inbox}
@@ -123,20 +123,27 @@
 
 % -------------- HEADER AND FOOTER --------------
 
+
 \defbeamertemplate*{frametitle}{mytheme}{%
-    \vspace{0cm}{
-        \usebeamerfont{title}\usebeamercolor[bg]{title}%
-        \insertframetitle}\\
-    \vspace{-0.55cm}%
+  \vspace{0cm}%
+  {\usebeamerfont{title}\usebeamercolor[bg]{title}%
+    \ifdefempty{\insertsubsectionhead}%
+        {% No subsection → use section title
+        \underline{\insertsectionhead:\;\insertsection}\;--\;\insertframetitle
+        }%
+        {% Subsection exists -> use subsection
+        {\color{black}[\insertsubsectionhead]}\;\underline{\insertsectionhead:\;\insertsubsection}\;--\;\insertframetitle
+        }%
+    }\\[-0.55cm]%
     \hfill%
     \includegraphics[height=0.635cm]{pictures/logo/c3i.png}%
     \hspace{0.25cm}%
     \includegraphics[height=0.635cm]{pictures/logo/m1_alpha.pdf}\par
     \vspace{-0.3cm}%
     \textcolor{UDSgreenSolidarite}{%
-        \noindent\rule{\textwidth}{1pt}%
-    }%
-}%
+    \noindent\rule{\textwidth}{1pt}%
+  }%
+}
 
 \defbeamertemplate*{footline}{mytheme}{%
     \leavevmode%
