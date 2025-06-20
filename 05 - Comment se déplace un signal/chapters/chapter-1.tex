@@ -23,12 +23,77 @@
 
 \end{frame}
 
+\begin{frame}{Gauss's Law}
+    \centering{\underline{Gauss's Law}}
+    \vspace{-8pt}
+    \begin{equation}
+        \nabv \cdot \efield = \frac{\rho}{\epsilon_0}
+        \hspace{1em} \Longleftrightarrow \hspace{1.0em}
+        \nabv \cdot \eflux = \rho v
+    \end{equation}
+    \centering{\underline{Gauss's Law For Magnetism}}
+    \vspace{-8pt}
+    \begin{equation}
+        \nabv \cdot \mflux = 0
+    \end{equation}
+\end{frame}
+
 \begin{frame}{Curl}
 \begin{twocolumns}[0.5]
     \leftcol
         \makefigure[1.0][0.8][Cyclone Analogy]{level-1/cyclone}
     \rightcol
         \makefigure[1.0][0.6][Rotating Ball Analogy]{level-1/curl-ball}
+ \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Faraday's Law of Induction}
+    \centering{\underline{Faraday's Law of Induction}}
+    \vspace{-10pt}
+    \begin{equation}
+        \nabv \times \efield = -\ddt{\mflux}
+    \end{equation}
+\end{frame}
+
+\begin{frame}{Ampère-Maxwell's Law}
+    \centering{\underline{Ampère-Maxwell's Law}}
+    \vspace{-10pt}
+    \begin{equation}
+        \nabv \times \mfield = \ddt{\eflux} + \ecurrent
+        \hspace{1em} \Longleftrightarrow \hspace{1.0em}
+        \nabv \times \mflux = \mu_0 \epsilon_0 \ddt{\efield} + \mu_0 \ecurrent
+    \end{equation}
+\end{frame}
+
+\begin{frame}{Maxwell Equation}
+    \begin{twocolumns}[0.3]
+    \leftcol
+        \makefigure[1.0][0.8][James Clark Maxwell]{level-1/james-maxwell}
+    \rightcol
+        \centering{\underline{Gauss's Law}}
+        \vspace{-8pt}
+        \begin{equation}
+                \nabv \cdot \efield = \frac{\rho}{\epsilon_0}
+                \hspace{1em} \Longleftrightarrow \hspace{1.0em}
+                \nabv \cdot \eflux = \rho v
+        \end{equation}
+        \centering{\underline{Gauss's Law For Magnetism}}
+        \vspace{-8pt}
+        \begin{equation}
+            \nabv \cdot \mflux = 0
+        \end{equation}
+        \centering{\underline{Faraday's Law of Induction}}
+        \vspace{-10pt}
+        \begin{equation}
+            \nabv \times \efield = -\ddt{\mflux}
+        \end{equation}
+        \centering{\underline{Ampère-Maxwell's Law}}
+        \vspace{-10pt}
+        \begin{equation}
+            \nabv \times \mfield = \ddt{\eflux} + \ecurrent
+            \hspace{1em} \Longleftrightarrow \hspace{1.0em}
+            \nabv \times \mflux = \mu_0 \epsilon_0 \ddt{\efield} + \mu_0 \ecurrent
+        \end{equation}
  \end{twocolumns}
 \end{frame}
 
@@ -47,6 +112,7 @@
         \rightcol
             \makefigure[1.0][0.7][Inductor Magnetic field]{level-1/inductor-magnetic-field}
     \end{twocolumns}
+    Quiz: Dans quel sens va le courant dans la bobine?
 \end{frame}
 
 \subsection[4min - Max]{Charge Movement}
