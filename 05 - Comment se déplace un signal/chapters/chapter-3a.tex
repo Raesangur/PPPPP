@@ -10,6 +10,34 @@
     \end{makelist}
 \end{frame}
 
+\begin{frame}{Signal Power}
+    \centering{\underline{Signal Power in dB}}
+    \begin{equation}
+            P_{Signal|\unit{dB}}=10 \log{\frac{P_{\text{Signal}|\unit{W}}}{1\unit{W}}}
+    \end{equation}
+    \vspace{10pt}\\
+    \centering{\underline{Signal Power in dBm}}
+    \begin{equation}
+            P_{Signal|\unit{dBm}}=10 \log{\frac{P_{\text{Signal}|\unit{mW}}}{1\unit{mW}}}
+    \end{equation}
+\end{frame}
+
+\begin{frame}{System Gain}
+    \centering{\underline{Voltage Gain}}
+    \begin{equation}
+            A_{V|\unit{dB}}=20 \log{\frac{V_{out}}{V_{in}}}
+            \hspace{2.0em} \Longleftrightarrow \hspace{2.0em}
+            \frac{P_{out}}{P_{in}} = 10^{\frac{A_{P}}{20}} 
+    \end{equation}
+    \vspace{10pt}\\
+    \centering{\underline{Power Gain}}
+    \begin{equation}
+            A_{V|\unit{dB}}=10 \log{\frac{P_{out}}{P_{in}}}
+            \hspace{2.0em} \Longleftrightarrow \hspace{2.0em}
+            \frac{P_{out}}{P_{in}} = 10^{\frac{A_{P}}{10}} 
+    \end{equation}
+\end{frame}
+
 
 \subsection[4min-Max]{Signal Source \rom{3}}
 \begin{frame}{Plan}
@@ -17,6 +45,14 @@
         \icon[red]{\faTimes} & Random Noise Source\\
         \icon[red]{\faTimes} & Noise Power\\
         \icon[red]{\faTimes} & Source of noise in a circuit
+    \end{makelist}
+\end{frame}
+
+\begin{frame}{Noise Source}
+    \begin{makelist}[\small][1.5]
+        \icon[red]{\faTimes} & Thermal Noise\\
+        \icon[red]{\faTimes} & Environmental Noise \\
+        \icon[red]{\faTimes} & Flicker Noise
     \end{makelist}
 \end{frame}
 
@@ -29,6 +65,15 @@
     \end{makelist}
 \end{frame}
 
+\begin{frame}{Average Power of a Signal}
+    \begin{equation}
+        P_{n}=\lim_{T \rightarrow \infty}\frac{1}{T}\int_{0}^{T}n^{2}(t) \,dt
+   \end{equation}
+    \vspace{10pt}\\
+    \begin{equation}
+        \int_{0}^{\infty}S_{x}(f) \, df = \lim_{T \rightarrow \infty}\frac{1}{T}\int_{0}^{T}x^{2}(t) \, dt
+   \end{equation}
+\end{frame}
 
 \subsection[3min-Max]{Harmonics \rom{2}}
 \begin{frame}{Plan}
@@ -51,9 +96,27 @@
         \icon[red]{\faTimes} & Application: Example for Voyager 1 Detection \href{https://www.seti.org/detecting-voyager-1-ata}{Link}
     \end{makelist}
 \end{frame}
+
+\begin{frame}{Definition}
+    \begin{equation}
+        SNR = \frac{P_{\text{Signal}|\unit{W}}}{P_{\text{Noise}|\unit{W}}}=P_{\text{Signal}|\unit{dB}} - P_{\text{Noise}|\unit{dB}}
+    \end{equation}
+\end{frame}
+
+\begin{frame}{Shannon-Hartley}
+    \begin{equation}
+        C = BW \cdot \log_{2}\left( 1+\frac{P_{\text{Signal}|\unit{W}}}{P_{\text{Noise}|\unit{W}}} \right)
+    \end{equation}
+    \begin{makelist}[\small][1.5]
+        \icon[blue]{\faCloudversify} & C: Canal Capacity [Bit/s]\\
+        \icon[blue]{\faChartArea} & BW: Canal Bandwidth [Hz]
+    \end{makelist}
+\end{frame}
 % 
 % 
-% 
+\begin{frame}{Determining SNR}
+    Mettre tableau avec resolution et SNR
+\end{frame}
 
 \subsection[5min-Pascal]{Jitter}
 \begin{frame}{Plan}
