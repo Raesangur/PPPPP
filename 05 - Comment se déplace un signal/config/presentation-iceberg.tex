@@ -4,24 +4,22 @@
 % ---------------------------------------------------------------------------
 %  PACKAGES
 % ---------------------------------------------------------------------------
-\usepackage{tikz}          % draw/shift the background
-\usepackage{etoolbox}      % hook into \section to keep a counter
-\usepackage{ifthen}        % simple math in LaTeX
-
+\usepackage{tikz}        
+\usepackage{etoolbox}     
+\usepackage{ifthen}       
 % ---------------------------------------------------------------------------
 %  GLOBAL DATA
 % ---------------------------------------------------------------------------
 \newcount\IceSecNum        % counts the *current* section number
 \IceSecNum=0               % start at zero
 
-\newcommand{\TotalSecs}{14} % <-- CHANGE if you have more / fewer layers
-\newcommand{\IcebergImg}{pictures/iceberg/iceberg-background.png} % <-- path to your tall iceberg
+\newcommand{\TotalSecs}{15} % <-- Number of level/section
+\newcommand{\IcebergImg}{pictures/iceberg/iceberg-background.png}
 
 % ---------------------------------------------------------------------------
 %  TEXT COLOR
 % ---------------------------------------------------------------------------
-\RequirePackage{xcolor} % already loaded by most themes, but be sure
-% --- choose break‑points that match your picture ----------
+\RequirePackage{xcolor}
 \newcommand{\UpdateIcebergTocColor}{%
   \ifnum\IceSecNum<4
       \colorlet{IceFg}{black}% sky & ice
