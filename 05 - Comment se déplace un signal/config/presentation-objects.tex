@@ -146,3 +146,26 @@
 \makeatletter
 \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 \makeatother
+
+
+% Insert a table from the tables folder. This Table can be automatically
+% generated from a dataframe in Pandas using pd.DataFrame().to_latex()
+% 1: name of the table file         (without .tex extension)
+% 2: caption                        (optional, defaults to none)
+% 3: label                          (optional, auto-generated from table name if omitted)
+% 4: placement                      (optional, defaults to 'htbp')
+%
+% Usage:
+%   \maketable{table1}
+%   \maketable{table1}{My caption}
+%   \maketable{table1}{My caption}{tab:mylabel}
+%   \maketable{table1}{My caption}{tab:mylabel}[H]
+
+\NewDocumentCommand{\maketable}{m o o o}{%
+    \begin{table}[{#4}]%
+    \centering
+    \IfValueT{#2}{\caption{#2}}%
+    \IfValueTF{#3}{\label{#3}}{\label{tab:#1}}%
+    \input{tables/#1.tex}%
+    \end{table}%
+}
