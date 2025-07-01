@@ -20,7 +20,9 @@
 \end{frame}
 
 \begin{frame}{Divergente}
-
+    \begin{equation}
+        \nabv \cdot \vec{V} = \frac{\partial \vec{V_x}}{\partial x} + \frac{\partial \vec{V_y}}{\partial y} + \frac{\partial \vec{V_z}}{\partial z}
+    \end{equation}
 \end{frame}
 
 \begin{frame}{Gauss's Law}
@@ -39,11 +41,17 @@
 \end{frame}
 
 \begin{frame}{Curl}
+    \begin{equation}
+        \nabv \times \vec{V} = \left(\frac{\partial\vec{V_z}}{\partial y}-\frac{\partial\vec{V_y}}{\partial z} \right) \check{x} +
+        \left(\frac{\partial\vec{V_x}}{\partial z}-\frac{\partial\vec{V_z}}{\partial x} \right) \check{y} +
+        \left(\frac{\partial\vec{V_y}}{\partial x}-\frac{\partial\vec{V_x}}{\partial y} \right) \check{z}
+    \end{equation}
+    \vspace{-15pt}
 \begin{twocolumns}[0.5]
     \leftcol
-        \makefigure[1.0][0.8][Cyclone Analogy]{level-1/cyclone}
+        \makefigure[1.0][0.5][Cyclone Analogy]{level-1/cyclone}
     \rightcol
-        \makefigure[1.0][0.6][Rotating Ball Analogy]{level-1/curl-ball}
+        \makefigure[1.0][0.5][Rotating Ball Analogy]{level-1/curl-ball}
  \end{twocolumns}
 \end{frame}
 
@@ -116,6 +124,26 @@
     Quiz: Dans quel sens vont les electrons dans la bobine?
 \end{frame}
 
+\subsection[2min - Max]{Voltage}
+\begin{frame}{Plan}
+    Analogie avec energie potentiel gravitationnel 
+\end{frame}
+
+\subsection[2min - Max]{Current}
+\begin{frame}{Plan}
+    Inclure conductivité $\sigma$ 
+\end{frame}
+
+\subsection[2min - Max]{Matériaux \rom{1}}
+\begin{frame}{Plan}
+    \begin{makelist}[\small][1.5]
+        \icon[red]{\faTimes} & Retour sur $\mu$ \& $\epsilon$\\
+        \icon[red]{\faTimes} & Difference entre $\epsilon$, $\epsilon_0$ et $\epsilon_r$\\
+        \icon[red]{\faTimes} & Indice de refraction Reel
+    \end{makelist}
+\end{frame}
+
+\begin{comment}
 \subsection[4min - Max]{Charge Movement}
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
@@ -137,3 +165,4 @@
         \icon[red]{\faTimes} & Inducteur
     \end{makelist}
 \end{frame}
+\end{comment}
