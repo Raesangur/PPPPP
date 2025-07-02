@@ -135,16 +135,40 @@
 \end{frame}
 
 \subsection[5min-Pascal]{Propagation Speed \rom{1}}
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Vitesse de propagation\\
-        \icon[red]{\faTimes} & Velocite de phase ($n=\frac{c}{v_p}$)\\
-        \icon[red]{\faTimes} & Speed of light\\
-    \end{makelist}
+\begin{frame}{Vitesse de propagation}
+    \begin{twocolumns}
+        \leftcol
+        \begin{makelist}[\small][1.5]
+            \icon{\faLongArrowAltRight} & Tout signal électromagnétique a une $v$\\
+            \icon{\faSun} & Vitesse de la lumière: $c = \SI{299792458}{\meter\per\second}$\\
+            \icon{\faHockeyPuck} & Vitesse d'un signal dépend de la constante diélectrique\\
+        \end{makelist}
+
+        \begin{center}
+            $v = \dfrac{c}{\sqrt{\varepsilon_r}}$
+        \end{center}
+
+        \rightcol
+        \maketable{speed-of-light}
+    \end{twocolumns}
 \end{frame}
 
 \begin{frame}{Phase Velocity}
-    \maketable{phase-velocity}
+    \begin{twocolumns}[0.33]
+        \leftcol
+        \begin{makelist}[\small][1.5]
+            \icon{\faStumbleupon} Dépend de la fréquence du signal
+        \end{makelist}
+
+        \begin{center}
+            $v_p = \dfrac{\lambda}{T}$\\
+            \vspace{6pt}
+            $n = \dfrac{c}{v_p}$
+        \end{center}
+
+        \rightcol
+        \maketable{phase-velocity}
+    \end{twocolumns}
 \end{frame}
 
 
