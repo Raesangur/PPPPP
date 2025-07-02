@@ -4,13 +4,121 @@
 
 
 \subsection[2min-Pascal]{Signal Source \rom{1}}
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Source de tension\\
-        \icon[red]{\faTimes} & Source de courant \\
-    \end{makelist}
+\begin{frame}{Comparaison des sources}
+    \begin{twocolumns}
+        \leftcol
+        \begin{center}
+            \textbf{Source de tension}
+        \end{center}
+        \rightcol
+        \begin{center}
+            \textbf{Source de courant}
+        \end{center}
+    \end{twocolumns}
+
+    \begin{twocolumns}[0.55]
+        \leftcol
+        \begin{itemize}
+            \item Modèle plus traditionnel
+            \item Fournit une tension fixe peu importe le courant demandé
+            \item Tension cause un courant au travers d'une load
+        \end{itemize}
+
+        \rightcol
+        \begin{itemize}
+            \item Fournit un courant fixe peu importe la tension requise pour driver ce courant demandé
+            \item Courant au travers d'une load crée une tension
+        \end{itemize}
+        
+    \end{twocolumns}
+
+    \vspace{-8pt}
+    \begin{twocolumns}
+        \leftcol
+        \begin{center}
+            $I = \dfrac{V}{R}$
+        \end{center}
+        \rightcol
+        \begin{center}
+            $V = RI$
+        \end{center}
+    \end{twocolumns}
+
+    \vfill
+
+    \begin{twocolumns}
+        \leftcol
+        \begin{maketikzfigure}[1][0.25]
+            \draw (0, 0) node[ground]{}
+                to [V, l=$V_S$, invert] ++(0, 2.5)
+                to [short] ++(2.5, 0)
+                to [R, l_=$R_{LOAD}$,i={$I = \frac{V_S}{R_{LOAD}}$}] ++(0, -2.5)
+                to node[ground]{} ++(0, 0);
+        \end{maketikzfigure}
+        \rightcol
+        \begin{maketikzfigure}[1][0.25]
+            \draw (0, 0) node[ground]{}
+                to [I, l=$I_S$] ++(0, 2.5)
+                to [short, i=$I_S$] ++(2.5, 0)
+                to [R, l_=$R_{LOAD}$,v^={$V = I_S \cdot R_{LOAD}$}] ++(0, -2.5)
+                to node[ground]{} ++(0, 0);
+        \end{maketikzfigure}
+    \end{twocolumns}
 \end{frame}
 
+\begin{frame}{Exemples de sources}
+    \begin{itemize}
+    \only<1->{
+        \item[] \itemicon{\faBatteryThreeQuarters} \textbf{Batteries}
+        \begin{itemize}
+            \item[] Réaction chimique qui fournit un potentiel de tension fixe aux bornes de la cellule.
+        \end{itemize}
+    }
+    \only<2->{
+        \item[] \itemicon{\faSun} \textbf{Effect Photovoltaïque}
+
+        \begin{itemize}
+            \item[] Excitation d'électrons frappés par des photons dans un matériau semiconducteur, causant leur déplacement.
+        \end{itemize}
+    }
+    \only<3->{
+        \item[] \itemicon{\faThermometerHalf} \textbf{Effect Seebeck}
+        \begin{itemize}
+            \item[] Effet thermoélectrique qui produit un différentiel de tension entre deux métaux différents qui ont des énergies thermiques différentes.
+        \end{itemize}
+    }
+    \only<4->{
+        \item[] \itemicon{\faVolumeUp} \textbf{Effect Piézoélectrique}
+        \begin{itemize}
+            \item[] Charge électrique provenant d'un matériau dont la matrice crystalline est déformée mécaniquementé.
+        \end{itemize}
+    }
+    \only<5->{
+        \item[] \itemicon{\faBolt} \textbf{Transistor Bipolaire --- Miroir de Courant}
+        \begin{itemize}
+            \item[] Deux effets qui répliquent un courant (avec un multiplicateur) en utilisant des transistors.
+        \end{itemize}
+    }
+    \only<5->{
+        \item[] \itemicon{\faSync} \textbf{Induction Électromagnétique}
+        \begin{itemize}
+            \item[] Le sujet de cette présentation.
+        \end{itemize}
+    }
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sources dans la vraie vie}
+    \begin{itemize}
+        \item Une vraie source de courant n'existe pas
+        \item Une vraie source de tension n'existe pas
+        \bigskip
+        \item Tout ce qui existe sont des sources de puissances
+        \item Les "sources" utilisent du feedback pour réguler courant et/ou tension
+        \bigskip
+        \item Il existe des sources de résistance aussi
+    \end{itemize}
+\end{frame}
 
 \subsection[3min - Max]{Harmonics \rom{1}}
 \begin{frame}{Plan}

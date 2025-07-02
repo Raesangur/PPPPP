@@ -11,6 +11,7 @@ Circuit communs et outils
     - Sommateur
     - Intégrateur
     - Digipot
+    - PLL
     - Mux Analogique
     - Transimpedance Amplifier / Transconductance amplifier
     - Shunt (mesure de courant)
