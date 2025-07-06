@@ -107,17 +107,18 @@
 %      \end{frame}%
 %    }%
 
-    %\AtBeginSubsection[]{%
-    %    \defaultbackground%
-    %    \begin{frame}[plain]%
-    %        \vfill%
-    %        \centering%
-    %        \maketoctitleheader%
-    %        \vfill%
-    %        \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
-    %        \vfill%
-    %    \end{frame}%
-    %}%
+    \AtBeginSubsection[]{%
+        \icebergbackground%
+        \begin{frame}[plain]%
+            \vfill%
+            \centering%
+            \maketoctitleheader%
+            \vfill%
+            \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
+            \vfill%
+        \end{frame}%
+        \defaultbackground
+    }%
 }%
 
 
