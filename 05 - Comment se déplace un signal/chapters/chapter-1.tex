@@ -16,29 +16,77 @@
     \end{makelist}
 \end{frame}
 
-\begin{frame}{Champ Vectoriel}
+\begin{frame}{Champs Vectoriel}
+        \begin{twocolumns}[0.4]
+        \leftcol
+            \makefigure[1.0][0.8][]{level-1/vector-field-1}
+        \rightcol
+           \makefigure[1.0][0.8][]{level-1/vector-field-2}
+    \end{twocolumns}
 \end{frame}
 
-\begin{frame}{Divergente}
+\begin{frame}{Dérivée Temporelle vs. Spatiale}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            Dérivée Temporelle
+        \rightcol
+           Dérivée Spatiale:
+            \begin{equation}
+                \text{Divergence} = \nabv \cdot \vec{V}
+            \end{equation}
+            \begin{equation}
+                \text{Curl} = \nabv \times \vec{V}
+            \end{equation}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Divergence}
     \begin{equation}
         \nabv \cdot \vec{V} = \frac{\partial \vec{V_x}}{\partial x} + \frac{\partial \vec{V_y}}{\partial y} + \frac{\partial \vec{V_z}}{\partial z}
     \end{equation}
+    \makefigure[1.0][0.6][]{level-1/divergence}
 \end{frame}
 
 \begin{frame}{Gauss's Law}
-    \centering{\underline{Gauss's Law}}
-    \vspace{-8pt}
-    \begin{equation}
-        \nabv \cdot \efield = \frac{\rho}{\epsilon_0}
-        \hspace{1em} \Longleftrightarrow \hspace{1.0em}
-        \nabv \cdot \eflux = \rho v
-    \end{equation}
-    \centering{\underline{Gauss's Law For Magnetism}}
-    \vspace{-8pt}
-    \begin{equation}
-        \nabv \cdot \mflux = 0
-    \end{equation}
+    \begin{twocolumns}[0.5]
+    \leftcol
+        \centering{\underline{Gauss's Law}}
+        \vspace{-8pt}
+        \begin{equation}
+            \nabv \cdot \efield = \frac{\rho}{\epsilon_0}
+            \hspace{1em} \Longleftrightarrow \hspace{1.0em}
+            \nabv \cdot \eflux = \rho v
+        \end{equation}
+    \rightcol
+        \makefigure[1.0][0.5][]{level-1/gauss-law-1}
+    \end{twocolumns}
 \end{frame}
+ 
+\begin{frame}{E Field on a PCB}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-1/pcb-E-fields-before}
+\end{frame}
+
+\begin{frame}{E Field on a PCB}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-1/pcb-E-fields}
+\end{frame}
+
+\begin{frame}{Gauss's Law for Magnetism}
+    \begin{twocolumns}[0.35]
+        \leftcol
+            \centering{\underline{Gauss's Law For Magnetism}}
+            \vspace{-8pt}
+            \begin{equation}
+                \nabv \cdot \mflux = 0
+            \end{equation}\\
+            \vspace{10pt}
+            \makefigure[1.0][0.4][]{level-1/magnetic-meme}
+        \rightcol
+            \makefigure[1.0][0.5][]{level-1/magnetic-meme-2}
+    \end{twocolumns}
+\end{frame}
+
 
 \begin{frame}{Curl}
     \begin{equation}
@@ -55,12 +103,24 @@
  \end{twocolumns}
 \end{frame}
 
+\begin{frame}{Curl}
+    \begin{makelist}[\small][1.5]
+        \icon[red]{\faExclamationTriangle} & \textbf{ATTENTION:} La Rotationnelle n'a pas de définition en 2D! Il faut au moin 3 dimensions!
+    \end{makelist}
+\end{frame}
+
 \begin{frame}{Faraday's Law of Induction}
-    \centering{\underline{Faraday's Law of Induction}}
-    \vspace{-10pt}
-    \begin{equation}
-        \nabv \times \efield = -\ddt{\mflux}
-    \end{equation}
+    \begin{twocolumns}[0.35]
+    \leftcol
+        \centering{\underline{Faraday's Law of Induction}}
+        \vspace{-10pt}
+        \begin{equation}
+            \nabv \times \efield = -\ddt{\mflux}
+        \end{equation}
+    \rightcol
+        \makefigure[1.0][0.8][]{level-1/generator}
+ \end{twocolumns}
+
 \end{frame}
 
 \begin{frame}{Ampère-Maxwell's Law}
@@ -71,6 +131,16 @@
         \hspace{1em} \Longleftrightarrow \hspace{1.0em}
         \nabv \times \mflux = \mu_0 \epsilon_0 \ddt{\efield} + \mu_0 \ecurrent
     \end{equation}
+\end{frame}
+
+\begin{frame}{E Field on a PCB}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-1/pcb-H-fields-before}
+\end{frame}
+
+\begin{frame}{E Field on a PCB}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-1/pcb-H-fields}
 \end{frame}
 
 \begin{frame}{Maxwell Equation}
@@ -103,6 +173,11 @@
             \nabv \times \mflux = \mu_0 \epsilon_0 \ddt{\efield} + \mu_0 \ecurrent
         \end{equation}
  \end{twocolumns}
+\end{frame}
+
+\begin{frame}{EM Field on a PCB}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-1/pcb-fields}
 \end{frame}
 
 \subsection[1min - Max]{Superposition \rom{1}}
@@ -149,6 +224,90 @@
         \icon[red]{\faTimes} & Indices de refraction Reel
     \end{makelist}
 \end{frame}
+
+\begin{frame}{Permittivitée vs. Permeabilitée}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            Permittivity
+        \rightcol
+            Permeability
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{$\epsilon$ \& $\mu$}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            \begin{equation}
+                \epsilon = \text{Electric Permittivity [F/m]}
+            \end{equation}
+            \begin{equation}
+                \mu = \text{Magnetic Permeabililty [H/m]}
+            \end{equation}
+        \rightcol
+            \makefigure[1.0][0.7][Imperméable]{level-1/impermeable}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{$\epsilon_0$ \& $\mu_0$}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            Electric Free Space Permittivity [F/m]:
+            \begin{equation}
+                \epsilon_0 \approx 8.854\times 10^{-12}
+            \end{equation}
+            Magnetic Free Space Permeabililty [H/m]:
+            \begin{equation}
+                \mu_0 \approx 4\pi \times 10^{-7}
+            \end{equation}
+        \rightcol
+            \makefigure[1.0][0.7][Imperméable]{level-1/impermeable}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{$\epsilon_r$ \& $\mu_r$}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            Electric Relative Permittivity [F/m]:
+            \begin{equation}
+                \epsilon_r =\frac{\epsilon}{\epsilon_0}
+            \end{equation}
+            Magnetic Relative Permeabililty [H/m]:
+            \begin{equation}
+                \mu_r =\frac{\mu}{\mu_0}
+            \end{equation}
+        \rightcol
+            \makefigure[1.0][0.7][Imperméable]{level-1/impermeable}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{$\epsilon_0$ \& $\mu_0$}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            Electric Relative Permittivity [F/m]:
+            \begin{equation}
+                \epsilon_0 =\frac{\epsilon}{\epsilon_0}
+            \end{equation}
+            Magnetic Relative Permeabililty [H/m]:
+            \begin{equation}
+                \mu_r =\frac{\mu}{\mu_0}
+            \end{equation}
+        \rightcol
+            \makefigure[1.0][0.7][Imperméable]{level-1/impermeable}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Indice de Refraction}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            Indice de refraction pour materiaux \textbf{sans pertes}:
+            \begin{equation}
+                n =\frac{\sqrt{\epsilon \mu}}{\sqrt{\epsilon_0 \mu_0}} = \sqrt{\epsilon_r \mu_r}
+            \end{equation}
+        \rightcol
+            \makefigure[1.0][0.7][Radio Telescope]{level-1/rf-telescope}
+    \end{twocolumns}
+\end{frame}
+
 
 \begin{comment}
 \subsection[4min - Max]{Charge Movement}
