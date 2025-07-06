@@ -53,7 +53,7 @@
         \centering{\underline{Gauss's Law}}
         \vspace{-8pt}
         \begin{equation}
-            \nabv \cdot \efield = \frac{\rho}{\epsilon_0}
+            \nabv \cdot \efield = \frac{\rho}{\varepsilon_0}
             \hspace{1em} \Longleftrightarrow \hspace{1.0em}
             \nabv \cdot \eflux = \rho v
         \end{equation}
@@ -129,7 +129,7 @@
     \begin{equation}
         \nabv \times \mfield = \ddt{\eflux} + \ecurrent
         \hspace{1em} \Longleftrightarrow \hspace{1.0em}
-        \nabv \times \mflux = \mu_0 \epsilon_0 \ddt{\efield} + \mu_0 \ecurrent
+        \nabv \times \mflux = \mu_0 \varepsilon_0 \ddt{\efield} + \mu_0 \ecurrent
     \end{equation}
 \end{frame}
 
@@ -151,7 +151,7 @@
         \centering{\underline{Gauss's Law}}
         \vspace{-8pt}
         \begin{equation}
-                \nabv \cdot \efield = \frac{\rho}{\epsilon_0}
+                \nabv \cdot \efield = \frac{\rho}{\varepsilon_0}
                 \hspace{1em} \Longleftrightarrow \hspace{1.0em}
                 \nabv \cdot \eflux = \rho v
         \end{equation}
@@ -170,7 +170,7 @@
         \begin{equation}
             \nabv \times \mfield = \ddt{\eflux} + \ecurrent
             \hspace{1em} \Longleftrightarrow \hspace{1.0em}
-            \nabv \times \mflux = \mu_0 \epsilon_0 \ddt{\efield} + \mu_0 \ecurrent
+            \nabv \times \mflux = \mu_0 \varepsilon_0 \ddt{\efield} + \mu_0 \ecurrent
         \end{equation}
  \end{twocolumns}
 \end{frame}
@@ -203,21 +203,32 @@
 \begin{frame}{Plan}
     \begin{twocolumns}[0.5]
         \leftcol
+            \begin{center}
             Energie Potentielle Gravitationnelle [J]:
+            \end{center}
+        \rightcol
+            \begin{center}
+            Potentiel Électrique [J/C]:\\
+            \end{center}
+    \end{twocolumns}
+    \begin{twocolumns}[0.5]
+        \leftcol
             \begin{equation}
                 U_{g} = -\int_{A}^{B}\vec{F_g} \,dl =  -\int_{A}^{B}mg\,dl
-            \end{equation}\\
-            \vspace{-50pt}
-            \makefigure[1.0][0.75][]{level-1/gravitationnal-potential}  
+            \end{equation}
         \rightcol
-            \vspace{10pt}
-            Potentiel Électrique [J/C]:\\
-            \vspace{-10pt}
             \begin{equation}
                 \Delta V_{AB} = -\int_{A}^{B}\efield \,dl
             \end{equation}
-            \makefigure[1.0][0.5][]{level-1/voltage}  
     \end{twocolumns}
+    \vspace{-24pt}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            \makefigure[1][0.75][]{level-1/gravitationnal-potential}
+        \rightcol
+            \makefigure[1][0.5][]{level-1/voltage}
+    \end{twocolumns}
+    \vfill
 \end{frame}
 
 \subsection[2min - Max]{Current}
@@ -235,8 +246,8 @@
 \subsection[2min - Max]{Matériaux \rom{1}}
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Retour sur $\mu$ \& $\epsilon$\\
-        \icon[red]{\faTimes} & Difference entre $\epsilon$, $\epsilon_0$ et $\epsilon_r$\\
+        \icon[red]{\faTimes} & Retour sur $\mu$ \& $\varepsilon$\\
+        \icon[red]{\faTimes} & Difference entre $\varepsilon$, $\varepsilon_0$ et $\varepsilon_r$\\
         \icon[red]{\faTimes} & Indices de refraction Reel
     \end{makelist}
 \end{frame}
@@ -250,11 +261,11 @@
     \end{twocolumns}
 \end{frame}
 
-\begin{frame}{$\epsilon$ \& $\mu$}
+\begin{frame}{$\varepsilon$ \& $\mu$}
     \begin{twocolumns}[0.5]
         \leftcol
             \begin{equation}
-                \epsilon = \text{Electric Permittivity [F/m]}
+                \varepsilon = \text{Electric Permittivity [F/m]}
             \end{equation}
             \begin{equation}
                 \mu = \text{Magnetic Permeabililty [H/m]}
@@ -264,12 +275,12 @@
     \end{twocolumns}
 \end{frame}
 
-\begin{frame}{$\epsilon_0$ \& $\mu_0$}
+\begin{frame}{$\varepsilon_0$ \& $\mu_0$}
     \begin{twocolumns}[0.5]
         \leftcol
             Electric Free Space Permittivity [F/m]:
             \begin{equation}
-                \epsilon_0 \approx 8.854\times 10^{-12}
+                \varepsilon_0 \approx 8.854\times 10^{-12}
             \end{equation}
             Magnetic Free Space Permeabililty [H/m]:
             \begin{equation}
@@ -280,12 +291,12 @@
     \end{twocolumns}
 \end{frame}
 
-\begin{frame}{$\epsilon_r$ \& $\mu_r$}
+\begin{frame}{$\varepsilon_r$ \& $\mu_r$}
     \begin{twocolumns}[0.5]
         \leftcol
             Electric Relative Permittivity [F/m]:
             \begin{equation}
-                \epsilon_r =\frac{\epsilon}{\epsilon_0}
+                \varepsilon_r =\frac{\varepsilon}{\varepsilon_0}
             \end{equation}
             Magnetic Relative Permeabililty [H/m]:
             \begin{equation}
@@ -296,12 +307,12 @@
     \end{twocolumns}
 \end{frame}
 
-\begin{frame}{$\epsilon_0$ \& $\mu_0$}
+\begin{frame}{$\varepsilon_0$ \& $\mu_0$}
     \begin{twocolumns}[0.5]
         \leftcol
             Electric Relative Permittivity [F/m]:
             \begin{equation}
-                \epsilon_0 =\frac{\epsilon}{\epsilon_0}
+                \varepsilon_0 =\frac{\varepsilon}{\varepsilon_0}
             \end{equation}
             Magnetic Relative Permeabililty [H/m]:
             \begin{equation}
@@ -317,7 +328,7 @@
         \leftcol
             Indice de refraction pour materiaux \textbf{sans pertes}:
             \begin{equation}
-                n =\frac{\sqrt{\epsilon \mu}}{\sqrt{\epsilon_0 \mu_0}} = \sqrt{\epsilon_r \mu_r}
+                n =\frac{\sqrt{\varepsilon \mu}}{\sqrt{\varepsilon_0 \mu_0}} = \sqrt{\varepsilon_r \mu_r}
             \end{equation}
         \rightcol
             \makefigure[1.0][0.7][Radio Telescope]{level-1/rf-telescope}
