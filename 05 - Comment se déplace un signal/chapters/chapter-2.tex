@@ -172,20 +172,152 @@
 \end{frame}
 
 
-\subsection[5min-Pascal]{Ground planes \rom{1}}
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Item 1\\
-        \icon[red]{\faTimes} & Item 2\\
-        \icon[red]{\faTimes} & GND IS NOT A SINK, IT'S A REFERENCE
-    \end{makelist}
-    
+\subsection[5min-Pascal]{Ground \rom{1}}
+
+\begin{frame}{Différentes catégories de GND}
+    \begin{itemize}
+        \item Parfois plusieurs GND dans un même circuit
+        \item Les GND agissent comme une \textit{référence}
+        \item \textit{Parfois} le GND est connecté à la terre / au chassis
+        \item Équipotentialité
+    \end{itemize}
+    \vfill
+
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+            \begin{maketikzfigure}[0.33][0.2]
+            \draw (0, 0) node[sground]{};
+            \end{maketikzfigure}
+            Ground
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+            \begin{maketikzfigure}[0.33][0.2]
+            \draw (0, 0) node[ground]{};
+            \end{maketikzfigure}
+            Earth
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+            \begin{maketikzfigure}[0.33][0.2]
+            \draw (0, 0) node[cground]{};
+            \end{maketikzfigure}
+            Chassis
+            \end{center}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\subsection[5min-Pascal/Max]{Induction}
+\begin{frame}{Dans un circuit}
+    \vfill
+    \begin{maketikzfigure}[0.8][0.66][european voltages]
+        \ctikzset{voltage/bump b=2.5} % Adjust arrow bumpiness for voltage
+
+        \only<1-3>{
+            \draw [thick]
+                (0,0) to [short] (10,0);
+        }
+
+        \draw [thick]
+            (0,0) to [american voltage source, l=$V$, invert] (0,5);
+
+
+        \only<1>{
+        \draw [thick]
+            (0, 5) to [short] (10,5);
+        }
+        \only<2>{
+        \draw [thick]
+            (0, 5) to [short] (2.5, 5)
+                   to [R, l=$R_{parasite}$, v=$i \cdot R_{parasite}$, color=accent] (7.5, 5)
+                   to [short] (10, 5);
+        }
+        \only<3->{
+        \draw [thick]
+            (0, 5) to [short] (2.5, 5)
+                   to [R, l=$R_{parasite}$] (7.5, 5)
+                   to [short] (10, 5);
+        }
+
+        \only<4->{
+        \draw [thick]
+            (0, 0) to [short] (2.5, 0)
+                   to [R, l=$R_{parasite}$, color=accent2] (7.5, 0)
+                   to [short] (10, 0);
+        }
+
+        \only<3>{
+            \node[thick, color=accent, font=\boldmath] at (0,  5.5) {$V_A$};
+            \node[thick, color=accent, font=\boldmath] at (10, 5.5) {$V_B$};
+        }
+        \only<4->{
+            \node[thick] at (0,  5.5) {\textbf{$V_A$}};
+            \node[thick] at (10, 5.5) {\textbf{$V_B$}};
+        }
+
+        \only<1>{
+        \draw [thick]
+            (10, 5)
+            to [R, l_=$R$, i_={$i = \frac{V}{R}$}] (10,0);
+        }
+        \only<2>{
+        \draw [thick]
+            (10, 5)
+            to [R, l_=$R$, i_={$i = \frac{V}{R + R_{parasite}}$}] (10,0);
+        }
+        \only<3->{
+        \draw [thick]
+            (10, 5)
+            to [R, l_=$R$, i_=$i$] (10,0);
+        }
+    \end{maketikzfigure}
+    \vfill
+\end{frame}
+
+\begin{frame}{Diapositive la plus importante}
+    \only<2->{
+    \begin{center}
+        \textcolor{UDSgreenFierte}{\faLongArrowAltRight}
+        \textbf{Tous les grounds ne sont pas égaux!}
+        \textcolor{UDSgreenFierte}{\faLongArrowAltLeft}
+    \end{center}
+    }
+\end{frame}
+
+
+\begin{frame}{Le Ground n'est pas un sink magique}
+    \begin{makelist}[\small][1.5]
+        \icon[red]{\faTimes} & Tout le courant doit s'en aller quelque part\\
+        \icon[red]{\faTimes} & Le ground est utile comme \textit{référence de tension}\\
+        \icon[red]{\faTimes} & Le ground n'est pas nécessairement un \textit{sink}
+    \end{makelist}
+
+    \vfill
+
+    \begin{maketikzfigure}[0.8][0.4]
+        \draw [thick]
+            (0,0) to [short] (10,0);
+
+        \draw [thick]
+            (0,0) to [american voltage source, l=$V$] (0,5);
+
+        \draw [thick]
+            (10, 5) to [short, i={$i = \frac{V}{R}$}] (0,5);
+
+        \draw [thick]
+            (10, 5) to [R, l_=$R$] (10,0);
+    \end{maketikzfigure}
+\end{frame}
+
+
+\subsection[5min-Max]{Induction}
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
         \icon[red]{\faTimes} & Comment les courants sont induits \\
+        \icon[red]{\faTimes} & Self-Induction dans une boucle\\
         \icon[red]{\faTimes} & Regle de la main droite\\
         \icon[red]{\faTimes} & Item 3
     \end{makelist}
@@ -193,7 +325,6 @@
 
 \subsection[5min-Pascal]{Current loops}
 \begin{frame}{Plan}
-    %Perso je splitterais cette section en 2 avec une partie plus deep dans l'iceberg
     \begin{makelist}[\small][1.5]
         \icon[red]{\faTimes} & GND Loop avec cable(Ou on place ca apres la section noise?)\\
         \icon[red]{\faTimes} & Frequency dependant loop\\

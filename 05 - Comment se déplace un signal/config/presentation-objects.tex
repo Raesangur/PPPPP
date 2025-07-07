@@ -54,11 +54,11 @@
 % \begin{maketikzfigure}[0.7][0.5]
 %     \draw (0,0) to[battery] (0,2);
 % \end{maketikzfigure}
-\NewDocumentEnvironment{maketikzfigure}{O{1} O{0.8}}{%
+\NewDocumentEnvironment{maketikzfigure}{O{1} O{0.8} O{american voltages, american currents}}{%
     \vspace{-16pt}%
     \begin{center}%
         \begin{adjustbox}{width=#1\textwidth, height=#2\textheight, keepaspectratio}%
-            \begin{circuitikz}[american voltages, american currents]%
+            \begin{circuitikz}[#3]%
 }
 {%
             \end{circuitikz}%
