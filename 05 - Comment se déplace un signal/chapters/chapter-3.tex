@@ -11,12 +11,75 @@
 \end{frame}
 
 \subsection[5min-Max]{Materiaux \rom{2}}
+\begin{comment}
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
         \icon[red]{\faTimes} & Complex $\epsilon$ \& $\mu$ \\
         \icon[red]{\faTimes} & Complex Refractive index\\
         \icon[red]{\faTimes} & Losses in dB\\
     \end{makelist}
+\end{frame}
+\end{comment}
+\begin{frame}{Rappel}
+    \begin{twocolumns}[0.4]
+        \leftcol
+            Electric Permittivity [F/m]:
+            \begin{equation*}
+                \varepsilon =\varepsilon_r \varepsilon_0
+            \end{equation*}
+            Magnetic Permeabililty [H/m]:
+            \begin{equation*}
+                \mu =\mu_r \mu_0
+            \end{equation*}
+            Refractive Index:
+            \begin{equation*}
+                n =\frac{\sqrt{\varepsilon \mu}}{\sqrt{\varepsilon_0 \mu_0}} = \sqrt{\varepsilon_r \mu_r}
+            \end{equation*}
+        \rightcol
+            Nous avons initialement considéré ces valeurs comme étant des nombre réel $\mathbb{R}$.\\
+            \vspace{10pt}
+            Cela fonctionne tres bien pour definir des matériaux \textbf{sans pertes}.\\
+            \vspace{10pt}
+            Par contre, dans la vrai vie, ce sont des nombres complexe $\mathbb{C}$. Cela permet de définir des matériaux \textbf{avec pertes}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Matériaux Complexes}
+        \begin{twocolumns}[0.6]
+        \leftcol
+            Indice de Refraction Complexe:
+            \begin{equation*}
+                \tilde{n} = n + jk
+            \end{equation*}
+            Permittivitée Complexe:
+            \begin{equation*}
+                \varepsilon = \epsilon_1 + j \epsilon_2 = (n+jk)^2
+            \end{equation*}
+            \vspace{5pt}
+            \begin{equation*}
+                \epsilon_1 = n^2 - k^2
+            \end{equation*}
+            \begin{equation*}
+                \epsilon_2 = 2nk
+            \end{equation*}
+        \rightcol
+           Indice de Refraction:
+            \begin{equation*}
+                n = \sqrt{\frac{\sqrt{\epsilon_1^2 + \epsilon_2^2}+\epsilon_1}{2}}
+            \end{equation*}
+           Coefficient d'Extinction:
+            \begin{equation*}
+                k = \sqrt{\frac{\sqrt{\epsilon_1^2 + \epsilon_2^2}-\epsilon_1}{2}}
+            \end{equation*}
+        \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Coefficient d'Extinction}
+    mettre graphique sinusoidale ammortie
+    \begin{equation}
+        T = e^{-kl}
+    \end{equation}
+    a valider
 \end{frame}
 
 \subsection[5min-Pascal]{Impédances \rom{1}}

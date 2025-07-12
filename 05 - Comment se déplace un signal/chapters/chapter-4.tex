@@ -56,6 +56,66 @@
     \end{makelist}
 \end{frame}
 
+\begin{frame}{Bruit Thermique - Resistance}
+    \begin{twocolumns}[0.5]
+        \leftcol
+        Johnson-Nyquist Noise Equation:
+        \begin{equation}
+            V_{rms}= \sqrt{4k_BTR\Delta f}
+        \end{equation}
+        $k_b = 1.38\times 10^{-23}$: Boltzmann Constant [J]\\
+        $T$: Temperature [K]\\
+        $\Delta f$: Frequency Range\\
+        $R$: Resistance [Ohm]\\
+        \rightcol
+        \makefigure[0.8][0.8][]{level-4/johnson-circuit}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Bruit Thermique - Thermique}
+    %\vspace{20pt}
+    \centering
+    \underline{Valeurs pour 300k:}
+    \begin{equation}
+    V_{rms}= 0.13\cdot\sqrt{R\Delta f} \hspace{2.0em} [\units{nV}]
+    \end{equation}
+    \makefigure[1.0][1.0][]{level-4/johnson-nyquist-band}
+\end{frame}
+
+\begin{frame}{Bruit Thermique - Resistance}
+    \makefigure[0.8][0.8][]{level-4/RC-noise_simpler}
+\end{frame}
+
+\begin{frame}{Bruit Thermique - Autres}
+    \begin{twocolumns}[0.5]
+        \leftcol
+        \centering
+        \underline{Bruit Condensateur:}
+        \begin{equation}
+            V_{rms}= \sqrt{\frac{k_BT}{C}}
+        \end{equation}
+        \rightcol
+        \centering
+        \underline{Bruit Inducteur:}
+        \begin{equation}
+            \overline{I_{n}}= \sqrt{\frac{k_BT}{L}}
+        \end{equation}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Bruit Thermique - Applications}
+    \maketable{thermal-noise}
+\end{frame}
+
+\begin{frame}{Bruits Environnementaux}
+    \begin{makelist}[\small][1.5]
+        \icon[green]{\faBolt} & \textbf{Atmospheriques:} Éclairs, Effets Corona, etc...\\
+        \icon[green]{\faHouzz} & \textbf{Industriel:} Lignes HV, Lampes Fluorescentes, etc...\\
+        \icon[green]{\faSun} & \textbf{Solaire:} Vents solaires\\
+        \icon[green]{\faMeteor} & \textbf{Cosmique:} Effets colectif des étoiles (8MHz-1.5GHz), CMB, Quasar, Pulsar, Chaos Gods\\
+        \icon[green]{\faFrown} & \textbf{Psychologique:} Toi qui fait pas tes lectures\\
+    \end{makelist}
+\end{frame}
 
 \subsection[2min-Max]{Noise Spectrum}
 \begin{frame}{Plan}
