@@ -157,15 +157,16 @@
 %
 % Usage:
 %   \maketable{table1}
-%   \maketable{table1}{My caption}
-%   \maketable{table1}{My caption}{tab:mylabel}
-%   \maketable{table1}{My caption}{tab:mylabel}[H]
+%   \maketable{table1}[My caption]
+%   \maketable{table1}[My caption][tab:mylabel]
+%   \maketable{table1}[My caption][tab:mylabel][H]
 
 \NewDocumentCommand{\maketable}{m o o o}{%
     \begin{table}[{#4}]%
-    \centering
-    \IfValueT{#2}{\caption{#2}}%
-    \IfValueTF{#3}{\label{#3}}{\label{tab:#1}}%
-    \input{tables/#1.tex}%
+        \centering
+        \IfValueT{#2}{\caption{#2}}%
+        \IfValueTF{#3}{\label{#3}}{\label{tab:#1}}%
+
+        \input{tables/#1.tex}%
     \end{table}%
 }
