@@ -327,13 +327,38 @@
 \end{comment}
 \subsection[5min-Pascal]{Current loops \rom{1}}
 \begin{frame}{Current Loop}
+    \begin{itemize}
+        \item[] \itemicon{\faExchange*} La loi du courant de Kirchhoff dit que à tout point dans un circuit, il doit y avoir autant de courant qui rentre que qui ne sort.
+        \item[] \itemicon{\faCogs} La loi de la conservation de charge indique que la somme des charges dans un circuit demeure la même.
+        \bigskip
+        \item[] \itemicon{\faSync} Le courant se déplace toujours en loops!
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Quote}
     \begin{makelist}[\small][1.5]
         \icon[red]{\faTimes} & L'Électricité prend le chemin le plus court\\
-        \icon[green]{\faCheck} & L'Électricité prend le chemin avec la plus petite Resistance\\ 
+        \icon{\faCheck} & L'Électricité prend le chemin avec la plus petite Resistance\\ 
     \end{makelist}
+
+    \vfill
+
+    \begin{maketikzfigure}[0.8][0.4]
+        \draw [thick]
+            (0,0) to [short] (10,0);
+
+        \draw [thick]
+            (0,0) to [american voltage source, l=$V$, invert] (0,5)
+            to [short] (10, 5);
+
+        \node at (2.5, 4.5) {$\SI{10}{\centi\meter}$};
+        \node at (7.5, 4.5) {$\SI{10}{\meter}$};
+
+        \draw [thick]
+            (10, 5) to [R, l_=$\SI{1}{\ohm}$] (10,0);
+        \draw [thick]
+            (5, 5) to [R, l_=$\SI{1}{\kilo\ohm}$] (5,0);
+    \end{maketikzfigure}
 \end{frame}
 
 \subsection[3min-Max]{Radiation \rom{1}}
@@ -406,10 +431,99 @@
 
 \subsection[5min-Pascal]{Fil d'une année lumière de long }
 % Parasitiques
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Item 1\\
-        \icon[red]{\faTimes} & Item 2\\
-        \icon[red]{\faTimes} & Item 3
-    \end{makelist}
+\begin{frame}{Scénario}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            \begin{center}
+            \begin{align*}
+                V_p = c   &= \SI{300\,000\,000}{\meter\per\second}\\
+            \end{align*}
+            \end{center}
+
+    \only<2>{
+    \begin{columns}
+        \begin{column}{0.25\textwidth}
+            \begin{center}
+            \begin{itemize}
+                \item[] \itemicon{\faSquare[regular]} $2c$
+                \item[] \itemicon{\faSquare[regular]} $\dfrac{1}{c}$
+            \end{itemize}
+            \end{center}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+            \begin{center}
+            \begin{itemize}
+                \item[] \itemicon{\faSquare[regular]} $c$
+                \item[] \itemicon{\faSquare[regular]} $2c + \dfrac{1}{c}$
+            \end{itemize}
+            \end{center}
+        \end{column}
+    \end{columns}
+    }
+    \only<3->{
+    \begin{columns}
+        \begin{column}{0.25\textwidth}
+            \begin{center}
+            \begin{itemize}
+                \item[] \itemicon[red]{\faSquare[regular]} $2c$
+                \item[] \itemicon{\faCheckSquare[regular]} $\dfrac{1}{c}$
+            \end{itemize}
+            \end{center}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+            \begin{center}
+            \begin{itemize}
+                \item[] \itemicon[red]{\faSquare[regular]} $c$
+                \item[] \itemicon{\faCheckSquare[regular]} $2c + \dfrac{1}{c}$
+            \end{itemize}
+            \end{center}
+        \end{column}
+    \end{columns}
+    }
+    
+    \rightcol
+    \begin{maketikzfigure}
+        \only<1>{
+            \draw [thick]
+                (0,0) to [normal open switch] (2, 0)
+                to [short] (3,0);
+        }
+        \only<2->{
+            \draw [thick]
+                (0,0) to [closing switch] (2, 0);
+            \draw [thick]
+            (3, 0) to [short, i=$i$] (2,0);
+        }
+
+        \draw[thick, dashed] (3, 0) to (9, 0);
+        \draw[thick] (9, 0) to [short] (10, 0) to [short] (10, 5);
+
+        \only<1-2>{
+        \draw [thick]
+            (0,0) to [american voltage source, l_=$V$, invert] (0,5)
+            to [empty led] (2, 5) to [short] (3, 5);
+        }
+        \only<3->{
+        \draw [thick]
+            (0,0) to [american voltage source, l_=$V$, invert] (0,5)
+            to [full led, color=accent] (2, 5) to [short] (3, 5);
+        }
+
+
+        \draw[thick, dashed] (3, 5) to (9, 5);
+        \draw[thick] (9, 5) to [short] (10, 5);
+
+        \node at (5, 4.5) {1 année lumière};
+
+        \draw [<->] (-1, 0) to (-1, 5);
+        \node at (-1.5, 2.5) {$\SI{1}{\meter}$};
+    \end{maketikzfigure}
+    \end{twocolumns}
+    
+    \vfill
+    \only<3->{
+    \begin{center}
+    \textit{https://www.youtube.com/watch?v=2Vrhk5OjBP8}
+    \end{center}
+    }
 \end{frame}
