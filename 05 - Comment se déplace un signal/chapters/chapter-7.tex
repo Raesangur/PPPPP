@@ -21,14 +21,148 @@
     \end{makelist}
 \end{frame}
 
+\begin{frame}{When it's a waveguide}    
+    \maketable{model-threshold}
+\end{frame}
+
 %Transmission line 3?
 
 \subsection[10min-Max-Pascal]{Matériaux \rom{3}}
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
+        \icon[red]{\faTimes} & Susceptibility\\
+        \icon[red]{\faTimes} & Polarization and Magnetisation\\
         \icon[red]{\faTimes} & Effective Complex Permittivity\\
         \icon[red]{\faTimes} & Frequency dependance\\
     \end{makelist}
+\end{frame}
+
+\begin{frame}{Rappel}
+    \begin{twocolumns}[0.4]
+        \leftcol
+            Electric Permittivity [F/m]:
+            \begin{equation*}
+                \varepsilon =\varepsilon_r \varepsilon_0
+            \end{equation*}
+            Refractive Index:
+            \begin{equation*}
+                n =\frac{\sqrt{\varepsilon \mu}}{\sqrt{\varepsilon_0 \mu_0}} = \sqrt{\varepsilon_r \mu_r}
+            \end{equation*}
+            Permittivitée Complexe:
+            \begin{equation*}
+                \varepsilon = \epsilon_1 + j \epsilon_2 = (n+jk)^2
+            \end{equation*}
+        \rightcol
+            Dans les sections précédentes, nous avons vu pourquoi les propriété des matériaux sont définies avec \textbf{nombres complexe} $\mathbb{C}$.
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Rappel}
+    \centering
+    \begin{twocolumns}[0.4]
+        \leftcol
+            \centering
+            \underline{Intensitée du Champ Électrique}
+            \begin{equation*}
+                \efield \rightarrow [\SI{}{\volt\per\meter}]
+            \end{equation*}
+            \underline{Densitée de Flux Électrique}
+            \begin{equation*}
+                \eflux \rightarrow [\SI{}{\coulomb\per\meter\squared}]
+            \end{equation*}
+            \underline{Relation}
+            \begin{equation*}
+                \eflux = \varepsilon \efield
+            \end{equation*}
+        \rightcol
+            \centering
+            \underline{Intensitée de Champ Magnétique}
+            \begin{equation*}
+                \mfield \rightarrow [\SI{}{\ampere\per\meter}]
+            \end{equation*}
+            \underline{Densitée de Flux Magnétique}
+            \begin{equation*}
+                \mflux \rightarrow [\SI{}{\weber\per\meter\squared} \;\; ou \;\; \SI{}{\tesla}]
+            \end{equation*}
+            \underline{Relation}
+            \begin{equation*}
+                \mflux = \mu \mfield
+            \end{equation*}
+    \end{twocolumns}
+\end{frame}
+
+
+\begin{frame}{Susceptibility}
+    La susceptibilitée est une autre valeur pour définir les propriétés de matériaux.
+    \begin{equation}
+        \begin{aligned}
+            \suse &=  \varepsilon_r - 1 \hspace{2em} \text{Electric Susceptibility}\\
+            \susm &=  \mu_r - 1 \hspace{2em} \text{Magnetic Susceptibility}
+        \end{aligned}
+    \end{equation}
+    \vspace{20pt}
+    Vacuum Susceptibility is always 0
+\end{frame}
+
+\begin{frame}{Polarization Density}
+    \begin{twocolumns}[0.6]
+        \leftcol
+        La densitée de polarisation représente la \textbf{contribution des dipôles électriques} du matériau qui \textbf{s'alignent} en réponse à un champs $\efield$
+        \begin{equation*}
+            \eflux = \varepsilon \efield \hspace{1em} \rightarrow \hspace{1em} \eflux = \varepsilon_0 \efield + \pola
+        \end{equation*}
+        \vspace{10pt}
+        \begin{equation*}
+            \begin{aligned}
+                \pola &=  \left(\varepsilon - \varepsilon_0 \right) \efield\\
+                &= \varepsilon_0 \suse \efield
+            \end{aligned}
+        \end{equation*}
+        \rightcol
+    \makefigure[1.0][0.6][]{level-7/polarization}
+    \end{twocolumns}
+    \centering
+    $\pola$ représente également l'énergie électrique que le matériau accumule.
+\end{frame}
+
+\begin{frame}{Effective Complex Permittivity}
+    \begin{twocolumns}[0.5]
+     \leftcol
+         Conversion to phasor form:
+        \begin{equation*}
+            \begin{aligned}
+                \nabv \times \mfield &= \ddt{\eflux} + \ecurrent \\
+                &= j\omega \eflux + \sigma \efield\\
+                &= j\omega \varepsilon \efield + \sigma \efield\\
+            \end{aligned}
+        \end{equation*}
+            Developpement:
+        \begin{equation*}
+            \begin{aligned}
+                j\omega \varepsilon \efield + \sigma \efield &= j\omega \left(\epsilon_1 - j \epsilon_2\right)\efield + \sigma \efield \\
+                &= j\omega \epsilon_1 \efield +  \left( \sigma + \omega \epsilon_2 \right)\efield \\
+                &= j\omega \left(\epsilon_1 - j \epsilon_2 - j \frac{\sigma}{\omega}\right)\efield\\
+            \end{aligned}
+        \end{equation*}
+    \rightcol
+        \begin{equation*}
+            \begin{aligned}
+                \omega \varepsilon_1 &: \text{Ability to store electric energy}\\
+                \omega \varepsilon_2 &: \text{Dielectric damping loss}\\
+                \sigma &: \text{Conductivity loss}
+            \end{aligned}
+        \end{equation*}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Effective Complex Permittivity}
+    \centering
+    \underline{Effective Complex Relative Permittivity}
+    \begin{equation}
+        \varepsilon_e = \left(\epsilon_1 - j\epsilon_2 - j\frac{\sigma}{\omega}\right)\frac{1}{\varepsilon_0}
+    \end{equation}
+    This term describe the properties of \textbf{non-homogeneous} materials. It can be seen as an average of all the individual relative permittivities.
+
 \end{frame}
 
 \subsection[5min-Pascal]{EM Fields \rom{2}}
