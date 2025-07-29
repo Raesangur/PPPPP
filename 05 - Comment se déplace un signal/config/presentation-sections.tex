@@ -28,18 +28,65 @@
     }
 }
 
+\newcommand\pausebackground {
+    \usebackgroundtemplate{
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics
+            [height=\paperheight, keepaspectratio]
+            {pictures/background/background-level-A.jpg}
+        };
+    \end{tikzpicture}
+    }
+}
+
+\newcommand\chapterbackground {
+    \usebackgroundtemplate{
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics
+            [width=\paperwidth, keepaspectratio]
+            {pictures/background/background-level-B.jpg}
+        };
+    \end{tikzpicture}
+    }
+}
+
 \newcommand\defaultbackground {
     \usebackgroundtemplate{
     \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics
             [width=\paperwidth, keepaspectratio]
-            {pictures/background/background5.pdf}
+            {pictures/background/background-default.pdf}
         };
     \end{tikzpicture}
     }
 }
 
+\newcommand\pascalbackground {
+    \usebackgroundtemplate{
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics
+            [width=\paperwidth, keepaspectratio]
+            {pictures/background/background-pascal.pdf}
+        };
+    \end{tikzpicture}
+    }
+}
+
+\newcommand\maxbackground {
+    \usebackgroundtemplate{
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics
+            [width=\paperwidth, keepaspectratio]
+            {pictures/background/background-max.pdf}
+        };
+    \end{tikzpicture}
+    }
+}
 
 % -------------- TITLE PAGE --------------
 \makeatletter

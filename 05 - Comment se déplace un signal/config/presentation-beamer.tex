@@ -114,7 +114,17 @@
             \centering%
             \maketoctitleheader%
             \vfill%
-            \tableofcontents[currentsection, currentsubsection, subsectionstyle=show/shaded/hide]%
+            \tableofcontents[
+                currentsection,
+                currentsubsection,
+                %subsectionstyle=show/shaded,
+                hideothersubsections,
+                sections={
+                    \number\numexpr\IceSecNum-1\relax,
+                    \number\IceSecNum,
+                    \number\numexpr\IceSecNum+1\relax
+                }
+          ]%
             \vfill%
         \end{frame}%
         \defaultbackground

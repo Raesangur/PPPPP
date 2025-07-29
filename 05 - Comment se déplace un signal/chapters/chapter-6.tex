@@ -2,8 +2,89 @@
 
 \section[Level 6]{Basic Building Blocks [12min-2h07]}
 
+\introbackground
+\begin{frame}[plain, label=intro-level-6]
+    \centering
+    \Large
+    \textcolor{white}{\textbf{Sujets Abordés dans la Section:}}\\
+    \vspace{24pt}
+    \begin{tabular}{c l}
+        \textcolor{UDSgreenFierte}{\faEye}
+            & \textcolor{white}{Avantages/Inconveniant de different types de \textbf{Lignes de Transmissions Planaires}}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faHubspot}
+            & \textcolor{white}{Comprendre l'effets de \textbf{Discontinuitées} sur les traces}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faEye}
+            & \textcolor{white}{Fonctionnement \textbf{d'Oscillateur \& Cristaux}}\\
+            [0.3em]
+    \end{tabular}
+\end{frame}
+\defaultbackground
 
-\subsection[5min-Max]{Signal Source \rom{4}}
+
+\subsection[5min-Max]{Waveguide \rom{1}}
+\maxbackground
+\begin{frame}{Plan}
+    \textbf{Je pense qu'on devrait rennomer ca Structure I ou Planar Transmission Line. Waveguide c'est plus un modele.}\\
+    \begin{makelist}[\small][1.5]
+        \icon[red]{\faTimes} & Transmission-Frequency plot\\
+        \icon[red]{\faTimes} & Explain Strip line\\
+        \icon[red]{\faTimes} & Show other structures\\
+        \icon[red]{\faTimes} & CPWG, Microstrip, GCPWG
+    \end{makelist}
+\end{frame}
+
+\begin{frame}{Microstrip}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.0][1.0][]{level-6/microstrip}
+        \rightcol
+            \begin{makelist}[\small][1.5]
+                \icon{\faCheck} & Simple à fabriquer\\
+                \icon{\faCheck} & Facile à modéliser\\
+                \icon{\faCheck} & Compact\\
+                \icon[red]{\faTimes} & Grande pertes par radiation >30GHz\\
+                \icon[red]{\faTimes} & Beaucoup de Dispersion\\
+            \end{makelist}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Stripline}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.0][1.0][]{level-6/stripline}
+        \rightcol
+            \begin{makelist}[\small][1.5]
+                \icon{\faCheck} & Tres peu de radiation\\
+                \icon[red]{\faTimes} & Nescessite 2 GND plane\\
+            \end{makelist}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Coplanar Waveguide}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.0][1.0][]{level-6/cpwg}
+        \rightcol
+            \begin{makelist}[\small][1.5]
+                \icon{\faCheck} & Peu de Dispersion\\
+                \icon{\faCheck} & Attenuation des Radiations\\
+                \icon[red]{\faTimes} & Nescessite plus d'espace\\
+                \icon[red]{\faTimes} & Via Stitching ($\approx \frac{\lambda}{10}$)\\
+            \end{makelist}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Plan}{Microwave connector type}
+    \makefigure[0.85][0.85][\href{https://www.microwaves101.com/encyclopedias/microwave-coaxial-connectors}{[Source]}]{level-6/microwave-connector}
+\end{frame}
+
+\subsection[5min-Pascal]{Signal Source \rom{4}}
+\pascalbackground
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
         \icon[red]{\faTimes} & Crystals\\
@@ -13,6 +94,7 @@
 \end{frame}
 
 \subsection[5min-Max]{Discontinuities}
+\maxbackground
 \begin{frame}{Open Microstrip Stub}
     \begin{twocolumns}[0.5]
         \leftcol
@@ -73,7 +155,7 @@
     \end{twocolumns}
 \end{frame}
 
-\subsection{Impedance Transformer}
+%\subsection{Impedance Transformer}
 \begin{frame}{Tapered Line}
     \begin{twocolumns}[0.5]
         \leftcol
@@ -85,6 +167,7 @@
 \end{frame}
 
 \subsection[2min-Max]{Couplers}
+\maxbackground
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
         \icon[red]{\faTimes} & Coupling\\
@@ -94,6 +177,7 @@
 \end{frame}
 
 \subsection[2min-Max]{Stubs}
+\maxbackground
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
         \icon[red]{\faTimes} & Item 1\\
@@ -136,20 +220,13 @@
     \makefigure[1.0][1.0][]{level-6/via-stubs}
 \end{frame}
 
-
-\subsection[5min-Pascal]{Waveguide \rom{1}}
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Transmission-Frequency plot\\
-        \icon[red]{\faTimes} & Explain Strip line\\
-        \icon[red]{\faTimes} & Show other structures\\
-        \icon[red]{\faTimes} & CPWG, Microstrip, GCPWG
-    \end{makelist}
+\begin{frame}{Via stubs}
+    \vspace{-40pt}
+    \makefigure[1.0][1.0][]{level-6/via-stubs-reflection}
 \end{frame}
 
-\begin{frame}{Plan}{Microwave connector type}
-    \makefigure[0.9][0.9][\href{https://www.microwaves101.com/encyclopedias/microwave-coaxial-connectors}{[Source]}]{level-6/microwave-connector}
-\end{frame}
+
+
 
 
 
