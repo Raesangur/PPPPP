@@ -10,7 +10,7 @@
     \vspace{24pt}
     \begin{tabular}{c l}
         \textcolor{UDSgreenFierte}{\faEye}
-            & \textcolor{white}{\textbf{Impedance de Source}\& \textbf{GPIO}}\\
+            & \textcolor{white}{\textbf{Impedance de Source} \& \textbf{GPIO}}\\
             [0.3em]
         \textcolor{UDSgreenFierte}{\faEye}
             & \textcolor{white}{Suite sur les propriété de \textbf{Matériaux} (paramètres complexes)}\\
@@ -28,14 +28,234 @@
 
 \subsection[5min-Pascal]{Signal Source \rom{2}}
 \pascalbackground
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Type of source\\
-        \icon[red]{\faTimes} & High/Low Impedance\\
-        \icon[red]{\faTimes} & GPIO output circuit
-    \end{makelist}
+\begin{frame}{Source vs Sink}
+    \begin{center}
+        \textit{Où va le courant?}
+    \end{center}
+
+    \begin{twocolumns}
+        \leftcol
+        \begin{center}
+            \textbf{Current Source}
+        \end{center}
+        \rightcol
+        \begin{center}
+            \textbf{Current Sink}
+        \end{center}
+    \end{twocolumns}
+    \vfill
+    \begin{twocolumns}
+        \leftcol
+        \ctikzset{bipoles/resistor/height=0.2}
+        \ctikzset{bipoles/resistor/width=0.5}
+        \ctikzset{bipoles/diode/height=0.35}
+        \ctikzset{bipoles/diode/width=0.2}
+        \begin{maketikzfigure}[1][0.45]
+            \draw (0, 0) node [dipchip,
+                num pins = 12,
+                hide numbers,
+                external pins width=0.3,
+                external pad fraction=4,
+                ](IC){};
+            ]
+            \only<1>{
+                \node [left, font=\tiny] at (IC.bpin 9) {OUT};
+            }
+
+            \only<1>{
+                \draw (IC.pin 9) to 
+                    [short] ($(IC.pin 9) + (0.5, 0)$) to
+                    [R] ($(IC.pin 9) + (1.5, 0)$) to
+                    [empty led] ($(IC.pin 9) + (2.5, 0)$) to
+                    [short] ($(IC.pin 7) + (2.5, 0)$) node [ground]{};
+            }
+            \only<2->{
+                \draw (IC.pin 9) to 
+                    [short] ($(IC.pin 9) + (0.5, 0)$) to
+                    [R] ($(IC.pin 9) + (1.5, 0)$) to
+                    [full led, color=accent] ($(IC.pin 9) + (2.5, 0)$) to
+                    [short] ($(IC.pin 7) + (2.5, 0)$) node [ground]{};
+
+                \draw [->, thick, accent]
+                    ($(IC.pin 8) + (0.5, 0)$) to [in=90, out=0]
+                    ($(IC.pin 7) + (2, 0)$);
+            }
+        \end{maketikzfigure}
+
+        \rightcol
+        \ctikzset{bipoles/resistor/height=0.2}
+        \ctikzset{bipoles/resistor/width=0.5}
+        \ctikzset{bipoles/diode/height=0.35}
+        \ctikzset{bipoles/diode/width=0.2}
+        \begin{maketikzfigure}[1][0.45]
+            \draw (0, 0) node [dipchip,
+                num pins = 12,
+                hide numbers,
+                external pins width=0.3,
+                external pad fraction=4,
+                ](IC){};
+            ]
+            \only<1>{
+                \node [left, font=\tiny] at (IC.bpin 9) {OUT};
+            }
+
+            \only<1>{
+                \draw (IC.pin 9) to 
+                    [short] ($(IC.pin 9) + (0.5, 0)$) to
+                    [R] ($(IC.pin 9) + (1.5, 0)$) to
+                    [empty led, invert] ($(IC.pin 9) + (2.5, 0)$) to
+                    [short] ($(IC.pin 12) + (2.5, 0)$) node [vcc]{};
+            }
+            \only<2->{
+                \draw (IC.pin 9) to 
+                    [short] ($(IC.pin 9) + (0.5, 0)$) to
+                    [R] ($(IC.pin 9) + (1.5, 0)$) to
+                    [full led, invert, color=accent] ($(IC.pin 9) + (2.5, 0)$) to
+                    [short] ($(IC.pin 12) + (2.5, 0)$) node [vcc]{};
+
+                \draw [->, thick, accent]
+                    ($(IC.pin 12) + (2, 0)$) to [in=0, out=-90]
+                    ($(IC.pin 10) + (0.5, 0)$);
+            }
+        \end{maketikzfigure}
+    \end{twocolumns}
 \end{frame}
 
+\begin{frame}{Fonctionnement d'un GPIO}
+    \begin{twocolumns}
+        \leftcol
+        \begin{center}
+            \textbf{Push-Pull}
+        \end{center}
+        \rightcol
+        \begin{center}
+            \textbf{Open-Drain}
+        \end{center}
+    \end{twocolumns}
+    \vfill
+    \begin{twocolumns}
+        \leftcol
+        \begin{maketikzfigure}[1][0.66]
+            \only<1, 4->{
+                \draw [thick]
+                    (0, 0) node (in)  {IN}
+                    (3.5, 0) node (out) {OUT};
+            }
+            \only<2>{
+                \draw [thick]
+                    (0, 0) node[color=accent]  (in)  {IN}
+                    (3.5, 0) node[color=accent2] (out) {OUT};
+            }
+            \only<3>{
+                \draw [thick]
+                    (0, 0) node[color=accent2] (in)  {IN}
+                    (3.5, 0) node[color=accent]  (out) {OUT};
+            }
+
+            \only<1, 4->{
+                \draw [thick]
+                    (2, 1.5) node[pigfete, bodydiode] (pmos){};
+                \draw [thick]
+                    (2, -1.5) node[nigfete, bodydiode] (nmos){};
+            }
+            \only<2>{
+                \draw [thick]
+                    (2, 1.5) node[pigfete, bodydiode, color=accent2] (pmos){};
+                \draw [thick]
+                    (2, -1.5) node[nigfete, bodydiode, color=accent] (nmos){};
+            }
+            \only<3>{
+                \draw [thick]
+                    (2, 1.5) node[pigfete, bodydiode, color=accent] (pmos){};
+                \draw [thick]
+                    (2, -1.5) node[nigfete, bodydiode, color=accent2] (nmos){};
+            }
+
+            \draw [thick]
+                (in.east) to [short] (0.5, 0) to [short] (0.5, 0 -| pmos.G) to (pmos.G);
+            \draw [thick]
+                (in.east) to [short] (0.5, 0) to [short] (0.5, 0 -| nmos.G) to (nmos.G);
+
+            \draw [thick]
+                (pmos.S) to [short] ($(pmos.S) + (0, 0.5)$) node[vcc]{};
+            \draw [thick]
+                (nmos.S) to [short] ($(nmos.S) - (0, 0.5)$) node[ground]{};
+
+            \draw [thick]
+                (pmos.D) to [short] (nmos.D);
+            \draw [thick]
+                (0, 0 -| pmos.D) to [short] (out.west);
+
+            \only<2> {
+                \draw[->, very thick, accent2] (out.south) to
+                [in=90, out=180] (nmos.S -| 2.5, 0);
+            }
+            \only<3> {
+                \draw[->, very thick, accent] (pmos.S -| 2.5, 0) to
+                [in=180, out=-90] (out.north);
+            }
+        \end{maketikzfigure}
+        \rightcol
+        \ctikzset{bipoles/resistor/height=0.2}
+        \ctikzset{bipoles/resistor/width=0.5}
+        \begin{maketikzfigure}[1][0.66]
+            \only<1-4>{
+                \draw [thick]
+                    (2, 0) node[nigfete, bodydiode] (nmos){};
+            }
+            \only<5>{
+                \draw [thick]
+                    (2, 0) node[nigfete, bodydiode, color=accent] (nmos){};
+            }
+            \only<6>{
+                \draw [thick]
+                    (2, 0) node[nigfete, bodydiode, color=accent2] (nmos){};
+            }
+
+            \only<1-4>{
+                \draw [thick]
+                    (nmos.G -| 0, 0) node (in)  {IN}
+                    (5, 1) node (out) {OUT};
+            }
+            \only<5>{
+                \draw [thick]
+                    (nmos.G -| 0, 0) node[color=accent]  (in)  {IN}
+                    (5, 1) node[color=accent2] (out) {OUT};
+            }
+            \only<6>{
+                \draw [thick]
+                    (nmos.G -| 0, 0) node[color=accent2] (in)  {IN}
+                    (5, 1) node[color=accent]  (out) {OUT};
+            }
+
+            \draw [thick]
+                (2.6, 3) node[vcc]{} to [R] (2.6, 1);
+
+            \draw [thick]
+                (in.east) to (nmos.G);
+
+            \draw [thick]
+                (nmos.S) to [short] ($(nmos.S) - (0, 0.5)$) node[ground]{};
+
+            \draw [thick]
+                (nmos.D) to [short] (0, 1 -| nmos.D) to [short] (out.west);
+
+            \only<5> {
+                \draw[-, very thick, accent2] (out.north) to
+                    [in=90, out=180] (3, 0.9)
+                    [in=90, out=-90] (nmos.S -| 2.5, 0);
+
+                \draw[->, very thick, accent2] (3, 3) to
+                [in=90, out=-90] (3, 0.9) to
+                [in=90, out=-90] ($(nmos.S -| 2.5, 0) - (0, 0.5)$);
+            }
+            \only<6> {
+                \draw[->, very thick, accent] (3, 3) to
+                [in=180, out=-90] (out.north);
+            }
+        \end{maketikzfigure}
+    \end{twocolumns}
+\end{frame}
 
 \subsection[5min-Max]{Materiaux \rom{2}}
 \maxbackground

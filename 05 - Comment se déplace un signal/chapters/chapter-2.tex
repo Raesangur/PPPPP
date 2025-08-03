@@ -466,7 +466,7 @@
 \pascalbackground
 % Parasitiques
 \begin{frame}{Scénario}
-    \begin{twocolumns}[0.5]
+    \begin{twocolumns}
         \leftcol
             \begin{center}
             \begin{align*}
@@ -529,28 +529,33 @@
             (3, 0) to [short, i=$i$] (2,0);
         }
 
-        \draw[thick, dashed] (3, 0) to (9, 0);
-        \draw[thick] (9, 0) to [short] (10, 0) to [short] (10, 5);
+        \draw[thick, dashed] ( 3, 0) to ( 9, 0);
+        \draw[thick, dashed] (-3, 0) to (-9, 0);
+        \draw[thick, dashed] (-3, 0) to (-9, 0);
+        \draw[thick] ( 9, 0) to [short] ( 10, 0) to [short] ( 10, 5);
+        \draw[thick] (-9, 0) to [short] (-10, 0) to [short] (-10, 5);
+
+        \draw [thick]
+            (0,0) to [american voltage source, l_=$V$, invert] (-2, 0) to [short] (-3, 0);
 
         \only<1-2>{
-        \draw [thick]
-            (0,0) to [american voltage source, l_=$V$, invert] (0,5)
-            to [empty led] (2, 5) to [short] (3, 5);
+            \draw[thick] (-3, 5) to [short] (-1, 5) to [empty led] (1, 5) to [short] (3, 5);
         }
         \only<3->{
-        \draw [thick]
-            (0,0) to [american voltage source, l_=$V$, invert] (0,5)
-            to [full led, color=accent] (2, 5) to [short] (3, 5);
+            \draw[thick] (-3, 5) to [short] (-1, 5) to [full led, color=accent] (1, 5) to [short] (3, 5);
         }
 
 
-        \draw[thick, dashed] (3, 5) to (9, 5);
-        \draw[thick] (9, 5) to [short] (10, 5);
+        \draw[thick, dashed] ( 3, 5) to ( 9, 5);
+        \draw[thick, dashed] (-3, 5) to (-9, 5);
+        \draw[thick] ( 9, 5) to [short] ( 10, 5);
+        \draw[thick] (-9, 5) to [short] (-10, 5);
 
-        \node at (5, 4.5) {1 année lumière};
+        \draw [<->] (-10, 6) to (10, 6);
+        \node[font=\Large] at (0, 6.5) {1 année lumière};
 
-        \draw [<->] (-1, 0) to (-1, 5);
-        \node at (-1.5, 2.5) {$\SI{1}{\meter}$};
+        \draw [<->] (-11, 0) to (-11, 5);
+        \node[font=\Large] at (-11.5, 2.5) {$\SI{1}{\meter}$};
     \end{maketikzfigure}
     \end{twocolumns}
     
