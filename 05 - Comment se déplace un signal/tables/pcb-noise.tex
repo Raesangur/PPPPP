@@ -1,0 +1,17 @@
+\footnotesize{
+\begin{table}
+    \caption{Autres Sources de bruits sur PCB}
+    % \label{tab:pcb-noise}
+    \begin{tabular}{l|c|c|l}
+        \toprule
+        Source & Bandwith & Noise Power (typical) & Notes \\
+        \midrule
+        \hline
+        Switch Mode PSU & 10kHz - 100MHz & -90 to -60 dBm & \makecell{Dépend du layout,\\ load \& filtrage}\\
+        \hline
+        Clock Signals & MHz - GHz & -50 to -10 dBm & \makecell{Couplage de signal périodique}\\
+        \hline
+        GND Bounce & MHz - GHz & -80 to -40 dBm & \makecell{Dépend des retour de\\ courant, impedance}\\
+        \bottomrule
+    \end{tabular}
+\end{table}}

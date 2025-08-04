@@ -137,12 +137,16 @@
 %https://www.itu.int/rec/R-REC-P.372/en
 \begin{frame}{Bruits Environnementaux}
     \begin{makelist}[\small][1.5]
-        \icon{\faBolt} & \textbf{Atmospheriques:} Éclairs, Effets Corona, etc...\\
-        \icon{\faHouzz} & \textbf{Industriel:} Lignes HV, Lampes Fluorescentes, etc...\\
+        \icon{\faBolt} & \textbf{Atmospheriques:} Éclairs, Effets Corona, etc... ($\approx -120 \text{ to} -80 \SI{}{\dbm\per\hertz}$, $<20\SI{}{\mega\hertz}$)\\
+        \icon{\faHouzz} & \textbf{Industriel:} Lignes HV, Lampes Fluorescentes, etc... ($\approx -110 \text{ to} -80 \SI{}{\dbm\per\hertz}$, $20-300\SI{}{\mega\hertz}$)\\
         \icon{\faSun} & \textbf{Solaire:} Vents solaires\\
-        \icon{\faMeteor} & \textbf{Cosmique:} Effets colectif des étoiles (8MHz-1.5GHz), CMB, Quasar, Pulsar, Chaos Gods\\
+        \icon{\faMeteor} & \textbf{Cosmique:} Effets colectif des étoiles (8MHz-1.5GHz), CMB, Quasar, Pulsar, Chaos Gods ($\approx -204 \text{ to} -164 \SI{}{\dbm\per\hertz}$, $20-120\SI{}{\mega\hertz}$)\\
         \icon{\faFrown} & \textbf{Psychologique:} Toi qui fait pas tes lectures\\
     \end{makelist}
+\end{frame}
+
+\begin{frame}{Autres source de bruit sur un PCB}
+    \maketable{pcb-noise}
 \end{frame}
 
 \subsection[2min-Max]{Noise Spectrum}
@@ -207,6 +211,14 @@
 % 
 \begin{frame}{Determining SNR}
     Mettre tableau avec resolution et SNR
+\end{frame}
+
+\begin{frame}{Common PCB Protocols}
+    \maketable{protocol-snr}
+\end{frame}
+
+\begin{frame}{(BER) Bit Error Rate}
+    \maketable{ber}
 \end{frame}
 
 \subsection[5min-Pascal]{Jitter}
