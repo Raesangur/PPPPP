@@ -1,0 +1,19 @@
+\footnotesize{
+\begin{table}
+    \caption{SNR selon le protocole (varie selon votre implementation)}
+    % \label{tab:pcb-noise}
+    \begin{tabular}{l|c|c|c}
+        \toprule
+        Protocol & Voltage (Typical) & Noise Margin & SNR\\
+        \midrule
+        \hline
+        I2C & 3.3V/5V & $\sim$0.3V & $\sim$20-30 dB\\
+        UART & 3.3V & $\sim$0.4V & $\sim$25-30 dB\\
+        SPI & 3.3V/5V & $\sim$0.4V & $\sim$25-30 dB\\
+        USB 2.0 & Differential 400-600mV& CMMR & $\sim$30-40 dB\\
+        USB 3.0 & Differential 800mV & Jitter Spec & $\sim$35-50 dB\\
+        Ethernet & Differential 2V & $\sim$0.4V-0.6V & $\sim$25-35 dB\\
+        PCIe Gen3 & Differential 800mV& $\sim$25-30\% Eye margin & $\sim$35-50 dB\\
+        \bottomrule
+    \end{tabular}
+\end{table}}

@@ -148,3 +148,43 @@
     \end{multicols}
 \end{frame}
 }
+
+
+\newcommand\pauseframe{
+    \pausebackground
+    \begin{frame}
+        %\vspace{-0pt}
+        \begin{multicols}{2}
+            \begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true, wd=0.5\textwidth, bgopacity=0.85]{title}
+                \usebeamerfont{title}Pause 10min\\
+            \end{beamercolorbox}%
+        \vfill\null
+        \columnbreak
+        \end{multicols}
+        \vspace{120pt}
+        \begin{beamercolorbox}[sep=3pt, center, shadow=true, rounded=true, wd=0.5\textwidth, bgopacity=0.85]{title}
+            \small{\textcolor{white}{Picture: Roger Microwave PCB}}\\
+        \end{beamercolorbox}%
+    \end{frame}
+    \defaultbackground
+}
+
+\newcommand\chapterframe{
+    \chapterbackground
+    \begin{frame}
+        \vspace{-30pt}
+        \begin{multicols}{2}
+            \begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true, wd=0.5\textwidth, bgopacity=0.85]{title}
+                \usebeamerfont{title}Fin Première Partie\\
+            \end{beamercolorbox}%
+        \vfill\null
+
+        \columnbreak
+        \end{multicols}
+        \vspace{120pt}
+        \begin{beamercolorbox}[sep=3pt, center, shadow=true, rounded=true, wd=0.5\textwidth, bgopacity=0.85]{title}
+            \small{\textcolor{white}{Picture: Milimeter-Wave Integrated Circuit (MMIC)}}\\
+        \end{beamercolorbox}%
+    \end{frame}
+    \defaultbackground
+}
