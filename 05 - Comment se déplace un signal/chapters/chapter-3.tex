@@ -342,6 +342,165 @@
     \end{makelist}
 \end{frame}
 
+\begin{frame}{Qu'est-ce qu'un impédance?}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item \textit{J'ai un PPPPP complet là-dessus!}
+            \item Rappel
+            \bigskip
+            \item Résistance complexe, dénoté $Z$, en $\SI{}{\ohm}$
+            \item Résistance électrique à une certaine fréquence
+            \item Composé de:
+            \begin{itemize}
+                \item Résistance \textcolor{red}{($R$)}
+                \item Réactance Inductive \textcolor{orange}{($X_L$)}
+                \item Réactance Capacitive \textcolor{blue}{($X_C$)}
+            \end{itemize}
+        \end{itemize}
+
+        \rightcol
+        \begin{center}
+            \Large
+            $V = ZI$\\
+            \vspace{12pt}
+            \textcolor{orange}{
+                $X_L = 2\pi f L$\\
+            }
+            \vspace{12pt}
+            \textcolor{blue}{
+                $X_C = \dfrac{1}{2\pi f C}$
+            }
+        \end{center}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Graphique d'impédance}
+    \begin{twocolumns}
+        \leftcol
+        \begin{center}
+            \only<2->{
+                $f = \SI{2}{\mega\hertz}$\\
+            }
+        \end{center}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \only<2->{
+                \begin{center}
+                \textcolor{orange}{
+                    $X_L = 2 \pi f L = \SI{126}{\ohm}$\\
+                }
+                \end{center}
+                }
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \only<3->{
+                \begin{center}
+                \textcolor{blue}{
+                $X_C = \dfrac{1}{2 \pi f C} = \SI{80}{\ohm}$\\
+                }
+                \end{center}
+                }
+            \end{column}
+        \end{columns}
+
+        \vspace{24pt}
+
+        \begin{maketikzfigure}[1][0.4][american voltages, american currents, cute inductors]
+            \draw[thick] (0, 2) to [sV=$V$, l_=$\SI{2}{\mega\hertz}$] (0, -2);
+
+            \only<1>{
+                \draw[thick] (0, 2) to [short] (6, 2);
+            }
+            \only<2->{
+                \draw[thick] (0, 2) to [short] (2, 2)
+                    to [L, l_=$\SI{10}{\micro\henry}$, color=orange] (4, 2)
+                    to [short] (6, 2);
+            }
+            \only<3>{
+                \draw[thick] (4.5, 2)
+                    to [C, l_=$\SI{100}{\nano\farad}$, color=blue] (4.5, -2);
+            }
+
+
+            \draw[thick] (6, 2) to
+                [R, l=$\SI{220}{\ohm}$, color=red] (6, -2)
+                to [short] (0, -2);
+
+        \end{maketikzfigure}
+
+        \rightcol
+
+        \begin{center}
+            \only<2->{
+                $Z = \sqrt{X^2 + R^2}$\\
+                \vspace{12pt}
+            }
+            \only<2>{
+                $Z = \sqrt{126^2 + 220^2} = \SI{250}{\ohm}$\\
+            }
+            \only<3->{
+                $Z = \sqrt{(126 - 80)^2 + 220^2} = \SI{225}{\ohm}$\\
+            }
+        \end{center}
+
+        \begin{adjustbox}{width=\textwidth, height=0.8\textheight, keepaspectratio}%
+            \begin{tikzpicture}
+            \only<1>{
+                \begin{axis}[
+                    axis x line=middle,
+                    axis y line=none,
+                    xmin=0, xmax=300,
+                    ymin=-200, ymax=200,
+                    xlabel = \(R (\SI{}{\ohm})\),
+                    xtick={0, 100, 200, 300},
+                    ytick=\empty,
+                    enlargelimits=false,
+                    clip=false
+                ]
+            }
+            \only<2->{
+                \begin{axis}[
+                    axis x line=middle,
+                    axis y line=left,
+                    xmin=0, xmax=300,
+                    ymin=-200, ymax=200,
+                    xlabel = \(R (\SI{}{\ohm})\),
+                    ylabel = \(X (\SI{}{\ohm})\),
+                    xtick={0, 100, 200, 300},
+                    ytick={-200, -100, 0, 100, 200},
+                    enlargelimits=false,
+                    clip=false
+                ]
+            }
+            \draw[->, very thick, red]    (axis cs:0,0) -- (axis cs:220,0);
+            \only<2->{
+            \draw[->, very thick, orange] (axis cs:0,0) -- (axis cs:0,126);
+            }
+
+            \only<3->{
+            \draw[->, very thick, blue]   (axis cs:0,0) -- (axis cs:0,-80);
+            }
+
+
+            \only<2>{
+            \draw[-, accent, dashed] (axis cs:0,126) -- (axis cs:220,126);
+            \draw[-, accent, dashed] (axis cs:220,0) -- (axis cs:220,126);
+
+            \draw[->, very thick, accent] (axis cs:0,0) -- (axis cs:220,126) node[midway, above, sloped] () {$Z = \SI{250}{\ohm}$};
+            }
+
+            \only<3>{
+            \draw[-, accent, dashed] (axis cs:220,0) -- (axis cs:220,46);
+
+            \draw[->, very thick, accent] (axis cs:0,0) -- (axis cs:220, 46) node[midway, above, sloped] () {$Z = \SI{225}{\ohm}$};
+            }
+            \end{axis}
+            \end{tikzpicture}
+        \end{adjustbox}
+    \end{twocolumns}
+\end{frame}
+
 \begin{frame}{Quote}
     \begin{makelist}[\small][1.5]
         \icon[red]{\faTimes} & L'Électricité prend le chemin avec la plus petite \textbf{Resistance}\\
