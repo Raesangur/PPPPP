@@ -508,6 +508,271 @@
     \end{makelist}
 \end{frame}
 
+\subsection{Transmission line \rom{1}}
+\pascalbackground
+\begin{frame}{Circuit électrique de base}
+    \begin{center}
+    
+    \resizebox{0.9\textwidth}{!}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,0) to [short, *-] (10,0)
+        to [R, l_=$R_{LOAD}$] (10,5)
+        (0,0) to [open, v<=$V$] (0,5)
+        to [short] (10,5)
+        ;
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+\begin{frame}{Circuit électrique - Résistance Parasite}
+    \begin{center}
+    
+    \resizebox{0.9\textwidth}{!}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,0) to [short, *-] (10,0)
+        to [R, l_=$R_{LOAD}$] (10,5)
+        (0,0) to [open, v<=$V$] (0,5)
+        to [short, *- ,i=$i$] (2,5)
+        to [R, l_=$R$, color=red] (4, 5)
+        to [short] (10,5)
+        ;
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+\begin{frame}{Circuit électrique - Capacitance Parasite}
+    \begin{center}
+    
+    \resizebox{0.9\textwidth}{!}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,0) to [short, *-] (10,0)
+        to [R, l_=$R_{LOAD}$] (10,5)
+        (0,0) to [open, v<=$V$] (0,5)
+        to [short, *- ,i=$i$] (2,5)
+        to [R, l_=$R$] (4, 5)
+        to [short] (10,5)
+        (0, 5) to [open] (4, 5)
+        to [C, l_=$C$, color=red] (4, 0)
+        ;
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+\begin{frame}{Circuit électrique - Inductance Parasite}
+    \begin{center}
+    
+    \resizebox{0.9\textwidth}{!}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,0) to [short, *-] (10,0)
+        to [R, l_=$R_{LOAD}$] (10,5)
+        (0,0) to [open, v<=$V$] (0,5)
+        to [short, *- ,i=$i$] (2,5)
+        to [R, l_=$R$] (4, 5)
+        to [short] (5, 5)
+        to [american inductor, l_=$L$, color=red] (7, 5)
+        to [short] (10,5)
+        (0, 5) to [open] (4.5, 5)
+        to [C, l_=$C$] (4.5, 0)
+        ;
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Circuit électrique - Conductance Parasite}
+    \begin{center}
+    
+    \resizebox{0.9\textwidth}{!}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,0) to [short, *-] (10,0)
+        to [R, l_=$R_{LOAD}$] (10,5)
+        (0,0) to [open, v<=$V$] (0,5)
+        to [short, *- ,i=$i$] (2,5)
+        to [R, l_=$R$] (4, 5)
+        to [short] (7, 5)
+        to [american inductor, l_=$L$] (9, 5)
+        to [short] (10,5)
+        (0, 5) to [open] (4.5, 5)
+        to [C, l_=$C$] (4.5, 0)
+        (0, 5) to [open] (6, 5)
+        to [R, l_=$G$, color=red] (6, 0)
+        ;
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Ligne de transmission}
+    \begin{center}
+    \resizebox{0.9\textwidth}{!}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,0) to [short, *-] (25, 0)
+        to [R, l_=$R_{LOAD}$] (25, 5)
+        (0,0) to [open, v<=$V$] (0, 5)
+        to [short, *- ,i=$i$] (1, 5)
+        to [R, l_=$R_1$] (2.5, 5)
+        to [short] (5, 5)
+        to [american inductor, l_=$L_1$] (6.5, 5)
+        
+        to [short] (8, 5)
+        to [R, l_=$R_2$] (10.5, 5)
+        to [short] (13, 5)
+        to [american inductor, l_=$L_2$] (14.5, 5)
+
+        to [short] (16, 5)
+        to [R, l_=$R_3$] (18.5, 5)
+        to [short] (21, 5)
+        to [american inductor, l_=$L_3$] (22.5, 5)
+        to [short] (22.75, 5)
+
+
+
+        (0, 5) to [open] (3, 5)
+        to [C, l_=$C_1$] (3, 0)
+        (0, 5) to [open] (4.5, 5)
+        to [R, l_=$G_1$] (4.5, 0)
+        
+        (0, 5) to [open] (11, 5)
+        to [C, l_=$C_2$] (11, 0)
+        (0, 5) to [open] (12.5, 5)
+        to [R, l_=$G_2$] (12.5, 0)
+
+        (0, 5) to [open] (19, 5)
+        to [C, l_=$C_3$] (19, 0)
+        (0, 5) to [open] (20.5, 5)
+        to [R, l_=$G_3$] (20.5, 0)
+        ;
+        \draw[thick, dotted] (23, 5) to [short] (23.5, 5);
+        \draw[thick] (23.75, 5) to [short] (25, 5);
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+
+
+\begin{frame}{Ligne de transmission - Impédance caractéstique}
+    \begin{columns}
+        \begin{column}{0.85\textwidth}
+            \begin{center}
+            $Z_0 = \sqrt{\dfrac{R + j \omega L}{G + j \omega C}}$
+            \end{center}
+        \end{column}
+        \begin{column}{0.15\textwidth}
+            \small{$G [S] = \dfrac{1}{R}$}
+        \end{column}
+        
+    \end{columns}
+    \vfill
+    \begin{center}
+    \resizebox{!}{0.66\textheight}{
+    \begin{circuitikz}[american voltages]
+        \draw [thick]
+        (0,0) to [short, *-] (10,0)
+        to [R, l_=$R_{LOAD}$] (10,5)
+        (0,0) to [open, v<=$V$] (0,5)
+        to [short, *- ,i=$i$] (2,5)
+        to [R, l_=$R$] (4, 5)
+        to [short] (7, 5)
+        to [american inductor, l_=$L$] (9, 5)
+        to [short] (10,5)
+        (0, 5) to [open] (4.5, 5)
+        to [C, l_=$C$] (4.5, 0)
+        (0, 5) to [open] (6, 5)
+        to [R, l_=$G$] (6, 0)
+        ;
+    \end{circuitikz}
+    }
+    \end{center}
+\end{frame}
+
+\begin{frame}{Ligne de transmission - Impédance Caractéristique}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+            $Z_0 = \sqrt{\dfrac{R + j \omega L}{G + j \omega C}}$\\
+            \vspace{20pt}
+            $G \rightarrow 0$\\
+            $R \lll \omega L$\\
+            \vspace{20pt}
+            $Z_0 = \sqrt{\dfrac{j \omega L}{j \omega C}}$\\
+            \vspace{5pt}
+            $Z_0 = \sqrt{\dfrac{L}{C}}$\\
+            \end{center}
+        \end{column}
+        \begin{column}{0.66\textwidth}
+            \resizebox{\textwidth}{!}{
+            \begin{circuitikz}[american voltages]
+                \draw [thick]
+                (0,0) to [short, *-] (10,0)
+                to [R, l_=$R_{LOAD}$] (10,5)
+                (0,0) to [open, v<=$V$] (0,5)
+                to [short, *- ,i=$i$] (2,5)
+                to [R, l_=$R$] (4, 5)
+                to [short] (7, 5)
+                to [american inductor, l_=$L$] (9, 5)
+                to [short] (10,5)
+                (0, 5) to [open] (4.5, 5)
+                to [C, l_=$C$] (4.5, 0)
+                (0, 5) to [open] (6, 5)
+                to [R, l_=$G$] (6, 0)
+                ;
+            \end{circuitikz}
+            }
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Impédance Caractéristique}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Ne dépend pas de la fréquence
+                \item Tout circuit a un $Z_0$
+                \item Ratio tension/courant se déplaçant
+                \bigskip
+                \item $Z_0$ ne dépend que de la \textit{géométrie} du circuit
+                \item Ratio du E-field vs H-field
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \huge{$Z_0 = \sqrt{\dfrac{L}{C}}$}\\
+                \vspace{30pt}
+                \resizebox{!}{0.45\textheight}{
+                \begin{circuitikz}[american voltages]
+                    \draw [line width = 0.5mm]
+                    (0,0) to [short, *-] (7,0)
+                    to [R, l_=$R_{L}$] (7,5)
+                    (0,0) to [open, v<=$V$] (0,5)
+                    to [short, *- ] (3,5)
+                    to [short] (4, 5)
+                    to [american inductor, l_=$L$] (6, 5)
+                    to [short] (7,5)
+                    (0, 5) to [open] (3, 5)
+                    to [C, l_=$C$] (3, 0)
+                    ;
+                \end{circuitikz}
+                }
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+
 \subsection[5min-Pascal]{Réflection}
 \pascalbackground
 \begin{frame}{Plan}
