@@ -1,6 +1,6 @@
 %!TEX root = ../presentation.tex 
 
-\section[Level 7]{Field lines and Fringes [20min-2h27]}
+\section[Level 7]{Dielectric Depths [20min-2h27]}
 
 \subsection[5min-Pascal]{Ground Planes \rom{2}}
 \pascalbackground
@@ -12,33 +12,23 @@
     \end{makelist}
 \end{frame}
 
-\subsection[5min-Pascal]{Waveguide \rom{2}}
+
+\subsection[10min-Pascal]{Stackup \rom{1}}
 \pascalbackground
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & stripline Field\\
-        \icon[red]{\faTimes} & Microstrip Field\\
-        \icon[red]{\faTimes} & CPWG, GCPWG field\\
-        \icon[red]{\faTimes} & Vias
+                \icon[red]{\faTimes} & Conversion\\
+        \icon[red]{\faTimes} & Lecture datasheet diélectrique\\
+        \icon[red]{\faTimes} & Optimisation Stackup\\
+        \icon[red]{\faTimes} & Propriété FR4, copper, or, plomb
     \end{makelist}
 \end{frame}
 
-\begin{frame}{When it's a waveguide}    
-    \maketable{model-threshold}
-\end{frame}
 
 %Transmission line 3?
 
-\subsection[10min-Max-Pascal]{Matériaux \rom{3}}
+\subsection[10min-Max]{Matériaux \rom{3}}
 \maxbackground
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Susceptibility\\
-        \icon[red]{\faTimes} & Polarization and Magnetisation\\
-        \icon[red]{\faTimes} & Effective Complex Permittivity\\
-        \icon[red]{\faTimes} & Frequency dependance\\
-    \end{makelist}
-\end{frame}
 
 \begin{frame}{Rappel}
     \begin{twocolumns}[0.4]
@@ -94,19 +84,6 @@
     \end{twocolumns}
 \end{frame}
 
-
-\begin{frame}{Susceptibility}
-    La susceptibilitée est une autre valeur pour définir les propriétés de matériaux.
-    \begin{equation}
-        \begin{aligned}
-            \suse &=  \varepsilon_r - 1 \hspace{2em} \text{Electric Susceptibility}\\
-            \susm &=  \mu_r - 1 \hspace{2em} \text{Magnetic Susceptibility}
-        \end{aligned}
-    \end{equation}
-    \vspace{20pt}
-    Vacuum Susceptibility is always 0
-\end{frame}
-
 \begin{frame}{Polarization Density}
     \begin{twocolumns}[0.6]
         \leftcol
@@ -127,6 +104,39 @@
     \centering
     $\pola$ représente également l'énergie électrique que le matériau accumule.
 \end{frame}
+
+\begin{frame}{Microwave oven}
+    \begin{twocolumns}[0.6]
+        \leftcol
+            \makefigure[1.0][0.6][]{level-7/microwave-oven}
+        \rightcol
+            \makefigure[1.0][0.6][]{level-7/polarization}
+    \end{twocolumns}
+    \centering
+    \vspace{-20pt}
+    Un micro-onde réchauffe en faisant osciller la $\pola$ des molécules d'eau. A cause d'un délais entre $\pola$ et la position de la molécule, un effet de friction survient, créant de la chaleur. 
+\end{frame}
+
+\begin{frame}{Polarization relation to $\varepsilon$}
+        \begin{twocolumns}[0.4]
+        \leftcol
+            Permittivitée Complexe:
+            \begin{equation*}
+                \varepsilon = \epsilon_1 + j \epsilon_2
+            \end{equation*}
+            \vspace{5pt}
+            \begin{equation*}
+                \begin{aligned}
+                    \varepsilon_1 &: \text{Ability to store electric energy}\\
+                    \varepsilon_2 &: \text{Dielectric damping loss}\\
+                \end{aligned}
+            \end{equation*}
+        \rightcol
+            %https://www.allaboutcircuits.com/technical-articles/introduction-to-dielectric-loss-in-transmission-lines/
+            \makefigure[0.9][0.9][]{level-7/polarization-graph}
+        \end{twocolumns}
+\end{frame}
+
 
 \begin{frame}{Effective Complex Permittivity}
     \begin{twocolumns}[0.5]
@@ -150,8 +160,8 @@
     \rightcol
         \begin{equation*}
             \begin{aligned}
-                \omega \varepsilon_1 &: \text{Ability to store electric energy}\\
-                \omega \varepsilon_2 &: \text{Dielectric damping loss}\\
+                \varepsilon_1 &: \text{Ability to store electric energy}\\
+                \varepsilon_2 &: \text{Dielectric damping loss}\\
                 \sigma &: \text{Conductivity loss}
             \end{aligned}
         \end{equation*}
@@ -168,22 +178,7 @@
 
 \end{frame}
 
-\subsection[5min-Pascal]{EM Fields \rom{2}}
-\pascalbackground
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Skin effect\\
-        \icon[red]{\faTimes} & EMI\\
-        \icon[red]{\faTimes} & Item 3
-    \end{makelist}
+\begin{frame}{Effective refractive index}
+    Indice de refraction effectif?
 \end{frame}
-
-\begin{frame}{Skin Depth of Different Materials}
-    %\begin{center}
-    %    \textbf{1oz PCB = $\SI{35}{\micro\meter}$}
-    %\end{center}
-
-    \maketable{skin-depth}
-\end{frame}
-
 
