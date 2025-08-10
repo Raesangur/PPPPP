@@ -508,7 +508,7 @@
     \end{makelist}
 \end{frame}
 
-\subsection{Transmission line \rom{1}}
+\subsection[5min-Pascal]{Transmission line \rom{1}}
 \pascalbackground
 \begin{frame}{Circuit électrique de base}
     \begin{center}
@@ -775,14 +775,134 @@
 
 \subsection[5min-Pascal]{Réflection}
 \pascalbackground
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Bounce Diagram\\
-        \icon[red]{\faTimes} & Impedance Mismatch\\
-        \icon[red]{\faTimes} & Item 3
-    \end{makelist}
+
+\begin{frame}{Réflexions}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Un signal sur ligne de transmission avec un certain courant
+            \item Courant déterminé par impédance caractéristique et tension
+            \item Si l'impédance change, le courant pouvant circuler change
+            \item Discontinuité cause des réflexions!
+        \end{itemize}
+        \rightcol
+        \begin{maketikzfigure}
+            \draw[thick] (0, 5) to [sV=$\SI{5}{\volt}$] (0, 0);
+
+
+            \draw[thick] (0, 5) to [short] (1, 5) to 
+            [R, l=$\SI{50}{\ohm}$] (3, 5) to
+            [short] (4, 5) to
+            [R, l=$\SI{100}{\ohm}$] (6, 5) to
+            [short] (7, 5);
+
+            \draw[thick] (7, 5) to [short] (7, 0) to [short] (0, 0);
+
+            \draw[very thick, ->, color=accent] (0.5, 4.5) -- (4, 4.5) node[midway, below, sloped] () {$\SI{100}{\milli\ampere}$};
+            \draw[thick, ->, color=accent] (4.5, 4.5) -- (6.5, 4.5) node[midway, below, sloped] () {$\SI{50}{\milli\ampere}$};z
+        \end{maketikzfigure}
+    \end{twocolumns}
 \end{frame}
-%Bounce Diagrams
+
+\begin{frame}{Mismatch d'impédance}
+    \animategraphics[autoplay, controls, loop, width=\linewidth]{12}{pictures/partial-reflection/partial-reflection-}{0}{51}
+\end{frame}
+
+\begin{frame}{Équations de réflexion}
+    \begin{twocolumns}[0.66]
+        \leftcol
+        \begin{center}
+            $\Gamma = \dfrac{V_r}{V_i} = -\dfrac{I_r}{I_i}$\\
+            \vspace{10pt}
+            $\Gamma = \dfrac{Z_L - Z_0}{Z_L + Z_0}$\\
+        \end{center}
+
+        \rightcol
+        \begin{maketikzfigure}[1][0.25]
+            \draw[thick] (0, 2) to [sV] (0, 0);
+
+            \draw[thick] (0, 2) to [R, l=$Z_0$] (4, 2) to
+            [R, l=$Z_L$] (4, 0) to [short] (0, 0);
+        \end{maketikzfigure}
+    \end{twocolumns}
+    \vspace{3.33mm}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}<2->
+            \begin{center}
+                $Z_L = Z_0$\\
+                \vspace{10pt}
+                $\Gamma = \dfrac{0}{Z_L + Z_0}$\\
+                \vspace{10pt}
+                $\Gamma = 0$\\
+                \vspace{5pt}
+                $V_r = 0$\\
+                \vspace{5pt}
+                Pas de réflexion!
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}<3->
+            \begin{center}
+                $Z_L = \infty$\\
+                \vspace{10pt}
+                $\Gamma = \dfrac{\infty}{\infty}$\\
+                \vspace{10pt}
+                $\Gamma = 1$\\
+                \vspace{5pt}
+                $V_r = V_i$\\
+                \vspace{5pt}
+                Même tension réfléchie que rentrante
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}<4->
+            \begin{center}
+                $Z_L = 0$\\
+                \vspace{10pt}
+                $\Gamma = -\dfrac{Z_0}{Z_0}$\\
+                \vspace{10pt}
+                $\Gamma = -1$\\
+                \vspace{5pt}
+                $V_r = -V_i$\\
+                \vspace{5pt}
+                Tension réfléchie négative
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Matching d'impédance}
+    \begin{twocolumns}[0.55]
+        \leftcol
+        \begin{itemize}
+            \item Une ligne de transmission a une impédance caractéristique $Z_0$
+            \item Un mismatch d'impédance entre $Z_0$ et $Z_L$ cause des réflexions
+            \begin{itemize}
+                \item Peuvent endommager circuit
+                \item Nuisent à la qualité du signal
+            \end{itemize}
+            \item Il existe des techniques de matching d'impédance
+            \item Ces effets ne se produisent que dans des lignes de transmissions assez longues
+            \begin{itemize}
+                \item $\frac{\lambda}{16}$
+            \end{itemize}
+        \end{itemize}
+
+        \rightcol
+        \makefigure[0.66][0.66][]{level-3/closed-circuit-pulse-reflection}
+        \vspace{-24pt}
+        \pause
+        \begin{center}
+            $v = \frac{c}{\sqrt{\varepsilon_r}} = \SI{150000000}{\meter\per\second}$\\
+            \vspace{4pt}
+            $L = 1in$\\
+            \vspace{4pt}
+            $\lambda_{min} = 16L = \SI{0.4}{\meter}$\\
+            \vspace{6pt}
+            $f_{max} = \frac{v}{\lambda_{min}} = \frac{\SI{150000000}{\meter\per\second}}{\SI{0.4}{\meter}} = \SI{369}{\mega\hertz}$
+        \end{center}
+    \end{twocolumns}
+\end{frame}
+
+
 
 \subsection[5min-Pascal]{Current loops \rom{2}}
 \pascalbackground
@@ -794,11 +914,106 @@
     \end{makelist}
 \end{frame}
 
-\subsection[5min-Pascal]{Transmission Line \rom{1}}
-\pascalbackground
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Equation de base\\
-        \icon[red]{\faTimes} & Pertes en dB (exponential decay)\\
-    \end{makelist}
+\begin{frame}{Uniformité de l'impédance}
+    \begin{twocolumns}
+        \leftcol
+        \begin{itemize}
+            \item Effet de self-inductance
+            \item L'impédance n'est pas uniforme sous la trace
+            \item Taille de la loop d'inductance
+            \item L'impédance est plus faible directement sous la trace!
+        \end{itemize}
+        \rightcol
+        \makefigure[1.0][1.0][]{level-1/pcb-fields}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Chemin du courant}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \only<2->{
+                \begin{adjustbox}{width=\textwidth, height=0.7\textheight, keepaspectratio}%
+                    \begin{tikzpicture}
+                        \draw[thick, *-] (0, 0) -- (0, -3);
+                        \draw[thick]     (0, -3) -- (2, -3);
+                        \draw[thick, -*] (2, -3) -- (2, 0);
+
+                        \draw[thick, dashed, color=accent] (0.25, -0.1) -- (1.75, -0.1);
+                        \node[sloped, color=accent] at (1, -3.33) {$f = $\SI{1}{\kilo\hertz}};
+                    \end{tikzpicture}
+                \end{adjustbox}
+                }
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \only<1, 3->{
+                \begin{adjustbox}{width=\textwidth, height=0.7\textheight, keepaspectratio}%
+                    \begin{tikzpicture}
+                        \draw[thick, *-] (0, 0) -- (0, -3);
+                        \draw[thick]     (0, -3) -- (2, -3);
+                        \draw[thick, -*] (2, -3) -- (2, 0);
+
+                        \only<1>{
+                            \fill[gray, dashed, fill opacity = 0.2, rounded corners] (-1.5, 1.5) rectangle (3.5, -4.5);
+
+                            \draw[->, thick] (-1, 0) -- (-0.25, 0) node[midway, above, sloped] () {IN};
+                            \draw[<-, thick] (2.25, 0) -- (3, 0)  node[midway, above, sloped] () {OUT};
+
+                        }
+
+                        \only<3-> {
+                            \draw[thick, dashed, color=accent] (0.25, -0.1) to
+                            [in=180, out=-90] (1, -2.9) to
+                            [in=-90, out=0] (1.75, -0.1);
+                            \node[sloped, color=accent] at (1, -3.33) {$f = $\SI{1}{\mega\hertz}};
+                        }
+                    \end{tikzpicture}
+                \end{adjustbox}
+                }
+            \end{center}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+                \only<4->{
+                \begin{adjustbox}{width=\textwidth, height=0.7\textheight, keepaspectratio}%
+                    \begin{tikzpicture}
+                        \draw[thick, *-] (0, 0) -- (0, -3);
+                        \draw[thick]     (0, -3) -- (2, -3);
+                        \draw[thick, -*] (2, -3) -- (2, 0);
+
+                        \draw[thick, dashed, color=accent] (0.1, -0.25) to
+                        [in=90, out=-90] (0.1, -2.66) to
+                        [in=180, out=-90] (1, -2.9) to
+                        [in=-90, out=0] (1.9, -2.66) to
+                        [in=-90, out=90] (1.9, -0.25);
+                        \node[sloped, color=accent] at (1, -3.33) {$f = $\SI{1}{\giga\hertz}};
+                    \end{tikzpicture}
+                \end{adjustbox}
+                }
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Chemin du courant}
+    \makefigure{level-3/frequency-dependant-impedance}
+\end{frame}
+
+\begin{frame}{Tous les GND ne sont pas égaux!}
+    \begin{center}
+        \textcolor{UDSgreenFierte}{\faLongArrowAltRight}
+        \textbf{Tous les grounds ne sont pas égaux!}
+        \textcolor{UDSgreenFierte}{\faLongArrowAltLeft}
+    \end{center}
+
+    \pause
+    \begin{twocolumns}
+        \leftcol
+        \makefigure[1][0.33]{level-3/oscilloscope-normal}
+
+        \rightcol
+        \makefigure[1][0.33][\cite{hamdand-2011}]{level-3/oscilloscope-improved}
+    \end{twocolumns}
 \end{frame}
