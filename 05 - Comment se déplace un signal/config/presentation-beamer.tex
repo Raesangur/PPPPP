@@ -140,11 +140,10 @@
   {\usebeamerfont{title}\usebeamercolor[bg]{title}%
     \ifdefempty{\insertsubsectionhead}%
         {% No subsection → use section title
-        \underline{\insertsectionhead:\;\insertsection}\;--\;\insertframetitle
+        \insertframetitle
         }%
         {% Subsection exists -> use subsection
-         {\color{black}[\insertsubsectionhead]}\;\underline{\insertsectionhead:\;\insertsubsection}\;--\;\insertframetitle
-       % {\color{black}[\insertsubsectionhead]}\;\insertframetitle
+         {\color{black}[\insertsubsectionhead]}\;\insertframetitle
         }%
     }\\[-0.55cm]%
     \hfill%
@@ -169,7 +168,7 @@
             [wd=.34\paperwidth, ht=2.25ex, dp=1ex, center]%
             {title in head/foot}%
             \usebeamerfont{title in head/foot}%
-                \textbf{\inserttitle}%
+                \textbf{\textcolor{white}{\insertsubsection}}%
         \end{beamercolorbox}%
     }%
     \begin{beamercolorbox}%

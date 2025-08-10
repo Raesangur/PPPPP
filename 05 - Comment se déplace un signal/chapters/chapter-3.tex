@@ -803,11 +803,11 @@
         \begin{adjustbox}{width=\textwidth, height=0.8\textheight, keepaspectratio}
             \begin{tikzpicture}
                 \begin{axis}[
-                  title={Amplitude of an electromagnetic wave versus distance},
+                  title={Amplitude d'une onde électromagnétique vs. distance},
                   xmin=0, xmax=40,
                   ymin=-200, ymax=200,
-                  xlabel={Distance from source (``L'')},
-                  ylabel={Amplitude (percent of original)},
+                  xlabel={Distance (x)},
+                  ylabel={Amplitude (\%)},
                   xtick={0,5,...,40},
                   ytick={-150,-100,-50,0,50,100,150},
                   grid=both,
@@ -827,13 +827,13 @@
                 ]
 
                 \addplot[blue] {100*cos(60*x)}; 
-                \addlegendentry{Cos($\beta$\,L)}
+                \addlegendentry{Cos($\beta$\,x)}
 
                 \addplot[red] {100*exp(-0.0536*x)};
-                \addlegendentry{Exp($-\alpha$\,L)}
+                \addlegendentry{Exp($-\alpha$\,x)}
 
                 \addplot[accent] {100*exp(-0.0536*x)*cos(60*x)};
-                \addlegendentry{Composite waveform}
+                \addlegendentry{Onde composée}
 
                 \end{axis}
             \end{tikzpicture}
