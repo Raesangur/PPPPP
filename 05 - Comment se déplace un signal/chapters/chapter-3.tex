@@ -771,6 +771,76 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}{Constante de propagation}
+    \begin{twocolumns}
+        \leftcol
+            \begin{center}
+                \textbf{Amplitude à l'entrée vs à un point \boldmath$x$}\\
+                $\dfrac{A_0}{A_x} = e^{\gamma x}$\\
+                \vspace{12pt}
+                \textbf{Constante de propagation \boldmath$\gamma$}\\
+                $\gamma = \alpha + j\beta = \alpha + j\left(\frac{2\pi}{\lambda}\right)$\\
+                \vspace{12pt}
+                \textbf{Constante de phase \boldmath$\beta$}\\
+                \textbf{Constante d'atténuation \boldmath$\alpha$}\\
+                $\alpha = \alpha_C + \alpha_D + \alpha_G + \alpha_R$
+            \begin{twocolumns}[0.6]
+                \leftcol
+                \begin{center}
+                    \small
+                    $\alpha_C$: Conductivité métal\\
+                    $\alpha_G$: Conductivité diélectrique\\
+                \end{center}
+                \rightcol
+                \begin{center}
+                    \small
+                    $\alpha_D$: Diélectrique
+                    $\alpha_R$: Radiation
+                \end{center}
+            \end{twocolumns}
+            \end{center}
+        \rightcol
+        \begin{adjustbox}{width=\textwidth, height=0.8\textheight, keepaspectratio}
+            \begin{tikzpicture}
+                \begin{axis}[
+                  title={Amplitude of an electromagnetic wave versus distance},
+                  xmin=0, xmax=40,
+                  ymin=-200, ymax=200,
+                  xlabel={Distance from source (``L'')},
+                  ylabel={Amplitude (percent of original)},
+                  xtick={0,5,...,40},
+                  ytick={-150,-100,-50,0,50,100,150},
+                  grid=both,
+                  major grid style={gray!30},
+                  minor grid style={gray!15},
+                  legend style={draw=none, fill=none, at={(0.98,0.05)}, anchor=south east},
+                  domain=0:40,
+                  samples=600,
+                  thick,
+                  legend style={
+                    draw=none,
+                    fill=none,
+                    font=\small,
+                    at={(0.98,0.02)},
+                    anchor=south east
+                }
+                ]
+
+                \addplot[blue] {100*cos(60*x)}; 
+                \addlegendentry{Cos($\beta$\,L)}
+
+                \addplot[red] {100*exp(-0.0536*x)};
+                \addlegendentry{Exp($-\alpha$\,L)}
+
+                \addplot[accent] {100*exp(-0.0536*x)*cos(60*x)};
+                \addlegendentry{Composite waveform}
+
+                \end{axis}
+            \end{tikzpicture}
+        \end{adjustbox}
+    \end{twocolumns}
+\end{frame}
+
 
 
 \subsection[5min-Pascal]{Réflection}
@@ -1017,3 +1087,4 @@
         \makefigure[1][0.33][\cite{hamdand-2011}]{level-3/oscilloscope-improved}
     \end{twocolumns}
 \end{frame}
+
