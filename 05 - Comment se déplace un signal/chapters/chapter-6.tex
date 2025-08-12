@@ -113,55 +113,66 @@
     \end{makelist}
 \end{frame}
 
-\subsection[5min-Max]{Discontinuities}
+\subsection[10min-Max]{Discontinuities}
 \maxbackground
-\begin{frame}{Open Microstrip Stub}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][Open microstrip Stub]{level-6/open-stub}
-        \rightcol
-            fuck
-    \end{twocolumns}
+
+\begin{frame}{Step}
+    \makefigure[0.8][0.8][]{level-6/step}
 \end{frame}
 
 \begin{frame}{Step}
-    \begin{twocolumns}[0.5]
+    \makefigure[0.8][0.8][]{level-6/step-sim}
+\end{frame}
+
+\begin{frame}{Step - S21}
+    \begin{twocolumns}[0.3]
         \leftcol
             \vspace{-30pt}
-            \makefigure[1.0][1.0][Step]{level-6/step}
+            \makefigure[1.2][1.2][]{level-6/step1}
         \rightcol
-            fuck
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/step-sparam-s21}
     \end{twocolumns}
 \end{frame}
 
-\begin{frame}{Notch}
-    \begin{twocolumns}[0.5]
+\begin{frame}{Step - S11}
+    \begin{twocolumns}[0.3]
         \leftcol
             \vspace{-30pt}
-            \makefigure[1.0][1.0][Notch]{level-6/notch}
+            \makefigure[1.2][1.2][]{level-6/step2}
         \rightcol
-            fuck
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/step-sparam-s11}
     \end{twocolumns}
 \end{frame}
 
-\begin{frame}{Gap}
-    \begin{twocolumns}[0.5]
+\begin{frame}{Step - S-Parameters}
+    \begin{twocolumns}[0.3]
         \leftcol
             \vspace{-30pt}
-            \makefigure[1.0][1.0][Gap]{level-6/gap}
+            \makefigure[1.2][1.2][]{level-6/step3}
         \rightcol
-            fuck
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/step-sparam}
     \end{twocolumns}
 \end{frame}
 
 \begin{frame}{Crossover}
-    \begin{twocolumns}[0.5]
+    \makefigure[0.8][0.8][]{level-6/crossover}
+\end{frame}
+
+\begin{frame}{Crossover}
+    \makefigure[0.8][0.8][]{level-6/cross-sim}
+\end{frame}
+
+\begin{frame}{Crossover}
+    \begin{twocolumns}[0.3]
         \leftcol
             \vspace{-30pt}
-            \makefigure[1.0][1.0][Crossover]{level-6/crossover}
+            \makefigure[1.2][1.2][]{level-6/crossover}
         \rightcol
-            fuck
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/cross-sparam}
     \end{twocolumns}
 \end{frame}
 
@@ -171,20 +182,171 @@
             \vspace{-30pt}
             \makefigure[1.0][1.0][Bend]{level-6/bend}
         \rightcol
-            fuck
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][Mitered Bend]{level-6/bend-mitered}
     \end{twocolumns}
 \end{frame}
 
-%\subsection{Impedance Transformer}
+\begin{frame}{Bend}
+    \makefigure[0.8][0.8][]{level-6/bend-sim}
+\end{frame}
+
+\begin{frame}{Bend}
+    \begin{twocolumns}[0.3]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.2][1.2][]{level-6/bend}
+        \rightcol
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/bend-sparam}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Mitered Bend}
+    \begin{twocolumns}[0.3]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.2][1.2][]{level-6/bend-mitered}
+        \rightcol
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/bend-mitered-sparam}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Bend}
+    \makefigure[0.8][0.8][]{level-6/bend-comparison-sparam}
+\end{frame}
+
+\begin{frame}{Gap}
+    \makefigure[0.8][0.8][]{level-6/gap}
+\end{frame}
+
+\begin{frame}{Gap}
+    \makefigure[0.8][0.8][]{level-6/gap2}
+\end{frame}
+
+\begin{frame}{Gap}
+    \makefigure[0.8][0.8][]{level-6/gap-sim}
+\end{frame}
+
+\begin{frame}{Gap}
+    \begin{twocolumns}[0.3]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.2][1.2][Gap]{level-6/gap2}
+        \rightcol
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/gap-sparam}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Gap Low-pass filter}
+    \centering
+    %https://github.com/thomaslepoix/Qucs-RFlayout?tab=readme-ov-file
+    \animategraphics[autoplay, controls, loop, width=0.6\linewidth]{12}{pictures/gif/bragg/bragg-}{1}{141}
+\end{frame}
+
+\begin{frame}{Bandpass Filter}
+    \centering
+    \animategraphics[autoplay, controls, loop, width=0.8\linewidth]{12}{pictures/gif/bandpass/bandpass-}{1}{180}
+\end{frame}
+
+
+
+
+\subsection{Impedance Transformer}
+\maxbackground
+
 \begin{frame}{Tapered Line}
+    \begin{twocolumns}[0.3]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.2][1.2][Transformer]{level-6/transformer}
+        \rightcol
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/stub-open-sparam}
+    \end{twocolumns}
+\end{frame}
+
+
+\subsection[2min-Max]{Stubs}
+\maxbackground
+
+\begin{frame}{Open Microstrip Stub}
+    \makefigure[0.8][0.8][]{level-6/open-stub}
+\end{frame}
+
+\begin{frame}{Open Microstrip Stub}
+    \makefigure[0.8][0.8][]{level-6/open-stub2}
+\end{frame}
+
+\begin{frame}{Open Microstrip Stub - Qucs-s Simulation}
+    \makefigure[0.8][0.8][]{level-6/stub-open-sim}
+\end{frame}
+
+\begin{frame}{Open Microstrip Stub}
+    \begin{twocolumns}[0.3]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.2][1.2][]{level-6/open-stub2}
+        \rightcol
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/stub-open-sparam}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Grounded Microstrip Stub}
+    \makefigure[0.8][0.8][]{level-6/gnd-stub}
+\end{frame}
+
+\begin{frame}{Gronded Microstrip Stub - Qucs-s Simulation}
+    \makefigure[0.8][0.8][]{level-6/stub-gnd-sim}
+\end{frame}
+
+\begin{frame}{Grounded Microstrip Stub}
+    \begin{twocolumns}[0.3]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.2][1.2][]{level-6/gnd-stub}
+        \rightcol
+            \vspace{-40pt}
+            \makefigure[1.0][1.0][]{level-6/stub-gnd-sparam}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Microstrip Stub Comparison}
+    \vspace{-30pt}
+    \makefigure[1.0][1.0][]{level-6/stub-comparison-sparam}
+\end{frame}
+
+\begin{frame}{Planar Radial Stub}
     \begin{twocolumns}[0.5]
         \leftcol
             \vspace{-30pt}
-            \makefigure[1.0][1.0][Transformer]{level-6/transformer}
+            \makefigure[1.0][1.0][Planar Radial Stub]{level-6/radial-stub}
         \rightcol
             fuck
     \end{twocolumns}
 \end{frame}
+
+\begin{frame}{Butterfly Radial Stub}
+    \begin{twocolumns}[0.5]
+        \leftcol
+            \vspace{-30pt}
+            \makefigure[1.0][1.0][Butterfly radial Stub]{level-6/butterfly-stub}
+        \rightcol
+            fuck
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Via stubs}
+    \makefigure[1.0][1.0][]{level-6/via-stubs}
+\end{frame}
+
+\begin{frame}{Via stubs}
+    \makefigure[1.0][1.0][]{level-6/via-stubs-reflection}
+\end{frame}
+
 
 \subsection[2min-Max]{Couplers}
 \maxbackground
@@ -216,58 +378,6 @@
     Mettre exemple de circuit RF avec mesure signal de retour d'antenne
     %\makefigure[0.9][0.9][]{level-6/coupling-crosstalk-light.png}
 \end{frame}
-
-\subsection[2min-Max]{Stubs}
-\maxbackground
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Item 1\\
-        \icon[red]{\faTimes} & Item 2\\
-        \icon[red]{\faTimes} & Item 3
-    \end{makelist}
-\end{frame}
-
-\begin{frame}{Microstrip Stub}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][Open Microstrip Stub]{level-6/open-stub}
-        \rightcol
-            fuck
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Planar Radial Stub}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][Planar Radial Stub]{level-6/radial-stub}
-        \rightcol
-            fuck
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Butterfly Radial Stub}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][Butterfly radial Stub]{level-6/butterfly-stub}
-        \rightcol
-            fuck
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Via stubs}
-    \makefigure[1.0][1.0][]{level-6/via-stubs}
-\end{frame}
-
-\begin{frame}{Via stubs}
-    \vspace{-40pt}
-    \makefigure[1.0][1.0][]{level-6/via-stubs-reflection}
-\end{frame}
-
-
-
 
 
 

@@ -1,0 +1,11 @@
+# Qucs 25.1.2  /home/clastillo/Documents/PPPPP/05 - Comment se déplace un signal/simulation/tl-comparison.sch
+
+Pac:P1 _net0 gnd Num="1" Z="50 Ohm" P="0 dBm" f="10 GHz" Temp="26.85"
+Pac:P2 _net1 gnd Num="2" Z="50 Ohm" P="0 dBm" f="10 GHz" Temp="26.85"
+Pac:P3 _net2 gnd Num="3" Z="50 Ohm" P="0 dBm" f="10 GHz" Temp="26.85"
+Pac:P4 _net3 gnd Num="4" Z="50 Ohm" P="0 dBm" f="10 GHz" Temp="26.85"
+Eqn:Eqn1 dBS11="dB(S[1,1])" dBS12="dB(S[1,2])" dBS21="dB(S[2,1])" dBS22="dB(S[2,2])" dBS33="dB(S[3,3])" dBS34="dB(S[3,4])" dBS43="dB(S[4,3])" dBS44="dB(S[4,4])" Export="yes"
+SUBST:FR408 er="3.66" h="0.1999 mm" t="43.2 um" tand="0.012" rho="1.66e-8" D="1.5um"
+MLIN:MS1 _net0 _net1 Subst="FR408" W="0.410 mm" L="10 mm" Model="Hammerstad" DispModel="Kirschning" Temp="26.85"
+CLIN:CLTC1 _net2 _net3 Subst="FR408" W="0.33307 mm" S="0.127 mm" L="10 mm" Backside="Metal" Approx="yes"
+.SP:SP1 Type="log" Start="10 MHz" Stop="300 GHz" Points="601" Noise="no" NoiseIP="1" NoiseOP="2" saveCVs="yes" saveAll="no"
