@@ -1,0 +1,19 @@
+# QucsTranscalc 25.1.2  /home/clastillo/Documents/PPPPP/05 - Comment se déplace un signal/simulation/microstrip-calculator
+#   Generated on Sat Aug 9 2025 at 18:15:37.
+#   It is not suggested to edit the file, use QucsTranscalc instead.
+
+<Microstrip>
+  Er 3.66 NA
+  Mur 1 NA
+  H 0.1999 mm
+  H_t 1e+20 mil
+  T 0.0432 mm
+  Cond 4.1e+07 NA
+  Tand 0 NA
+  Rough 0 mil
+  Freq 10 GHz
+  W 0.410714 mm
+  L 4.58 mm
+  Z0 50 Ohm
+  Ang_l 90 Deg
+</Microstrip>

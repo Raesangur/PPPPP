@@ -1,19 +1,139 @@
 %!TEX root = ../presentation.tex 
 
 
-\section[Level 8]{Dielectric Depths [26min-2h49]}
+\section[Level 8]{Field lines and Fringes [26min-2h49]}
+
+\subsection[6min-Max]{Matériaux \rom{4}}
+\maxbackground
+
+\begin{frame}{Rappel - Impédance Caractéristique}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+            $Z_0 = \sqrt{\dfrac{R + j \omega L}{G + j \omega C}}$\\
+            \vspace{20pt}
+            $G \rightarrow 0$\\
+            $R \lll \omega L$\\
+            \vspace{20pt}
+            $Z_0 = \sqrt{\dfrac{j \omega L}{j \omega C}}$\\
+            \vspace{5pt}
+            $Z_0 = \sqrt{\dfrac{L}{C}}$\\
+            \end{center}
+        \end{column}
+        \begin{column}{0.66\textwidth}
+            \resizebox{\textwidth}{!}{
+            \begin{circuitikz}[american voltages]
+                \draw [thick]
+                (0,0) to [short, *-] (10,0)
+                to [R, l_=$R_{LOAD}$] (10,5)
+                (0,0) to [open, v<=$V$] (0,5)
+                to [short, *- ,i=$i$] (2,5)
+                to [R, l_=$R$] (4, 5)
+                to [short] (7, 5)
+                to [american inductor, l_=$L$] (9, 5)
+                to [short] (10,5)
+                (0, 5) to [open] (4.5, 5)
+                to [C, l_=$C$] (4.5, 0)
+                (0, 5) to [open] (6, 5)
+                to [R, l_=$G$] (6, 0)
+                ;
+            \end{circuitikz}
+            }
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Conduction G}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+            $Z_0 = \sqrt{\dfrac{R + j \omega L}{G + j \omega C}}$\\
+            \end{center}
+            \small{
+            Le parametre G possède plusieurs noms:
+            \begin{itemize}
+                \item Conduction\\
+                \item Relaxation Losses\\
+                \item Substrate Vibration Losses\\
+                \item Dielectric Losses
+            \end{itemize}}
+        \end{column}
+
+        \begin{column}{0.66\textwidth}
+            \resizebox{\textwidth}{!}{
+            \begin{circuitikz}[american voltages]
+                \draw [thick]
+                (0,0) to [short, *-] (10,0)
+                to [R, l_=$R_{LOAD}$] (10,5)
+                (0,0) to [open, v<=$V$] (0,5)
+                to [short, *- ,i=$i$] (2,5)
+                to [R, l_=$R$] (4, 5)
+                to [short] (7, 5)
+                to [american inductor, l_=$L$] (9, 5)
+                to [short] (10,5)
+                (0, 5) to [open] (4.5, 5)
+                to [C, l_=$C$] (4.5, 0)
+                (0, 5) to [open] (6, 5)
+                to [R, l_=$G$] (6, 0)
+                ;
+            \end{circuitikz}
+            }
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{FR4 Fabrication \& Defect}
+    \makefigure[0.8][0.8][]{level-9/fr4-cross}
+\end{frame}
+
+\begin{frame}{Conduction on different laminates}
+%https://resources.altium.com/p/increasingly-important-role-loss-tangents-pcb-laminates
+    \maketable{laminate-tand}
+\end{frame}
 
 %Transmission line 4?
-\subsection[6min-Max-Pascal]{Matériaux \rom{4}}
+\subsection[6min-Max]{Impedance \rom{3}}
 \maxbackground
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Relaxation Loss\\
-        \icon[red]{\faTimes} & Conduction G\\
-        \icon[red]{\faTimes} & Substrate vibration\\
-        \icon[red]{\faTimes} & Loss Tangent
-    \end{makelist}
+
+
+\begin{frame}{Relation frequentielle}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \begin{center}
+            $Z_0 = \sqrt{\dfrac{R + j \omega L}{G + j \omega C}}$\\
+            \end{center}
+        \end{column}
+        \begin{column}{0.66\textwidth}
+            En réalité, les paramètres sont très dépendant de la frequence du signal dans les GHz.
+        \end{column}
+    \end{columns}
+    \vspace{30pt}
+    \makefigure[0.8][0.7][]{level-8/impedance-frequency}
 \end{frame}
+
+\begin{frame}{Skin effect}
+    Comme l'aire de conduction diminue avec la frequence, la résistance de la trace augmente...
+    \makefigure[1.0][1.0][]{level-8/skin-effect}
+\end{frame}
+
+\begin{frame}{Skin Depth of Different Materials}
+    %\begin{center}
+    %    \textbf{1oz PCB = $\SI{35}{\micro\meter}$}
+    %\end{center}
+
+    \maketable{skin-depth}
+\end{frame}
+
+\begin{frame}{Indice effectif}
+    Mettre equation Ee
+\end{frame}
+
+\begin{frame}{Impédance dans les GHz}
+    \makefigure[0.9][0.9][Gold Microstrip on Alumina, w = 240 $\mu$m, h = 500 $\mu$m]{level-8/impedance-hf}
+\end{frame}
+
+
+
 
 \subsection[5min-Pascal]{Passive Component \rom{2}}
 \pascalbackground
@@ -26,27 +146,6 @@
 
 
 
-\subsection[10min-Pascal]{Stackup \rom{1}}
-\pascalbackground
-\begin{frame}{Plan}
-    \begin{makelist}[\small][1.5]
-                \icon[red]{\faTimes} & Conversion\\
-        \icon[red]{\faTimes} & Lecture datasheet diélectrique\\
-        \icon[red]{\faTimes} & Optimisation Stackup\\
-        \icon[red]{\faTimes} & Propriété FR4, copper, or, plomb
-    \end{makelist}
-\end{frame}
-
-\subsection[2min-Max]{Vitesse de Propagation \rom{2}}
-\maxbackground
-\begin{frame}{Plan}
-    \textbf{Je risque de déplacer cette section avant level-6 à cause de la dispersion}\\
-    \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Dispersion\\
-        \icon[red]{\faTimes} & Item 2\\
-        \icon[red]{\faTimes} & Item 3
-    \end{makelist}
-\end{frame}
 
 \subsection[3min-Pascal]{Eye Diagram \rom{2}}
 \pascalbackground
@@ -58,3 +157,17 @@
     \end{makelist}
 \end{frame}
 
+\subsection[10min-Max]{Waveguide \rom{1}}
+\pascalbackground
+\begin{frame}{Plan}
+    \begin{makelist}[\small][1.5]
+        \icon[red]{\faTimes} & Qu'arrive t'il quand on monte encore plus la frequence\\
+        \icon[red]{\faTimes} & Figure Guide d'onde\\
+        \icon[red]{\faTimes} & Mode TE et TM\\
+        \icon[red]{\faTimes} & Propagation
+    \end{makelist}
+\end{frame}
+
+\begin{frame}{When it's a waveguide}    
+    \maketable{model-threshold}
+\end{frame}

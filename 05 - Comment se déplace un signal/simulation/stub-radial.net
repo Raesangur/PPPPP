@@ -1,0 +1,11 @@
+# Qucs 25.1.2  /home/clastillo/Documents/PPPPP/05 - Comment se déplace un signal/simulation/stub-radial.sch
+
+Pac:P1 _net0 gnd Num="1" Z="50 Ohm" P="0 dBm" f="10 GHz" Temp="26.85"
+Pac:P2 _net1 gnd Num="2" Z="50 Ohm" P="0 dBm" f="10 GHz" Temp="26.85"
+MLIN:MS1 _net0 _net2 Subst="FR408" W="0.410 mm" L="18.32 mm" Model="Hammerstad" DispModel="Kirschning" Temp="26.85"
+MTEE:MS4 _net2 _net3 _net4 Subst="FR408" W1="0.41 mm" W2="0.41 mm" W3="0.41 mm" MSModel="Hammerstad" MSDispModel="Kirschning" Temp="26.85"
+MLIN:MS2 _net3 _net1 Subst="FR408" W="0.410 mm" L="18.32 mm" Model="Hammerstad" DispModel="Kirschning" Temp="26.85"
+Eqn:Eqn1 dBS11="dB(S[1,1])" dBS12="dB(S[1,2])" dBS21="dB(S[2,1])" dBS22="dB(S[2,2])" Export="yes"
+.SP:SP1 Type="log" Start="10 MHz" Stop="60 GHz" Points="601" Noise="no" NoiseIP="1" NoiseOP="2" saveCVs="no" saveAll="no"
+SUBST:FR408 er="3.66" h="0.1999 mm" t="43.2 um" tand="0.012" rho="1.66e-8" D="1.5um"
+MRSTUB:MS5 _net4 Subst="FR408" ri="0.205 mm" ro="2.9mm" Wf="0.205 mm" alpha="120" EffDimens="OldQucsNoCorrection" Model="Giannini"
