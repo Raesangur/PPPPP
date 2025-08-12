@@ -1,6 +1,6 @@
 <Qucs Schematic 25.1.2>
 <Properties>
-  <View=-96,186,959,793,2.09076,0,0>
+  <View=107,186,959,793,2.09076,364,0>
   <Grid=10,10,1>
   <DataSet=microstrip.dat>
   <DataDisplay=microstrip.dpl>

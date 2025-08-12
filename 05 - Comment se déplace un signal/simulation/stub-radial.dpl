@@ -1,0 +1,25 @@
+<Qucs Schematic 25.1.2>
+<Properties>
+  <View=-11493,-6505,9824,9735,0.1,0,0>
+  <Grid=10,10,0>
+  <DataSet=stub-radial.dat>
+  <DataDisplay=stub-radial.sch>
+  <OpenDisplay=0>
+  <Script=stub-radial.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+</Diagrams>
+<Paintings>
+</Paintings>
