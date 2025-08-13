@@ -1,1 +1,140 @@
 %!TEX root = ../presentation.tex
+\pascalbackground
+
+\begin{frame}{Comment fonctionne un crystal}
+    \begin{twocolumns}[0.66]
+        \leftcol
+            \begin{itemize}
+                \item Oscillateur utilisant l'effet piézoélectrique
+                \item Déformation mécanique d'une matrice cristalline
+                \item Génère un champ électrique
+                \item Effet inverse possible!
+                \bigskip
+                \item Fréquence de résonance
+                \item Q factor beaucoup plus élevé que circuit RLC équivalent
+            \end{itemize}
+        \makefigure[1][0.4]{level-5/piezoelectric-effect}
+        \rightcol
+            \begin{maketikzfigure}
+                \draw (0, 6) node[vcc] {};
+                \draw (0, 6) to [short] (-1, 6) to 
+                [R, l=$R_1$] (-1, 4) to
+                [american inductor, l=$L_1$] (-1, 2) to
+                [C, l=$C_1$] (-1, 0) to
+                [short] (0, 0) 
+                node[ground] {};
+
+                \draw (0, 6) to [short] (1, 6) to
+                [C, l=$C_2$] (1, 0) to 
+                [short] (0, 0);
+            \end{maketikzfigure}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Comment résonne un crystal}
+    \begin{twocolumns}[0.33]
+        \leftcol
+            \begin{maketikzfigure}
+                \draw (0, 6) node[vcc] {};
+                \draw (0, 6) to [short] (-1, 6) to 
+                [R, l=$R_1$, color=UDSviolet] (-1, 4) to
+                [american inductor, l=$L_1$, color=orange] (-1, 2) to
+                [C, l=$C_1$, color=blue] (-1, 0) to
+                [short] (0, 0) 
+                node[ground] {};
+
+                \draw (0, 6) to [short] (1, 6) to
+                [C, l=$C_2$, color=red] (1, 0) to 
+                [short] (0, 0);
+            \end{maketikzfigure}
+        \rightcol
+
+            \begin{maketikzfigure}
+            \begin{axis}[
+              width=12cm, height=6.5cm,
+              axis lines=left,
+              xlabel={$f$}, ylabel={$Z$},
+              xmin=0, xmax=1, ymin=0, ymax=1,
+              xtick=\empty, ytick=\empty,
+              clip=false
+            ]
+
+            \addplot[ultra thick, accent, smooth]
+              coordinates {
+                (0.02, 0.92) (0.10, 0.60) (0.22, 0.22)             % falling, capacitive
+                (0.30, 0.30) (0.38, 0.55) (0.46, 0.80)             % rising to parallel resonance
+                (0.52, 0.88) (0.62, 0.62) (0.78, 0.48) (0.98,0.36) % roll-off
+              };
+
+            \def\xFs{0.26}
+            \def\xFr{0.50}
+
+            \draw[dashed] (axis cs:\xFs,0) -- (axis cs:\xFs, 1);
+            \draw[dashed] (axis cs:\xFr,0) -- (axis cs:\xFr, 1);
+
+            \draw[color=UDSviolet, thick] (axis cs:0, 0.20) -- (axis cs:1, 0.20);
+
+            \node[above] at (axis cs:\xFs, 1) {$f_s$};
+            \node[above] at (axis cs:\xFr, 1) {$f_r$};
+
+            \node[anchor=south west] at (axis cs:0.02, 1) {\small Capacitif};
+            \node[anchor=south]      at (axis cs:0.38, 1) {\small Inductif};
+            \node[anchor=south east] at (axis cs:0.98, 1) {\small Capacitif};
+
+            \node[below] at (axis cs:\xFs,0) {\scriptsize Résonance Série};
+            \node[below] at (axis cs:\xFr,-0.1) {\scriptsize Résonance Parallèle};
+
+            \end{axis}
+                
+            \end{maketikzfigure}
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Crystal sur un microcontrôleur}
+    \ctikzset{bipoles/capacitor/height=0.5}
+    \ctikzset{bipoles/capacitor/width=0.2}
+    \ctikzset{logic ports/scale=0.5}
+    \begin{maketikzfigure}
+
+        \draw (4, 0) node [dipchip,
+            num pins = 8,
+            hide numbers,
+            external pins width=0.3,
+            external pad fraction=4,
+            ](IC){};
+
+            \node [right, font=\tiny] at (IC.bpin 1) {OSC2};
+            \node [right, font=\tiny] at (IC.bpin 4) {OSC1};
+
+
+            \draw[thick] (IC.pin 1) to [short] ($(IC.pin 1) - (1, 0)$) to
+            [piezoelectric, color=accent] ($(IC.pin 4) - (1, 0)$) to
+            [short] (IC.pin 4);
+
+            \only<1>{
+                \draw[thick] ($(IC.pin 1) - (1, 0)$) to
+                [C, l=$C_1$] ($(IC.pin 1) - (3, 0)$);
+                \draw[thick] ($(IC.pin 4) - (1, 0)$) to
+                [C, l=$C_2$] ($(IC.pin 4) - (3, 0)$);
+            }
+            \only<2->{
+                \draw[thick] ($(IC.pin 1) - (1, 0)$) to
+                [C, l=$C_1$, color=accent2] ($(IC.pin 1) - (3, 0)$);
+                \draw[thick] ($(IC.pin 4) - (1, 0)$) to
+                [C, l=$C_2$, color=accent2] ($(IC.pin 4) - (3, 0)$);
+            } 
+
+            \draw[thick] ($(IC.pin 1) - (3, 0)$) to [short] ($(IC.pin 4) - (3, 0)$)
+            to [short] ($(IC.pin 4) - (3, 1)$) node[ground]{};
+
+
+            \only<3->{
+                \draw[dashed] (IC.bpin 1) to [short] ($(IC.pin 1) + (1.5, 0)$) to
+                [inline not, color=accent2] ($(IC.pin 4) + (1.5, 0)$) to [short] (IC.bpin 4);
+            }
+    \end{maketikzfigure}
+\end{frame}
+
+\begin{frame}{Condensateur de charge}
+
+\end{frame}
