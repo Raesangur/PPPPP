@@ -1,6 +1,7 @@
 %!TEX root = ../presentation.tex
 
-\section[Level 6]{Basic Building Blocks [12min-2h07]}
+\section[Level 6]{Crosstalk \& Coupling [18min - 1h55]}
+
 \introbackground
 \begin{frame}[plain, label=intro-level-6]
     \centering
@@ -9,377 +10,105 @@
     \vspace{24pt}
     \begin{tabular}{c l}
         \textcolor{UDSgreenFierte}{\faEye}
-            & \textcolor{white}{Avantages/Inconveniant de different types de \textbf{Lignes de Transmissions Planaires}}\\
+            & \textcolor{white}{Comprendre \textbf{le Couplage} entre traces adjascentes}\\
             [0.3em]
         \textcolor{UDSgreenFierte}{\faHubspot}
-            & \textcolor{white}{Comprendre l'effets de \textbf{Discontinuitées} sur les traces}\\
+            & \textcolor{white}{Difference entre le \textbf{Near/Far Crosstalk}}\\
             [0.3em]
         \textcolor{UDSgreenFierte}{\faEye}
-            & \textcolor{white}{Fonctionnement \textbf{d'Oscillateur \& Cristaux}}\\
+            & \textcolor{white}{Comprendre les \textbf{Radiation Pattern}}\\
+            [0.3em]
+        \textcolor{UDSgreenFierte}{\faEye}
+            & \textcolor{white}{Introduction au \textbf{Paires Differentielles}}\\
             [0.3em]
     \end{tabular}
 \end{frame}
 \defaultbackground
 
-
-
-
-\subsection[2min-Max]{Vitesse de Propagation \rom{2}}
-\maxbackground
-\begin{frame}{Plan}
+\begin{frame}{Introduction}
     \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Dispersion\\
+        \icon[red]{\faTimes} & Item 1\\
         \icon[red]{\faTimes} & Item 2\\
         \icon[red]{\faTimes} & Item 3
     \end{makelist}
 \end{frame}
 
-
-
-
-\subsection[5min-Max]{Coaxial Cable}
-\maxbackground
-\begin{frame}{Plan}{Microwave connector type}
-    \makefigure[0.85][0.85][\href{https://www.microwaves101.com/encyclopedias/microwave-coaxial-connectors}{[Source]}]{level-6/microwave-connector}
-\end{frame}
-
-
-
-
-\subsection[5min-Max]{Planar Transmission Lines \rom{1}}
+\subsection[3min-Max]{Radiation \rom{2}}
 \maxbackground
 \begin{frame}{Plan}
-    \textbf{Je pense qu'on devrait rennomer ca Structure I ou Planar Transmission Line. Waveguide c'est plus un modele.}\\
     \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Transmission-Frequency plot\\
-        \icon[red]{\faTimes} & Explain Strip line\\
-        \icon[red]{\faTimes} & Show other structures\\
-        \icon[red]{\faTimes} & CPWG, Microstrip, GCPWG
+        \icon[red]{\faTimes} & Radiation Pattern\\
+        \icon[red]{\faTimes} & Radiation Lense\\
+        \icon[red]{\faTimes} & FDTD Equations
     \end{makelist}
 \end{frame}
-
-\begin{frame}{Microstrip}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][]{level-6/microstrip}
-        \rightcol
-            \begin{makelist}[\small][1.5]
-                \icon{\faCheck} & Simple à fabriquer\\
-                \icon{\faCheck} & Facile à modéliser\\
-                \icon{\faCheck} & Compact\\
-                \icon[red]{\faTimes} & Grande pertes par radiation >30GHz\\
-                \icon[red]{\faTimes} & Beaucoup de Dispersion\\
-            \end{makelist}
-    \end{twocolumns}
+% Radiation Pattern
+\begin{frame}{EM Field on a PCB}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-1/pcb-fields}
 \end{frame}
 
-\begin{frame}{Stripline}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][]{level-6/stripline}
-        \rightcol
-            \begin{makelist}[\small][1.5]
-                \icon{\faCheck} & Tres peu de radiation\\
-                \icon[red]{\faTimes} & Nescessite 2 GND plane\\
-            \end{makelist}
-    \end{twocolumns}
+\begin{frame}{Radiation}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-6/radiation-1}
 \end{frame}
 
-\begin{frame}{Coplanar Waveguide}
-    \begin{twocolumns}[0.5]
+\begin{frame}{Radiation}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-6/radiation-2}
+\end{frame}
+
+\begin{frame}{Radiation}
+    \vspace{-20pt}
+    \makefigure[1.0][1.0][]{level-6/radiation-3}
+\end{frame}
+
+\begin{frame}{Monopole Antenna}
+    \begin{twocolumns}[0.3]
         \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][]{level-6/cpwg}
+            \makefigure[1.0][0.7][]{level-6/monopole-1}
         \rightcol
-            \begin{makelist}[\small][1.5]
-                \icon{\faCheck} & Peu de Dispersion\\
-                \icon{\faCheck} & Attenuation des Radiations\\
-                \icon[red]{\faTimes} & Nescessite plus d'espace\\
-                \icon[red]{\faTimes} & Via Stitching ($\approx \frac{\lambda}{10}$)\\
-            \end{makelist}
+            \makefigure[1.0][0.7][]{level-6/monopole-2}
     \end{twocolumns}
 \end{frame}
 
 
-\subsection[5min-Pascal]{Signal Source \rom{4}}
+
+\subsection[5min-Pascal]{Differential Pairs}
 \pascalbackground
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Crystals\\
-        \icon[red]{\faTimes} & Oscillators\\
-        \icon[red]{\faTimes} & Item 3
+        \icon[red]{\faTimes} & Twisted Pairs\\
+        \icon[red]{\faTimes} & Do Differential Pairs need GND?\\
+        \icon[red]{\faTimes} & CMMR
+
     \end{makelist}
 \end{frame}
-
-\subsection[10min-Max]{Discontinuities}
-\maxbackground
-
-\begin{frame}{Step}
-    \makefigure[0.8][0.8][]{level-6/step}
-\end{frame}
-
-\begin{frame}{Step}
-    \makefigure[0.8][0.8][]{level-6/step-sim}
-\end{frame}
-
-\begin{frame}{Step - S21}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][]{level-6/step1}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/step-sparam-s21}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Step - S11}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][]{level-6/step2}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/step-sparam-s11}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Step - S-Parameters}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][]{level-6/step3}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/step-sparam}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Crossover}
-    \makefigure[0.8][0.8][]{level-6/crossover}
-\end{frame}
-
-\begin{frame}{Crossover}
-    \makefigure[0.8][0.8][]{level-6/cross-sim}
-\end{frame}
-
-\begin{frame}{Crossover}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][]{level-6/crossover}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/cross-sparam}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Bend}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][Bend]{level-6/bend}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][Mitered Bend]{level-6/bend-mitered}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Bend}
-    \makefigure[0.8][0.8][]{level-6/bend-sim}
-\end{frame}
-
-\begin{frame}{Bend}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][]{level-6/bend}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/bend-sparam}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Mitered Bend}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][]{level-6/bend-mitered}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/bend-mitered-sparam}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Bend}
-    \makefigure[0.8][0.8][]{level-6/bend-comparison-sparam}
-\end{frame}
-
-\begin{frame}{Gap}
-    \makefigure[0.8][0.8][]{level-6/gap}
-\end{frame}
-
-\begin{frame}{Gap}
-    \makefigure[0.8][0.8][]{level-6/gap2}
-\end{frame}
-
-\begin{frame}{Gap}
-    \makefigure[0.8][0.8][]{level-6/gap-sim}
-\end{frame}
-
-\begin{frame}{Gap}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][Gap]{level-6/gap2}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/gap-sparam}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Gap Low-pass filter}
-    \centering
-    %https://github.com/thomaslepoix/Qucs-RFlayout?tab=readme-ov-file
-    \animategraphics[autoplay, controls, loop, width=0.6\linewidth]{12}{pictures/gif/bragg/bragg-}{1}{141}
-\end{frame}
-
-\begin{frame}{Bandpass Filter}
-    \centering
-    \animategraphics[autoplay, controls, loop, width=0.8\linewidth]{12}{pictures/gif/bandpass/bandpass-}{1}{180}
-\end{frame}
-
-
-
-
-\subsection{Impedance Transformer}
-\maxbackground
-
-\begin{frame}{Tapered Line}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][Transformer]{level-6/transformer}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/stub-open-sparam}
-    \end{twocolumns}
-\end{frame}
-
-
-\subsection[2min-Max]{Stubs}
-\maxbackground
-
-\begin{frame}{Open Microstrip Stub}
-    \makefigure[0.8][0.8][]{level-6/open-stub}
-\end{frame}
-
-\begin{frame}{Open Microstrip Stub}
-    \makefigure[0.8][0.8][]{level-6/open-stub2}
-\end{frame}
-
-\begin{frame}{Open Microstrip Stub - Qucs-s Simulation}
-    \makefigure[0.8][0.8][]{level-6/stub-open-sim}
-\end{frame}
-
-\begin{frame}{Open Microstrip Stub}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][]{level-6/open-stub2}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/stub-open-sparam}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Grounded Microstrip Stub}
-    \makefigure[0.8][0.8][]{level-6/gnd-stub}
-\end{frame}
-
-\begin{frame}{Gronded Microstrip Stub - Qucs-s Simulation}
-    \makefigure[0.8][0.8][]{level-6/stub-gnd-sim}
-\end{frame}
-
-\begin{frame}{Grounded Microstrip Stub}
-    \begin{twocolumns}[0.3]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.2][1.2][]{level-6/gnd-stub}
-        \rightcol
-            \vspace{-40pt}
-            \makefigure[1.0][1.0][]{level-6/stub-gnd-sparam}
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Microstrip Stub Comparison}
-    \vspace{-30pt}
-    \makefigure[1.0][1.0][]{level-6/stub-comparison-sparam}
-\end{frame}
-
-\begin{frame}{Planar Radial Stub}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][Planar Radial Stub]{level-6/radial-stub}
-        \rightcol
-            fuck
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Butterfly Radial Stub}
-    \begin{twocolumns}[0.5]
-        \leftcol
-            \vspace{-30pt}
-            \makefigure[1.0][1.0][Butterfly radial Stub]{level-6/butterfly-stub}
-        \rightcol
-            fuck
-    \end{twocolumns}
-\end{frame}
-
-\begin{frame}{Via stubs}
-    \makefigure[1.0][1.0][]{level-6/via-stubs}
-\end{frame}
-
-\begin{frame}{Via stubs}
-    \makefigure[1.0][1.0][]{level-6/via-stubs-reflection}
-\end{frame}
-
-
-\subsection[2min-Max]{Couplers}
-\maxbackground
+% 
+\subsection[5min-Pascal]{Far crosstalk}
+\pascalbackground
 \begin{frame}{Plan}
     \begin{makelist}[\small][1.5]
-        \icon[red]{\faTimes} & Coupling\\
-        \icon[red]{\faTimes} & Transfer - S-parameters\\
+        \icon[red]{\faTimes} & Item 1\\
+        \icon[red]{\faTimes} & Item 2\\
         \icon[red]{\faTimes} & Item 3
     \end{makelist}
 \end{frame}
 
 \begin{frame}{Coupling Coefficient}
-    \textbf{Mettre le gif?}
-\end{frame}
-
-\begin{frame}{Coupling Coefficient}
-    \makefigure[0.8][0.8][]{level-6/coupling-distance-20reso-light}
-\end{frame}
-
-\begin{frame}{Coupling Length}
-    \makefigure[0.9][0.9][]{level-6/coupling_heatmap_3.0-light}
+    \makefigure[0.8][0.8][]{level-5/coupling-distance-20reso-light}
 \end{frame}
 
 \begin{frame}{Crosstalk calculation}
-    \makefigure[0.8][0.8][]{level-6/coupling-crosstalk-light.png}
+    \makefigure[0.8][0.8][]{level-5/coupling-crosstalk-light.png}
 \end{frame}
 
-\begin{frame}{Application}
-    Mettre exemple de circuit RF avec mesure signal de retour d'antenne
-    %\makefigure[0.9][0.9][]{level-6/coupling-crosstalk-light.png}
+\subsection[5min-Pascal]{Near crosstalk}
+\pascalbackground
+\begin{frame}{Plan}
+    \begin{makelist}[\small][1.5]
+        \icon[red]{\faTimes} & Item 1\\
+        \icon[red]{\faTimes} & Item 2\\
+        \icon[red]{\faTimes} & Item 3
+    \end{makelist}
 \end{frame}
-
-
-
-
-
