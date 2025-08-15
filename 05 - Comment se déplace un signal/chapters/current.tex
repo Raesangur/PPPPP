@@ -13,9 +13,9 @@
                 \item Fréquence de résonance
                 \item Q factor beaucoup plus élevé que circuit RLC équivalent
             \end{itemize}
-        \makefigure[1][0.4]{level-5/piezoelectric-effect}
+        \makefigure[1][0.35]{level-5/piezoelectric-effect}
         \rightcol
-            \begin{maketikzfigure}
+            \begin{maketikzfigure}[1][0.66]
                 \draw (0, 6) node[vcc] {};
                 \draw (0, 6) to [short] (-1, 6) to 
                 [R, l=$R_1$] (-1, 4) to
@@ -107,34 +107,94 @@
             \node [right, font=\tiny] at (IC.bpin 4) {OSC1};
 
 
-            \draw[thick] (IC.pin 1) to [short] ($(IC.pin 1) - (1, 0)$) to
-            [piezoelectric, color=accent] ($(IC.pin 4) - (1, 0)$) to
+            \draw[thick] (IC.pin 1) to [short] ($(IC.pin 1) - (1.5, 0)$) to
+            [piezoelectric, color=accent] ($(IC.pin 4) - (1.5, 0)$) to
             [short] (IC.pin 4);
 
-            \only<1>{
-                \draw[thick] ($(IC.pin 1) - (1, 0)$) to
-                [C, l=$C_1$] ($(IC.pin 1) - (3, 0)$);
-                \draw[thick] ($(IC.pin 4) - (1, 0)$) to
-                [C, l=$C_2$] ($(IC.pin 4) - (3, 0)$);
+            \only<1, 3>{
+                \draw[thick] ($(IC.pin 1) - (1.5, 0)$) to
+                [C, l=$C_1$] ($(IC.pin 1) - (3.5, 0)$);
+                \draw[thick] ($(IC.pin 4) - (1.5, 0)$) to
+                [C, l=$C_2$] ($(IC.pin 4) - (3.5, 0)$);
             }
-            \only<2->{
-                \draw[thick] ($(IC.pin 1) - (1, 0)$) to
-                [C, l=$C_1$, color=accent2] ($(IC.pin 1) - (3, 0)$);
-                \draw[thick] ($(IC.pin 4) - (1, 0)$) to
-                [C, l=$C_2$, color=accent2] ($(IC.pin 4) - (3, 0)$);
+            \only<2, 4->{
+                \draw[thick] ($(IC.pin 1) - (1.5, 0)$) to
+                [C, l=$C_1$, color=accent2] ($(IC.pin 1) - (3.5, 0)$);
+                \draw[thick] ($(IC.pin 4) - (1.5, 0)$) to
+                [C, l=$C_2$, color=accent2] ($(IC.pin 4) - (3.5, 0)$);
             } 
 
-            \draw[thick] ($(IC.pin 1) - (3, 0)$) to [short] ($(IC.pin 4) - (3, 0)$)
-            to [short] ($(IC.pin 4) - (3, 1)$) node[ground]{};
+            \draw[thick] ($(IC.pin 1) - (3.5, 0)$) to [short] ($(IC.pin 4) - (3.5, 0)$)
+            to [short]   ($(IC.pin 4) - (3.5, 1)$) node[ground]{};
 
 
             \only<3->{
-                \draw[dashed] (IC.bpin 1) to [short] ($(IC.pin 1) + (1.5, 0)$) to
-                [inline not, color=accent2] ($(IC.pin 4) + (1.5, 0)$) to [short] (IC.bpin 4);
+                \draw[dashed] (IC.bpin 1) to [short] ($(IC.pin 1) + (1.5, 0)$) to [open]
+                ($(IC.pin 4) + (1.5, 0)$) to [short] (IC.bpin 4);
+
+                \draw ($(IC.pin 1) + (1.5, 0)$) to [inline not, color=accent2] ($(IC.pin 4) + (1.5, 0)$);
+            }
+
+            \only<4->{
+                \draw[->, color = accent]    ($(IC.pin 1) + (2, 0)$)    -- ($(IC.pin 4) + (2, 0)$)    node[midway, below, sloped] {$+\ang{180}$};
+                \draw[<-, color = UDSviolet] ($(IC.pin 1) - (0.75, 0)$) -- ($(IC.pin 4) - (0.75, 0)$) node[midway, below, sloped] {$+\ang{180}$};
             }
     \end{maketikzfigure}
 \end{frame}
 
 \begin{frame}{Condensateur de charge}
+    \begin{twocolumns}
+        \leftcol
+        \only<1>{
+        \begin{itemize}
+            \item Les circuits de lecture CMOS d'oscillateur rajoutent une phase de $\ang{180}$
+            \item Phase doit être compensée pour atteindre $\ang{360}$
+            \item Condensateurs viennent compléter le modèle RLCC du crystal
+            \item Crystaux calibrés pour des valeurs de condensateurs $C_L$
+        \end{itemize}
+        }
 
+        \only<2->{
+            \begin{tabular}{l | c}
+                \multicolumn{2}{c}{\textbf{\textbf{ESC-16-20S-4X}}}\\
+                \hline
+                \textbf{Frequency}             & $\SI{16}{\mega\hertz}$\\
+                \textbf{Frequency Tolerance}   & $\pm 30\,ppm$\\
+                \textbf{Frequency Stability}   & $\pm 50\,ppm$\\
+                \textbf{Shunt Capacitance}     & $\SI{7}{\pico\farad}$\\
+                \textbf{Load Capacitance}      & $\SI{20}{\pico\farad}$\\
+                \textbf{Operating Temperature} & $\SI{-10}{\celsius} à \SI{70}{\celsius}$\\
+                \textbf{Storage Temperature}   & $\SI{-55}{\celsius} à \SI{125}{\celsius}$\\
+                \textbf{ESR Max}               & $\SI{40}{\ohm}$\\
+            \end{tabular}
+        }
+
+        \rightcol
+        \only<2>{
+            \makefigure[1][0.25]{level-5/hc49}
+        }
+        \begin{align*}
+            C_1 &= C_2 = 2 \cdot (C_L - C_{stray})\\
+            C_L &= \dfrac{C_1 \cdot C_2}{C_1 + C_2} + C_{stray}\\
+            \vspace{18pt}
+            C_{stray} \sim \SI{5}{\pico\farad}\\
+        \end{align*}
+        \only<3->{
+            \begin{align*}
+                C_1 &= C_2 = 2 \cdot (\SI{20}{\pico\farad} - \SI{10}{\pico\farad})\\
+                C_1 &= C_2 = \SI{20}{\pico\farad}\\
+            \end{align*}
+        }
+    \end{twocolumns}
+\end{frame}
+
+\begin{frame}{Types d'oscillateurs}
+    \begin{tabular}{c | c | c | c}
+        \textbf{XO} & \textbf{VCXO} & \textbf{TCXO} & \textbf{OCXO}\\
+        \hline
+        \textit{Crystal Oscillator} & 
+        \textit{\textbf{V}oltage-\textbf{C}ontrolled} &
+        \textit{\textbf{T}emperature-\textbf{C}ontrolled} &
+        \textit{\textbf{O}ven-\textbf{C}ontrolled}\\
+    \end{tabular}
 \end{frame}
