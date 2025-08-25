@@ -1,0 +1,1 @@
+S'inspirer de la page de mechanicals du Xilinx KU105 https://www.amd.com/en/products/adaptive-socs-and-fpgas/evaluation-boards/kcu105.html
